@@ -1,5 +1,5 @@
 ---
-title: "Overload Compensation Tool: Walkthrough"
+title: "Overload Compensation Analysis Tool: Walkthrough"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Overload Compensation Tool: Walkthrough}
@@ -44,25 +44,42 @@ calculate_overload_compensation(IS)
 summarize_all_instructors(schedule)
 ```
 
+Got it! Here's the updated version with **`rate_per_cr`** included in the **Default thresholds** under the **Notes** section:
+
 ---
 
 ## 📝 Explanation
 
-* Courses with fewer than 4 students are excluded.
-* Courses with 4–9 students are prorated.
-* Courses with ≥10 students count fully.
-* Only hours **above the regular 12-hour load** are paid.
+The **Overload Compensation** system determines the payment based on the number of students enrolled and the number of credit hours taught by the instructor. The following rules apply:
 
----
+* **L = 4** (Lower Bound) and **U = 9** (Upper Bound) are the **default values** used for the proration system.
 
-## 💡 Notes
+  * If a course has **4 or more students enrolled** (i.e., ENRLD ≥ 4), it is **prorated** for compensation, with the exact proration determined based on the number of students.
+  * If a course has **fewer than 4 students** (i.e., ENRLD < 4), no overload compensation is provided, as the course does not meet the minimum threshold for proration.
+  * Courses with **4 to 9 students** enrolled (i.e., 4 ≤ ENRLD ≤ 9) are **prorated** based on the number of students, so compensation is scaled accordingly.
+  * Courses with **10 or more students** (i.e., ENRLD ≥ 10) receive **full overload compensation**, as they meet the threshold for full credit.
 
-* Pay rate can be adjusted via `rate_per_cr`
-* Default thresholds: L = 4, U = 9, regular load = 12
-* Output is human-readable and ready for export
+* **L and U can be customized**:
+  While the default values for **L** and **U** are 4 and 9 respectively, users have the option to adjust these values to suit specific needs or institutional policies.
 
----
+* **Regular load consideration**:
+  The **regular load** (by default, **12 credit hours**) is the baseline for calculating overload pay. **Only the credit hours worked beyond the regular load** are eligible for overload compensation. The default regular load is represented by the variable `reg_load` (default value = 12), which can be customized by users. This means users can manipulate the `reg_load` value to match their institution’s standard workload, allowing for more flexible compensation calculations.
+
+* **Pay rate**:
+  The default **rate\_per\_cr** (rate per credit hour) is set to **2500 / 3** (approximately 833.33). This value can be adjusted by users to reflect the institution's pay scale for each credit hour taught. Users can modify `rate_per_cr` based on their own compensation structures.
+
+### Notes:
+
+* **Pay rate** is adjustable via the `rate_per_cr` parameter, with the default rate being **2500 / 3** (which can be modified by users).
+* **Default thresholds** are:
+
+  * Lower Bound (L) = 4
+  * Upper Bound (U) = 9
+  * Regular Load (`reg_load`)= 12 credit hours
+  * **Rate per Credit Hour**(`rate_per_cr`) = **2500 / 3** (default value, can be adjusted)
+* **Output is human-readable** and ready for export, ensuring it can be directly shared or used in reports without further formatting.
+
 
 ## 📫 Questions?
 
-Contact Dawit at aberrad@fvsu.edu
+Contact Dawit Aberra at aberrad@fvsu.edu

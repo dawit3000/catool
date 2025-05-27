@@ -26,7 +26,7 @@ compute prorated pay based on enrollment thresholds.
 ``` r
 # Install directly from GitHub
 # install.packages("remotes")
-remotes::install_github("yourusername/OverloadCompTool")
+remotes::install_github("dawit3000/OverloadCompTool")
 ```
 
 ## 📁 Sample Usage

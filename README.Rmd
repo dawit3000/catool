@@ -25,7 +25,7 @@ The **Overload Compensation Analysis Tool** is an R package designed to calculat
 ```r
 # Install directly from GitHub
 # install.packages("remotes")
-remotes::install_github("yourusername/OverloadCompTool")
+remotes::install_github("dawit3000/OverloadCompTool")
 ````
 
 ## 📁 Sample Usage
