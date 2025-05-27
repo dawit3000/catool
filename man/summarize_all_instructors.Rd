@@ -4,11 +4,25 @@
 \alias{summarize_all_instructors}
 \title{Summarize Overload Compensation for All Instructors}
 \usage{
-summarize_all_instructors(schedule_df = schedule)
+summarize_all_instructors(
+  schedule_df = schedule,
+  L = 4,
+  U = 9,
+  rate_per_cr = 2500/3,
+  reg_load = 12
+)
 }
 \arguments{
 \item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.
 Defaults to \code{schedule} if not specified.}
+
+\item{L}{Lower bound of enrollment illegible for peroration (inclusive)}
+
+\item{U}{Upper bound of enrollment illegible for peroration (inclusive)}
+
+\item{rate_per_cr}{Numeric value indicating the rate paid per credit hour.}
+
+\item{reg_load}{A numeric value indicating the regular teaching load (in credit hours).}
 }
 \value{
 A tibble summarizing overload compensation for each instructor,

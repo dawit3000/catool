@@ -17,7 +17,7 @@ calculate_overload_compensation(
 
 \item{L}{Lower enrollment threshold for overload pay qualification (default is 4).}
 
-\item{U}{Upper enrollment threshold for full-rate overload pay (default is 9).}
+\item{U}{Upper enrollment threshold of proration for full-rate overload pay (default is 9).}
 
 \item{rate_per_cr}{The base overload pay per credit hour (default is 2500/3).}
 

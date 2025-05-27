@@ -34,21 +34,35 @@ remotes::install_github("dawit3000/OverloadCompTool")
 library(OverloadCompTool)
 
 # Load your schedule data
+
 schedule <- read.csv("Schedule.csv")
 
-# Get one instructor's pay
-IS <- get_instructor_schedule("Smith, Jane", schedule)
+# Get one instructor's pay default
+
+IS<-get_instructor_schedule("Torres, Adam", schedule)
 calculate_overload_compensation(IS)
+
+# Get one instructor's overload compensation based on the following institutional guidelines:
+# - An instructor is eligible for overload pay if they teach credit hours (HRS) exceeding the regular load of 9 credit hours per semester.
+# - Compensation is provided only if the class contributing to the qualifying credit hours has at least 3 students enrolled (ENRLD ≥ 3).
+# - Compensation is prorated if enrollment falls between 3 and 15 students (inclusive).
+# - The compensation rate is $1,000.00 per credit hour.
+
+IS<-get_instructor_schedule("Torres, Adam")
+calculate_overload_compensation(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
+
 
 # Summarize everyone
 summarize_all_instructors(schedule)
+summarize_all_instructors(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
+
 ```
 
 ## 📄 Inputs
 
 * A data frame with at least these columns:
 
-  * `INSTRUCTOR`
+  * `INSTRUCTOR` (Name of Instructors)
   * `HRS` (Credit Hours)
   * `ENRLD` (Enrollment)
 
@@ -59,6 +73,7 @@ A tidy data frame including:
 * Overload Pay by Course
 * Total Compensation (USD)
 * Summary notes
+* Look for the last few newly added columns
 
 ## ✍️ Author
 

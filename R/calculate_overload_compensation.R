@@ -5,7 +5,7 @@
 #'
 #' @param instructor_schedule A data frame with columns `ENRLD` (enrollment) and `HRS` (credit hours).
 #' @param L Lower enrollment threshold for overload pay qualification (default is 4).
-#' @param U Upper enrollment threshold for full-rate overload pay (default is 9).
+#' @param U Upper enrollment threshold of proration for full-rate overload pay (default is 9).
 #' @param rate_per_cr The base overload pay per credit hour (default is 2500/3).
 #' @param reg_load Regular teaching load in credit hours (default is 12).
 #'

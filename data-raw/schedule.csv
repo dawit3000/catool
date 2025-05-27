@@ -1,666 +1,666 @@
-"P.of.T","SUBJ","NUMB","SECT","CRN","TITLE","NOTES","HRS","ENRLD","MAXENRL","TIMES","DAYS","LOCATION","INSTRUCTOR","CAMPUS"
-"1","ACCT","2101","W1",49476,"PRINCIPLES OF ACCOUNTING I","",3,34,30,"","","","Ivory, Regina","On-Line"
-"1","ACCT","2101","WH",50425,"PRINCIPLES OF ACCOUNTING I","",3,32,30,"05:30-08:15","T","0201 COMPUTER TECHNOLOGY/MATHE","Pointer, Audra","Main Campus"
-"1","ACCT","2102","W1",49316,"PRINCIPLES OF ACCOUNTING II","",3,34,30,"","","","Ivory, Regina","On-Line"
-"1","ACCT","3113","WH",47259,"INTERMEDIATE ACCOUNTING II","",3,7,30,"09:30-10:45","T R","0201 COMPUTER TECHNOLOGY/MATHE","McBride, Bridgett","Main Campus"
-"1","ACCT","3133","WH",49318,"INDIVIDUAL INCOME TAX","",3,9,30,"11:00-12:15","M W","0201 COMPUTER TECHNOLOGY/MATHE","McBride, Bridgett","Main Campus"
-"1","ACCT","4113","WH1",49909,"GOVERNMENT NOT-FOR-PROFIT","",3,8,30,"05:30-08:15","W","0201 COMPUTER TECHNOLOGY/MATHE","Roddy, Jaquetta","Main Campus"
-"1","AENT","2833","WH",49502,"SURVEYING","",3,31,30,"09:00-09:50","M W","0104 ELLIS AG-MECH ACAD","Williams, Archie","Main Campus"
-"1","AENT","2833*","51",49503,"SURVEY LAB","",0,31,30,"07:00-08:50","T","0120 ELLIS AG-MECH ACAD","Williams, Archie","Main Campus"
-"1","AENT","3803","WH",48393,"BUILDINGS & RELATED STRUCTURES","",3,12,30,"06:00-07:50","M","0128 ELLIS AG-MECH ACAD","Maze, Fanisha","Main Campus"
-"1","AENT","3803L","51",48394,"BUILDNG & RELATED STRUCT LAB","",0,12,30,"05:00-06:50","R","0128 ELLIS AG-MECH ACAD","Maze, Fanisha","Main Campus"
-"1","AENT","3832","WH",49782,"INSTRUMENTATION","",2,4,30,"10:00-10:50","M W","0125 ELLIS AG-MECH ACAD","Williams, Archie","Main Campus"
-"1","AENT","3832L","51",49783,"INSTRUMENTATION LAB","- No-cost:$0 required txtbk cost",0,4,20,"08:00-09:50","M","0116 ELLIS AG-MECH ACAD","Williams, Archie","Main Campus"
-"1","AENT","4813","1",47928,"SOIL,WATER,&NATURAL RESOURCE","",3,8,20,"01:00-01:50","M W","0123 ELLIS AG-MECH ACAD","Ogden, Cedric","Main Campus"
-"1","AENT","4813L","51",47812,"SOIL,WATER,&NATURAL RES. LAB","",0,8,20,"02:00-03:50","F","0123 ELLIS AG-MECH ACAD","Ogden, Cedric","Main Campus"
-"1","AENT","4833","WH",50099,"MACHINERY FOR AGRICULTURE","",3,5,10,"09:30-10:45","T R","0123 ELLIS AG-MECH ACAD","Wilcox, Tommell","Main Campus"
-"1","AENT","4833","WH1",50513,"MACHINERY FOR AGRICULTURE","",3,1,10,"08:00-08:50","M W","0123 ELLIS AG-MECH ACAD","Wilcox, Tommell","Main Campus"
-"1","AENT","4833L","51",50100,"MACHINERY FOR AGRICULTURE LAB","",0,6,10,"07:00-08:50","W","0123 ELLIS AG-MECH ACAD","Wilcox, Tommell","Main Campus"
-"1","AENT","4881","WH",49504,"SENIOR SEMINAR","",1,7,25,"05:00-05:50","M","0124 ELLIS AG-MECH ACAD","Johnson, Raphael","Main Campus"
-"1","AGEC","3813","1",47632,"AGRICULTURAL FINANCE & RECORDS","",3,12,25,"05:30-08:30","T","0201 TABOR AGR ACAD","Cornish, Brian","Main Campus"
-"1","AGEC","4823","1",47331,"MARKETING AGRICULTURAL PRODUCT","",3,13,25,"09:30-10:45","T R","0201 TABOR AGR ACAD","Liu, Xuanli","Main Campus"
-"1","AGEC","4833","1",49483,"AGRICULTURAL POLICIES","",3,12,25,"09:00-09:50","M W F","0201 TABOR AGR ACAD","Ibrahim, Mohammed","Main Campus"
-"1","AGEC","4843","1",47605,"PRODUCTION ECONOMICS","",3,13,25,"08:00-09:15","T R","0201 TABOR AGR ACAD","Liu, Xuanli","Main Campus"
-"1","AGEC","4853","1",49266,"NAT. RESOURCES ECON.","",3,11,25,"11:00-11:50","M W F","0201 TABOR AGR ACAD","Ibrahim, Mohammed","Main Campus"
-"1","AGEC","4864","1",49287,"SPEC PROB IN AGRI ECONOMIC","",3,12,12,"10:00-10:50","M W F","0201 TABOR AGR ACAD","Liu, Xuanli","Main Campus"
-"1","ANSC","1811","1",47368,"INTRO TO ANIMAL AGRICULTURE","",1,76,80,"01:00-01:50","R","0105 TABOR AGR ACAD","Terrill, Thomas","Main Campus"
-"1","ANSC","2803","1",47369,"GENERAL ANIMAL SCIENCE","",3,79,80,"12:00-12:50","M W","0105 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","2803L","51",47370,"GEN ANIMAL SCI LAB","",0,78,80,"01:00-02:50","T","0105 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","2803L","52",50480,"GEN ANIMAL SCI LAB","",0,2,4,"01:00-02:50","S","0105 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","3813","1",47525,"MEAT SCIENCE","",3,26,45,"10:00-10:50","M W","0105 TABOR AGR ACAD","Lee, Jung","Main Campus"
-"1","ANSC","3813L","51",47526,"PRIN OF MEAT SCI LAB","",0,26,45,"03:30-05:20","R","MEAT TECHNOLOGY BUILDING","Lee, Jung","Main Campus"
-"1","ANSC","3823","1",47536,"PHYSIOLOGY DOMESTIC ANIMALS","",3,35,45,"01:00-01:50","M W","0105 TABOR AGR ACAD","Moawad, Adel","Main Campus"
-"1","ANSC","3823L","51",47537,"PHYS OF DOMESTIC ANIM. LAB","",0,35,45,"04:00-05:50","F","0105 TABOR AGR ACAD","Moawad, Adel","Main Campus"
-"1","ANSC","3863","1",50489,"DAIRY CATTLE PRODUCTION","",3,21,30,"05:00-05:50","M W","0105 TABOR AGR ACAD","Mohamed, Abdallah","Main Campus"
-"1","ANSC","3863L","51",50490,"DAIRY CATTLE PROD LAB","",0,21,30,"05:30-07:20","T","","Mohamed, Abdallah","Main Campus"
-"1","ANSC","3883","1",47371,"APPLIED ANIMAL NUTRITION","",3,28,45,"11:00-11:50","M W","0105 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","3883L","51",47372,"APPLIED ANIMAL NUTR LAB","",0,27,45,"03:30-05:20","T","0105 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","3883L","52",50552,"APPLIED ANIMAL NUTR LAB","",0,1,5,"11:00-12:50","S","0114 TABOR AGR ACAD","Whitley, Niki","Main Campus"
-"1","ANSC","4813","1",48816,"ANIMAL BREEDING","",3,29,45,"06:00-07:15","M W","0105 TABOR AGR ACAD","Mohamed, Abdallah","Main Campus"
-"1","ANSC","4822","1",49822,"SENIOR RESEARCH","",2,6,15,"06:00-06:50","R","0105 TABOR AGR ACAD","Moawad, Adel","Main Campus"
-"1","ANSC","4822L","51",49849,"SENIOR RESEARCH LAB","",0,6,15,"05:00-06:50","","TABOR AGR ACAD","Moawad, Adel","Main Campus"
-"1","ANSC","4841","1",49224,"ANIMAL SCIENCE SEMINAR","",1,20,20,"04:00-04:50","W","STALLWORTH RSCH","Singh, Mahipal","Main Campus"
-"1","ANSC","5123","1",47593,"PHYSIOLOGICAL CHEM II","",3,19,20,"04:00-04:50","M W F","0101 MEAT TECHNOLOGY BUILDING","Kouakou, Brou","Main Campus"
-"1","ANSC","5203","1",49281,"EXPERIMENTAL DESIGN/DATA ANAL","",3,17,15,"05:30-07:00","T R","0101 MEAT TECHNOLOGY BUILDING","Lee, Jung","Main Campus"
-"1","ANSC","6103","1",47814,"PLANT-HERBIVORE INTERATIONS","",3,21,20,"09:30-10:45","T R","0105 TABOR AGR ACAD","Terrill, Thomas","Main Campus"
-"1","ANSC","6103L","51",47815,"PLANT & HERBIVORE INTER LAB","",0,21,20,"08:00-09:00","R","","Terrill, Thomas","Main Campus"
-"1","ANSC","6153","1",47816,"ANIMAL ENERGETICS","",3,10,15,"08:00-08:50","M W F","0101 MEAT TECHNOLOGY BUILDING","Kouakou, Brou","Main Campus"
-"1","ANSC","6273","1",48406,"CELL PHYSIOLOGY","",3,16,20,"10:00-10:50","M W F","0101 MEAT TECHNOLOGY BUILDING","Moawad, Adel","Main Campus"
-"1","ANSC","6421","1",47817,"GRADUATE SEMINARS","",1,5,15,"04:00-04:50","T","0101 MEAT TECHNOLOGY BUILDING","Terrill, Thomas","Main Campus"
-"1","ANSC","6436","1",47427,"RESEARCH AND THESIS","",1,14,15,"02:00-02:50","T","0101 MEAT TECHNOLOGY BUILDING","Moawad, Adel","Main Campus"
-"1","ARTH","1000","1",47295,"ART APPRECIATION","",3,35,30,"10:00-10:50","M W F","0212 MILLER HALL","Hamilton, Elizabeth","Main Campus"
-"1","ARTH","1000","2",47404,"ART APPRECIATION","",3,34,30,"11:00-11:50","M W F","0212 MILLER HALL","Hamilton, Elizabeth","Main Campus"
-"1","ARTH","1000","3",47347,"ART APPRECIATION","",3,31,30,"02:00-02:50","M W F","0212 MILLER HALL","Hamilton, Elizabeth","Main Campus"
-"1","ARTH","2000","1",50411,"ART HISTORY SURVEY I","- No-cost:$0 required txtbk cost",3,3,30,"05:00-07:00","W","0212 MILLER HALL","Hamilton, Elizabeth","Main Campus"
-"1","ARTH","2312","1",49290,"TYPOGRAPHIC DESIGN","",3,1,20,"10:00-10:50","M W","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","2312L","51",49586,"TYPOGRAPHIC DESIGN LAB","",0,1,20,"10:00-10:50","F","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","2350","1",50422,"SCULPTURE","",3,4,20,"01:00-02:45","T","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","2350L","51",50423,"SCULPTURE LAB","",0,4,20,"01:00-02:45","R","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","3103","1",50023,"PERSPECTIVE DRAWING","",3,2,20,"03:00-04:50","M","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","3103L","51",50024,"PERSPECTIVE DRAWING LAB","",0,2,20,"03:00-04:50","W","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","3130","1",49832,"COLOR THEORY","",3,3,20,"09:30-10:45","T","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","3130L","51",49833,"COLOR THEORY LAB","",0,2,20,"09:30-10:45","R","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","3353","1",49837,"HISTORY OF GRAPHIC DESIGN","",3,4,20,"09:00-09:50","M W F","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","3369","1",50463,"FUND OF GRAPHIC DESIGN","",3,4,20,"02:00-02:50","M W F","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","3393","1",48889,"DIGITAL MEDIA & DESIGN III","- No-cost:$0 required txtbk cost",3,4,20,"03:00-03:50","M W","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","3393L","51",48890,"DIGITAL MEDIA & DESIGN III LAB","- No-cost:$0 required txtbk cost",0,4,20,"03:00-03:50","F","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","4113","1",49834,"PORTFOLIO I","- No-cost:$0 required txtbk cost",3,3,20,"11:00-11:50","M W F","0203 MILLER HALL","Farley, Dontay","Main Campus"
-"1","ARTH","4483","1",50419,"WATERCOLOR PAINTING","",3,1,20,"10:00-10:50","M","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","ARTH","4483L","51",50420,"WATERCOLOR PAINTING LAB","",0,1,20,"10:00-10:50","W","FINE ARTS CENTER","Calloway, Ricky","Main Campus"
-"1","BHSC","2300","W1",47846,"BEHAVIORAL STATS","",3,38,30,"","","","Haywood, Jerry","On-Line"
-"1","BHSC","2300","WH",47374,"BEHAVIORAL STATS","",3,36,30,"10:00-10:50","M W F","0102 MILLER HALL","Chatmon, Roddrick","Main Campus"
-"1","BIOL","1101","2",47340,"INTRO TO BIOLOGY","",1,29,28,"02:00-02:50","W","0220 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BIOL","1101","W1",50289,"INTRO TO BIOLOGY","- $40 or under req txtbks cost",1,29,30,"","","","Dhir, Seema","On-Line"
-"1","BIOL","1104K","2",47254,"INTRO BIOLOGY","",4,53,50,"09:30-10:45","T R","0120 ACADEMIC CLASSROOM BUILDI","Paul, Jasmine","Main Campus"
-"1","BIOL","1104K","W1",47633,"INTRO BIOLOGY","",4,41,40,"","","","Paul, Jasmine","On-Line"
-"1","BIOL","1104K","W2",50503,"INTRO BIOLOGY","",4,54,55,"","","","Durham, Cedrica","On-Line"
-"1","BIOL","1104L","54",49485,"INTRO BIOL LAB","- $40 or under req txtbks cost",0,30,30,"03:30-05:20","T","0124 ACADEMIC CLASSROOM BUILDI","Copeland-Hite, Kiandra","Main Campus"
-"1","BIOL","1104L","55",48584,"INTRO BIOL LAB","",0,22,30,"12:00-01:50","T","0124 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BIOL","1104L","W51",47635,"INTRO BIOL LAB","",0,41,40,"","","","Paul, Jasmine","On-Line"
-"1","BIOL","1104L","W52",50505,"INTRO BIOL LAB","- $40 or under req txtbks cost",0,54,55,"","","","Durham, Cedrica","On-Line"
-"1","BIOL","1105","1",47548,"ENVIRONMENTAL SCIENCE","",3,44,50,"12:30-01:45","T R","0120 ACADEMIC CLASSROOM BUILDI","Paul, Jasmine","Main Campus"
-"1","BIOL","1105","2",48486,"ENVIRONMENTAL SCIENCE","",3,23,50,"03:15-04:30","T R","0120 ACADEMIC CLASSROOM BUILDI","Paul, Jasmine","Main Campus"
-"1","BIOL","1105","W1",47547,"ENVIRONMENTAL SCIENCE","",3,35,40,"","","","Paul, Jasmine","On-Line"
-"1","BIOL","1107K","1",49077,"PRINCIPLES OF BIOLOGY I","- Hope & Zell Miller STEM Course",4,46,40,"10:00-10:50","M W F","0111 ACADEMIC CLASSROOM BUILDI","Copeland-Hite, Kiandra","Main Campus"
-"1","BIOL","1107K","2",50059,"PRINCIPLES OF BIOLOGY I","- Hope & Zell Miller STEM Course",4,46,50,"03:00-03:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","Copeland-Hite, Kiandra","Main Campus"
-"1","BIOL","1107K","3",48801,"PRINCIPLES OF BIOLOGY I","- Hope & Zell Miller STEM Course",4,47,50,"02:00-02:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","BIOL","1107L","52",47465,"PRIN OF BIOL LAB","",0,38,30,"02:00-03:50","R","0124 ACADEMIC CLASSROOM BUILDI","Copeland-Hite, Kiandra","Main Campus"
-"1","BIOL","1107L","53",50060,"PRIN OF BIOL LAB","- No-cost:$0 required txtbk cost",0,31,30,"04:00-05:50","R","0124 ACADEMIC CLASSROOM BUILDI","Copeland-Hite, Kiandra","Main Campus"
-"1","BIOL","1107L","54",47513,"PRIN OF BIOL LAB","",0,34,30,"12:00-01:50","R","0124 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","BIOL","1107L","55",49313,"PRIN OF BIOL LAB","- No-cost:$0 required txtbk cost",0,35,30,"10:00-11:50","R","0124 ACADEMIC CLASSROOM BUILDI","Bryant, Madalyn","Main Campus"
-"1","BIOL","1108K","2",47841,"PRINCIPLES OF BIOLOGY II","",4,45,40,"12:30-01:45","T R","0111 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","BIOL","1108K","3",47342,"PRINCIPLES OF BIOLOGY II","",4,39,35,"02:00-03:15","T R","0111 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","BIOL","1108K","W1",47869,"PRINCIPLES OF BIOLOGY II","",4,61,60,"","","","Durham, Cedrica","On-Line"
-"1","BIOL","1108L","51",47467,"PRIN OF BIOL LAB","",0,29,30,"02:00-03:50","M","0131 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","BIOL","1108L","52",47498,"PRIN OF BIOL LAB","",0,16,30,"02:00-03:50","T","0131 ACADEMIC CLASSROOM BUILDI","Bryant, Madalyn","Main Campus"
-"1","BIOL","1108L","53",47468,"PRIN OF BIOL LAB","",0,10,30,"12:00-01:50","T","0131 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","1108L","55",48585,"PRIN OF BIOL LAB","",0,27,30,"10:00-11:50","W","0131 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","BIOL","1108L","W51",47870,"PRIN OF BIOL LAB","",0,63,60,"","","","Durham, Cedrica","On-Line"
-"1","BIOL","2251","1",50150,"HUM ANATOMY & PHYSIOLOGY I","",4,41,38,"08:00-08:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","2251L","51",50151,"HUM ANATOMY & PHYSIO I LAB","",0,42,38,"06:00-08:00","F","0326 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","2252","1",50456,"HUM ANATOMY & PHYSIOLOGY II","",4,41,30,"10:00-10:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","2252L","51",50457,"HUM ANATOMY & PHYSIO II LAB","",0,41,30,"01:00-03:50","F","0326 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","2260K","1",50373,"FOUNDATIONS OF MICROBIOLOGY","",4,35,30,"09:00-09:50","M W","0111 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","2260L","51",50375,"FNDS OF MICROBIOLOGY LAB","",0,35,30,"11:00-12:50","M W","0133 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","3014","1",49779,"ECOLOGY","",4,15,30,"09:00-09:50","M W F","0134 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","BIOL","3014L","51",49780,"ECOLOGY LAB","",0,15,30,"03:30-06:00","T","0134 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","BIOL","3017","1",49491,"FORENSICS II","",3,10,20,"11:00-12:15","M W","0122 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BIOL","3222L","1",49315,"INVESTIGATIONS IN CELL BIOLOGY","",2,25,25,"09:30-10:45","T R","0324 ACADEMIC CLASSROOM BUILDI","Dodd, Celia","Main Campus"
-"1","BIOL","3223","1",47354,"CELL & MOLECULAR BIOLOGY","",3,26,35,"11:00-11:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","3345","1",49781,"PRINCIPLES OF TOXICOLOGY","",3,16,30,"10:00-10:50","M W F","0321 ACADEMIC CLASSROOM BUILDI","Dodd, Celia","Main Campus"
-"1","BIOL","4111","1",47257,"SPECIAL PROJECTS IN BIOLOGY","",1,2,0,"","","","Dhir, Seema","Main Campus"
-"1","BIOL","4112","1",47387,"SPECIAL PROJECTS IN BIOLOGY","",1,0,0,"","","","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4113","2",49189,"SPECIAL PROJECTS IN BIOLOGY","- No-cost:$0 required txtbk cost",1,1,0,"","","","Dodd, Celia","Main Campus"
-"1","BIOL","4222","1",47258,"BIOLOGY SEMINAR","",1,21,30,"10:00-10:50","T","0111 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4234K","1",47363,"MICROBIOLOGY","",4,43,35,"08:00-08:50","M W","0111 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4234L","51",47470,"MICROBIOLOGY LAB","",0,42,35,"01:00-02:50","M W","0133 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4234L","52",50510,"MICROBIOLOGY LAB","",0,1,1,"04:00-05:50","M W","0133 ACADEMIC CLASSROOM BUILDI","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4254K","1",47364,"GENETICS","",4,38,34,"09:00-09:50","M W F","0120 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","4254L","51",47471,"GENETICS LAB","",0,38,34,"03:00-05:50","M","0324 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","BIOL","4272L","1",47531,"BIOTECHNIQUES","",2,16,30,"02:00-03:15","T R","0220 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BIOL","4343L","1",47335,"SENIOR PROJECT","",3,8,0,"","","","McLaughlin, Frederick","Main Campus"
-"1","BIOL","4343L","3",47344,"SENIOR PROJECT","",3,8,0,"","","","Dhir, Seema","Main Campus"
-"1","BIOL","4343L","6",48121,"SENIOR PROJECT","",3,5,0,"","","","Dodd, Celia","Main Campus"
-"1","BIOL","4384K","1",50391,"LIMNOLOGY","",4,6,20,"09:30-10:45","T R","0134 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","BIOL","4384L","51",50392,"LIMNOLOGY LAB","",0,6,20,"03:30-06:20","R","0134 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","BIOT","5373","1",50115,"PLANT TISSUE & CELL CULTURE","",3,12,12,"09:00-09:50","M W","STALLWORTH","Joshee, Nirmal","Main Campus"
-"1","BIOT","5373L","51",50116,"PLANT TISS. & CELL CULT. LAB","",0,12,12,"09:00-10:50","F","STALLWORTH","Joshee, Nirmal","Main Campus"
-"1","BIOT","6053","1",48048,"BIOINFORMATICS","",3,8,10,"08:00-09:15","T R","STALLWORTH","Gosukonda, Ramana","Main Campus"
-"1","BIOT","6523","1",49134,"COMMUNICATIONS IN BIOTECHNOLOG","",3,16,20,"02:00-03:15","T R","STALLWORTH","Singh, Hari","Main Campus"
-"1","BIOT","6533","1",48399,"SPECIALTY PLANT & CROP IMPROVE","",3,5,10,"11:00-11:50","M W","STALLWORTH","Biswas, Bipul","Main Campus"
-"1","BIOT","6533L","51",48452,"SPEC PLANTS/CROP IMPROV LAB","",0,5,10,"02:00-03:50","W","0117 STALLWORTH RSCH","Biswas, Bipul","Main Campus"
-"1","BIOT","6993","1",47580,"MASTER'S THESIS RESEARCH","",1,5,20,"08:00-08:50","MTWRF","STALLWORTH","Singh, Hari","Main Campus"
-"1","BLOG","3133","W1",49322,"BUSINESS LOGISTICS","",3,31,30,"","","","Davis, Cathy","On-Line"
-"1","BLOG","4213","WH",48920,"PHYSICAL DISTRIBUTION","",3,10,30,"09:30-10:45","T R","0321 COMPUTER TECHNOLOGY/MATHE","Gebremikael, Fesseha","Main Campus"
-"1","BLOG","4223","WH",47763,"TRANSPORTATION","",3,11,30,"03:30-04:45","T R","0204 COMPUTER TECHNOLOGY/MATHE","Salone, David","Main Campus"
-"1","BLOG","4233","WH",48080,"GLOBAL LOGISTICS","",3,11,30,"02:00-03:15","T R","0302 COMPUTER TECHNOLOGY/MATHE","Salone, David","Main Campus"
-"1","BLOG","4253","WH",47793,"STRATEGIC SUPPLY CHAIN MNGT","",3,6,30,"11:00-12:15","M W","0301 COMPUTER TECHNOLOGY/MATHE","Salone, David","Main Campus"
-"1","BLOG","4263","WH",48941,"LEAN SUPP CHN & LOGISTICS MNGT","",3,9,30,"12:30-01:45","M W","0201 COMPUTER TECHNOLOGY/MATHE","Salone, David","Main Campus"
-"1","BLOG","4273","WH",48594,"SUPPLY CHAIN ANALYSIS","",3,6,30,"09:30-10:45","M W","0201 COMPUTER TECHNOLOGY/MATHE","Gebremikael, Fesseha","Main Campus"
-"1","BLOG","4273","WH2",50498,"SUPPLY CHAIN ANALYSIS","",3,1,1,"08:00-09:15","T R","COMPUTER TECHNOLOGY/MATHE","Gebremikael, Fesseha","Main Campus"
-"1","BOTN","2001K","1",47365,"GENERAL BOTANY","",4,12,30,"10:00-10:50","M W F","0324 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BOTN","2001L","51",47367,"GENERAL BOTANY LAB","",0,12,30,"03:30-06:15","R","0324 ACADEMIC CLASSROOM BUILDI","Dhir, Seema","Main Campus"
-"1","BUSA","1911","W1",49601,"LEADERSHIP DEVELOPMENT I","",1,40,30,"","","","Williams, LuWanna","On-Line"
-"1","BUSA","1911","W2",50500,"LEADERSHIP DEVELOPMENT I","",1,30,30,"","","","Williams, LuWanna","On-Line"
-"1","BUSA","1911","WH",47794,"LEADERSHIP DEVELOPMENT I","",1,36,30,"05:30-06:20","T","0104 MILLER HALL","Ballard, Ashley","Main Campus"
-"1","BUSA","1921","W1",49478,"LEADERSHIP DEVELOPMENT II","",1,37,30,"","","","Williams, LuWanna","On-Line"
-"1","BUSA","1921","W2",50501,"LEADERSHIP DEVELOPMENT II","",1,25,30,"","","","Williams, LuWanna","On-Line"
-"1","BUSA","1921","WH",50432,"LEADERSHIP DEVELOPMENT II","",1,29,30,"06:30-07:20","T","0104 MILLER HALL","Ballard, Ashley","Main Campus"
-"1","BUSA","2105","WH",47484,"COMMUN. IN THE BUSI. ENVIRO","",3,34,30,"05:30-08:15","M","0204 COMPUTER TECHNOLOGY/MATHE","Davis, Cathy","Main Campus"
-"1","BUSA","2503","W1",47648,"BUSINESS INFORMATION SYSTEM","",3,34,30,"","","","Haastrup, Janita","On-Line"
-"1","BUSA","3103","W1",47792,"FINANCIAL MANAGEMENT","",3,38,30,"","","","McBride, Bridgett","On-Line"
-"1","BUSA","3203","WH",48433,"QUANTITATIVE METHODS","",3,28,30,"02:00-03:15","T R","0321 COMPUTER TECHNOLOGY/MATHE","Gebremikael, Fesseha","Main Campus"
-"1","BUSA","3213","WH",49185,"STATS FOR BUSINESS & ECON","",3,26,30,"02:00-03:15","M W","0321 COMPUTER TECHNOLOGY/MATHE","Gebremikael, Fesseha","Main Campus"
-"1","BUSA","3313","WH",47563,"LEGAL,SOCIAL,ETHICAL ENVIRO","",3,33,30,"02:00-03:15","M W","0110 COMPUTER TECHNOLOGY/MATHE","Drew, Michelle","Main Campus"
-"1","BUSA","4123","WH",47351,"INTERNSHIP","- No-cost:$0 required txtbk cost",3,17,30,"","","COMPUTER TECHNOLOGY/MATHE","Ivory, Regina","Main Campus"
-"1","BUSA","4353","WH",50410,"INTRO TO INTERNATIONAL BUSINES","",3,22,30,"09:30-10:45","M W","0202 COMPUTER TECHNOLOGY/MATHE","Drew, Michelle","Main Campus"
-"1","CHEM","1211","1",50031,"PRINCIPLE OF CHEMISTRY I","",3,41,35,"11:00-11:50","M W F","0111 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1211","2",50032,"PRINCIPLE OF CHEMISTRY I","",3,32,25,"09:30-10:45","T R","0321 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1211L","51",50033,"PRIN OF CHEM LAB","- $40 or under req txtbks cost",1,23,24,"03:00-05:50","M","0237 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","1211L","52",50034,"PRIN OF CHEM LAB","- $40 or under req txtbks cost",1,22,24,"12:00-02:50","T","0237 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1211L","53",50035,"PRIN OF CHEM LAB","- $40 or under req txtbks cost",1,20,24,"03:00-05:50","T","0237 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1212","1",50036,"PRINCIPLE OF CHEMISTRY II","- $40 or under req txtbks cost",3,35,40,"09:00-09:50","M W F","0212 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","1212","2",50037,"PRINCIPLE OF CHEMISTRY II","- $40 or under req txtbks cost",3,22,40,"10:00-10:50","M W F","0314 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","1212","3",50455,"PRINCIPLE OF CHEMISTRY II","- $40 or under req txtbks cost",3,26,40,"03:00-03:50","M W F","0212 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1212L","51",50038,"PRIN OF CHEM LAB II","- $40 or under req txtbks cost",1,25,24,"12:00-02:50","R","0237 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1212L","52",50394,"PRIN OF CHEM LAB II","- $40 or under req txtbks cost",1,24,24,"03:00-05:50","R","0235 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","1212L","53",50041,"PRIN OF CHEM LAB II","- $40 or under req txtbks cost",1,23,24,"03:00-05:50","T","0235 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","2221","1",50043,"PRIN ORGANIC CHEMISTRY I","",3,32,24,"09:30-10:45","T R","0212 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","2221L","52",50458,"PRIN ORGANIC CHEM LAB","",1,26,24,"06:00-08:50","T","0340 ACADEMIC CLASSROOM BUILDI","Simpson, Jessica","Main Campus"
-"1","CHEM","2222","1",50045,"PRIN ORGANIC CHEMISTRY II","",3,46,24,"02:00-03:15","T R","0212 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","2222L","51",50047,"PRIN ORGANIC CHEM II LAB","",1,11,24,"11:00-02:50","W","0337 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","2222L","52",50048,"PRIN ORGANIC CHEM II LAB","",1,29,24,"03:00-05:50","W","0340 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","3250","1",50049,"PRIN BIOCHEMISTRY","",3,20,30,"12:30-01:45","T R","0212 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","3250L","51",50050,"PRIN BIOCHEM LAB","",1,21,30,"03:30-06:20","T","0337 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","CHEM","3342K","1",47317,"CHEMICAL INSTRUMENTATION","",4,8,16,"01:00-01:50","M W F","0321 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","3342L","51",47444,"CHEMICAL INSTRUMENTATION LAB","",0,8,16,"03:00-05:50","W","0342 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","4210","1",50384,"SEMINAR","",1,10,12,"07:00-07:50","R","0321 ACADEMIC CLASSROOM BUILDI","Bright, Robin","Main Campus"
-"1","CHEM","4332K","1",47610,"PHYSICAL CHEMISTRY II","",4,1,12,"10:00-10:50","M W F","0223 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","4332L","51",50397,"PHYSICAL CHEMISTRY II LAB","",0,1,12,"06:00-08:50","F","0342 ACADEMIC CLASSROOM BUILDI","Holmes, Tiffani","Main Campus"
-"1","CHEM","4350","1",50383,"POLYMER CHEMISTRY","",2,3,12,"09:00-09:50","M W","0321 ACADEMIC CLASSROOM BUILDI","Reese, Carrie","Main Campus"
-"1","COMM","1110","1",50007,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,29,25,"09:30-10:45","T R","0204 MILLER HALL","Akbar, Maisha","Main Campus"
-"1","COMM","1110","2",49324,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,30,25,"02:00-03:15","T R","0204 MILLER HALL","Akbar, Maisha","Main Campus"
-"1","COMM","1110","3",49325,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,35,25,"11:00-11:50","M W F","0202 MILLER HALL","Johnson, II, Maurice","Main Campus"
-"1","COMM","1110","5",50433,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,30,25,"01:00-01:50","M W F","0207 MILLER HALL","Johnson, II, Maurice","Main Campus"
-"1","COMM","1110","6",49944,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,29,25,"03:00-03:50","M W F","0202 MILLER HALL","Johnson, II, Maurice","Main Campus"
-"1","COMM","1110","W1",47290,"PUBLIC SPEAKING","",3,37,25,"","","","Johnson, II, Maurice","On-Line"
-"1","COMM","1110","W2",48631,"PUBLIC SPEAKING","",3,37,25,"","","","Akbar, Maisha","On-Line"
-"1","COMM","1110","W3",50009,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,36,25,"","","","Johnson, II, Maurice","On-Line"
-"1","COMM","1110","W4",50010,"PUBLIC SPEAKING","- No-cost:$0 required txtbk cost",3,37,25,"","","","Johnson, II, Maurice","On-Line"
-"1","COUN","5433","W2",50188,"SUB ABUSE & ADDICTIONS COUNSEL","",3,5,15,"","","WEB/ D2L ONLINE","White, Adrienne","On-Line"
-"1","COUN","5433","WH1",50184,"SUB ABUSE & ADDICTIONS COUNSEL","",3,5,15,"06:30-09:00","R","WEB/ D2L ONLINE","White, Adrienne","FVSU-Warner Robins Campus"
-"1","COUN","5443","WH",49584,"CAREER & LIFE STYLE DEVELOPMEN","",3,2,15,"06:00-09:00","M","0138 FVSU - Warner Robins Si","White, Adrienne","FVSU-Warner Robins Campus"
-"1","COUN","5553","W1",49572,"MULTICULTURAL COUNSELING","",3,13,15,"","","WEB/ D2L ONLINE","Doughty, Fulani","On-Line"
-"1","COUN","5553","W2",49859,"MULTICULTURAL COUNSELING","",3,7,15,"","","WEB/ D2L ONLINE","Newton, James","On-Line"
-"1","COUN","5553","WH",50216,"MULTICULTURAL COUNSELING","",3,4,15,"06:00-09:00","R","0151 FVSU - Warner Robins Si","Holyfield-Moss, Bridget","FVSU-Warner Robins Campus"
-"1","COUN","5633","70",49585,"GROUP THEORY & PROCESS","",3,10,15,"06:00-09:00","T","0138 FVSU - Warner Robins Si","White, Adrienne","FVSU-Warner Robins Campus"
-"1","COUN","5633","W1",48408,"GROUP THEORY & PROCESS","",3,15,15,"","","WEB/ D2L ONLINE","Doughty, Fulani","On-Line"
-"1","COUN","5633","W2",49882,"GROUP THEORY & PROCESS","",3,13,15,"","","WEB/ D2L ONLINE","Doughty, Fulani","On-Line"
-"1","COUN","5643","W1",49571,"FAMILY COUNSELING & GUIDANCE","",3,14,15,"","","WEB/ D2L ONLINE","Everett, Otha","On-Line"
-"1","COUN","5650","70",49603,"COUNSEL SKILLS & TECHNIQUES","",3,8,15,"06:00-09:00","R","0150 FVSU - Warner Robins Si","Howard, Anissa","FVSU-Warner Robins Campus"
-"1","COUN","5650","W1",50217,"COUNSEL SKILLS & TECHNIQUES","",3,13,15,"","","WEB/ D2L ONLINE","Faucher, Amanda","On-Line"
-"1","COUN","5733","W1",49570,"PSYCHOLOGICAL TESTING & EVAL","",3,16,16,"","","WEB/ D2L ONLINE","Newton, James","On-Line"
-"1","COUN","5733","W2",50464,"PSYCHOLOGICAL TESTING & EVAL","",3,10,15,"","","WEB/ D2L ONLINE","Newton, James","On-Line"
-"1","COUN","5734","70",48951,"CLINICAL DIAG &TREATMENT PLAN","",3,13,15,"06:00-09:00","W","0151 FVSU - Warner Robins Si","Holyfield-Moss, Bridget","FVSU-Warner Robins Campus"
-"1","COUN","5734","W1",49152,"CLINICAL DIAG &TREATMENT PLAN","",3,10,15,"","","","Payne, Tamara","On-Line"
-"1","COUN","5734","W2",50186,"CLINICAL DIAG &TREATMENT PLAN","",3,9,15,"","","WEB/ D2L ONLINE","Payne, Tamara","On-Line"
-"1","COUN","5743","WH",49590,"CRISIS COUNSELING","",3,6,15,"06:00-09:00","T","0151 FVSU - Warner Robins Si","Holyfield-Moss, Bridget","FVSU-Warner Robins Campus"
-"1","CRJU","2000","1",47638,"INTRO CRIMINAL JUSTICE","",3,29,40,"10:00-10:50","M W F","0216 BOND ACADEMIC BLDG","James, Shuntavia","Main Campus"
-"1","CRJU","2000","W1",49321,"INTRO CRIMINAL JUSTICE","- No-cost:$0 required txtbk cost",3,42,40,"","","","Collier, Constance","On-Line"
-"1","CRJU","2001","W1",49320,"REPORT WRITING","",3,26,40,"","","","McMurtry, Anita","On-Line"
-"1","CRJU","2010","W1",49821,"C J ETHICS","",3,22,40,"","","","James, Shuntavia","On-Line"
-"1","CRJU","2100","W1",48611,"INTRO TO CORRECTIONS","",3,24,40,"","","","Fletcher, Antonio","On-Line"
-"1","CRJU","3003","W1",50438,"JUV. JUS. SYS.","",3,34,40,"","","","Craig, Ronald","On-Line"
-"1","CRJU","3004","1",47407,"THEORIES","",3,6,40,"12:30-01:45","T R","0216 BOND ACADEMIC BLDG","McMurtry, Anita","Main Campus"
-"1","CRJU","3004","W1",48834,"THEORIES","",3,8,40,"","","","Craig, Ronald","On-Line"
-"1","CRJU","3005","W1",49057,"COMM. POLICE","",3,12,40,"","","","James, Shuntavia","On-Line"
-"1","CRJU","3010","W1",49054,"CRIMINAL LAW","",3,22,40,"","","","McMurtry, Anita","On-Line"
-"1","CRJU","3016","1",49895,"FORENSICS I","",3,22,40,"09:30-10:45","T R","0222 BOND ACADEMIC BLDG","Thorpe, Ava","Main Campus"
-"1","CRJU","3030","1",50081,"EVIDENCE","",3,12,40,"12:30-01:45","T R","0122 BOND ACADEMIC BLDG","Thorpe, Ava","Main Campus"
-"1","CRJU","3050","W1",50082,"POLICE ADMINISTRATION","",3,19,40,"","","","Thorpe, Ava","On-Line"
-"1","CRJU","3060","W1",49333,"RESEARCH METHODS","",3,5,40,"","","","Craig, Ronald","On-Line"
-"1","CRJU","3101","W1",48833,"MINORITIES","",3,10,40,"","","","Thorpe, Ava","On-Line"
-"1","CRJU","3105","1",48608,"ALT. TO INCARCERATION","",3,7,40,"02:00-03:15","T R","0222 BOND ACADEMIC BLDG","McMurtry, Anita","Main Campus"
-"1","CRJU","4080","W1",48363,"PRACTICUM","",6,21,25,"","","","Craig, Ronald","On-Line"
-"1","CSCI","1153","1",47337,"INTRO TO COMPUTERS","",3,35,30,"09:30-10:45","T R","0320 COMPUTER TECHNOLOGY/MATHE","Yousif, Nabil","Main Campus"
-"1","CSCI","1153","2",50181,"INTRO TO COMPUTERS","",3,31,30,"05:00-06:15","T R","0320 COMPUTER TECHNOLOGY/MATHE","Dong, Chunhua","Main Campus"
-"1","CSCI","1153","W1",47518,"INTRO TO COMPUTERS","",3,34,35,"","","ONLI WEB/ D2L ONLINE","Zeng, Xiangyan","On-Line"
-"1","CSCI","1153","W2",47393,"INTRO TO COMPUTERS","",3,37,35,"","","","Naghedolfeizi, Masoud","On-Line"
-"1","CSCI","1153","W3",50061,"INTRO TO COMPUTERS","",3,41,40,"","","","Zeng, Xiangyan","On-Line"
-"1","CSCI","1153","W4",50385,"INTRO TO COMPUTERS","",3,35,35,"","","","Dong, Chunhua","On-Line"
-"1","CSCI","1301","1",47389,"PRIN PROGRAM I","",4,35,30,"03:30-04:45","T R","0320 COMPUTER TECHNOLOGY/MATHE","Yousif, Nabil","Main Campus"
-"1","CSCI","1301L","51",47430,"PRIN PROGRAM I","",0,35,30,"02:00-03:40","M","0320 COMPUTER TECHNOLOGY/MATHE","Yousif, Nabil","Main Campus"
-"1","CSCI","1302","1",47851,"PRIN OF PROGRAM II","",4,9,30,"10:00-10:50","M W F","0320 COMPUTER TECHNOLOGY/MATHE","Zeng, Xiangyan","Main Campus"
-"1","CSCI","1302L","51",47852,"PRIN OF PROGRAM II LAB","",0,9,30,"02:00-03:40","F","0320 COMPUTER TECHNOLOGY/MATHE","Zeng, Xiangyan","Main Campus"
-"1","CSCI","3110","1",50101,"SECURITY SCRIPT PROGRAMMING","",3,15,30,"12:30-01:45","T R","0320 COMPUTER TECHNOLOGY/MATHE","Yousif, Nabil","Main Campus"
-"1","CSCI","3150","W1",47280,"DATA COMMUNICATIONS & NETWORKS","",3,15,30,"","","","Naghedolfeizi, Masoud","On-Line"
-"1","CSCI","3333","1",47391,"JAVA","",3,12,25,"08:00-08:50","M W F","0321 COMPUTER TECHNOLOGY/MATHE","Zhu, J.","Main Campus"
-"1","CSCI","3351","1",47333,"COMPUTER ORGAN/ASSEMBLY LANG","",3,20,30,"12:00-12:50","M W F","0302 COMPUTER TECHNOLOGY/MATHE","Wang, Haixin","Main Campus"
-"1","CSCI","3410","1",47516,"DATA STRUCTURES","",3,25,30,"01:00-01:50","M W F","0320 COMPUTER TECHNOLOGY/MATHE","Zeng, Xiangyan","Main Campus"
-"1","CSCI","3900","1",49557,"DATA SCI & MACHINE LEARNING","",3,9,25,"03:30-04:45","T R","0319 COMPUTER TECHNOLOGY/MATHE","Naghedolfeizi, Masoud","Main Campus"
-"1","CSCI","4320","1",48598,"SOFTWARE ENGINEERING","",3,22,30,"05:00-06:15","T R","0319 COMPUTER TECHNOLOGY/MATHE","Yousif, Nabil","Main Campus"
-"1","CSCI","4999","1",49388,"SPECIAL TOPICS IN CSCI/CSIS","",3,12,15,"11:00-12:15","T R","0219 COMPUTER TECHNOLOGY/MATHE","McKinnon, Shawna","Main Campus"
-"1","CSIS","2000","1",48673,"INTRO TO INFORMATION SECURITY","",3,10,25,"12:30-01:45","T R","0319 COMPUTER TECHNOLOGY/MATHE","Naghedolfeizi, Masoud","Main Campus"
-"1","CSIS","3743","1",47864,"WEB DEVELOPMENT","",3,16,30,"10:00-10:50","M W F","0319 COMPUTER TECHNOLOGY/MATHE","Wang, Haixin","Main Campus"
-"1","DATA","1501","1",50108,"INTRODUCTION TO DATA SCIENCES","- No-cost:$0 required txtbk cost",3,3,35,"03:00-04:45","T R","0218 COMPUTER TECHNOLOGY/MATHE","Cartwright, Samuel","Main Campus"
-"1","ECON","2105","W1",49479,"PRIN OF MACROECON","",3,35,30,"","","","Dibie, Josephine","On-Line"
-"1","ECON","2105","WH",47411,"PRIN OF MACROECON","",3,34,30,"09:30-10:45","T R","0204 COMPUTER TECHNOLOGY/MATHE","Dibie, Josephine","Main Campus"
-"1","ECON","2106","W1",47262,"PRINCIPLES OF MICROECONOMICS","",3,28,30,"","","","Dibie, Josephine","On-Line"
-"1","ECON","2106","WH",49480,"PRINCIPLES OF MICROECONOMICS","",3,27,30,"02:00-03:15","T R","0303 COMPUTER TECHNOLOGY/MATHE","Dibie, Josephine","Main Campus"
-"1","ECON","3113","1",50471,"INTERMEDIATE MACROECONOMICS","",3,16,30,"05:30-08:15","R","COMPUTER TECHNOLOGY/MATHE","Cornish, Brian","Main Campus"
-"1","ECSP","3000","W1",49874,"EXPLORE OF LEARN/CREATIVE ART","",1,14,20,"","","","Joiner, Patriece","On-Line"
-"1","ECSP","3020","1",50105,"EFFECTIVE READ & WRIT METHODS","",3,5,25,"12:30-01:45","M W","0106 HUBBARD EDUCATION","Tyler, Deborah","Main Campus"
-"1","ECSP","3131","1",47532,"NATURE & CURR NEEDS ECSP LEARN","",3,4,30,"10:00-01:00","F","0110 HUBBARD EDUCATION","Anderson, Marie","Main Campus"
-"1","ECSP","3132","1",47576,"CLASS ROOM MNGT. STRATEGIES","",3,4,25,"02:00-03:15","T R","0106 HUBBARD EDUCATION","McMullen, Rebecca","Main Campus"
-"1","ECSP","3332","1",48173,"MTHDS TEACH LANG ARTS/READ","- No-cost:$0 required txtbk cost",3,12,25,"05:30-08:30","M","0106 HUBBARD EDUCATION","Anderson-Robinson, Nataysha","Main Campus"
-"1","ECSP","3432","1",48174,"METHODS OF TEACH SOCIAL STUD","",3,10,25,"05:30-08:30","R","0106 HUBBARD EDUCATION","Stephens, Annie","Main Campus"
-"1","ECSP","3731","1",48077,"EARLY CHILDHOOD/SPEC ED PRACT.","- No-cost:$0 required txtbk cost",1,9,25,"08:00-12:00","MTWRF","0106 HUBBARD EDUCATION","Walden, Jacqueline","Main Campus"
-"1","ECSP","4000","1",48902,"CHAR LEARNERS WITH SPEC. NEEDS","",2,6,25,"05:30-08:30","W","0108 HUBBARD EDUCATION","Peck, Barbara","Main Campus"
-"1","ECSP","4895","1",47567,"DIRECTEDTEACHING/SEMINAR","- No-cost:$0 required txtbk cost",12,7,25,"04:30-07:30","M W","0106 HUBBARD EDUCATION","McMullen, Rebecca","Main Campus"
-"1","ECSP","5424","W1",49899,"DIVERSITY & DIFFERENTIATED IN","",3,6,15,"05:50-08:50","R","0139 FVSU - Warner Robins Si","Peck, Barbara","FVSU-Warner Robins Campus"
-"1","ECSP","5426","WH1",50107,"TRENDS & ISSUES IN MATH/ECE","",3,4,10,"05:30-08:30","M","FVSU - Warner Robins Si","Jones, Cynthia","Main Campus"
-"1","ECSP","5427","70",49938,"ETHICS AND THE LAW","",3,8,12,"09:00-12:00","S","0151 FVSU - Warner Robins Si","Peck, Barbara","FVSU-Warner Robins Campus"
-"1","ECSP","5429","70",49610,"FAMILY SUPPORT & INTERVENTION","",3,3,20,"05:30-08:30","T","FVSU - Warner Robins Si","McMullen, Rebecca","FVSU-Warner Robins Campus"
-"1","EDMG","3131","1",49877,"NATURE AND NEEDS IN MG","",3,4,15,"02:00-05:00","F","0106 HUBBARD EDUCATION","Anderson, Marie","Main Campus"
-"1","EDMG","3132","1",49878,"CLASSROOM MANAGEMENT STRAT","",3,4,15,"02:00-03:15","T R","0106 HUBBARD EDUCATION","McMullen, Rebecca","Main Campus"
-"1","EDMG","3232","W1",50484,"MTHDS OF TEACH. SCI MG","",3,1,25,"","","","Jefferson, Jessica","Main Campus"
-"1","EDMG","3332","1",48078,"MTHDS. TEAC. LANG. ARTS/READMG","- No-cost:$0 required txtbk cost",3,9,20,"05:30-08:30","M","0106 HUBBARD EDUCATION","Anderson-Robinson, Nataysha","Main Campus"
-"1","EDMG","3432","1",48177,"MTHDS TEACH. SOCIAL STUDIES","",3,8,20,"05:30-08:30","R","0110 HUBBARD EDUCATION","Stephens, Annie","Main Campus"
-"1","EDMG","3731","1",48076,"MIDDLE SCHOOL PRACTICUM I","- No-cost:$0 required txtbk cost",3,7,20,"08:00-12:00","MTWRF","0106 HUBBARD EDUCATION","Walden, Jacqueline","Main Campus"
-"1","EDMG","3732","1",50090,"MIDDLE SCHOOL PRACTICUM II","",3,3,20,"08:00-12:00","MTWRF","HUBBARD EDUCATION","Walden, Jacqueline","Main Campus"
-"1","EDMG","4895","WH",47493,"DIRECTED TEACHING/SEMINAR","- No-cost:$0 required txtbk cost",12,5,25,"07:00-03:00","MTWRF","0110 HUBBARD EDUCATION","Jefferson, Jessica","Main Campus"
-"1","EDMG","5613","W1",50218,"CURR NEEDS OF TRANS LEARNER","",3,2,20,"","","","McMullen, Rebecca","On-Line"
-"1","EDSC","5993","W1",47538,"SCHOOL COUNSELING INTERN II","- No-cost:$0 required txtbk cost",3,10,12,"","","WEB/ D2L ONLINE","Davis, Pamela","On-Line"
-"1","EDSC","5993","W2",49861,"SCHOOL COUNSELING INTERN II","",3,0,8,"","","WEB/ D2L ONLINE","Davis, Pamela","On-Line"
-"1","EDSC","6123","W1",48403,"DIAGNOSIS AND TREATMENT","",3,9,15,"","","WEB/ D2L ONLINE","Faucher, Amanda","On-Line"
-"1","EDUC","2110","1",49869,"ISSUES IN EDUCATION","",3,45,40,"05:30-08:30","W","0110 HUBBARD EDUCATION","Green, Gregory","Main Campus"
-"1","EDUC","2110P","WH",49870,"PRE PROFESSIONAL BLOCK PRAC.","- No-cost:$0 required txtbk cost",0,49,45,"08:00-12:00","T R","0102 HUBBARD EDUCATION","Anderson-Robinson, Nataysha","Main Campus"
-"1","EDUC","2120","1",49871,"PERSPECTIVES ON DIVERSITY","",3,48,45,"03:30-04:15","T R","0102 HUBBARD EDUCATION","Sianjina, Rayton","Main Campus"
-"1","EDUC","2130","WH",49872,"LEARN AND TEACH","",3,49,48,"02:00-03:15","T R","0102 HUBBARD EDUCATION","Jefferson, Jessica","Main Campus"
-"1","EDUC","2503","1",49873,"EXCEPTIONALITIES & INSTRUCTION","",3,29,30,"05:30-08:30","M","0110 HUBBARD EDUCATION","Peck, Barbara","Main Campus"
-"1","EEGG","2114","1",48344,"CIRCUITS II","",4,5,10,"09:00-09:50","M W F","0302 COMPUTER TECHNOLOGY/MATHE","Wang, Haixin","Main Campus"
-"1","EEGG","2114L","51",48345,"CIRCUITS II - LAB","",0,2,10,"04:00-05:40","R","0321 COMPUTER TECHNOLOGY/MATHE","Wang, Haixin","Main Campus"
-"1","ELET","1211","1",47589,"AC CIRCUIT ANALYSIS","",4,17,30,"11:00-11:50","M W F","0124 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","1211%","51",47590,"AC CIRCUIT LAB","",0,17,30,"03:00-04:50","W","0124 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","2310","1",47398,"ELECTRONIC DEVICES AND CIRCUIT","",4,15,30,"10:00-10:50","M W F","0124 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","2310L","51",47438,"ELECT DEVICES A-LAB","",0,15,30,"03:00-04:50","M","0124 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","2500","1",48331,"PRIN OF DIGITAL SYSTEMS","",3,20,20,"01:00-01:50","M W F","0124 ELLIS AG-MECH ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4500","1",49700,"COMPUTER SYSTEMS","",3,8,20,"11:00-11:50","M W","0125 ELLIS AG-MECH ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4500L","51",49701,"COMPUTER SYSTEMS LAB","",0,8,20,"03:00-04:50","M","0213 TABOR AGR ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4501","1",48333,"MICROPROCESSOR APPLICATION","",3,10,20,"10:00-10:50","M W","0125 ELLIS AG-MECH ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4501L","51",48334,"MICROPROCESSOR APPL. LAB","",0,10,20,"03:00-04:50","W","0213 TABOR AGR ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4502","1",50446,"MACHINE LEARNING FOR ROBOTICS","",4,5,20,"12:00-12:50","M W F","0125 ELLIS AG-MECH ACAD","Qiu, Hao","Main Campus"
-"1","ELET","4502L","51",50447,"MACHINE LEARN FOR ROBOTICS LAB","",0,5,20,"03:00-04:50","F","0125 BYWATERS ACADEMIC","Qiu, Hao","Main Campus"
-"1","ELET","4510","1",47842,"INDUSTRIAL ELECTRONICS CONTROL","",3,8,20,"01:00-01:50","M W","0102 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","4510L","51",47843,"INDUSTRIAL ELECTRONICS CONTROL","",0,8,20,"01:00-02:50","T","0124 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ELET","4901","1",47927,"SPECIAL TOPICS AND PROJECTS","",1,6,20,"03:00-04:50","T","0102 ELLIS AG-MECH ACAD","Eldurssi, Awad","Main Campus"
-"1","ENGG","2133","1",48346,"ENGINEERING MECHANICS II","",3,5,10,"03:00-03:50","M W F","0303 COMPUTER TECHNOLOGY/MATHE","Wang, Haixin","Main Campus"
-"1","ENGL","999","W1",48782,"SUPPORT FOR ENGLISH","- No-cost:$0 required txtbk cost",2,15,35,"","","","Pitts, Berlethia","On-Line"
-"1","ENGL","1101","1",49673,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,23,30,"09:00-09:50","M W F","0205 MILLER HALL","Gregg, Anthony","Main Campus"
-"1","ENGL","1101","2",47800,"COMPOSITION I","- $40 or under req txtbks cost",3,29,30,"11:00-11:50","M W F","0205 MILLER HALL","Gregg, Anthony","Main Campus"
-"1","ENGL","1101","3",50093,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,26,30,"01:00-01:50","M W F","0205 MILLER HALL","Gregg, Anthony","Main Campus"
-"1","ENGL","1101","4",49231,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,29,30,"02:00-02:50","M W F","0205 MILLER HALL","Gregg, Anthony","Main Campus"
-"1","ENGL","1101","5",50287,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,19,30,"03:00-03:50","M W F","0205 MILLER HALL","Gregg, Anthony","Main Campus"
-"1","ENGL","1101","6",49674,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,17,35,"08:00-09:15","T R","0212 MILLER HALL","Pitts, Berlethia","Main Campus"
-"1","ENGL","1101","7",49763,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,36,35,"09:30-10:45","T R","0212 MILLER HALL","Pitts, Berlethia","Main Campus"
-"1","ENGL","1101","8",49765,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,26,35,"12:30-01:45","T R","0212 MILLER HALL","Pitts, Berlethia","Main Campus"
-"1","ENGL","1101","9",49767,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,18,35,"02:00-03:15","T R","0212 MILLER HALL","Pitts, Berlethia","Main Campus"
-"1","ENGL","1101","11",50361,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,17,30,"09:30-10:45","T R","0205 MILLER HALL","Leeman, Catherine","Main Campus"
-"1","ENGL","1101","12",50362,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,11,30,"12:30-01:45","T R","0205 MILLER HALL","Leeman, Catherine","Main Campus"
-"1","ENGL","1101","13",50363,"COMPOSITION I","- No-cost:$0 required txtbk cost",3,15,30,"02:00-03:15","T R","0205 MILLER HALL","Leeman, Catherine","Main Campus"
-"1","ENGL","1102","1",48590,"COMPOSITION II","- $40 or under req txtbks cost",3,37,35,"09:00-09:50","M W F","0207 MILLER HALL","Wang, Zhigang","Main Campus"
-"1","ENGL","1102","2",48591,"COMPOSITION II","- $40 or under req txtbks cost",3,36,35,"10:00-10:50","M W F","0207 MILLER HALL","Wang, Zhigang","Main Campus"
-"1","ENGL","1102","3",48789,"COMPOSITION II","- $40 or under req txtbks cost",3,30,35,"02:00-02:50","M W F","0207 MILLER HALL","Wang, Zhigang","Main Campus"
-"1","ENGL","1102","4",49766,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,32,35,"03:00-03:50","M W F","0207 MILLER HALL","Wang, Zhigang","Main Campus"
-"1","ENGL","1102","5",49768,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,26,35,"08:00-08:50","M W F","0204 MILLER HALL","Ogden, Conswellor","Main Campus"
-"1","ENGL","1102","6",47265,"COMPOSITION II","- $40 or under req txtbks cost",3,25,35,"11:00-11:50","M W F","0204 MILLER HALL","Ogden, Conswellor","Main Campus"
-"1","ENGL","1102","7",49550,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,30,35,"12:00-12:50","M W F","0204 MILLER HALL","Ogden, Conswellor","Main Campus"
-"1","ENGL","1102","8",49551,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,30,35,"01:00-01:50","M W F","0204 MILLER HALL","Ogden, Conswellor","Main Campus"
-"1","ENGL","1102","9",50365,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,29,35,"02:00-02:50","M W F","0204 MILLER HALL","Ogden, Conswellor","Main Campus"
-"1","ENGL","1102","10",50367,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,20,35,"08:00-09:15","T R","0104 MILLER HALL","Warren, Asha","Main Campus"
-"1","ENGL","1102","11",50368,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,28,35,"09:30-10:45","T R","0104 MILLER HALL","Warren, Asha","Main Campus"
-"1","ENGL","1102","12",50369,"COMPOSITION II","- No-cost:$0 required txtbk cost",3,28,35,"12:30-01:45","T R","0104 MILLER HALL","Warren, Asha","Main Campus"
-"1","ENGL","1102H","WH1",50370,"HONORS COMPOSITION II","",3,10,25,"03:30-04:45","T R","0104 MILLER HALL","Warren, Asha","Main Campus"
-"1","ENGL","2111","WH1",50466,"WORLD LITERATURE","- No-cost:$0 required txtbk cost",3,43,35,"02:00-03:15","T R","0104 MILLER HALL","Warren, Asha","Main Campus"
-"1","ENGL","3343","W1",49875,"CONTEMPORARY AMERICAN LITERATU","",3,5,15,"","","","Anderson-Robinson, Nataysha","On-Line"
-"1","ENGL","3500","W1",50193,"GRAMMAR FOR TEACH & WRITERS","",3,6,20,"","","","Warren, Asha","On-Line"
-"1","ENGL","4520","W1",49876,"LIT. FOR THE MIDDLE GRADES","",3,5,15,"","","","Anderson-Robinson, Nataysha","On-Line"
-"1","ENGL","5023","W1",49906,"PRE-ADOLESCENT LITERATURE","",3,4,20,"","","","Forde', Nancy","On-Line"
-"1","EPSY","5513","W1",49261,"PRE-ADOLESCENT PSYCHOLOGY","",3,6,20,"","","","McMullen, Rebecca","On-Line"
-"1","FCSC","2833","W1",47324,"CONSUMER ECONOMICS","",3,15,35,"","","","Lawrence, Jimeca","On-Line"
-"1","FCSC","3872","W1",49335,"COMM INVOLVEMNT & VOL","",2,11,25,"","","","Torbert, Kena","Main Campus"
-"1","FCSC","3903","1",50509,"SUPERVISED FIELD EXPERIENCE","- No-cost:$0 required txtbk cost",1,3,2,"09:00-12:00","S","0108 MYERS HOME EC","Hollis, Francine","Main Campus"
-"1","FCSC","3913","1",47659,"HOSPITALITY & HOME MANAGEME","",3,5,12,"05:30-09:30","T R","HOME-EC MNGT HOUSE","Torbert, Kena","Main Campus"
-"1","FDNU","3803","W1",49568,"UNDERSTANDING NUTRITION","",3,6,20,"","","","Jeffery, Nancy","On-Line"
-"1","FDNU","4893","W1",49794,"MEDICAL NUTRITION THERAPY II","",3,6,20,"","","","Corbett, Bridgit","On-Line"
-"1","FDNU","4903","1",48476,"INSTITUTIONAL FOODS","",3,6,20,"09:00-09:50","M W","0209 MYERS HOME EC","Hollis, Francine","Main Campus"
-"1","FDNU","4903L","51",48477,"INSTITUTIONAL FOODS LAB","",0,6,20,"09:00-10:50","F","0119 MYERS HOME EC","Hollis, Francine","Main Campus"
-"1","FREN","1002","W1",48137,"ELEMENTARY FRENCH II","",3,10,25,"","","","Keita, Mamadou","On-Line"
-"1","FREN","2001","W1",49337,"INTERMEDIATE FRENCH I","",3,12,25,"","","","Keita, Mamadou","On-Line"
-"1","FVSU","100","1",47327,"INTRO TO UNIV","",1,43,50,"11:00-11:50","T R","0118 BOND ACADEMIC BLDG","Hutchins, Latrella","Main Campus"
-"1","FVSU","100","2",47422,"INTRO TO UNIV (ORI)/AGRI","",1,58,50,"11:00-11:50","T R","0105 TABOR AGR ACAD","Johnson, Allison","Main Campus"
-"1","FVSU","100","3",47423,"INTRO TO UNIV","",1,48,50,"11:00-11:50","T R","MILLER HALL","Gregg, Heidi","Main Campus"
-"1","FVSU","100","4",47386,"INTRO TO UNIV","",1,38,35,"11:00-11:50","T R","0123 BOND ACADEMIC BLDG","Roberson, Missie","Main Campus"
-"1","FVSU","100","5",49377,"INTRO TO UNIV","",1,29,30,"11:00-11:50","T R","0216 BOND ACADEMIC BLDG","Powell, Jocelyn","Main Campus"
-"1","FVSU","100","6",50388,"INTRO TO UNIV","",1,77,80,"11:00-11:50","T R","0110 COMPUTER TECHNOLOGY/MATHE","Williams, Shelisha","Main Campus"
-"1","FVSU","100","W1",47421,"INTRO TO UNIV/ ONLINE","",1,46,50,"","","","Williams, Shelisha","On-Line"
-"1","FVSU","500","W5E",49522,"GRADUATE STUDIES ORIENTATION","",0,7,10,"04:00-05:15","W","","McMullen, Rebecca","On-Line"
-"1","GEOG","1231","1",47403,"HUMAN GEOGRAPHY","",3,32,35,"09:30-10:45","T R","0215 BOND ACADEMIC BLDG","Osondu, Iheanyichukwu","Main Campus"
-"1","GEOG","1231","2",47535,"HUMAN GEOGRAPHY","",3,32,35,"12:30-01:45","T R","0215 BOND ACADEMIC BLDG","Osondu, Iheanyichukwu","Main Campus"
-"1","GEOG","1231","3",48807,"HUMAN GEOGRAPHY","",3,27,35,"02:00-03:15","T R","0215 BOND ACADEMIC BLDG","Osondu, Iheanyichukwu","Main Campus"
-"1","GEOG","1231","4",49786,"HUMAN GEOGRAPHY","",3,18,35,"03:30-04:45","T R","0215 BOND ACADEMIC BLDG","Osondu, Iheanyichukwu","Main Campus"
-"1","GEOL","1122","1",50402,"EARTH HISTORY","",4,6,10,"09:30-10:45","T R","0220 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","GEOL","1122L","51",50403,"EARTH HIST-LAB","",0,6,10,"07:00-08:50","W","0212 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","GEOL","3104","W1",48053,"CLIMATE CHANGE:EARTH IN FUTURE","",4,4,20,"","","","Kar, Adityamoy","On-Line"
-"1","GEOL","3104L","51",48054,"CLIMATE CHANGE: ERTH & FUT LAB","",0,3,20,"03:15-05:55","W","0220 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","GEOL","4202","1",50053,"APP OF COMPUT MTHDS IN SCI/RES","",2,1,10,"05:00-06:40","R","0220 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","GEOL","5203","0",49919,"ENVIRONMENTAL GEOLOGY","",3,4,10,"05:00-07:30","T","0212 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","GERO","3030","W1",49269,"MENTAL AND WELL-BEING & AGING","",3,24,25,"","","","Chatmon, Roddrick","On-Line"
-"1","HIST","1111","WH",49528,"SURV WRLD CIV ERLY MODERN","- No-cost:$0 required txtbk cost",3,45,40,"09:00-09:50","M W F","0118 BOND ACADEMIC BLDG","Taylor, Deitrah","Main Campus"
-"1","HIST","1111","WH2",50406,"SURV WRLD CIV ERLY MODERN","- No-cost:$0 required txtbk cost",3,50,40,"10:00-10:50","M W F","0118 BOND ACADEMIC BLDG","Taylor, Deitrah","Main Campus"
-"1","HIST","1112","WH",47408,"SRV WRLD CIV FR MODRN TIME","",3,45,40,"11:00-11:50","M W F","0118 BOND ACADEMIC BLDG","Taylor, Deitrah","Main Campus"
-"1","HIST","1112","WH2",50407,"SRV WRLD CIV FR MODRN TIME","",3,47,40,"01:00-01:50","M W F","0222 BOND ACADEMIC BLDG","Taylor, Deitrah","Main Campus"
-"1","HIST","1112","WH3",50408,"SRV WRLD CIV FR MODRN TIME","",3,43,40,"06:00-07:15","T R","0102 MILLER HALL","Johnson, Raphael","Main Campus"
-"1","HIST","2111","1",47506,"US HIS TO PST CV WAR","",3,35,40,"09:00-09:50","M W F","0117 BOND ACADEMIC BLDG","Smith, Mark","Main Campus"
-"1","HIST","2111","2",47277,"US HIS TO PST CV WAR","",3,39,40,"10:00-10:50","M W F","0117 BOND ACADEMIC BLDG","Smith, Mark","Main Campus"
-"1","HIST","2111","3",50409,"US HIS TO PST CV WAR","",3,41,40,"01:00-01:50","M W F","0117 BOND ACADEMIC BLDG","Smith, Mark","Main Campus"
-"1","HIST","2112","WH",47278,"US-PST CV WR TO PRESENT","",3,40,40,"09:30-10:45","T R","0117 BOND ACADEMIC BLDG","Daniely, Dayna","Main Campus"
-"1","HIST","2112","WH2",48347,"US-PST CV WR TO PRESENT","",3,44,40,"12:30-01:45","T R","0117 BOND ACADEMIC BLDG","Daniely, Dayna","Main Campus"
-"1","HIST","2112","WH3",48813,"US-PST CV WR TO PRESENT","",3,45,40,"02:00-03:15","T R","0117 BOND ACADEMIC BLDG","Daniely, Dayna","Main Campus"
-"1","HIST","2112","WH4",50502,"US-PST CV WR TO PRESENT","- No-cost:$0 required txtbk cost",3,17,30,"06:00-07:15","T R","0118 BOND ACADEMIC BLDG","Boone, Matthew","Main Campus"
-"1","HIST","6975","W1",50214,"SPECIAL TOPICS IN HISTORY","",3,4,25,"","","","Stephens, Walter","On-Line"
-"1","HLTH","2121","1",49241,"HEALTHFUL LIVING","",2,5,25,"11:00-11:50","T R","0348 HPE BUILDING","Riley, Clarence","Main Campus"
-"1","HLTH","3130","1",49865,"SUBSTANCE USE & ABUSE","",3,9,50,"09:00-10:30","T R","0348 HPE BUILDING","Riley, Clarence","Main Campus"
-"1","HORT","3852","1",50208,"ORG/CONV VEG & FRUIT GARDEN","",3,4,20,"12:30-01:45","T R","0114 TABOR AGR ACAD","Brown, James","Main Campus"
-"1","HORT","3852L","51",50209,"ORG/CONV VEG & FRUIT GAR LAB","",0,4,20,"03:30-05:20","T","0114 TABOR AGR ACAD","Brown, James","Main Campus"
-"1","HORT","4813","1",50459,"NURSERY MANAGEMENT","",3,4,20,"12:30-01:45","T R","TABOR AGR ACAD","Gosukonda, Ramana","Main Campus"
-"1","HORT","4813L","51",50460,"NURSERY MANAGEMENT LAB","",0,4,20,"03:30-05:20","F","0114 TABOR AGR ACAD","Gosukonda, Ramana","Main Campus"
-"1","HPER","2000","1",49866,"DEPARTMENTAL SEMINAR","",0,4,10,"07:00-07:50","F","0350 HPE BUILDING","Hammond, Korrey","Main Campus"
-"1","HPER","3131","1",50062,"MEASUREMENT & EVAL IN PHYS. ED","",3,2,20,"06:00-07:30","M W","HPE BUILDING","Hammond, Korrey","Main Campus"
-"1","HPER","3902","1",49080,"TEACHING PRACTICUM IN HPE II","",2,4,10,"10:00-10:50","M W","HPE BUILDING","Green, Gregory","Main Campus"
-"1","HPER","4431","1",49081,"INSTRUCTIONAL DESIGN IN HPE II","",3,6,10,"01:00-02:20","M W","HPE BUILDING","Green, Gregory","Main Campus"
-"1","HPER","4500","1",49082,"PHYSIOLOGY OF EXERCISE","",3,9,10,"05:00-07:30","T R","HPE BUILDING","Hammond, Korrey","Main Campus"
-"1","HPER","4617","1",49867,"SR. SEMINAR IN HPE","",1,1,5,"05:00-06:00","M","HPE BUILDING","Green, Gregory","Main Campus"
-"1","HPER","4895","WH",49868,"DIRECTED TEACHING/SEMINAR","",12,0,10,"08:00-04:00","MTWRF","","Green, Gregory","Main Campus"
-"1","ICDV","2813","1",47649,"LIFE SPAN DEV/CON INFULN","",3,9,30,"12:30-01:45","T R","0205 MYERS HOME EC","Miller, Pamela","Main Campus"
-"1","ICDV","3842","1",47652,"PARENT CHILD RELATIONS","",2,5,30,"06:00-07:50","W","0205 MYERS HOME EC","Chaney, Terralon","Main Campus"
-"1","ICDV","4909","1",47656,"DIR OBSERV/SUPERVISION","",9,2,18,"08:00-04:50","MTWRF","FLD EXPER","Hollis, Francine","Main Campus"
-"1","MAED","5030","W1",49902,"Geometry","",3,1,15,"","","","Jefferson, Jessica","On-Line"
-"1","MATH","998","1",49246,"SUPPORT FOR MATH MODELING","- No-cost:$0 required txtbk cost",2,15,30,"12:00-12:50","M W","0110 MILLER HALL","Alderman, Tasha","Main Campus"
-"1","MATH","998","2",48142,"SUPPORT FOR MATH MODELING","- No-cost:$0 required txtbk cost",2,13,0,"01:00-01:50","M W","0110 MILLER HALL","Harris, Linda","Main Campus"
-"1","MATH","998","3",48143,"SUPPORT FOR MATH MODELING","- No-cost:$0 required txtbk cost",2,16,20,"12:00-12:50","T R","0110 MILLER HALL","Wilcox, Council","Main Campus"
-"1","MATH","998","W1",49987,"SUPPORT FOR MATH MODELING","- No-cost:$0 required txtbk cost",2,15,25,"","","","Alderman, Tasha","On-Line"
-"1","MATH","999","1",49303,"SUPPORT FOR COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",2,12,25,"12:00-12:50","T R","0321 COMPUTER TECHNOLOGY/MATHE","Tragoonsirisak, Patcharin","Main Campus"
-"1","MATH","999","2",48871,"SUPPORT FOR COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",2,12,25,"10:00-10:50","M W","0321 COMPUTER TECHNOLOGY/MATHE","Kunwar, Ishwari","Main Campus"
-"1","MATH","999","W1",50055,"SUPPORT FOR COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",2,14,20,"","","","Tragoonsirisak, Patcharin","On-Line"
-"1","MATH","1101","1",47495,"MATHEMATICAL MODELING","",3,26,40,"09:00-09:50","M W F","0301 COMPUTER TECHNOLOGY/MATHE","Grant, Shanah","Main Campus"
-"1","MATH","1101","2",48781,"MATHEMATICAL MODELING","",3,22,0,"09:30-10:45","T R","0110 MILLER HALL","Wilcox, Council","Main Campus"
-"1","MATH","1101","3",48011,"MATHEMATICAL MODELING","",3,22,25,"03:30-04:45","T R","0110 MILLER HALL","Alderman, Tasha","Main Campus"
-"1","MATH","1101","4",49245,"MATHEMATICAL MODELING","",3,18,20,"02:00-03:15","M W","0108 MILLER HALL","Harris, Linda","Main Campus"
-"1","MATH","1101","5",48105,"MATHEMATICAL MODELING","",3,15,20,"12:30-01:45","T R","0108 MILLER HALL","Alderman, Tasha","Main Campus"
-"1","MATH","1101","W1",49988,"MATHEMATICAL MODELING","",3,31,0,"","","","Alderman, Tasha","On-Line"
-"1","MATH","1111","1",49306,"COLLEGE ALGEBRA","- Hope & Zell Miller STEM Course",3,38,40,"11:00-11:50","M W F","0302 COMPUTER TECHNOLOGY/MATHE","Hamdan, Mustafa","Main Campus"
-"1","MATH","1111","2",47297,"COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",3,38,40,"02:00-03:15","T R","0201 COMPUTER TECHNOLOGY/MATHE","Cartwright, Samuel","Main Campus"
-"1","MATH","1111","3",49307,"COLLEGE ALGEBRA","- Hope & Zell Miller STEM Course",3,38,40,"09:30-10:45","T R","0301 COMPUTER TECHNOLOGY/MATHE","Burell, Bhavana","Main Campus"
-"1","MATH","1111","4",47406,"COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",3,32,40,"01:00-01:50","M W F","0301 COMPUTER TECHNOLOGY/MATHE","Grant, Shanah","Main Campus"
-"1","MATH","1111","5",47432,"COLLEGE ALGEBRA","- No-cost:$0 required txtbk cost",3,32,40,"12:30-01:45","T R","0301 COMPUTER TECHNOLOGY/MATHE","Burell, Bhavana","Main Campus"
-"1","MATH","1111","W1",50056,"COLLEGE ALGEBRA","- Hope & Zell Miller STEM Course",3,50,35,"","","","Tragoonsirisak, Patcharin","On-Line"
-"1","MATH","1112","1",47299,"TRIGONOMETRY","",3,33,40,"08:00-09:15","T R","0204 COMPUTER TECHNOLOGY/MATHE","Burell, Bhavana","Main Campus"
-"1","MATH","1112","2",48429,"TRIGONOMETRY","- No-cost:$0 required txtbk cost",3,39,40,"02:00-03:15","M W","0201 COMPUTER TECHNOLOGY/MATHE","Aberra, Dawitt","Main Campus"
-"1","MATH","1113","1",47433,"PRECALCULUS","",4,42,40,"12:00-12:50","MTWR","0204 COMPUTER TECHNOLOGY/MATHE","Cartwright, Samuel","Main Campus"
-"1","MATH","1113","2",50213,"PRECALCULUS","- Hope & Zell Miller STEM Course",4,35,40,"02:00-02:50","MTWR","0301 COMPUTER TECHNOLOGY/MATHE","Burell, Bhavana","Main Campus"
-"1","MATH","1113H","WH1",50449,"HONORS PRECALCULUS","",4,0,40,"01:00-01:50","MTWR","0204 COMPUTER TECHNOLOGY/MATHE","Tragoonsirisak, Patcharin","Main Campus"
-"1","MATH","1150","1",47862,"CALCULUS FOR BUS. & ECONOMICS","",4,35,40,"10:00-10:50","MTWR","0304 COMPUTER TECHNOLOGY/MATHE","Cartwright, Samuel","Main Campus"
-"1","MATH","1154","1",47300,"CALCULUS I","",4,45,40,"09:00-09:50","MTWR","0304 COMPUTER TECHNOLOGY/MATHE","Cartwright, Samuel","Main Campus"
-"1","MATH","1154","2",47301,"CALCULUS I","",4,42,40,"04:00-04:50","MTWR","0302 COMPUTER TECHNOLOGY/MATHE","Hamdan, Mustafa","Main Campus"
-"1","MATH","1401","1",49071,"ELEMENTARY STATISTICS","- Hope & Zell Miller STEM Course",3,44,40,"02:00-03:15","T R","0202 COMPUTER TECHNOLOGY/MATHE","Aberra, Dawitt","Main Campus"
-"1","MATH","2164","1",47598,"CALCULUS II","",4,19,40,"01:00-01:50","MTWR","0304 COMPUTER TECHNOLOGY/MATHE","Kunwar, Ishwari","Main Campus"
-"1","MATH","2174","1",50381,"CALCULUS III","- Hope & Zell Miller STEM Course",4,10,40,"02:00-02:50","MTWR","0204 COMPUTER TECHNOLOGY/MATHE","Kunwar, Ishwari","Main Campus"
-"1","MATH","2203","1",47629,"INTRO LINEAR ALGEBRA","",3,25,40,"03:30-04:45","T R","0303 COMPUTER TECHNOLOGY/MATHE","Aberra, Dawitt","Main Campus"
-"1","MATH","2253","1",47334,"DISCRETE MATH","",3,33,40,"11:00-11:50","M W F","0304 COMPUTER TECHNOLOGY/MATHE","Grant, Shanah","Main Campus"
-"1","MATH","3100","W1",50506,"DISCRETE MATH & STATISTICS","",3,4,20,"","","","Jefferson, Jessica","Main Campus"
-"1","MATH","3273","W1",50511,"THEORY OF NUMBERS","",3,1,1,"","","","Zhu, J.","On-Line"
-"1","MATH","3323","1",47303,"COLLEGE GEOMETRY","",3,12,30,"09:00-09:50","M W F","0303 COMPUTER TECHNOLOGY/MATHE","Zhu, J.","Main Campus"
-"1","MATH","3400","WH",50465,"GEOMETRY FOR K-8 TEACHERS","",3,7,20,"05:30-08:30","W","0102 HUBBARD EDUCATION","Smith, Christy","On-Line"
-"1","MATH","3510","W1",50469,"ALGEBRAIC CONCEPTS","",3,9,25,"","","HUBBARD EDUCATION","Jefferson, Jessica","Main Campus"
-"1","MATH","4143","1",47560,"COMPLEX VARIABLES","",3,9,30,"12:30-01:45","T R","0302 COMPUTER TECHNOLOGY/MATHE","Hamdan, Mustafa","Main Campus"
-"1","MATH","4243","1",47304,"LINEAR ALGEBRA II","",3,7,30,"09:30-10:45","T R","0303 COMPUTER TECHNOLOGY/MATHE","Kunwar, Ishwari","Main Campus"
-"1","MATH","4343","1",47305,"ADVANCED CALCULUS","",3,5,30,"11:00-11:50","M W F","0303 COMPUTER TECHNOLOGY/MATHE","Zhu, J.","Main Campus"
-"1","MATH","4363","1",48869,"NUMEMRICAL METHODS","",3,5,30,"12:00-12:50","M W F","0303 COMPUTER TECHNOLOGY/MATHE","Zhu, J.","Main Campus"
-"1","MATH","4390","1",48254,"MATHEMATICS REVIEW","",2,5,30,"02:00-02:50","M W","0302 COMPUTER TECHNOLOGY/MATHE","Tragoonsirisak, Patcharin","Main Campus"
-"1","MCMM","2313","1",50001,"INTRODUCTION TO BROADCASTING","",3,5,25,"01:00-01:50","M W F","BISHOP MASS COMM","Yorke, Justice","Main Campus"
-"1","MCMM","3123","1",50413,"MASS MEDIA LAW & ETHICS","- No-cost:$0 required txtbk cost",3,22,25,"09:00-09:50","M W F","BISHOP MASS COMM","Yorke, Justice","Main Campus"
-"1","MCMM","3125","1",47614,"ELECTRONIC MEDIA","",3,17,25,"05:00-07:50","M","0203 MILLER HALL","Cummings, Felicia","Main Campus"
-"1","MCMM","3143","WH1",48918,"WRITING FOR DIGITAL MEDIA","- No-cost:$0 required txtbk cost",3,8,20,"02:00-02:50","M W F","0203 MILLER HALL","Cummings, Felicia","Main Campus"
-"1","MCMM","3333","1",50415,"VIDEO EDITING I","",3,4,20,"05:00-07:50","T","BISHOP MASS COMM","Rashidi, Kuumba","Main Campus"
-"1","MCMM","4163","1",50417,"PHOTOJOURNALISM","- No-cost:$0 required txtbk cost",3,14,25,"12:30-01:45","T R","0210 MILLER HALL","Asad, Tauheedah","Main Campus"
-"1","MCMM","4193","1",50414,"TV PRODUCTION I","- No-cost:$0 required txtbk cost",3,3,20,"02:00-02:50","M W F","BISHOP MASS COMM","Yorke, Justice","Main Campus"
-"1","MCMM","4243","1",50004,"MULTI-MEDIA PRESENTATIONS","",3,3,25,"11:00-11:50","M W F","0203 MILLER HALL","Cummings, Felicia","Main Campus"
-"1","MCMM","4273","1",50000,"CORPORATE COMMUNICATIONS","- No-cost:$0 required txtbk cost",3,6,25,"09:30-10:45","T R","0210 MILLER HALL","Asad, Tauheedah","Main Campus"
-"1","MCMM","4283","1",49844,"MASS COMMUNICATION RESEARCH","- No-cost:$0 required txtbk cost",3,13,25,"08:00-08:50","M W F","BISHOP MASS COMM","Yorke, Justice","Main Campus"
-"1","MCMM","4293","1",49060,"PERFORMANCE IN MEDIA","- No-cost:$0 required txtbk cost",3,3,25,"02:00-03:15","T R","MILLER HALL","Asad, Tauheedah","Main Campus"
-"1","MCMM","4323","1",49722,"INTERNSHIP","- No-cost:$0 required txtbk cost",3,1,25,"06:00-09:00","T","0203 MILLER HALL","Cummings, Felicia","Main Campus"
-"1","MCMM","4361","1",50003,"CAPSTONE IN MASS COMMUNICATION","",3,7,25,"03:30-04:45","T R","0210 MILLER HALL","Asad, Tauheedah","Main Campus"
-"1","MILS","1120","1",47308,"BASIC LEADERSHIP","",1,13,25,"09:00-09:50","M","0309 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","1120","2",47309,"BASIC LEADERSHIP","",1,7,25,"10:00-10:50","M","0309 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","1120","3",47310,"BASIC LEADERSHIP","",1,10,25,"11:00-11:50","M","0309 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","1120L","51",47446,"INTRO MIL LEADSHP-LAB","",0,24,45,"03:30-05:30","R","0305 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","1120L","52",47447,"INTRO MIL LEADSHP-LAB","",0,5,15,"09:00-11:00","S","0305 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","2220","1",47311,"LEADERSHIP & TEAMWORK","",2,10,25,"01:00-01:50","M W","0309 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","2220","2",47339,"LEADERSHIP & TEAMWORK","",2,1,15,"02:00-02:50","M W","0309 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","2220L","51",47448,"LEADERSHIP & TEAMWORK LAB","",0,9,30,"03:30-05:30","R","0305 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","2220L","52",47449,"LEADERSHIP & TEAMWORK LAB","",0,1,15,"09:00-11:00","S","0305 HUBBARD EDUCATION","Willis, Simeon","Main Campus"
-"1","MILS","2920","1",47824,"LEADERSHIP","",2,2,10,"03:00-04:50","M W","0309 HUBBARD EDUCATION","White, Darius","Main Campus"
-"1","MILS","2920L","51",47905,"LEADERSHIP LAB","",0,2,10,"03:30-05:30","R","0309 HUBBARD EDUCATION","White, Darius","Main Campus"
-"1","MILS","2920L","52",48432,"LEADERSHIP LAB","",0,0,10,"09:00-11:00","S","0309 HUBBARD EDUCATION","White, Darius","Main Campus"
-"1","MILS","3320","1",47338,"LEADERSHIP AND ETHICS","",3,1,25,"09:30-10:45","T R","0305 HUBBARD EDUCATION","Anderson, Jonathan","Main Campus"
-"1","MILS","3320","2",48430,"LEADERSHIP AND ETHICS","",3,7,25,"12:30-01:45","T R","0305 HUBBARD EDUCATION","Anderson, Jonathan","Main Campus"
-"1","MILS","3320L","51",47450,"LEADERSHIP AND ETHICS LAB","",0,7,30,"03:30-05:30","R","0308 HUBBARD EDUCATION","Anderson, Jonathan","Main Campus"
-"1","MILS","3320L","52",47520,"LEADERSHIP AND ETHICS LAB","",0,1,15,"09:00-11:00","S","0308 HUBBARD EDUCATION","Anderson, Jonathan","Main Campus"
-"1","MILS","4420","1",47312,"OFFICERSHIP","",1,8,25,"09:30-10:45","T R","0302 HUBBARD EDUCATION","Morgan, Nicholas","Main Campus"
-"1","MILS","4420","2",48431,"OFFICERSHIP","",1,3,25,"12:30-01:45","T R","0302 HUBBARD EDUCATION","Morgan, Nicholas","Main Campus"
-"1","MILS","4420L","51",47451,"OFFICERSHIP LAB","",0,10,25,"03:30-05:30","R","0302 HUBBARD EDUCATION","Morgan, Nicholas","Main Campus"
-"1","MILS","4420L","52",47452,"OFFICERSHIP LAB","",0,1,25,"09:00-11:00","S","0302 HUBBARD EDUCATION","Morgan, Nicholas","Main Campus"
-"1","MILS","4920","1",50470,"LEADERSHIP/ARMY VALUES","",3,3,10,"02:30-03:45","M W","0305 HUBBARD EDUCATION","White, Darius","Main Campus"
-"1","MKTG","3103","WH",47561,"PRIN OF MARKETING","",3,36,30,"09:30-10:45","M W","0204 COMPUTER TECHNOLOGY/MATHE","Barrett, Stacie","Main Campus"
-"1","MKTG","3133","WH",48800,"PRIN OF RETAILING","",3,24,30,"11:00-12:15","M W","0202 COMPUTER TECHNOLOGY/MATHE","Barrett, Stacie","Main Campus"
-"1","MKTG","4103","WH",50436,"MARKET COMMUNICATION","",3,10,30,"03:30-04:45","M W","0319 COMPUTER TECHNOLOGY/MATHE","Barrett, Stacie","Main Campus"
-"1","MKTG","4123","WH",47571,"INTERNATIONAL MARKETING","",3,16,30,"02:00-03:15","M W","0304 COMPUTER TECHNOLOGY/MATHE","Barrett, Stacie","Main Campus"
-"1","MKTG","4253","W1",50292,"MARKETING MANAGEMENT","",3,15,30,"","","","Barrett, Stacie","On-Line"
-"1","MLHC","5770","WH",49851,"SUPERVISED PRACTICUM","",3,4,8,"06:00-09:00","M","FVSU - Warner Robins Si","Holyfield-Moss, Bridget","FVSU-Warner Robins Campus"
-"1","MLHC","5772","WH",49853,"INTERNSHIP I","",3,0,8,"06:00-09:00","R","FVSU - Warner Robins Si","Fast, Juanita","FVSU-Warner Robins Campus"
-"1","MLHC","5782","WH",49854,"INTERNSHIP II","",3,3,8,"06:00-09:00","R","FVSU - Warner Robins Si","Fast, Juanita","FVSU-Warner Robins Campus"
-"1","MNGT","3103","WH",47415,"PRINCIPLES OF MANAGEMENT","",3,31,30,"09:30-10:45","T R","0202 COMPUTER TECHNOLOGY/MATHE","Haastrup, Janita","Main Campus"
-"1","MNGT","3153","WH",48434,"ORGANIZATIONAL THEORY/BEHAVIOR","",3,8,30,"02:00-03:15","T R","0304 COMPUTER TECHNOLOGY/MATHE","Haastrup, Janita","Main Campus"
-"1","MNGT","3203","WH",50437,"HUMAN RESOURCE MANAGEMENT","",3,13,30,"12:30-01:45","T R","0202 COMPUTER TECHNOLOGY/MATHE","Haastrup, Janita","Main Campus"
-"1","MNGT","3303","WH",47797,"OPERATION/PRODUCTION MNGT","",3,17,30,"05:30-08:15","T","0301 COMPUTER TECHNOLOGY/MATHE","Cornelious, Kasie","Main Campus"
-"1","MNGT","4353","W1",47959,"SMALL BUSINESS MANAGEMENT","",3,30,30,"","","","Haastrup, Janita","On-Line"
-"1","MNGT","4383","WH",47528,"INTERNATIONAL MANAGEMENT","",3,13,30,"11:00-12:15","M W","0319 COMPUTER TECHNOLOGY/MATHE","Drew, Michelle","Main Campus"
-"1","MNGT","4393","W1",47564,"STRATEGIC MNGT","",3,22,30,"","","","Drew, Michelle","On-Line"
-"1","MPAC","5001","W1",50486,"FOUNDATIONS OF PUBLIC MNGT","",3,4,20,"","","","Green, Johnny","On-Line"
-"1","MPAC","5002","W1",50487,"HR MNGT IN PUBLIC SECTOR","",3,5,20,"","","","Green, Johnny","On-Line"
-"1","MPAC","5003","W1",50488,"LDS & ORGANIZATIONAL BEHAVIOR","",3,5,20,"","","","Green, Johnny","On-Line"
-"1","MUSC","1000","1",48852,"MUSIC APPRECIATION","",3,35,35,"09:00-09:50","M W F","0203 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","1000","2",48853,"MUSIC APPRECIATION","",3,36,35,"10:00-10:50","M W F","0203 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","1013","1",50191,"MUSIC THEORY II","",3,2,15,"04:00-04:50","M W F","","Thompson, Jonathan","Main Campus"
-"1","MUSC","1141","1",50015,"MAJOR APPLIED MUSIC","- No-cost:$0 required txtbk cost",1,5,5,"07:00-07:50","F","0101 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","1331","1",49559,"MUSIC ENSEMBLE","- No-cost:$0 required txtbk cost",1,11,40,"07:00-08:00","MTWR","0102 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","1331","5",48000,"CONCERT BAND","",1,32,35,"05:00-07:00","M WR","0100 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","1331","7",48845,"MUSIC ENSEMBLE","- No-cost:$0 required txtbk cost",1,3,20,"06:00-07:00","M W","0103 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","2013","3",50428,"MUSIC THEORY IV","",3,4,15,"02:00-02:50","T","0200 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","2141","1",50016,"MAJOR APPLIED MUSIC","- No-cost:$0 required txtbk cost",1,3,5,"08:00-09:00","F","0101 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","2314","1",50477,"CONDUCTING FUNDAMENTALS","- No-cost:$0 required txtbk cost",1,4,25,"09:00-09:50","M","PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","2331","1",49561,"MUSIC ENSEMBLE","- No-cost:$0 required txtbk cost",1,5,40,"07:00-08:00","MTWR","0102 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","2331","5",48005,"MUSIC ENSEMBLE CONCERT BAND","",1,10,35,"05:00-06:00","M WR","0100 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","2362","0",49567,"CLASS PIANO I","- No-cost:$0 required txtbk cost",1,2,16,"11:00-11:50","M","0201 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","3000","1",49452,"MUSIC BUSINESS PRACTICES","- No-cost:$0 required txtbk cost",3,21,15,"09:30-10:45","T R","0200 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","3294","1",47504,"JAZZ HISTORY","",2,2,35,"01:00-02:00","T R","0200 PATTON ACADEMIC","Nicholson, Donnie","Main Campus"
-"1","MUSC","3331","1",49562,"MUSIC ENSEMBLE","- No-cost:$0 required txtbk cost",1,5,40,"07:00-08:00","MTWR","0102 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","3331","5",48002,"MUSIC ENSEMBLE CONCERT BAND","",1,8,35,"05:00-07:00","M WR","0100 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4003","1",50476,"MUSIC HISTORY & LIT III","- No-cost:$0 required txtbk cost",2,5,30,"03:00-03:50","M W","0211 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4141","1",50018,"MAJOR APPLIED MUSIC","- No-cost:$0 required txtbk cost",1,2,5,"12:00-01:00","F","0101 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4262","1",50427,"FORM AND ANALYSIS","",2,5,15,"03:00-03:50","T R","0200 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4331","1",49563,"MUSIC ENSEMBLE","- No-cost:$0 required txtbk cost",1,5,40,"07:00-08:00","T R","0102 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4331","5",48009,"MUSIC ENSEMBLE CONCERT BAND","",1,1,35,"05:00-07:00","M WR","0100 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4797","1",50019,"MUSIC SEMINAR","",2,4,15,"02:00-02:50","M W","0200 PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","MUSC","4798","0",50491,"SENIOR RECITAL","",3,5,25,"04:00-07:00","R","PATTON ACADEMIC","Thompson, Jonathan","Main Campus"
-"1","NURS","3100K","1",50125,"CON.PSYCHIATRIC MH NURSING","",5,16,40,"09:00-11:30","F","0108 MYERS HOME EC","Lowe, Latonya","Main Campus"
-"1","NURS","3100L","1",50126,"CON.PSYCH MH NURSING LAB","",0,16,40,"06:30-12:30","M","0108 MYERS HOME EC","Lowe, Latonya","Main Campus"
-"1","NURS","3110K","1",50123,"ADLT NURS & HLTH DISPARITIES i","",7,16,40,"08:00-11:20","T","0108 MYERS HOME EC","Lowe, Latonya","Main Campus"
-"1","NURS","3110L","1",50124,"ADLT NURS & HLTH DISPAR LAB","",0,16,40,"06:30-04:00","W","","Lowe, Latonya","Main Campus"
-"1","NURS","3120","1",50127,"RESEARCH METHODS IN NURSING","",3,16,40,"12:30-03:00","T","0108 MYERS HOME EC","Lowe, Latonya","Main Campus"
-"1","NURS","4100","1",50450,"NURSE AS A LEADER","",3,6,6,"02:30-05:00","W","","May, Kimberly","Main Campus"
-"1","NURS","4110K","1",50451,"NURSING CARE OF CHILDREN","",4,6,6,"12:00-02:00","W","","May, Kimberly","Main Campus"
-"1","NURS","4110L","0",50453,"NURSING CARE OF CHILDREN LAB","",0,6,6,"07:00-07:00","T","","May, Kimberly","Off Campus"
-"1","NURS","4120K","1",50452,"ENTRY INTO NURSING PRACTICE","",8,6,6,"08:00-10:30","W","","Greene, Lawanda","Main Campus"
-"1","NURS","4120L","1",50454,"ENTRY INTO NURS PRACTICE LAB","",0,6,6,"","WRF","","Greene, Lawanda","Off Campus"
-"1","PBHL","5103","WH",49802,"ENVIRONMENTAL HEALTH","",3,7,30,"06:00-09:00","M","ONEAL VET TECH BLD","Wesey, Sunny","Main Campus"
-"1","PBHL","5113","WH",50390,"ENVIRONMENTAL POLLUTION","",3,8,30,"06:00-09:00","T","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","PBHL","5133","WH",49893,"NUTRI AGRONOMICS /FOOD CULTURE","",3,3,30,"06:00-09:00","W","ONEAL VET TECH BLD","Sharif-Amanyi, Hamidah","Main Campus"
-"1","PBHL","5183","WH",50389,"ENVIRONMENTAL LAW","",3,9,30,"06:00-09:00","T","ONEAL VET TECH BLD","Wesey, Sunny","Main Campus"
-"1","PBHL","5193","WH",49806,"INDUSTRIAL HLTH & HAZARD MNGT","- No-cost:$0 required txtbk cost",3,8,30,"06:00-09:00","W","ONEAL VET TECH BLD","Wesey, Sunny","Main Campus"
-"1","PBHL","5200","WH",50386,"HLTH BEHAVIOR/HLTH PROMOTION","",3,6,30,"06:00-09:00","M","ONEAL VET TECH BLD","Sharif-Amanyi, Hamidah","Main Campus"
-"1","PBHL","5223","WH",50387,"OCCUPATION SFTY & EPIDEMIOLOGY","",3,2,30,"06:00-09:00","T","ONEAL VET TECH BLD","Sharif-Amanyi, Hamidah","Main Campus"
-"1","PBHL","5324","WH",49810,"ZOONOSES OF ANIMAL & HUMAN POP","- No-cost:$0 required txtbk cost",3,4,30,"06:00-09:00","M","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","PBHL","5850","WH",49808,"FIELD EXPERIENCE","- No-cost:$0 required txtbk cost",1,3,30,"05:00-06:00","R","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","PBHL","5999","WH",49809,"THESIS/RESEARCH","- No-cost:$0 required txtbk cost",1,4,30,"07:00-08:00","R","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","PEDW","1402","1",47251,"FITS/LIFESTY ASSESSES","",1,45,50,"09:00-09:50","M W","0348 HPE BUILDING","Hardison, Tiffany","Main Campus"
-"1","PEDW","1402","2",48623,"FITS/LIFESTY ASSESSES","- No-cost:$0 required txtbk cost",1,44,50,"10:00-10:50","M W","0348 HPE BUILDING","Hardison, Tiffany","Main Campus"
-"1","PEDW","1402","3",49864,"FITS/LIFESTY ASSESSES","",1,33,50,"01:30-02:20","T R","0344 HPE BUILDING","Hardison, Tiffany","Main Campus"
-"1","PEDW","1410","1",48624,"BEGINNING SWIMMING","- No-cost:$0 required txtbk cost",1,17,25,"05:00-06:00","F","0350 HPE BUILDING","Hammond, Korrey","Main Campus"
-"1","PEDW","1444","1",47425,"WALKING/JOGGING","",1,49,50,"06:00-06:50","M W","HPE BUILDING","Hardison, Tiffany","Main Campus"
-"1","PEDW","1631","1",49238,"BASIC WEIGHT TRAINING","",1,51,50,"05:00-05:50","M W","0352 HPE BUILDING","Hammond, Korrey","Main Campus"
-"1","PEDW","1771","1",48897,"RHYTHMIC AEROBICS","- No-cost:$0 required txtbk cost",1,22,50,"06:00-06:50","T R","0344 HPE BUILDING","Hardison, Tiffany","Main Campus"
-"1","PEDW","2522","1",48569,"PERSON AND COMM HLTH","",2,52,50,"11:00-11:50","M W","0348 HPE BUILDING","Riley, Clarence","Main Campus"
-"1","PEDW","2522","W1",48475,"PERSON AND COMM HLTH","",2,63,50,"","","","Riley, Clarence","On-Line"
-"1","PEDW","2522","W2",49236,"PERSON AND COMM HLTH","",2,65,50,"","","","Riley, Clarence","On-Line"
-"1","PHIL","2010","WH1",49552,"INTRO TO PHILOSOPHY","- No-cost:$0 required txtbk cost",3,36,40,"09:30-10:45","T R","0102 MILLER HALL","Slater, Lonnie","Main Campus"
-"1","PHIL","2010","WH2",49630,"INTRO TO PHILOSOPHY","- No-cost:$0 required txtbk cost",3,22,40,"04:00-04:50","M W F","0104 MILLER HALL","Bumpus, James","Main Campus"
-"1","PHIL","2010","WH3",49772,"INTRO TO PHILOSOPHY","- No-cost:$0 required txtbk cost",3,11,40,"08:00-09:15","T R","0102 MILLER HALL","Pierson, Mark","Main Campus"
-"1","PHIL","2010","WH4",50357,"INTRO TO PHILOSOPHY","- No-cost:$0 required txtbk cost",3,33,40,"09:00-09:50","M W F","0102 MILLER HALL","Bumpus, James","Main Campus"
-"1","PHIL","2010","WH5",50371,"INTRO TO PHILOSOPHY","- No-cost:$0 required txtbk cost",3,30,40,"12:30-01:45","T R","0212 MILLER HALL","Pierson, Mark","Main Campus"
-"1","PHIL","2030","WH1",49553,"ETHICS","",3,40,40,"02:00-03:15","T R","0102 MILLER HALL","Slater, Lonnie","Main Campus"
-"1","PHIL","2030","WH2",49631,"ETHICS","",3,12,40,"05:00-06:15","M W","0104 MILLER HALL","Bumpus, James","Main Campus"
-"1","PHIL","2030","WH3",50358,"ETHICS","",3,38,40,"12:30-01:45","T R","0102 MILLER HALL","Slater, Lonnie","Main Campus"
-"1","PHIL","4002","WH1",50359,"MAJOR THEORIES IN AESTHETICS","",3,13,15,"09:30-10:45","T R","0206 MILLER HALL","Pierson, Mark","Main Campus"
-"1","PHSC","1101","1",47313,"INTRO PHYSICAL SCI I","",3,42,40,"12:30-01:45","T R","0314 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","PHSC","2012","1",47375,"INTRO NON-TRDTL FORMS OF ENRGY","",1,13,30,"06:00-06:50","W","0212 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","PHYS","1112","1",47307,"INTRO PHYSICS II","",4,28,35,"09:00-09:50","M W F","0201 COMPUTER TECHNOLOGY/MATHE","Arora, Sanjeev","Main Campus"
-"1","PHYS","1112","W1",50379,"INTRO PHYSICS II","- Hope & Zell Miller STEM Course",4,43,35,"","","","Arora, Sanjeev","On-Line"
-"1","PHYS","1112L","51",47435,"INTRO PHYS II-LAB","",0,33,35,"01:00-02:50","F","0225 ACADEMIC CLASSROOM BUILDI","Arora, Sanjeev","Main Campus"
-"1","PHYS","1112L","W51",50382,"INTRO PHYS II-LAB","",0,39,35,"","","","Arora, Sanjeev","On-Line"
-"1","PHYS","2212","1",47329,"PRINCIPLES OF PHYSICS II","",4,15,35,"10:00-10:50","M W F","0201 COMPUTER TECHNOLOGY/MATHE","Arora, Sanjeev","Main Campus"
-"1","PHYS","2212L","51",47437,"PRIN PHYS LAB II","",0,12,35,"04:00-05:50","R","0225 ACADEMIC CLASSROOM BUILDI","Arora, Sanjeev","Main Campus"
-"1","POLS","1101","WH",50083,"AMERICAN GOVERNMENT","- No-cost:$0 required txtbk cost",3,41,35,"12:30-01:45","T R","0118 BOND ACADEMIC BLDG","Fields, Meigan","Main Campus"
-"1","POLS","1101","WH2",49797,"AMERICAN GOVERNMENT","- No-cost:$0 required txtbk cost",3,40,35,"09:00-09:50","M W F","0118 BOND ACADEMIC BLDG","Green, Johnny","Main Campus"
-"1","POLS","1101","WH3",50084,"AMERICAN GOVERNMENT","- No-cost:$0 required txtbk cost",3,41,35,"10:00-10:50","M W F","0222 BOND ACADEMIC BLDG","Dibie, Robert","Main Campus"
-"1","POLS","1101","WH4",47420,"AMERICAN GOVERNMENT","",3,37,35,"08:00-09:15","T R","0117 BOND ACADEMIC BLDG","Clay, Shajan","Main Campus"
-"1","POLS","1101","WH5",49796,"AMERICAN GOVERNMENT","- No-cost:$0 required txtbk cost",3,37,35,"09:30-10:45","T R","0123 BOND ACADEMIC BLDG","Clay, Shajan","Main Campus"
-"1","POLS","1101","WH6",50440,"AMERICAN GOVERNMENT","- No-cost:$0 required txtbk cost",3,34,35,"12:30-01:45","T R","0222 BOND ACADEMIC BLDG","Clay, Shajan","Main Campus"
-"1","POLS","3301","WH",49800,"POLITICAL SCI RSCH MTHDS","",3,14,35,"01:00-01:50","M W F","0122 BOND ACADEMIC BLDG","Green, Johnny","Main Campus"
-"1","POLS","4402","WH",50445,"AFRICAN POLITICS","",3,7,35,"01:00-01:50","M W F","0218 BOND ACADEMIC BLDG","Dibie, Robert","Main Campus"
-"1","PSCI","1804","1",47325,"PLANT SCIENCE","",4,26,30,"02:00-02:50","M W F","0105 TABOR AGR ACAD","Surrency, Jacques","Main Campus"
-"1","PSCI","1804L","51",47428,"PLANT SCIENCE LAB","",0,26,30,"01:00-02:50","R","0124 TABOR AGR ACAD","Surrency, Jacques","Main Campus"
-"1","PSCI","2803","1",47810,"INTRO TO BIOTECHNOLOGY","",3,6,20,"09:30-10:45","T R","0123 TABOR AGR ACAD","Dhir, Sarwan","Main Campus"
-"1","PSCI","3862","1",50467,"PLANT PHYSIOLOGY","",3,5,10,"05:30-08:30","M","0123 TABOR AGR ACAD","Punnuri, Somashekhar","Main Campus"
-"1","PSCI","3862L","51",50462,"PLANT PHYSIOLOGY LAB","",0,5,10,"08:30-10:20","S","0123 TABOR AGR ACAD","Punnuri, Somashekhar","Main Campus"
-"1","PSCI","4833","1",49901,"PRIN OF PLANT BREEDING","",3,6,15,"09:30-10:45","T R","0114 TABOR AGR ACAD","Gosukonda, Ramana","Main Campus"
-"1","PSCI","4833L","51",49903,"PRIN OF PLANT BREEDING LAB","",0,6,15,"05:30-07:20","F","0114 TABOR AGR ACAD","Gosukonda, Ramana","Main Campus"
-"1","PSCI","4843K","1",49907,"TECH. IN MOLECULAR BIOLOGY","",3,5,15,"11:00-11:50","M W","0115 TABOR AGR ACAD","Dhir, Sarwan","Main Campus"
-"1","PSCI","4843L","51",49908,"TECH. MOLEC. BIO. LAB","",0,5,15,"10:00-11:50","F","0123 TABOR AGR ACAD","Dhir, Sarwan","Main Campus"
-"1","PSCI","4863","1",50461,"PLANT BIOTECHNOLOGY","",3,3,10,"05:30-08:30","T","0114 TABOR AGR ACAD","Dhir, Sarwan","Main Campus"
-"1","PSCI","4863L","51",50479,"PLANT BIOTECHNOLOGY LAB","",0,3,15,"03:30-06:15","R","0115 TABOR AGR ACAD","Dhir, Sarwan","Main Campus"
-"1","PSYC","1101","W1",49237,"GENERAL PSYCHOLOGY","- No-cost:$0 required txtbk cost",3,48,40,"","","","Haywood, Jerry","On-Line"
-"1","PSYC","1101","WH",48338,"GENERAL PSYCHOLOGY","",3,42,40,"11:00-11:50","M W F","0117 BOND ACADEMIC BLDG","Wheeler, Elizabeth","Main Campus"
-"1","PSYC","1101","WH2",49049,"GENERAL PSYCHOLOGY","- No-cost:$0 required txtbk cost",3,45,40,"01:00-01:50","M W F","0118 BOND ACADEMIC BLDG","Wheeler, Elizabeth","Main Campus"
-"1","PSYC","1101","WH3",50290,"GENERAL PSYCHOLOGY","- No-cost:$0 required txtbk cost",3,16,30,"10:00-10:50","M W F","0123 BOND ACADEMIC BLDG","Wheeler, Elizabeth","Main Campus"
-"1","PSYC","2902","W1",47595,"CAREERS & ISSUES IN PSYC","",2,51,40,"","","","Mitchell, Erin","On-Line"
-"1","PSYC","2902","WH",49519,"CAREERS & ISSUES IN PSYC","",2,46,40,"12:00-12:50","M W","0118 BOND ACADEMIC BLDG","Mitchell, Erin","Main Campus"
-"1","PSYC","3013","W1",47542,"PSYCHO RSCH II","",3,35,40,"","","","Rookard, Maya","On-Line"
-"1","PSYC","3013","WH",47320,"PSYCHO RSCH II","",3,26,40,"03:30-04:45","T R","0118 BOND ACADEMIC BLDG","Rookard, Maya","Main Campus"
-"1","PSYC","3023","W1",47543,"ABNORMAL PSYCHOLOGY","",3,44,40,"","","","Stephen, Faith","On-Line"
-"1","PSYC","3023","WH",47400,"ABNORMAL PSYCHOLOGY","",3,46,40,"09:30-10:45","T R","MILLER HALL","Chatmon, Roddrick","Main Campus"
-"1","PSYC","3043","W1",47941,"PSYCHOLOGY OF LEARNING","",3,48,40,"","","","Stephen, Faith","On-Line"
-"1","PSYC","3063","W1",47596,"PERSONALITY","",3,46,40,"","","","Chatmon, Roddrick","On-Line"
-"1","PSYC","3063","WH",49051,"PERSONALITY","",3,44,40,"01:00-01:50","M W F","0102 MILLER HALL","Chatmon, Roddrick","Main Campus"
-"1","PSYC","4053","W1",47540,"BEHAVIOR MODIFICATION","",3,47,40,"","","","Mitchell, Erin","On-Line"
-"1","PSYC","4053","WH",47858,"BEHAVIOR MODIFICATION","",3,43,40,"11:00-11:50","M W F","0123 BOND ACADEMIC BLDG","Mitchell, Erin","Main Campus"
-"1","PSYC","4073","W1",47912,"CROSS-CULTURAL PSYCHOLOGY","",3,39,40,"","","","Rookard, Maya","On-Line"
-"1","PSYC","4073","WH",49521,"CROSS-CULTURAL PSYCHOLOGY","",3,26,40,"02:00-03:15","T R","0118 BOND ACADEMIC BLDG","Rookard, Maya","Main Campus"
-"1","PSYC","4083","W1",47597,"FORENSIC PSYCHOLOGY","",3,44,40,"","","","Murfree, Joshua","On-Line"
-"1","PSYC","4083","WH",47497,"FORENSIC PSYCHOLOGY","",3,43,40,"12:30-01:45","T R","0123 BOND ACADEMIC BLDG","Haywood, Jerry","Main Campus"
-"1","PSYC","4910","W1",48601,"PRO ETHICS,STANDARD,CAREER DEV","",3,36,40,"","","","Haywood, Jerry","On-Line"
-"1","PSYC","4910","WH",49052,"PRO ETHICS,STANDARD,CAREER DEV","",3,21,40,"10:00-10:50","M W F","0122 BOND ACADEMIC BLDG","Haywood, Jerry","Main Campus"
-"1","PSYC","4912","W1",48619,"PSYCHOLOGY INTERNSHIP","",6,11,15,"","","","Haywood, Jerry","On-Line"
-"1","RCCM","5423","W1",47360,"MEDICAL CASE MANAGEMENT","",3,13,15,"","","WEB/ D2L ONLINE","Everett, Otha","On-Line"
-"1","RCCM","5441","W1",47361,"PRACTICUM IN REHABILITATION","- $40 or under req txtbks cost",3,3,12,"","","WEB/ D2L ONLINE","Allen-Joyner, Crystal","On-Line"
-"1","RCCM","5706","W1",47362,"INTERSHIP REHABILITATION","- $40 or under req txtbks cost",3,5,6,"","","WEB/ D2L ONLINE","Allen-Joyner, Crystal","On-Line"
-"1","RCCM","5706","W2",50439,"INTERSHIP REHABILITATION","",3,0,6,"","","WEB/ D2L ONLINE","Allen-Joyner, Crystal","On-Line"
-"1","RCCM","6001","W1",47574,"COMPREHENSIVE REVIEW","- $40 or under req txtbks cost",0,4,15,"","","WEB/ D2L ONLINE","Everett, Otha","On-Line"
-"1","READ","2100","1",50483,"LITERACY COMPREHENSION","",3,2,10,"","","HUBBARD EDUCATION","Anderson-Robinson, Nataysha","Main Campus"
-"1","READ","3820","WH",49845,"EXPAND LIT ACROSS CONTENT/ECSP","",3,26,25,"05:30-08:30","W","HUBBARD EDUCATION","Anderson-Robinson, Nataysha","On-Line"
-"1","READ","3823","WH",49703,"EXPANDING LITERACY IN MID GRD.","",3,7,25,"05:30-08:30","W","HUBBARD EDUCATION","Anderson-Robinson, Nataysha","On-Line"
-"1","READ","5434","70",49937,"CONTENT AREA LITERACY","",3,1,12,"09:00-12:00","S","0131 FVSU - Warner Robins Si","Forde', Nancy","FVSU-Warner Robins Campus"
-"1","SCIE","3102K","1",47761,"PRIN. OF PHYSICAL SCIENCE II","",3,7,15,"05:00-07:30","T","0212 ACADEMIC CLASSROOM BUILDI","Kar, Adityamoy","Main Campus"
-"1","SCIE","3103","W1",47872,"PRIN OF ENVIRONMENTAL SCIENCE","",3,12,15,"","","","Paul, Jasmine","On-Line"
-"1","SOWK","2002","1",47579,"SOCIAL WORK ETHICS","",3,13,20,"08:00-08:50","M W F","0216 BOND ACADEMIC BLDG","Beasley, Harvey","Main Campus"
-"1","SOWK","3002","1",49841,"HUMN. BEHAV. & SOC. ENV. II","",3,21,20,"09:30-10:45","T R","0121 BOND ACADEMIC BLDG","Beasley, Harvey","Main Campus"
-"1","SOWK","3002","WH",50401,"HUMN. BEHAV. & SOC. ENV. II","",3,6,25,"05:30-06:45","M W","0121 BOND ACADEMIC BLDG","Beasley, Harvey","Main Campus"
-"1","SOWK","3012","1",50071,"THRY & MTHDS-SOC WRK PRACT II","",3,19,20,"12:30-01:45","T R","0121 BOND ACADEMIC BLDG","Beasley, Harvey","Main Campus"
-"1","SOWK","3012","WH",49275,"THRY & MTHDS-SOC WRK PRACT II","",3,8,20,"06:30-07:45","T R","0121 BOND ACADEMIC BLDG","Gresham, Kay","Main Campus"
-"1","SOWK","4030","W1",50404,"SOC WRK-FLD OF GERONTOLOGY","",3,12,25,"","","","Gresham, Kay","On-Line"
-"1","SOWK","4060","W1",50405,"HUMAN SRVCS-RURAL COMM","",3,14,25,"","","","Gresham, Kay","On-Line"
-"1","SOWK","4099","W1",50076,"MEN HLTH & SOC WK PRACTICES","",3,14,20,"","","","Young, D'Netra","On-Line"
-"1","SOWK","4110","1",50075,"SOCIAL WELFARE POLICY","",3,15,25,"10:00-10:50","M W F","0218 BOND ACADEMIC BLDG","Thomas, Deja","Main Campus"
-"1","SOWK","4110","WH",49842,"SOCIAL WELFARE POLICY","",3,6,20,"07:00-08:15","M W","0216 BOND ACADEMIC BLDG","Thomas, Deja","Main Campus"
-"1","SOWK","4132","1",50077,"SOCIAL RESEARCH SEMINAR","",3,4,20,"05:30-06:45","M W","0216 BOND ACADEMIC BLDG","Thomas, Deja","Main Campus"
-"1","SOWK","4132","WH",47426,"SOCIAL RESEARCH SEMINAR","",3,11,20,"11:00-11:50","M W F","0216 BOND ACADEMIC BLDG","Thomas, Deja","Main Campus"
-"1","SOWK","4399","1",47952,"FIELD OBSERVATION & EXPERIENCE","",3,22,25,"01:00-01:50","M W F","0216 BOND ACADEMIC BLDG","Young, D'Netra","Main Campus"
-"1","SOWK","4402","1",47819,"PRACTICUM II","",6,19,20,"06:00-07:15","T R","0216 BOND ACADEMIC BLDG","Young, D'Netra","Main Campus"
-"1","SPAN","1001","1",49675,"ELEMENTARY SPANISH I","",3,32,30,"09:00-09:50","M W F","0104 MILLER HALL","Carter, Mariah","Main Campus"
-"1","SPAN","1002","1",49676,"ELEMENTARY SPANISH II","- $40 or under req txtbks cost",3,38,30,"10:00-10:50","M W F","0104 MILLER HALL","Carter, Mariah","Main Campus"
-"1","SPAN","1002","2",50307,"ELEMENTARY SPANISH II","- $40 or under req txtbks cost",3,36,30,"12:00-12:50","M W F","0104 MILLER HALL","Carter, Mariah","Main Campus"
-"1","SPAN","1002","3",50355,"ELEMENTARY SPANISH II","- $40 or under req txtbks cost",3,39,30,"01:00-01:50","M W F","0104 MILLER HALL","Carter, Mariah","Main Campus"
-"1","SPAN","2001","1",50356,"INTERMEDIATE SPANISH I","- No-cost:$0 required txtbk cost",3,48,30,"02:00-02:50","M W F","0104 MILLER HALL","Carter, Mariah","Main Campus"
-"1","SSCI","3813","1",50113,"SOIL FERTLTY/FERTILIZTN","",3,12,10,"09:00-09:50","M W","0124 TABOR AGR ACAD","Surrency, Jacques","Main Campus"
-"1","SSCI","3813L","51",50114,"SOIL FER/FERT LAB","",0,12,10,"03:00-04:50","M","0124 TABOR AGR ACAD","Surrency, Jacques","Main Campus"
-"1","STAT","3000","1",48866,"STATISTICAL METHODS I","",3,7,30,"02:00-03:40","M","0202 COMPUTER TECHNOLOGY/MATHE","Hamdan, Mustafa","Main Campus"
-"1","STAT","3000L","51",48867,"STATISTICAL METHODS I LAB","",0,7,30,"02:00-03:40","W","0218 COMPUTER TECHNOLOGY/MATHE","Hamdan, Mustafa","Main Campus"
-"1","VETY","1812","1",47453,"MEDICAL TERMINOLOGY","- No-cost:$0 required txtbk cost",1,7,60,"01:00-01:50","W","0117 ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","1824","1",47644,"ANIMAL ANATOMY AND PHYSIOLOGY","- No-cost:$0 required txtbk cost",4,55,54,"12:30-01:45","T R","0117 ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","1824L","51",47645,"ANIMAL ANATOMY & PHYS LAB","- No-cost:$0 required txtbk cost",0,18,18,"09:00-10:50","T","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","1824L","52",47646,"ANIMAL ANATOMY & PHYS LAB","- No-cost:$0 required txtbk cost",0,19,18,"02:00-03:50","T","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","1824L","53",48856,"ANIMAL ANATOMY & PHYS LAB","- No-cost:$0 required txtbk cost",0,18,18,"09:00-10:50","R","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","2824","1",47283,"HOSPITAL PROCEDURES","- No-cost:$0 required txtbk cost",2,21,28,"10:00-10:50","M","0117 ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2824L","51",47454,"HOSPITAL PROCEDURES LAB","- No-cost:$0 required txtbk cost",0,17,14,"10:00-11:50","W","ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2824L","52",48386,"HOSPITAL PROCEDURES LAB","- No-cost:$0 required txtbk cost",0,4,14,"01:00-02:50","W","ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2873","1",47284,"RADIOLOGY","- No-cost:$0 required txtbk cost",3,21,32,"09:30-10:20","T R","0117 ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2873L","51",47455,"RADIOLOGY LAB","- No-cost:$0 required txtbk cost",0,14,16,"01:00-02:50","R","ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2873L","52",47806,"RADIOLOGY LAB","- No-cost:$0 required txtbk cost",0,7,16,"03:00-04:50","R","ONEAL VET TECH BLD","McCommon, George","Main Campus"
-"1","VETY","2893","1",47478,"VETERINARY MICROBIOLOGY","- No-cost:$0 required txtbk cost",3,14,30,"02:00-02:50","M W","0132 ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","2893L","51",47456,"VETY MICROBIOLOGY LAB","- No-cost:$0 required txtbk cost",0,10,15,"03:00-04:50","M","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","2893L","52",48650,"VETY MICROBIOLOGY LAB","- No-cost:$0 required txtbk cost",0,4,15,"03:00-04:50","W","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","3924","1",47285,"VETERINARY CLINICAL PATH & CHM","- No-cost:$0 required txtbk cost",3,21,30,"09:00-09:50","M W","0132 ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","VETY","3924L","51",47457,"VETERINARY CLIN PATH & CHM LAB","- No-cost:$0 required txtbk cost",0,12,15,"12:30-02:20","T","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","VETY","3924L","52",48458,"VETERINARY CLIN PATH & CHM LAB","- No-cost:$0 required txtbk cost",0,8,15,"12:30-02:20","R","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","VETY","3924L","53",50497,"VETERINARY CLIN PATH & CHM LAB","",0,1,1,"03:00-05:50","F","ONEAL VET TECH BLD","Samples, Oreta","Main Campus"
-"1","VETY","4863","1",48108,"BIOMEDICAL RESEARCH METHODS","- No-cost:$0 required txtbk cost",2,5,20,"11:00-11:50","M","0157 ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","4863L","51",48861,"BIOMEDICAL RESEARCH LAB","- No-cost:$0 required txtbk cost",0,5,20,"11:00-12:50","W","ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","4883","1",47758,"SPECIAL TOPICS","- No-cost:$0 required txtbk cost",2,10,20,"03:00-04:50","R","0132 ONEAL VET TECH BLD","Mofya, Saul","Main Campus"
-"1","VETY","4923","1",47286,"CLINICS-SMALL ANIM SURG & MED","- No-cost:$0 required txtbk cost",3,10,20,"08:00-05:00","MTWRF","UGA-VET","Mofya, Saul","Main Campus"
-"1","VETY","4933","1",47287,"CLINICS-RECEIVING & CENTRAL","- No-cost:$0 required txtbk cost",3,10,20,"08:00-05:00","MTWRF","UGA-VET","Mofya, Saul","Main Campus"
-"1","VETY","4943","1",47288,"CLINICS-ANESTHESIOLOGY","- No-cost:$0 required txtbk cost",3,10,20,"08:00-05:00","MTWRF","UGA-VET","Mofya, Saul","Main Campus"
-"1","VETY","4953","1",47289,"CLINICS-CLINICAL APPLICATIONS","- No-cost:$0 required txtbk cost",3,10,20,"08:00-05:00","MTWRF","UGA-VET","Mofya, Saul","Main Campus"
-"1","ZOOL","3203K","1",47346,"ENTOMOLOGY","",4,19,30,"03:30-04:45","T R","0111 ACADEMIC CLASSROOM BUILDI","Mbata, George","Main Campus"
-"1","ZOOL","3203L","51",47473,"ENTOMOLOGY LAB","",0,19,30,"01:00-02:50","F","0134 ACADEMIC CLASSROOM BUILDI","Mbata, George","Main Campus"
-"1","ZOOL","3214K","1",50065,"COMPARATIVE VERTEBRATE ANATOMY","",4,23,30,"09:00-09:50","M W F","0314 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","ZOOL","3214L","51",50066,"COMPARATIVE VERT-LAB","",0,23,30,"02:00-04:50","T","0326 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
-"1","ZOOL","3254K","1",48803,"HISTOLOGY","- $40 or under req txtbks cost",4,18,30,"12:00-12:50","M W F","0111 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","ZOOL","3254L","51",48804,"HISTOLOGY-LAB","- $40 or under req txtbks cost",0,15,30,"01:00-03:50","W","0324 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","ZOOL","3254L","52",50508,"HISTOLOGY-LAB","- $40 or under req txtbks cost",0,3,2,"05:30-08:30","T","0324 ACADEMIC CLASSROOM BUILDI","Simmons, Kaneatra","Main Campus"
-"1","ZOOL","3384K","1",50393,"ICHTYOLOGY","",4,7,20,"10:00-10:50","M W F","0134 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","ZOOL","3384L","51",50430,"ICHTYOLOGY LAB","",0,4,20,"11:00-01:50","M","0134 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","ZOOL","3384L","52",50499,"ICHTYOLOGY LAB","",0,3,2,"02:00-04:50","F","0131 ACADEMIC CLASSROOM BUILDI","Perlote, Turquoise","Main Campus"
-"1","ZOOL","4294K","1",47373,"VERTEBRATE PHYSIOLOGY","",4,33,24,"11:00-11:50","M W F","0314 ACADEMIC CLASSROOM BUILDI","Dodd, Celia","Main Campus"
-"1","ZOOL","4294L","51",47474,"VERTEBRATE PHYSIOLOGY LAB","",0,33,24,"12:00-02:50","W","0134 ACADEMIC CLASSROOM BUILDI","Dodd, Celia","Main Campus"
-"1","ZOOL","4393","1",50374,"POPULATION DYNAMICS","",3,3,20,"01:00-01:50","M W F","0111 ACADEMIC CLASSROOM BUILDI","MacKay, Rebecca","Main Campus"
+P.of.T,SUBJ,NUMB,SECT,CRN,TITLE,NOTES,HRS,ENRLD,MAXENRL,TIMES,DAYS,LOCATION,INSTRUCTOR,CAMPUS
+1,ACCT,2101,W1,49476,PRINCIPLES OF ACCOUNTING I,,3,34,30,,,,"Bui, Analie",On-Line
+1,ACCT,2101,WH,50425,PRINCIPLES OF ACCOUNTING I,,3,32,30,05:30-08:15,T,0201 COMPUTER TECHNOLOGY/MATHE,"Calhoun, Alexandra",Main Campus
+1,ACCT,2102,W1,49316,PRINCIPLES OF ACCOUNTING II,,3,34,30,,,,"Bui, Analie",On-Line
+1,ACCT,3113,WH,47259,INTERMEDIATE ACCOUNTING II,,3,7,30,09:30-10:45,T R,0201 COMPUTER TECHNOLOGY/MATHE,"Davis, Kheylen",Main Campus
+1,ACCT,3133,WH,49318,INDIVIDUAL INCOME TAX,,3,9,30,11:00-12:15,M W,0201 COMPUTER TECHNOLOGY/MATHE,"Davis, Kheylen",Main Campus
+1,ACCT,4113,WH1,49909,GOVERNMENT NOT-FOR-PROFIT,,3,8,30,05:30-08:15,W,0201 COMPUTER TECHNOLOGY/MATHE,"el-Salman, Fuaad",Main Campus
+1,AENT,2833,WH,49502,SURVEYING,,3,31,30,09:00-09:50,M W,0104 ELLIS AG-MECH ACAD,"el-Zaher, Kamaaluddeen",Main Campus
+1,AENT,2833*,51,49503,SURVEY LAB,,0,31,30,07:00-08:50,T,0120 ELLIS AG-MECH ACAD,"el-Zaher, Kamaaluddeen",Main Campus
+1,AENT,3803,WH,48393,BUILDINGS & RELATED STRUCTURES,,3,12,30,06:00-07:50,M,0128 ELLIS AG-MECH ACAD,"Bouchon, Karis",Main Campus
+1,AENT,3803L,51,48394,BUILDNG & RELATED STRUCT LAB,,0,12,30,05:00-06:50,R,0128 ELLIS AG-MECH ACAD,"Bouchon, Karis",Main Campus
+1,AENT,3832,WH,49782,INSTRUMENTATION,,2,4,30,10:00-10:50,M W,0125 ELLIS AG-MECH ACAD,"el-Zaher, Kamaaluddeen",Main Campus
+1,AENT,3832L,51,49783,INSTRUMENTATION LAB,- No-cost:$0 required txtbk cost,0,4,20,08:00-09:50,M,0116 ELLIS AG-MECH ACAD,"el-Zaher, Kamaaluddeen",Main Campus
+1,AENT,4813,1,47928,"SOIL,WATER,&NATURAL RESOURCE",,3,8,20,01:00-01:50,M W,0123 ELLIS AG-MECH ACAD,"Boucher, Samuel",Main Campus
+1,AENT,4813L,51,47812,"SOIL,WATER,&NATURAL RES. LAB",,0,8,20,02:00-03:50,F,0123 ELLIS AG-MECH ACAD,"Boucher, Samuel",Main Campus
+1,AENT,4833,WH,50099,MACHINERY FOR AGRICULTURE,,3,5,10,09:30-10:45,T R,0123 ELLIS AG-MECH ACAD,"Rose-Williams, Javon",Main Campus
+1,AENT,4833,WH1,50513,MACHINERY FOR AGRICULTURE,,3,1,10,08:00-08:50,M W,0123 ELLIS AG-MECH ACAD,"Rose-Williams, Javon",Main Campus
+1,AENT,4833L,51,50100,MACHINERY FOR AGRICULTURE LAB,,0,6,10,07:00-08:50,W,0123 ELLIS AG-MECH ACAD,"Rose-Williams, Javon",Main Campus
+1,AENT,4881,WH,49504,SENIOR SEMINAR,,1,7,25,05:00-05:50,M,0124 ELLIS AG-MECH ACAD,"Greenstein, Derrick",Main Campus
+1,AGEC,3813,1,47632,AGRICULTURAL FINANCE & RECORDS,,3,12,25,05:30-08:30,T,0201 TABOR AGR ACAD,"Torres, Adam",Main Campus
+1,AGEC,4823,1,47331,MARKETING AGRICULTURAL PRODUCT,,3,13,25,09:30-10:45,T R,0201 TABOR AGR ACAD,"Bostic, Alisha",Main Campus
+1,AGEC,4833,1,49483,AGRICULTURAL POLICIES,,3,12,25,09:00-09:50,M W F,0201 TABOR AGR ACAD,"Ivey, Raven",Main Campus
+1,AGEC,4843,1,47605,PRODUCTION ECONOMICS,,3,13,25,08:00-09:15,T R,0201 TABOR AGR ACAD,"Bostic, Alisha",Main Campus
+1,AGEC,4853,1,49266,NAT. RESOURCES ECON.,,3,11,25,11:00-11:50,M W F,0201 TABOR AGR ACAD,"Ivey, Raven",Main Campus
+1,AGEC,4864,1,49287,SPEC PROB IN AGRI ECONOMIC,,3,12,12,10:00-10:50,M W F,0201 TABOR AGR ACAD,"Bostic, Alisha",Main Campus
+1,ANSC,1811,1,47368,INTRO TO ANIMAL AGRICULTURE,,1,76,80,01:00-01:50,R,0105 TABOR AGR ACAD,"Soto, Salvador",Main Campus
+1,ANSC,2803,1,47369,GENERAL ANIMAL SCIENCE,,3,79,80,12:00-12:50,M W,0105 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,2803L,51,47370,GEN ANIMAL SCI LAB,,0,78,80,01:00-02:50,T,0105 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,2803L,52,50480,GEN ANIMAL SCI LAB,,0,2,4,01:00-02:50,S,0105 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,3813,1,47525,MEAT SCIENCE,,3,26,45,10:00-10:50,M W,0105 TABOR AGR ACAD,"al-Hussein, Abdul Waahid",Main Campus
+1,ANSC,3813L,51,47526,PRIN OF MEAT SCI LAB,,0,26,45,03:30-05:20,R,MEAT TECHNOLOGY BUILDING,"al-Hussein, Abdul Waahid",Main Campus
+1,ANSC,3823,1,47536,PHYSIOLOGY DOMESTIC ANIMALS,,3,35,45,01:00-01:50,M W,0105 TABOR AGR ACAD,"King, Zeid",Main Campus
+1,ANSC,3823L,51,47537,PHYS OF DOMESTIC ANIM. LAB,,0,35,45,04:00-05:50,F,0105 TABOR AGR ACAD,"King, Zeid",Main Campus
+1,ANSC,3863,1,50489,DAIRY CATTLE PRODUCTION,,3,21,30,05:00-05:50,M W,0105 TABOR AGR ACAD,"Cha, Tran",Main Campus
+1,ANSC,3863L,51,50490,DAIRY CATTLE PROD LAB,,0,21,30,05:30-07:20,T,,"Cha, Tran",Main Campus
+1,ANSC,3883,1,47371,APPLIED ANIMAL NUTRITION,,3,28,45,11:00-11:50,M W,0105 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,3883L,51,47372,APPLIED ANIMAL NUTR LAB,,0,27,45,03:30-05:20,T,0105 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,3883L,52,50552,APPLIED ANIMAL NUTR LAB,,0,1,5,11:00-12:50,S,0114 TABOR AGR ACAD,"Hocking, Kevin",Main Campus
+1,ANSC,4813,1,48816,ANIMAL BREEDING,,3,29,45,06:00-07:15,M W,0105 TABOR AGR ACAD,"Cha, Tran",Main Campus
+1,ANSC,4822,1,49822,SENIOR RESEARCH,,2,6,15,06:00-06:50,R,0105 TABOR AGR ACAD,"King, Zeid",Main Campus
+1,ANSC,4822L,51,49849,SENIOR RESEARCH LAB,,0,6,15,05:00-06:50,,TABOR AGR ACAD,"King, Zeid",Main Campus
+1,ANSC,4841,1,49224,ANIMAL SCIENCE SEMINAR,,1,20,20,04:00-04:50,W,STALLWORTH RSCH,"Armstrong, Desanay",Main Campus
+1,ANSC,5123,1,47593,PHYSIOLOGICAL CHEM II,,3,19,20,04:00-04:50,M W F,0101 MEAT TECHNOLOGY BUILDING,"Kramer, James",Main Campus
+1,ANSC,5203,1,49281,EXPERIMENTAL DESIGN/DATA ANAL,,3,17,15,05:30-07:00,T R,0101 MEAT TECHNOLOGY BUILDING,"al-Hussein, Abdul Waahid",Main Campus
+1,ANSC,6103,1,47814,PLANT-HERBIVORE INTERATIONS,,3,21,20,09:30-10:45,T R,0105 TABOR AGR ACAD,"Soto, Salvador",Main Campus
+1,ANSC,6103L,51,47815,PLANT & HERBIVORE INTER LAB,,0,21,20,08:00-09:00,R,,"Soto, Salvador",Main Campus
+1,ANSC,6153,1,47816,ANIMAL ENERGETICS,,3,10,15,08:00-08:50,M W F,0101 MEAT TECHNOLOGY BUILDING,"Kramer, James",Main Campus
+1,ANSC,6273,1,48406,CELL PHYSIOLOGY,,3,16,20,10:00-10:50,M W F,0101 MEAT TECHNOLOGY BUILDING,"King, Zeid",Main Campus
+1,ANSC,6421,1,47817,GRADUATE SEMINARS,,1,5,15,04:00-04:50,T,0101 MEAT TECHNOLOGY BUILDING,"Soto, Salvador",Main Campus
+1,ANSC,6436,1,47427,RESEARCH AND THESIS,,1,14,15,02:00-02:50,T,0101 MEAT TECHNOLOGY BUILDING,"King, Zeid",Main Campus
+1,ARTH,1000,1,47295,ART APPRECIATION,,3,35,30,10:00-10:50,M W F,0212 MILLER HALL,"el-Ayoub, Muneefa",Main Campus
+1,ARTH,1000,2,47404,ART APPRECIATION,,3,34,30,11:00-11:50,M W F,0212 MILLER HALL,"el-Ayoub, Muneefa",Main Campus
+1,ARTH,1000,3,47347,ART APPRECIATION,,3,31,30,02:00-02:50,M W F,0212 MILLER HALL,"el-Ayoub, Muneefa",Main Campus
+1,ARTH,2000,1,50411,ART HISTORY SURVEY I,- No-cost:$0 required txtbk cost,3,3,30,05:00-07:00,W,0212 MILLER HALL,"el-Ayoub, Muneefa",Main Campus
+1,ARTH,2312,1,49290,TYPOGRAPHIC DESIGN,,3,1,20,10:00-10:50,M W,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,2312L,51,49586,TYPOGRAPHIC DESIGN LAB,,0,1,20,10:00-10:50,F,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,2350,1,50422,SCULPTURE,,3,4,20,01:00-02:45,T,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,2350L,51,50423,SCULPTURE LAB,,0,4,20,01:00-02:45,R,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,3103,1,50023,PERSPECTIVE DRAWING,,3,2,20,03:00-04:50,M,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,3103L,51,50024,PERSPECTIVE DRAWING LAB,,0,2,20,03:00-04:50,W,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,3130,1,49832,COLOR THEORY,,3,3,20,09:30-10:45,T,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,3130L,51,49833,COLOR THEORY LAB,,0,2,20,09:30-10:45,R,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,3353,1,49837,HISTORY OF GRAPHIC DESIGN,,3,4,20,09:00-09:50,M W F,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,3369,1,50463,FUND OF GRAPHIC DESIGN,,3,4,20,02:00-02:50,M W F,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,3393,1,48889,DIGITAL MEDIA & DESIGN III,- No-cost:$0 required txtbk cost,3,4,20,03:00-03:50,M W,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,3393L,51,48890,DIGITAL MEDIA & DESIGN III LAB,- No-cost:$0 required txtbk cost,0,4,20,03:00-03:50,F,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,4113,1,49834,PORTFOLIO I,- No-cost:$0 required txtbk cost,3,3,20,11:00-11:50,M W F,0203 MILLER HALL,"Marquez, Edgar",Main Campus
+1,ARTH,4483,1,50419,WATERCOLOR PAINTING,,3,1,20,10:00-10:50,M,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,ARTH,4483L,51,50420,WATERCOLOR PAINTING LAB,,0,1,20,10:00-10:50,W,FINE ARTS CENTER,"Trujillo, Matthew",Main Campus
+1,BHSC,2300,W1,47846,BEHAVIORAL STATS,,3,38,30,,,,"Rocha, Chance",On-Line
+1,BHSC,2300,WH,47374,BEHAVIORAL STATS,,3,36,30,10:00-10:50,M W F,0102 MILLER HALL,"Gooding, Benjamin",Main Campus
+1,BIOL,1101,2,47340,INTRO TO BIOLOGY,,1,29,28,02:00-02:50,W,0220 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,1101,W1,50289,INTRO TO BIOLOGY,- $40 or under req txtbks cost,1,29,30,,,,"al-Abdul, Mamdooh",On-Line
+1,BIOL,1104K,2,47254,INTRO BIOLOGY,,4,53,50,09:30-10:45,T R,0120 ACADEMIC CLASSROOM BUILDI,"Qu, Austin",Main Campus
+1,BIOL,1104K,W1,47633,INTRO BIOLOGY,,4,41,40,,,,"Qu, Austin",On-Line
+1,BIOL,1104K,W2,50503,INTRO BIOLOGY,,4,54,55,,,,"Rodriguez, Issiah",On-Line
+1,BIOL,1104L,54,49485,INTRO BIOL LAB,- $40 or under req txtbks cost,0,30,30,03:30-05:20,T,0124 ACADEMIC CLASSROOM BUILDI,"Grange, Danielle",Main Campus
+1,BIOL,1104L,55,48584,INTRO BIOL LAB,,0,22,30,12:00-01:50,T,0124 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,1104L,W51,47635,INTRO BIOL LAB,,0,41,40,,,,"Qu, Austin",On-Line
+1,BIOL,1104L,W52,50505,INTRO BIOL LAB,- $40 or under req txtbks cost,0,54,55,,,,"Rodriguez, Issiah",On-Line
+1,BIOL,1105,1,47548,ENVIRONMENTAL SCIENCE,,3,44,50,12:30-01:45,T R,0120 ACADEMIC CLASSROOM BUILDI,"Qu, Austin",Main Campus
+1,BIOL,1105,2,48486,ENVIRONMENTAL SCIENCE,,3,23,50,03:15-04:30,T R,0120 ACADEMIC CLASSROOM BUILDI,"Qu, Austin",Main Campus
+1,BIOL,1105,W1,47547,ENVIRONMENTAL SCIENCE,,3,35,40,,,,"Qu, Austin",On-Line
+1,BIOL,1107K,1,49077,PRINCIPLES OF BIOLOGY I,#NAME?,4,46,40,10:00-10:50,M W F,0111 ACADEMIC CLASSROOM BUILDI,"Grange, Danielle",Main Campus
+1,BIOL,1107K,2,50059,PRINCIPLES OF BIOLOGY I,#NAME?,4,46,50,03:00-03:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Grange, Danielle",Main Campus
+1,BIOL,1107K,3,48801,PRINCIPLES OF BIOLOGY I,#NAME?,4,47,50,02:00-02:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,BIOL,1107L,52,47465,PRIN OF BIOL LAB,,0,38,30,02:00-03:50,R,0124 ACADEMIC CLASSROOM BUILDI,"Grange, Danielle",Main Campus
+1,BIOL,1107L,53,50060,PRIN OF BIOL LAB,- No-cost:$0 required txtbk cost,0,31,30,04:00-05:50,R,0124 ACADEMIC CLASSROOM BUILDI,"Grange, Danielle",Main Campus
+1,BIOL,1107L,54,47513,PRIN OF BIOL LAB,,0,34,30,12:00-01:50,R,0124 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,BIOL,1107L,55,49313,PRIN OF BIOL LAB,- No-cost:$0 required txtbk cost,0,35,30,10:00-11:50,R,0124 ACADEMIC CLASSROOM BUILDI,"Mccluskey, Ilysh",Main Campus
+1,BIOL,1108K,2,47841,PRINCIPLES OF BIOLOGY II,,4,45,40,12:30-01:45,T R,0111 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,BIOL,1108K,3,47342,PRINCIPLES OF BIOLOGY II,,4,39,35,02:00-03:15,T R,0111 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,BIOL,1108K,W1,47869,PRINCIPLES OF BIOLOGY II,,4,61,60,,,,"Rodriguez, Issiah",On-Line
+1,BIOL,1108L,51,47467,PRIN OF BIOL LAB,,0,29,30,02:00-03:50,M,0131 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,BIOL,1108L,52,47498,PRIN OF BIOL LAB,,0,16,30,02:00-03:50,T,0131 ACADEMIC CLASSROOM BUILDI,"Mccluskey, Ilysh",Main Campus
+1,BIOL,1108L,53,47468,PRIN OF BIOL LAB,,0,10,30,12:00-01:50,T,0131 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,1108L,55,48585,PRIN OF BIOL LAB,,0,27,30,10:00-11:50,W,0131 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,BIOL,1108L,W51,47870,PRIN OF BIOL LAB,,0,63,60,,,,"Rodriguez, Issiah",On-Line
+1,BIOL,2251,1,50150,HUM ANATOMY & PHYSIOLOGY I,,4,41,38,08:00-08:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,2251L,51,50151,HUM ANATOMY & PHYSIO I LAB,,0,42,38,06:00-08:00,F,0326 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,2252,1,50456,HUM ANATOMY & PHYSIOLOGY II,,4,41,30,10:00-10:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,2252L,51,50457,HUM ANATOMY & PHYSIO II LAB,,0,41,30,01:00-03:50,F,0326 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,2260K,1,50373,FOUNDATIONS OF MICROBIOLOGY,,4,35,30,09:00-09:50,M W,0111 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,2260L,51,50375,FNDS OF MICROBIOLOGY LAB,,0,35,30,11:00-12:50,M W,0133 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,3014,1,49779,ECOLOGY,,4,15,30,09:00-09:50,M W F,0134 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,BIOL,3014L,51,49780,ECOLOGY LAB,,0,15,30,03:30-06:00,T,0134 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,BIOL,3017,1,49491,FORENSICS II,,3,10,20,11:00-12:15,M W,0122 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,3222L,1,49315,INVESTIGATIONS IN CELL BIOLOGY,,2,25,25,09:30-10:45,T R,0324 ACADEMIC CLASSROOM BUILDI,"al-Saad, Najeema",Main Campus
+1,BIOL,3223,1,47354,CELL & MOLECULAR BIOLOGY,,3,26,35,11:00-11:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,3345,1,49781,PRINCIPLES OF TOXICOLOGY,,3,16,30,10:00-10:50,M W F,0321 ACADEMIC CLASSROOM BUILDI,"al-Saad, Najeema",Main Campus
+1,BIOL,4111,1,47257,SPECIAL PROJECTS IN BIOLOGY,,1,2,0,,,,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,4112,1,47387,SPECIAL PROJECTS IN BIOLOGY,,1,0,0,,,,"Armbruster, Connor",Main Campus
+1,BIOL,4113,2,49189,SPECIAL PROJECTS IN BIOLOGY,- No-cost:$0 required txtbk cost,1,1,0,,,,"al-Saad, Najeema",Main Campus
+1,BIOL,4222,1,47258,BIOLOGY SEMINAR,,1,21,30,10:00-10:50,T,0111 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,4234K,1,47363,MICROBIOLOGY,,4,43,35,08:00-08:50,M W,0111 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,4234L,51,47470,MICROBIOLOGY LAB,,0,42,35,01:00-02:50,M W,0133 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,4234L,52,50510,MICROBIOLOGY LAB,,0,1,1,04:00-05:50,M W,0133 ACADEMIC CLASSROOM BUILDI,"Armbruster, Connor",Main Campus
+1,BIOL,4254K,1,47364,GENETICS,,4,38,34,09:00-09:50,M W F,0120 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,4254L,51,47471,GENETICS LAB,,0,38,34,03:00-05:50,M,0324 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,BIOL,4272L,1,47531,BIOTECHNIQUES,,2,16,30,02:00-03:15,T R,0220 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,4343L,1,47335,SENIOR PROJECT,,3,8,0,,,,"Armbruster, Connor",Main Campus
+1,BIOL,4343L,3,47344,SENIOR PROJECT,,3,8,0,,,,"al-Abdul, Mamdooh",Main Campus
+1,BIOL,4343L,6,48121,SENIOR PROJECT,,3,5,0,,,,"al-Saad, Najeema",Main Campus
+1,BIOL,4384K,1,50391,LIMNOLOGY,,4,6,20,09:30-10:45,T R,0134 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,BIOL,4384L,51,50392,LIMNOLOGY LAB,,0,6,20,03:30-06:20,R,0134 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,BIOT,5373,1,50115,PLANT TISSUE & CELL CULTURE,,3,12,12,09:00-09:50,M W,STALLWORTH,"Couch, Jonathan",Main Campus
+1,BIOT,5373L,51,50116,PLANT TISS. & CELL CULT. LAB,,0,12,12,09:00-10:50,F,STALLWORTH,"Couch, Jonathan",Main Campus
+1,BIOT,6053,1,48048,BIOINFORMATICS,,3,8,10,08:00-09:15,T R,STALLWORTH,"Fhuere, Alexandra",Main Campus
+1,BIOT,6523,1,49134,COMMUNICATIONS IN BIOTECHNOLOG,,3,16,20,02:00-03:15,T R,STALLWORTH,"al-Suleiman, Nazmiyya",Main Campus
+1,BIOT,6533,1,48399,SPECIALTY PLANT & CROP IMPROVE,,3,5,10,11:00-11:50,M W,STALLWORTH,"Nalla, Adam",Main Campus
+1,BIOT,6533L,51,48452,SPEC PLANTS/CROP IMPROV LAB,,0,5,10,02:00-03:50,W,0117 STALLWORTH RSCH,"Nalla, Adam",Main Campus
+1,BIOT,6993,1,47580,MASTER'S THESIS RESEARCH,,1,5,20,08:00-08:50,MTWRF,STALLWORTH,"al-Suleiman, Nazmiyya",Main Campus
+1,BLOG,3133,W1,49322,BUSINESS LOGISTICS,,3,31,30,,,,"Fernandez, Jesus",On-Line
+1,BLOG,4213,WH,48920,PHYSICAL DISTRIBUTION,,3,10,30,09:30-10:45,T R,0321 COMPUTER TECHNOLOGY/MATHE,"Lovejoy, Othell",Main Campus
+1,BLOG,4223,WH,47763,TRANSPORTATION,,3,11,30,03:30-04:45,T R,0204 COMPUTER TECHNOLOGY/MATHE,"Kincaid, Ariel",Main Campus
+1,BLOG,4233,WH,48080,GLOBAL LOGISTICS,,3,11,30,02:00-03:15,T R,0302 COMPUTER TECHNOLOGY/MATHE,"Kincaid, Ariel",Main Campus
+1,BLOG,4253,WH,47793,STRATEGIC SUPPLY CHAIN MNGT,,3,6,30,11:00-12:15,M W,0301 COMPUTER TECHNOLOGY/MATHE,"Kincaid, Ariel",Main Campus
+1,BLOG,4263,WH,48941,LEAN SUPP CHN & LOGISTICS MNGT,,3,9,30,12:30-01:45,M W,0201 COMPUTER TECHNOLOGY/MATHE,"Kincaid, Ariel",Main Campus
+1,BLOG,4273,WH,48594,SUPPLY CHAIN ANALYSIS,,3,6,30,09:30-10:45,M W,0201 COMPUTER TECHNOLOGY/MATHE,"Lovejoy, Othell",Main Campus
+1,BLOG,4273,WH2,50498,SUPPLY CHAIN ANALYSIS,,3,1,1,08:00-09:15,T R,COMPUTER TECHNOLOGY/MATHE,"Lovejoy, Othell",Main Campus
+1,BOTN,2001K,1,47365,GENERAL BOTANY,,4,12,30,10:00-10:50,M W F,0324 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BOTN,2001L,51,47367,GENERAL BOTANY LAB,,0,12,30,03:30-06:15,R,0324 ACADEMIC CLASSROOM BUILDI,"al-Abdul, Mamdooh",Main Campus
+1,BUSA,1911,W1,49601,LEADERSHIP DEVELOPMENT I,,1,40,30,,,,"Hassan, Au",On-Line
+1,BUSA,1911,W2,50500,LEADERSHIP DEVELOPMENT I,,1,30,30,,,,"Hassan, Au",On-Line
+1,BUSA,1911,WH,47794,LEADERSHIP DEVELOPMENT I,,1,36,30,05:30-06:20,T,0104 MILLER HALL,"al-Jabbar, Ameen",Main Campus
+1,BUSA,1921,W1,49478,LEADERSHIP DEVELOPMENT II,,1,37,30,,,,"Hassan, Au",On-Line
+1,BUSA,1921,W2,50501,LEADERSHIP DEVELOPMENT II,,1,25,30,,,,"Hassan, Au",On-Line
+1,BUSA,1921,WH,50432,LEADERSHIP DEVELOPMENT II,,1,29,30,06:30-07:20,T,0104 MILLER HALL,"al-Jabbar, Ameen",Main Campus
+1,BUSA,2105,WH,47484,COMMUN. IN THE BUSI. ENVIRO,,3,34,30,05:30-08:15,M,0204 COMPUTER TECHNOLOGY/MATHE,"Fernandez, Jesus",Main Campus
+1,BUSA,2503,W1,47648,BUSINESS INFORMATION SYSTEM,,3,34,30,,,,"Baxter, Ryan",On-Line
+1,BUSA,3103,W1,47792,FINANCIAL MANAGEMENT,,3,38,30,,,,"Davis, Kheylen",On-Line
+1,BUSA,3203,WH,48433,QUANTITATIVE METHODS,,3,28,30,02:00-03:15,T R,0321 COMPUTER TECHNOLOGY/MATHE,"Lovejoy, Othell",Main Campus
+1,BUSA,3213,WH,49185,STATS FOR BUSINESS & ECON,,3,26,30,02:00-03:15,M W,0321 COMPUTER TECHNOLOGY/MATHE,"Lovejoy, Othell",Main Campus
+1,BUSA,3313,WH,47563,"LEGAL,SOCIAL,ETHICAL ENVIRO",,3,33,30,02:00-03:15,M W,0110 COMPUTER TECHNOLOGY/MATHE,"Caldera-Velazquez, Sabryna",Main Campus
+1,BUSA,4123,WH,47351,INTERNSHIP,- No-cost:$0 required txtbk cost,3,17,30,,,COMPUTER TECHNOLOGY/MATHE,"Bui, Analie",Main Campus
+1,BUSA,4353,WH,50410,INTRO TO INTERNATIONAL BUSINES,,3,22,30,09:30-10:45,M W,0202 COMPUTER TECHNOLOGY/MATHE,"Caldera-Velazquez, Sabryna",Main Campus
+1,CHEM,1211,1,50031,PRINCIPLE OF CHEMISTRY I,,3,41,35,11:00-11:50,M W F,0111 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1211,2,50032,PRINCIPLE OF CHEMISTRY I,,3,32,25,09:30-10:45,T R,0321 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1211L,51,50033,PRIN OF CHEM LAB,- $40 or under req txtbks cost,1,23,24,03:00-05:50,M,0237 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,1211L,52,50034,PRIN OF CHEM LAB,- $40 or under req txtbks cost,1,22,24,12:00-02:50,T,0237 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1211L,53,50035,PRIN OF CHEM LAB,- $40 or under req txtbks cost,1,20,24,03:00-05:50,T,0237 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1212,1,50036,PRINCIPLE OF CHEMISTRY II,- $40 or under req txtbks cost,3,35,40,09:00-09:50,M W F,0212 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,1212,2,50037,PRINCIPLE OF CHEMISTRY II,- $40 or under req txtbks cost,3,22,40,10:00-10:50,M W F,0314 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,1212,3,50455,PRINCIPLE OF CHEMISTRY II,- $40 or under req txtbks cost,3,26,40,03:00-03:50,M W F,0212 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1212L,51,50038,PRIN OF CHEM LAB II,- $40 or under req txtbks cost,1,25,24,12:00-02:50,R,0237 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1212L,52,50394,PRIN OF CHEM LAB II,- $40 or under req txtbks cost,1,24,24,03:00-05:50,R,0235 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,1212L,53,50041,PRIN OF CHEM LAB II,- $40 or under req txtbks cost,1,23,24,03:00-05:50,T,0235 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,2221,1,50043,PRIN ORGANIC CHEMISTRY I,,3,32,24,09:30-10:45,T R,0212 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,2221L,52,50458,PRIN ORGANIC CHEM LAB,,1,26,24,06:00-08:50,T,0340 ACADEMIC CLASSROOM BUILDI,"el-Sesay, Shaamila",Main Campus
+1,CHEM,2222,1,50045,PRIN ORGANIC CHEMISTRY II,,3,46,24,02:00-03:15,T R,0212 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,2222L,51,50047,PRIN ORGANIC CHEM II LAB,,1,11,24,11:00-02:50,W,0337 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,2222L,52,50048,PRIN ORGANIC CHEM II LAB,,1,29,24,03:00-05:50,W,0340 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,3250,1,50049,PRIN BIOCHEMISTRY,,3,20,30,12:30-01:45,T R,0212 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,3250L,51,50050,PRIN BIOCHEM LAB,,1,21,30,03:30-06:20,T,0337 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,CHEM,3342K,1,47317,CHEMICAL INSTRUMENTATION,,4,8,16,01:00-01:50,M W F,0321 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,3342L,51,47444,CHEMICAL INSTRUMENTATION LAB,,0,8,16,03:00-05:50,W,0342 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,4210,1,50384,SEMINAR,,1,10,12,07:00-07:50,R,0321 ACADEMIC CLASSROOM BUILDI,"Xiong, Joseph",Main Campus
+1,CHEM,4332K,1,47610,PHYSICAL CHEMISTRY II,,4,1,12,10:00-10:50,M W F,0223 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,4332L,51,50397,PHYSICAL CHEMISTRY II LAB,,0,1,12,06:00-08:50,F,0342 ACADEMIC CLASSROOM BUILDI,"el-Naim, Naaifa",Main Campus
+1,CHEM,4350,1,50383,POLYMER CHEMISTRY,,2,3,12,09:00-09:50,M W,0321 ACADEMIC CLASSROOM BUILDI,"Eberle, Zaeem",Main Campus
+1,COMM,1110,1,50007,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,29,25,09:30-10:45,T R,0204 MILLER HALL,"Brant, Jay",Main Campus
+1,COMM,1110,2,49324,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,30,25,02:00-03:15,T R,0204 MILLER HALL,"Brant, Jay",Main Campus
+1,COMM,1110,3,49325,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,35,25,11:00-11:50,M W F,0202 MILLER HALL,"Montoya, Moriah",Main Campus
+1,COMM,1110,5,50433,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,30,25,01:00-01:50,M W F,0207 MILLER HALL,"Montoya, Moriah",Main Campus
+1,COMM,1110,6,49944,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,29,25,03:00-03:50,M W F,0202 MILLER HALL,"Montoya, Moriah",Main Campus
+1,COMM,1110,W1,47290,PUBLIC SPEAKING,,3,37,25,,,,"Montoya, Moriah",On-Line
+1,COMM,1110,W2,48631,PUBLIC SPEAKING,,3,37,25,,,,"Brant, Jay",On-Line
+1,COMM,1110,W3,50009,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,36,25,,,,"Montoya, Moriah",On-Line
+1,COMM,1110,W4,50010,PUBLIC SPEAKING,- No-cost:$0 required txtbk cost,3,37,25,,,,"Montoya, Moriah",On-Line
+1,COUN,5433,W2,50188,SUB ABUSE & ADDICTIONS COUNSEL,,3,5,15,,,WEB/ D2L ONLINE,"Riley, Jorge",On-Line
+1,COUN,5433,WH1,50184,SUB ABUSE & ADDICTIONS COUNSEL,,3,5,15,06:30-09:00,R,WEB/ D2L ONLINE,"Riley, Jorge",FVSU-Warner Robins Campus
+1,COUN,5443,WH,49584,CAREER & LIFE STYLE DEVELOPMEN,,3,2,15,06:00-09:00,M,0138 FVSU - Warner Robins Si,"Riley, Jorge",FVSU-Warner Robins Campus
+1,COUN,5553,W1,49572,MULTICULTURAL COUNSELING,,3,13,15,,,WEB/ D2L ONLINE,"Piechowski, Kathryn",On-Line
+1,COUN,5553,W2,49859,MULTICULTURAL COUNSELING,,3,7,15,,,WEB/ D2L ONLINE,"Reffel, Danielle",On-Line
+1,COUN,5553,WH,50216,MULTICULTURAL COUNSELING,,3,4,15,06:00-09:00,R,0151 FVSU - Warner Robins Si,"Lovato, Francisco",FVSU-Warner Robins Campus
+1,COUN,5633,70,49585,GROUP THEORY & PROCESS,,3,10,15,06:00-09:00,T,0138 FVSU - Warner Robins Si,"Riley, Jorge",FVSU-Warner Robins Campus
+1,COUN,5633,W1,48408,GROUP THEORY & PROCESS,,3,15,15,,,WEB/ D2L ONLINE,"Piechowski, Kathryn",On-Line
+1,COUN,5633,W2,49882,GROUP THEORY & PROCESS,,3,13,15,,,WEB/ D2L ONLINE,"Piechowski, Kathryn",On-Line
+1,COUN,5643,W1,49571,FAMILY COUNSELING & GUIDANCE,,3,14,15,,,WEB/ D2L ONLINE,"Lovan, Timothy",On-Line
+1,COUN,5650,70,49603,COUNSEL SKILLS & TECHNIQUES,,3,8,15,06:00-09:00,R,0150 FVSU - Warner Robins Si,"el-Ahmad, Fahmi",FVSU-Warner Robins Campus
+1,COUN,5650,W1,50217,COUNSEL SKILLS & TECHNIQUES,,3,13,15,,,WEB/ D2L ONLINE,"Schmalz, Taylor",On-Line
+1,COUN,5733,W1,49570,PSYCHOLOGICAL TESTING & EVAL,,3,16,16,,,WEB/ D2L ONLINE,"Reffel, Danielle",On-Line
+1,COUN,5733,W2,50464,PSYCHOLOGICAL TESTING & EVAL,,3,10,15,,,WEB/ D2L ONLINE,"Reffel, Danielle",On-Line
+1,COUN,5734,70,48951,CLINICAL DIAG &TREATMENT PLAN,,3,13,15,06:00-09:00,W,0151 FVSU - Warner Robins Si,"Lovato, Francisco",FVSU-Warner Robins Campus
+1,COUN,5734,W1,49152,CLINICAL DIAG &TREATMENT PLAN,,3,10,15,,,,"Werkele, Leilani",On-Line
+1,COUN,5734,W2,50186,CLINICAL DIAG &TREATMENT PLAN,,3,9,15,,,WEB/ D2L ONLINE,"Werkele, Leilani",On-Line
+1,COUN,5743,WH,49590,CRISIS COUNSELING,,3,6,15,06:00-09:00,T,0151 FVSU - Warner Robins Si,"Lovato, Francisco",FVSU-Warner Robins Campus
+1,CRJU,2000,1,47638,INTRO CRIMINAL JUSTICE,,3,29,40,10:00-10:50,M W F,0216 BOND ACADEMIC BLDG,"Prosser, Camille",Main Campus
+1,CRJU,2000,W1,49321,INTRO CRIMINAL JUSTICE,- No-cost:$0 required txtbk cost,3,42,40,,,,"Ehlers, Marnita",On-Line
+1,CRJU,2001,W1,49320,REPORT WRITING,,3,26,40,,,,"Lopez, Zhiyuan",On-Line
+1,CRJU,2010,W1,49821,C J ETHICS,,3,22,40,,,,"Prosser, Camille",On-Line
+1,CRJU,2100,W1,48611,INTRO TO CORRECTIONS,,3,24,40,,,,"Cave, Michelle",On-Line
+1,CRJU,3003,W1,50438,JUV. JUS. SYS.,,3,34,40,,,,"Nossem, Kayla",On-Line
+1,CRJU,3004,1,47407,THEORIES,,3,6,40,12:30-01:45,T R,0216 BOND ACADEMIC BLDG,"Lopez, Zhiyuan",Main Campus
+1,CRJU,3004,W1,48834,THEORIES,,3,8,40,,,,"Nossem, Kayla",On-Line
+1,CRJU,3005,W1,49057,COMM. POLICE,,3,12,40,,,,"Prosser, Camille",On-Line
+1,CRJU,3010,W1,49054,CRIMINAL LAW,,3,22,40,,,,"Lopez, Zhiyuan",On-Line
+1,CRJU,3016,1,49895,FORENSICS I,,3,22,40,09:30-10:45,T R,0222 BOND ACADEMIC BLDG,"Hickey, Jordan",Main Campus
+1,CRJU,3030,1,50081,EVIDENCE,,3,12,40,12:30-01:45,T R,0122 BOND ACADEMIC BLDG,"Hickey, Jordan",Main Campus
+1,CRJU,3050,W1,50082,POLICE ADMINISTRATION,,3,19,40,,,,"Hickey, Jordan",On-Line
+1,CRJU,3060,W1,49333,RESEARCH METHODS,,3,5,40,,,,"Nossem, Kayla",On-Line
+1,CRJU,3101,W1,48833,MINORITIES,,3,10,40,,,,"Hickey, Jordan",On-Line
+1,CRJU,3105,1,48608,ALT. TO INCARCERATION,,3,7,40,02:00-03:15,T R,0222 BOND ACADEMIC BLDG,"Lopez, Zhiyuan",Main Campus
+1,CRJU,4080,W1,48363,PRACTICUM,,6,21,25,,,,"Nossem, Kayla",On-Line
+1,CSCI,1153,1,47337,INTRO TO COMPUTERS,,3,35,30,09:30-10:45,T R,0320 COMPUTER TECHNOLOGY/MATHE,"Garcia, Fidel",Main Campus
+1,CSCI,1153,2,50181,INTRO TO COMPUTERS,,3,31,30,05:00-06:15,T R,0320 COMPUTER TECHNOLOGY/MATHE,"John, Brittany",Main Campus
+1,CSCI,1153,W1,47518,INTRO TO COMPUTERS,,3,34,35,,,ONLI WEB/ D2L ONLINE,"Thach, Caleb",On-Line
+1,CSCI,1153,W2,47393,INTRO TO COMPUTERS,,3,37,35,,,,"Steele, Kendra",On-Line
+1,CSCI,1153,W3,50061,INTRO TO COMPUTERS,,3,41,40,,,,"Thach, Caleb",On-Line
+1,CSCI,1153,W4,50385,INTRO TO COMPUTERS,,3,35,35,,,,"John, Brittany",On-Line
+1,CSCI,1301,1,47389,PRIN PROGRAM I,,4,35,30,03:30-04:45,T R,0320 COMPUTER TECHNOLOGY/MATHE,"Garcia, Fidel",Main Campus
+1,CSCI,1301L,51,47430,PRIN PROGRAM I,,0,35,30,02:00-03:40,M,0320 COMPUTER TECHNOLOGY/MATHE,"Garcia, Fidel",Main Campus
+1,CSCI,1302,1,47851,PRIN OF PROGRAM II,,4,9,30,10:00-10:50,M W F,0320 COMPUTER TECHNOLOGY/MATHE,"Thach, Caleb",Main Campus
+1,CSCI,1302L,51,47852,PRIN OF PROGRAM II LAB,,0,9,30,02:00-03:40,F,0320 COMPUTER TECHNOLOGY/MATHE,"Thach, Caleb",Main Campus
+1,CSCI,3110,1,50101,SECURITY SCRIPT PROGRAMMING,,3,15,30,12:30-01:45,T R,0320 COMPUTER TECHNOLOGY/MATHE,"Garcia, Fidel",Main Campus
+1,CSCI,3150,W1,47280,DATA COMMUNICATIONS & NETWORKS,,3,15,30,,,,"Steele, Kendra",On-Line
+1,CSCI,3333,1,47391,JAVA,,3,12,25,08:00-08:50,M W F,0321 COMPUTER TECHNOLOGY/MATHE,"al-Agha, Kaarim",Main Campus
+1,CSCI,3351,1,47333,COMPUTER ORGAN/ASSEMBLY LANG,,3,20,30,12:00-12:50,M W F,0302 COMPUTER TECHNOLOGY/MATHE,"Manzanares, Alex",Main Campus
+1,CSCI,3410,1,47516,DATA STRUCTURES,,3,25,30,01:00-01:50,M W F,0320 COMPUTER TECHNOLOGY/MATHE,"Thach, Caleb",Main Campus
+1,CSCI,3900,1,49557,DATA SCI & MACHINE LEARNING,,3,9,25,03:30-04:45,T R,0319 COMPUTER TECHNOLOGY/MATHE,"Steele, Kendra",Main Campus
+1,CSCI,4320,1,48598,SOFTWARE ENGINEERING,,3,22,30,05:00-06:15,T R,0319 COMPUTER TECHNOLOGY/MATHE,"Garcia, Fidel",Main Campus
+1,CSCI,4999,1,49388,SPECIAL TOPICS IN CSCI/CSIS,,3,12,15,11:00-12:15,T R,0219 COMPUTER TECHNOLOGY/MATHE,"Smith, Courtney",Main Campus
+1,CSIS,2000,1,48673,INTRO TO INFORMATION SECURITY,,3,10,25,12:30-01:45,T R,0319 COMPUTER TECHNOLOGY/MATHE,"Steele, Kendra",Main Campus
+1,CSIS,3743,1,47864,WEB DEVELOPMENT,,3,16,30,10:00-10:50,M W F,0319 COMPUTER TECHNOLOGY/MATHE,"Manzanares, Alex",Main Campus
+1,DATA,1501,1,50108,INTRODUCTION TO DATA SCIENCES,- No-cost:$0 required txtbk cost,3,3,35,03:00-04:45,T R,0218 COMPUTER TECHNOLOGY/MATHE,"el-Shaker, Fakeeha",Main Campus
+1,ECON,2105,W1,49479,PRIN OF MACROECON,,3,35,30,,,,"al-Kazi, Haashid",On-Line
+1,ECON,2105,WH,47411,PRIN OF MACROECON,,3,34,30,09:30-10:45,T R,0204 COMPUTER TECHNOLOGY/MATHE,"al-Kazi, Haashid",Main Campus
+1,ECON,2106,W1,47262,PRINCIPLES OF MICROECONOMICS,,3,28,30,,,,"al-Kazi, Haashid",On-Line
+1,ECON,2106,WH,49480,PRINCIPLES OF MICROECONOMICS,,3,27,30,02:00-03:15,T R,0303 COMPUTER TECHNOLOGY/MATHE,"al-Kazi, Haashid",Main Campus
+1,ECON,3113,1,50471,INTERMEDIATE MACROECONOMICS,,3,16,30,05:30-08:15,R,COMPUTER TECHNOLOGY/MATHE,"Torres, Adam",Main Campus
+1,ECSP,3000,W1,49874,EXPLORE OF LEARN/CREATIVE ART,,1,14,20,,,,"Flores, David",On-Line
+1,ECSP,3020,1,50105,EFFECTIVE READ & WRIT METHODS,,3,5,25,12:30-01:45,M W,0106 HUBBARD EDUCATION,"Dunn, Colton",Main Campus
+1,ECSP,3131,1,47532,NATURE & CURR NEEDS ECSP LEARN,,3,4,30,10:00-01:00,F,0110 HUBBARD EDUCATION,"Bridges-Farrow, Chelsea",Main Campus
+1,ECSP,3132,1,47576,CLASS ROOM MNGT. STRATEGIES,,3,4,25,02:00-03:15,T R,0106 HUBBARD EDUCATION,"al-Iman, Tahiyya",Main Campus
+1,ECSP,3332,1,48173,MTHDS TEACH LANG ARTS/READ,- No-cost:$0 required txtbk cost,3,12,25,05:30-08:30,M,0106 HUBBARD EDUCATION,"Villegas, Iris",Main Campus
+1,ECSP,3432,1,48174,METHODS OF TEACH SOCIAL STUD,,3,10,25,05:30-08:30,R,0106 HUBBARD EDUCATION,"al-Salek, Manaara",Main Campus
+1,ECSP,3731,1,48077,EARLY CHILDHOOD/SPEC ED PRACT.,- No-cost:$0 required txtbk cost,1,9,25,08:00-12:00,MTWRF,0106 HUBBARD EDUCATION,"Leo, Samuel",Main Campus
+1,ECSP,4000,1,48902,CHAR LEARNERS WITH SPEC. NEEDS,,2,6,25,05:30-08:30,W,0108 HUBBARD EDUCATION,"Sandoval, Antonio",Main Campus
+1,ECSP,4895,1,47567,DIRECTEDTEACHING/SEMINAR,- No-cost:$0 required txtbk cost,12,7,25,04:30-07:30,M W,0106 HUBBARD EDUCATION,"al-Iman, Tahiyya",Main Campus
+1,ECSP,5424,W1,49899,DIVERSITY & DIFFERENTIATED IN,,3,6,15,05:50-08:50,R,0139 FVSU - Warner Robins Si,"Sandoval, Antonio",FVSU-Warner Robins Campus
+1,ECSP,5426,WH1,50107,TRENDS & ISSUES IN MATH/ECE,,3,4,10,05:30-08:30,M,FVSU - Warner Robins Si,"Chau, Austin",Main Campus
+1,ECSP,5427,70,49938,ETHICS AND THE LAW,,3,8,12,09:00-12:00,S,0151 FVSU - Warner Robins Si,"Sandoval, Antonio",FVSU-Warner Robins Campus
+1,ECSP,5429,70,49610,FAMILY SUPPORT & INTERVENTION,,3,3,20,05:30-08:30,T,FVSU - Warner Robins Si,"al-Iman, Tahiyya",FVSU-Warner Robins Campus
+1,EDMG,3131,1,49877,NATURE AND NEEDS IN MG,,3,4,15,02:00-05:00,F,0106 HUBBARD EDUCATION,"Bridges-Farrow, Chelsea",Main Campus
+1,EDMG,3132,1,49878,CLASSROOM MANAGEMENT STRAT,,3,4,15,02:00-03:15,T R,0106 HUBBARD EDUCATION,"al-Iman, Tahiyya",Main Campus
+1,EDMG,3232,W1,50484,MTHDS OF TEACH. SCI MG,,3,1,25,,,,"Lalau-Hitchcock, Diksha",Main Campus
+1,EDMG,3332,1,48078,MTHDS. TEAC. LANG. ARTS/READMG,- No-cost:$0 required txtbk cost,3,9,20,05:30-08:30,M,0106 HUBBARD EDUCATION,"Villegas, Iris",Main Campus
+1,EDMG,3432,1,48177,MTHDS TEACH. SOCIAL STUDIES,,3,8,20,05:30-08:30,R,0110 HUBBARD EDUCATION,"al-Salek, Manaara",Main Campus
+1,EDMG,3731,1,48076,MIDDLE SCHOOL PRACTICUM I,- No-cost:$0 required txtbk cost,3,7,20,08:00-12:00,MTWRF,0106 HUBBARD EDUCATION,"Leo, Samuel",Main Campus
+1,EDMG,3732,1,50090,MIDDLE SCHOOL PRACTICUM II,,3,3,20,08:00-12:00,MTWRF,HUBBARD EDUCATION,"Leo, Samuel",Main Campus
+1,EDMG,4895,WH,47493,DIRECTED TEACHING/SEMINAR,- No-cost:$0 required txtbk cost,12,5,25,07:00-03:00,MTWRF,0110 HUBBARD EDUCATION,"Lalau-Hitchcock, Diksha",Main Campus
+1,EDMG,5613,W1,50218,CURR NEEDS OF TRANS LEARNER,,3,2,20,,,,"al-Iman, Tahiyya",On-Line
+1,EDSC,5993,W1,47538,SCHOOL COUNSELING INTERN II,- No-cost:$0 required txtbk cost,3,10,12,,,WEB/ D2L ONLINE,"Taherkhani, Vu",On-Line
+1,EDSC,5993,W2,49861,SCHOOL COUNSELING INTERN II,,3,0,8,,,WEB/ D2L ONLINE,"Taherkhani, Vu",On-Line
+1,EDSC,6123,W1,48403,DIAGNOSIS AND TREATMENT,,3,9,15,,,WEB/ D2L ONLINE,"Schmalz, Taylor",On-Line
+1,EDUC,2110,1,49869,ISSUES IN EDUCATION,,3,45,40,05:30-08:30,W,0110 HUBBARD EDUCATION,"Simmons, Danita",Main Campus
+1,EDUC,2110P,WH,49870,PRE PROFESSIONAL BLOCK PRAC.,- No-cost:$0 required txtbk cost,0,49,45,08:00-12:00,T R,0102 HUBBARD EDUCATION,"Villegas, Iris",Main Campus
+1,EDUC,2120,1,49871,PERSPECTIVES ON DIVERSITY,,3,48,45,03:30-04:15,T R,0102 HUBBARD EDUCATION,"Halling, Amy",Main Campus
+1,EDUC,2130,WH,49872,LEARN AND TEACH,,3,49,48,02:00-03:15,T R,0102 HUBBARD EDUCATION,"Lalau-Hitchcock, Diksha",Main Campus
+1,EDUC,2503,1,49873,EXCEPTIONALITIES & INSTRUCTION,,3,29,30,05:30-08:30,M,0110 HUBBARD EDUCATION,"Sandoval, Antonio",Main Campus
+1,EEGG,2114,1,48344,CIRCUITS II,,4,5,10,09:00-09:50,M W F,0302 COMPUTER TECHNOLOGY/MATHE,"Manzanares, Alex",Main Campus
+1,EEGG,2114L,51,48345,CIRCUITS II - LAB,,0,2,10,04:00-05:40,R,0321 COMPUTER TECHNOLOGY/MATHE,"Manzanares, Alex",Main Campus
+1,ELET,1211,1,47589,AC CIRCUIT ANALYSIS,,4,17,30,11:00-11:50,M W F,0124 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,1211%,51,47590,AC CIRCUIT LAB,,0,17,30,03:00-04:50,W,0124 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,2310,1,47398,ELECTRONIC DEVICES AND CIRCUIT,,4,15,30,10:00-10:50,M W F,0124 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,2310L,51,47438,ELECT DEVICES A-LAB,,0,15,30,03:00-04:50,M,0124 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,2500,1,48331,PRIN OF DIGITAL SYSTEMS,,3,20,20,01:00-01:50,M W F,0124 ELLIS AG-MECH ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4500,1,49700,COMPUTER SYSTEMS,,3,8,20,11:00-11:50,M W,0125 ELLIS AG-MECH ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4500L,51,49701,COMPUTER SYSTEMS LAB,,0,8,20,03:00-04:50,M,0213 TABOR AGR ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4501,1,48333,MICROPROCESSOR APPLICATION,,3,10,20,10:00-10:50,M W,0125 ELLIS AG-MECH ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4501L,51,48334,MICROPROCESSOR APPL. LAB,,0,10,20,03:00-04:50,W,0213 TABOR AGR ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4502,1,50446,MACHINE LEARNING FOR ROBOTICS,,4,5,20,12:00-12:50,M W F,0125 ELLIS AG-MECH ACAD,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4502L,51,50447,MACHINE LEARN FOR ROBOTICS LAB,,0,5,20,03:00-04:50,F,0125 BYWATERS ACADEMIC,"el-Tabatabai, Hibbaan",Main Campus
+1,ELET,4510,1,47842,INDUSTRIAL ELECTRONICS CONTROL,,3,8,20,01:00-01:50,M W,0102 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,4510L,51,47843,INDUSTRIAL ELECTRONICS CONTROL,,0,8,20,01:00-02:50,T,0124 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ELET,4901,1,47927,SPECIAL TOPICS AND PROJECTS,,1,6,20,03:00-04:50,T,0102 ELLIS AG-MECH ACAD,"al-Gad, Fikriyya",Main Campus
+1,ENGG,2133,1,48346,ENGINEERING MECHANICS II,,3,5,10,03:00-03:50,M W F,0303 COMPUTER TECHNOLOGY/MATHE,"Manzanares, Alex",Main Campus
+1,ENGL,999,W1,48782,SUPPORT FOR ENGLISH,- No-cost:$0 required txtbk cost,2,15,35,,,,"Allen, Kerrian",On-Line
+1,ENGL,1101,1,49673,COMPOSITION I,- No-cost:$0 required txtbk cost,3,23,30,09:00-09:50,M W F,0205 MILLER HALL,"Martinez, Sarah",Main Campus
+1,ENGL,1101,2,47800,COMPOSITION I,- $40 or under req txtbks cost,3,29,30,11:00-11:50,M W F,0205 MILLER HALL,"Martinez, Sarah",Main Campus
+1,ENGL,1101,3,50093,COMPOSITION I,- No-cost:$0 required txtbk cost,3,26,30,01:00-01:50,M W F,0205 MILLER HALL,"Martinez, Sarah",Main Campus
+1,ENGL,1101,4,49231,COMPOSITION I,- No-cost:$0 required txtbk cost,3,29,30,02:00-02:50,M W F,0205 MILLER HALL,"Martinez, Sarah",Main Campus
+1,ENGL,1101,5,50287,COMPOSITION I,- No-cost:$0 required txtbk cost,3,19,30,03:00-03:50,M W F,0205 MILLER HALL,"Martinez, Sarah",Main Campus
+1,ENGL,1101,6,49674,COMPOSITION I,- No-cost:$0 required txtbk cost,3,17,35,08:00-09:15,T R,0212 MILLER HALL,"Allen, Kerrian",Main Campus
+1,ENGL,1101,7,49763,COMPOSITION I,- No-cost:$0 required txtbk cost,3,36,35,09:30-10:45,T R,0212 MILLER HALL,"Allen, Kerrian",Main Campus
+1,ENGL,1101,8,49765,COMPOSITION I,- No-cost:$0 required txtbk cost,3,26,35,12:30-01:45,T R,0212 MILLER HALL,"Allen, Kerrian",Main Campus
+1,ENGL,1101,9,49767,COMPOSITION I,- No-cost:$0 required txtbk cost,3,18,35,02:00-03:15,T R,0212 MILLER HALL,"Allen, Kerrian",Main Campus
+1,ENGL,1101,11,50361,COMPOSITION I,- No-cost:$0 required txtbk cost,3,17,30,09:30-10:45,T R,0205 MILLER HALL,"Hand, Dallas",Main Campus
+1,ENGL,1101,12,50362,COMPOSITION I,- No-cost:$0 required txtbk cost,3,11,30,12:30-01:45,T R,0205 MILLER HALL,"Hand, Dallas",Main Campus
+1,ENGL,1101,13,50363,COMPOSITION I,- No-cost:$0 required txtbk cost,3,15,30,02:00-03:15,T R,0205 MILLER HALL,"Hand, Dallas",Main Campus
+1,ENGL,1102,1,48590,COMPOSITION II,- $40 or under req txtbks cost,3,37,35,09:00-09:50,M W F,0207 MILLER HALL,"Cross, Jon",Main Campus
+1,ENGL,1102,2,48591,COMPOSITION II,- $40 or under req txtbks cost,3,36,35,10:00-10:50,M W F,0207 MILLER HALL,"Cross, Jon",Main Campus
+1,ENGL,1102,3,48789,COMPOSITION II,- $40 or under req txtbks cost,3,30,35,02:00-02:50,M W F,0207 MILLER HALL,"Cross, Jon",Main Campus
+1,ENGL,1102,4,49766,COMPOSITION II,- No-cost:$0 required txtbk cost,3,32,35,03:00-03:50,M W F,0207 MILLER HALL,"Cross, Jon",Main Campus
+1,ENGL,1102,5,49768,COMPOSITION II,- No-cost:$0 required txtbk cost,3,26,35,08:00-08:50,M W F,0204 MILLER HALL,"Brown, Triayna",Main Campus
+1,ENGL,1102,6,47265,COMPOSITION II,- $40 or under req txtbks cost,3,25,35,11:00-11:50,M W F,0204 MILLER HALL,"Brown, Triayna",Main Campus
+1,ENGL,1102,7,49550,COMPOSITION II,- No-cost:$0 required txtbk cost,3,30,35,12:00-12:50,M W F,0204 MILLER HALL,"Brown, Triayna",Main Campus
+1,ENGL,1102,8,49551,COMPOSITION II,- No-cost:$0 required txtbk cost,3,30,35,01:00-01:50,M W F,0204 MILLER HALL,"Brown, Triayna",Main Campus
+1,ENGL,1102,9,50365,COMPOSITION II,- No-cost:$0 required txtbk cost,3,29,35,02:00-02:50,M W F,0204 MILLER HALL,"Brown, Triayna",Main Campus
+1,ENGL,1102,10,50367,COMPOSITION II,- No-cost:$0 required txtbk cost,3,20,35,08:00-09:15,T R,0104 MILLER HALL,"al-Mirza, Mahmood",Main Campus
+1,ENGL,1102,11,50368,COMPOSITION II,- No-cost:$0 required txtbk cost,3,28,35,09:30-10:45,T R,0104 MILLER HALL,"al-Mirza, Mahmood",Main Campus
+1,ENGL,1102,12,50369,COMPOSITION II,- No-cost:$0 required txtbk cost,3,28,35,12:30-01:45,T R,0104 MILLER HALL,"al-Mirza, Mahmood",Main Campus
+1,ENGL,1102H,WH1,50370,HONORS COMPOSITION II,,3,10,25,03:30-04:45,T R,0104 MILLER HALL,"al-Mirza, Mahmood",Main Campus
+1,ENGL,2111,WH1,50466,WORLD LITERATURE,- No-cost:$0 required txtbk cost,3,43,35,02:00-03:15,T R,0104 MILLER HALL,"al-Mirza, Mahmood",Main Campus
+1,ENGL,3343,W1,49875,CONTEMPORARY AMERICAN LITERATU,,3,5,15,,,,"Villegas, Iris",On-Line
+1,ENGL,3500,W1,50193,GRAMMAR FOR TEACH & WRITERS,,3,6,20,,,,"al-Mirza, Mahmood",On-Line
+1,ENGL,4520,W1,49876,LIT. FOR THE MIDDLE GRADES,,3,5,15,,,,"Villegas, Iris",On-Line
+1,ENGL,5023,W1,49906,PRE-ADOLESCENT LITERATURE,,3,4,20,,,,"Nelson, Alexander",On-Line
+1,EPSY,5513,W1,49261,PRE-ADOLESCENT PSYCHOLOGY,,3,6,20,,,,"al-Iman, Tahiyya",On-Line
+1,FCSC,2833,W1,47324,CONSUMER ECONOMICS,,3,15,35,,,,"Mccormick, Jeremy",On-Line
+1,FCSC,3872,W1,49335,COMM INVOLVEMNT & VOL,,2,11,25,,,,"Thortvedt, Kevin",Main Campus
+1,FCSC,3903,1,50509,SUPERVISED FIELD EXPERIENCE,- No-cost:$0 required txtbk cost,1,3,2,09:00-12:00,S,0108 MYERS HOME EC,"Cheng, Lucy",Main Campus
+1,FCSC,3913,1,47659,HOSPITALITY & HOME MANAGEME,,3,5,12,05:30-09:30,T R,HOME-EC MNGT HOUSE,"Thortvedt, Kevin",Main Campus
+1,FDNU,3803,W1,49568,UNDERSTANDING NUTRITION,,3,6,20,,,,"Gilbert, Sonja",On-Line
+1,FDNU,4893,W1,49794,MEDICAL NUTRITION THERAPY II,,3,6,20,,,,"Robles, Brian",On-Line
+1,FDNU,4903,1,48476,INSTITUTIONAL FOODS,,3,6,20,09:00-09:50,M W,0209 MYERS HOME EC,"Cheng, Lucy",Main Campus
+1,FDNU,4903L,51,48477,INSTITUTIONAL FOODS LAB,,0,6,20,09:00-10:50,F,0119 MYERS HOME EC,"Cheng, Lucy",Main Campus
+1,FREN,1002,W1,48137,ELEMENTARY FRENCH II,,3,10,25,,,,"el-Jaber, Sitaara",On-Line
+1,FREN,2001,W1,49337,INTERMEDIATE FRENCH I,,3,12,25,,,,"el-Jaber, Sitaara",On-Line
+1,FVSU,100,1,47327,INTRO TO UNIV,,1,43,50,11:00-11:50,T R,0118 BOND ACADEMIC BLDG,"al-Idris, Musheera",Main Campus
+1,FVSU,100,2,47422,INTRO TO UNIV (ORI)/AGRI,,1,58,50,11:00-11:50,T R,0105 TABOR AGR ACAD,"Landin, Yahaira",Main Campus
+1,FVSU,100,3,47423,INTRO TO UNIV,,1,48,50,11:00-11:50,T R,MILLER HALL,"Hoang, Katelyn",Main Campus
+1,FVSU,100,4,47386,INTRO TO UNIV,,1,38,35,11:00-11:50,T R,0123 BOND ACADEMIC BLDG,"Dumas, Gabriela",Main Campus
+1,FVSU,100,5,49377,INTRO TO UNIV,,1,29,30,11:00-11:50,T R,0216 BOND ACADEMIC BLDG,"Hector, Kristjan",Main Campus
+1,FVSU,100,6,50388,INTRO TO UNIV,,1,77,80,11:00-11:50,T R,0110 COMPUTER TECHNOLOGY/MATHE,"Strecker, Jessica",Main Campus
+1,FVSU,100,W1,47421,INTRO TO UNIV/ ONLINE,,1,46,50,,,,"Strecker, Jessica",On-Line
+1,FVSU,500,W5E,49522,GRADUATE STUDIES ORIENTATION,,0,7,10,04:00-05:15,W,,"al-Iman, Tahiyya",On-Line
+1,GEOG,1231,1,47403,HUMAN GEOGRAPHY,,3,32,35,09:30-10:45,T R,0215 BOND ACADEMIC BLDG,"el-Abood, Tameema",Main Campus
+1,GEOG,1231,2,47535,HUMAN GEOGRAPHY,,3,32,35,12:30-01:45,T R,0215 BOND ACADEMIC BLDG,"el-Abood, Tameema",Main Campus
+1,GEOG,1231,3,48807,HUMAN GEOGRAPHY,,3,27,35,02:00-03:15,T R,0215 BOND ACADEMIC BLDG,"el-Abood, Tameema",Main Campus
+1,GEOG,1231,4,49786,HUMAN GEOGRAPHY,,3,18,35,03:30-04:45,T R,0215 BOND ACADEMIC BLDG,"el-Abood, Tameema",Main Campus
+1,GEOL,1122,1,50402,EARTH HISTORY,,4,6,10,09:30-10:45,T R,0220 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,GEOL,1122L,51,50403,EARTH HIST-LAB,,0,6,10,07:00-08:50,W,0212 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,GEOL,3104,W1,48053,CLIMATE CHANGE:EARTH IN FUTURE,,4,4,20,,,,"Fang, Mason",On-Line
+1,GEOL,3104L,51,48054,CLIMATE CHANGE: ERTH & FUT LAB,,0,3,20,03:15-05:55,W,0220 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,GEOL,4202,1,50053,APP OF COMPUT MTHDS IN SCI/RES,,2,1,10,05:00-06:40,R,0220 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,GEOL,5203,0,49919,ENVIRONMENTAL GEOLOGY,,3,4,10,05:00-07:30,T,0212 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,GERO,3030,W1,49269,MENTAL AND WELL-BEING & AGING,,3,24,25,,,,"Gooding, Benjamin",On-Line
+1,HIST,1111,WH,49528,SURV WRLD CIV ERLY MODERN,- No-cost:$0 required txtbk cost,3,45,40,09:00-09:50,M W F,0118 BOND ACADEMIC BLDG,"Henderson, Melissa",Main Campus
+1,HIST,1111,WH2,50406,SURV WRLD CIV ERLY MODERN,- No-cost:$0 required txtbk cost,3,50,40,10:00-10:50,M W F,0118 BOND ACADEMIC BLDG,"Henderson, Melissa",Main Campus
+1,HIST,1112,WH,47408,SRV WRLD CIV FR MODRN TIME,,3,45,40,11:00-11:50,M W F,0118 BOND ACADEMIC BLDG,"Henderson, Melissa",Main Campus
+1,HIST,1112,WH2,50407,SRV WRLD CIV FR MODRN TIME,,3,47,40,01:00-01:50,M W F,0222 BOND ACADEMIC BLDG,"Henderson, Melissa",Main Campus
+1,HIST,1112,WH3,50408,SRV WRLD CIV FR MODRN TIME,,3,43,40,06:00-07:15,T R,0102 MILLER HALL,"Greenstein, Derrick",Main Campus
+1,HIST,2111,1,47506,US HIS TO PST CV WAR,,3,35,40,09:00-09:50,M W F,0117 BOND ACADEMIC BLDG,"Curry, Jossie",Main Campus
+1,HIST,2111,2,47277,US HIS TO PST CV WAR,,3,39,40,10:00-10:50,M W F,0117 BOND ACADEMIC BLDG,"Curry, Jossie",Main Campus
+1,HIST,2111,3,50409,US HIS TO PST CV WAR,,3,41,40,01:00-01:50,M W F,0117 BOND ACADEMIC BLDG,"Curry, Jossie",Main Campus
+1,HIST,2112,WH,47278,US-PST CV WR TO PRESENT,,3,40,40,09:30-10:45,T R,0117 BOND ACADEMIC BLDG,"el-Kanan, Mufeed",Main Campus
+1,HIST,2112,WH2,48347,US-PST CV WR TO PRESENT,,3,44,40,12:30-01:45,T R,0117 BOND ACADEMIC BLDG,"el-Kanan, Mufeed",Main Campus
+1,HIST,2112,WH3,48813,US-PST CV WR TO PRESENT,,3,45,40,02:00-03:15,T R,0117 BOND ACADEMIC BLDG,"el-Kanan, Mufeed",Main Campus
+1,HIST,2112,WH4,50502,US-PST CV WR TO PRESENT,- No-cost:$0 required txtbk cost,3,17,30,06:00-07:15,T R,0118 BOND ACADEMIC BLDG,"Hickey, Garret",Main Campus
+1,HIST,6975,W1,50214,SPECIAL TOPICS IN HISTORY,,3,4,25,,,,"Findley, Leigh",On-Line
+1,HLTH,2121,1,49241,HEALTHFUL LIVING,,2,5,25,11:00-11:50,T R,0348 HPE BUILDING,"al-Ahmadi, Ibrahim",Main Campus
+1,HLTH,3130,1,49865,SUBSTANCE USE & ABUSE,,3,9,50,09:00-10:30,T R,0348 HPE BUILDING,"al-Ahmadi, Ibrahim",Main Campus
+1,HORT,3852,1,50208,ORG/CONV VEG & FRUIT GARDEN,,3,4,20,12:30-01:45,T R,0114 TABOR AGR ACAD,"Sotam, Vanessa",Main Campus
+1,HORT,3852L,51,50209,ORG/CONV VEG & FRUIT GAR LAB,,0,4,20,03:30-05:20,T,0114 TABOR AGR ACAD,"Sotam, Vanessa",Main Campus
+1,HORT,4813,1,50459,NURSERY MANAGEMENT,,3,4,20,12:30-01:45,T R,TABOR AGR ACAD,"Fhuere, Alexandra",Main Campus
+1,HORT,4813L,51,50460,NURSERY MANAGEMENT LAB,,0,4,20,03:30-05:20,F,0114 TABOR AGR ACAD,"Fhuere, Alexandra",Main Campus
+1,HPER,2000,1,49866,DEPARTMENTAL SEMINAR,,0,4,10,07:00-07:50,F,0350 HPE BUILDING,"Eckert, Kristjan",Main Campus
+1,HPER,3131,1,50062,MEASUREMENT & EVAL IN PHYS. ED,,3,2,20,06:00-07:30,M W,HPE BUILDING,"Eckert, Kristjan",Main Campus
+1,HPER,3902,1,49080,TEACHING PRACTICUM IN HPE II,,2,4,10,10:00-10:50,M W,HPE BUILDING,"Simmons, Danita",Main Campus
+1,HPER,4431,1,49081,INSTRUCTIONAL DESIGN IN HPE II,,3,6,10,01:00-02:20,M W,HPE BUILDING,"Simmons, Danita",Main Campus
+1,HPER,4500,1,49082,PHYSIOLOGY OF EXERCISE,,3,9,10,05:00-07:30,T R,HPE BUILDING,"Eckert, Kristjan",Main Campus
+1,HPER,4617,1,49867,SR. SEMINAR IN HPE,,1,1,5,05:00-06:00,M,HPE BUILDING,"Simmons, Danita",Main Campus
+1,HPER,4895,WH,49868,DIRECTED TEACHING/SEMINAR,,12,0,10,08:00-04:00,MTWRF,,"Simmons, Danita",Main Campus
+1,ICDV,2813,1,47649,LIFE SPAN DEV/CON INFULN,,3,9,30,12:30-01:45,T R,0205 MYERS HOME EC,"Ali, Justin",Main Campus
+1,ICDV,3842,1,47652,PARENT CHILD RELATIONS,,2,5,30,06:00-07:50,W,0205 MYERS HOME EC,"Hypio, Alec",Main Campus
+1,ICDV,4909,1,47656,DIR OBSERV/SUPERVISION,,9,2,18,08:00-04:50,MTWRF,FLD EXPER,"Cheng, Lucy",Main Campus
+1,MAED,5030,W1,49902,Geometry,,3,1,15,,,,"Lalau-Hitchcock, Diksha",On-Line
+1,MATH,998,1,49246,SUPPORT FOR MATH MODELING,- No-cost:$0 required txtbk cost,2,15,30,12:00-12:50,M W,0110 MILLER HALL,"Melara, Jovanni",Main Campus
+1,MATH,998,2,48142,SUPPORT FOR MATH MODELING,- No-cost:$0 required txtbk cost,2,13,0,01:00-01:50,M W,0110 MILLER HALL,"Mergia, Jalond",Main Campus
+1,MATH,998,3,48143,SUPPORT FOR MATH MODELING,- No-cost:$0 required txtbk cost,2,16,20,12:00-12:50,T R,0110 MILLER HALL,"Yu, Jing",Main Campus
+1,MATH,998,W1,49987,SUPPORT FOR MATH MODELING,- No-cost:$0 required txtbk cost,2,15,25,,,,"Melara, Jovanni",On-Line
+1,MATH,999,1,49303,SUPPORT FOR COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,2,12,25,12:00-12:50,T R,0321 COMPUTER TECHNOLOGY/MATHE,"el-Nassif, Safwa",Main Campus
+1,MATH,999,2,48871,SUPPORT FOR COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,2,12,25,10:00-10:50,M W,0321 COMPUTER TECHNOLOGY/MATHE,"Awtrey, Jason",Main Campus
+1,MATH,999,W1,50055,SUPPORT FOR COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,2,14,20,,,,"el-Nassif, Safwa",On-Line
+1,MATH,1101,1,47495,MATHEMATICAL MODELING,,3,26,40,09:00-09:50,M W F,0301 COMPUTER TECHNOLOGY/MATHE,"Ramos, Daniel",Main Campus
+1,MATH,1101,2,48781,MATHEMATICAL MODELING,,3,22,0,09:30-10:45,T R,0110 MILLER HALL,"Yu, Jing",Main Campus
+1,MATH,1101,3,48011,MATHEMATICAL MODELING,,3,22,25,03:30-04:45,T R,0110 MILLER HALL,"Melara, Jovanni",Main Campus
+1,MATH,1101,4,49245,MATHEMATICAL MODELING,,3,18,20,02:00-03:15,M W,0108 MILLER HALL,"Mergia, Jalond",Main Campus
+1,MATH,1101,5,48105,MATHEMATICAL MODELING,,3,15,20,12:30-01:45,T R,0108 MILLER HALL,"Melara, Jovanni",Main Campus
+1,MATH,1101,W1,49988,MATHEMATICAL MODELING,,3,31,0,,,,"Melara, Jovanni",On-Line
+1,MATH,1111,1,49306,COLLEGE ALGEBRA,#NAME?,3,38,40,11:00-11:50,M W F,0302 COMPUTER TECHNOLOGY/MATHE,"Mcroy, Charneissha",Main Campus
+1,MATH,1111,2,47297,COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,3,38,40,02:00-03:15,T R,0201 COMPUTER TECHNOLOGY/MATHE,"el-Shaker, Fakeeha",Main Campus
+1,MATH,1111,3,49307,COLLEGE ALGEBRA,#NAME?,3,38,40,09:30-10:45,T R,0301 COMPUTER TECHNOLOGY/MATHE,"Barron, Kelly",Main Campus
+1,MATH,1111,4,47406,COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,3,32,40,01:00-01:50,M W F,0301 COMPUTER TECHNOLOGY/MATHE,"Ramos, Daniel",Main Campus
+1,MATH,1111,5,47432,COLLEGE ALGEBRA,- No-cost:$0 required txtbk cost,3,32,40,12:30-01:45,T R,0301 COMPUTER TECHNOLOGY/MATHE,"Barron, Kelly",Main Campus
+1,MATH,1111,W1,50056,COLLEGE ALGEBRA,#NAME?,3,50,35,,,,"el-Nassif, Safwa",On-Line
+1,MATH,1112,1,47299,TRIGONOMETRY,,3,33,40,08:00-09:15,T R,0204 COMPUTER TECHNOLOGY/MATHE,"Barron, Kelly",Main Campus
+1,MATH,1112,2,48429,TRIGONOMETRY,- No-cost:$0 required txtbk cost,3,39,40,02:00-03:15,M W,0201 COMPUTER TECHNOLOGY/MATHE,"Ellis, Ciana",Main Campus
+1,MATH,1113,1,47433,PRECALCULUS,,4,42,40,12:00-12:50,MTWR,0204 COMPUTER TECHNOLOGY/MATHE,"el-Shaker, Fakeeha",Main Campus
+1,MATH,1113,2,50213,PRECALCULUS,#NAME?,4,35,40,02:00-02:50,MTWR,0301 COMPUTER TECHNOLOGY/MATHE,"Barron, Kelly",Main Campus
+1,MATH,1113H,WH1,50449,HONORS PRECALCULUS,,4,0,40,01:00-01:50,MTWR,0204 COMPUTER TECHNOLOGY/MATHE,"el-Nassif, Safwa",Main Campus
+1,MATH,1150,1,47862,CALCULUS FOR BUS. & ECONOMICS,,4,35,40,10:00-10:50,MTWR,0304 COMPUTER TECHNOLOGY/MATHE,"el-Shaker, Fakeeha",Main Campus
+1,MATH,1154,1,47300,CALCULUS I,,4,45,40,09:00-09:50,MTWR,0304 COMPUTER TECHNOLOGY/MATHE,"el-Shaker, Fakeeha",Main Campus
+1,MATH,1154,2,47301,CALCULUS I,,4,42,40,04:00-04:50,MTWR,0302 COMPUTER TECHNOLOGY/MATHE,"Mcroy, Charneissha",Main Campus
+1,MATH,1401,1,49071,ELEMENTARY STATISTICS,#NAME?,3,44,40,02:00-03:15,T R,0202 COMPUTER TECHNOLOGY/MATHE,"Ellis, Ciana",Main Campus
+1,MATH,2164,1,47598,CALCULUS II,,4,19,40,01:00-01:50,MTWR,0304 COMPUTER TECHNOLOGY/MATHE,"Awtrey, Jason",Main Campus
+1,MATH,2174,1,50381,CALCULUS III,#NAME?,4,10,40,02:00-02:50,MTWR,0204 COMPUTER TECHNOLOGY/MATHE,"Awtrey, Jason",Main Campus
+1,MATH,2203,1,47629,INTRO LINEAR ALGEBRA,,3,25,40,03:30-04:45,T R,0303 COMPUTER TECHNOLOGY/MATHE,"Ellis, Ciana",Main Campus
+1,MATH,2253,1,47334,DISCRETE MATH,,3,33,40,11:00-11:50,M W F,0304 COMPUTER TECHNOLOGY/MATHE,"Ramos, Daniel",Main Campus
+1,MATH,3100,W1,50506,DISCRETE MATH & STATISTICS,,3,4,20,,,,"Lalau-Hitchcock, Diksha",Main Campus
+1,MATH,3273,W1,50511,THEORY OF NUMBERS,,3,1,1,,,,"al-Agha, Kaarim",On-Line
+1,MATH,3323,1,47303,COLLEGE GEOMETRY,,3,12,30,09:00-09:50,M W F,0303 COMPUTER TECHNOLOGY/MATHE,"al-Agha, Kaarim",Main Campus
+1,MATH,3400,WH,50465,GEOMETRY FOR K-8 TEACHERS,,3,7,20,05:30-08:30,W,0102 HUBBARD EDUCATION,"Miramontes, Jonnie",On-Line
+1,MATH,3510,W1,50469,ALGEBRAIC CONCEPTS,,3,9,25,,,HUBBARD EDUCATION,"Lalau-Hitchcock, Diksha",Main Campus
+1,MATH,4143,1,47560,COMPLEX VARIABLES,,3,9,30,12:30-01:45,T R,0302 COMPUTER TECHNOLOGY/MATHE,"Mcroy, Charneissha",Main Campus
+1,MATH,4243,1,47304,LINEAR ALGEBRA II,,3,7,30,09:30-10:45,T R,0303 COMPUTER TECHNOLOGY/MATHE,"Awtrey, Jason",Main Campus
+1,MATH,4343,1,47305,ADVANCED CALCULUS,,3,5,30,11:00-11:50,M W F,0303 COMPUTER TECHNOLOGY/MATHE,"al-Agha, Kaarim",Main Campus
+1,MATH,4363,1,48869,NUMEMRICAL METHODS,,3,5,30,12:00-12:50,M W F,0303 COMPUTER TECHNOLOGY/MATHE,"al-Agha, Kaarim",Main Campus
+1,MATH,4390,1,48254,MATHEMATICS REVIEW,,2,5,30,02:00-02:50,M W,0302 COMPUTER TECHNOLOGY/MATHE,"el-Nassif, Safwa",Main Campus
+1,MCMM,2313,1,50001,INTRODUCTION TO BROADCASTING,,3,5,25,01:00-01:50,M W F,BISHOP MASS COMM,"Griggs, Mercedes",Main Campus
+1,MCMM,3123,1,50413,MASS MEDIA LAW & ETHICS,- No-cost:$0 required txtbk cost,3,22,25,09:00-09:50,M W F,BISHOP MASS COMM,"Griggs, Mercedes",Main Campus
+1,MCMM,3125,1,47614,ELECTRONIC MEDIA,,3,17,25,05:00-07:50,M,0203 MILLER HALL,"Burback, Sarah",Main Campus
+1,MCMM,3143,WH1,48918,WRITING FOR DIGITAL MEDIA,- No-cost:$0 required txtbk cost,3,8,20,02:00-02:50,M W F,0203 MILLER HALL,"Burback, Sarah",Main Campus
+1,MCMM,3333,1,50415,VIDEO EDITING I,,3,4,20,05:00-07:50,T,BISHOP MASS COMM,"el-Begum, Sahl",Main Campus
+1,MCMM,4163,1,50417,PHOTOJOURNALISM,- No-cost:$0 required txtbk cost,3,14,25,12:30-01:45,T R,0210 MILLER HALL,"Armstrong, Darnell",Main Campus
+1,MCMM,4193,1,50414,TV PRODUCTION I,- No-cost:$0 required txtbk cost,3,3,20,02:00-02:50,M W F,BISHOP MASS COMM,"Griggs, Mercedes",Main Campus
+1,MCMM,4243,1,50004,MULTI-MEDIA PRESENTATIONS,,3,3,25,11:00-11:50,M W F,0203 MILLER HALL,"Burback, Sarah",Main Campus
+1,MCMM,4273,1,50000,CORPORATE COMMUNICATIONS,- No-cost:$0 required txtbk cost,3,6,25,09:30-10:45,T R,0210 MILLER HALL,"Armstrong, Darnell",Main Campus
+1,MCMM,4283,1,49844,MASS COMMUNICATION RESEARCH,- No-cost:$0 required txtbk cost,3,13,25,08:00-08:50,M W F,BISHOP MASS COMM,"Griggs, Mercedes",Main Campus
+1,MCMM,4293,1,49060,PERFORMANCE IN MEDIA,- No-cost:$0 required txtbk cost,3,3,25,02:00-03:15,T R,MILLER HALL,"Armstrong, Darnell",Main Campus
+1,MCMM,4323,1,49722,INTERNSHIP,- No-cost:$0 required txtbk cost,3,1,25,06:00-09:00,T,0203 MILLER HALL,"Burback, Sarah",Main Campus
+1,MCMM,4361,1,50003,CAPSTONE IN MASS COMMUNICATION,,3,7,25,03:30-04:45,T R,0210 MILLER HALL,"Armstrong, Darnell",Main Campus
+1,MILS,1120,1,47308,BASIC LEADERSHIP,,1,13,25,09:00-09:50,M,0309 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,1120,2,47309,BASIC LEADERSHIP,,1,7,25,10:00-10:50,M,0309 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,1120,3,47310,BASIC LEADERSHIP,,1,10,25,11:00-11:50,M,0309 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,1120L,51,47446,INTRO MIL LEADSHP-LAB,,0,24,45,03:30-05:30,R,0305 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,1120L,52,47447,INTRO MIL LEADSHP-LAB,,0,5,15,09:00-11:00,S,0305 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,2220,1,47311,LEADERSHIP & TEAMWORK,,2,10,25,01:00-01:50,M W,0309 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,2220,2,47339,LEADERSHIP & TEAMWORK,,2,1,15,02:00-02:50,M W,0309 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,2220L,51,47448,LEADERSHIP & TEAMWORK LAB,,0,9,30,03:30-05:30,R,0305 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,2220L,52,47449,LEADERSHIP & TEAMWORK LAB,,0,1,15,09:00-11:00,S,0305 HUBBARD EDUCATION,"Kazee, Amanda",Main Campus
+1,MILS,2920,1,47824,LEADERSHIP,,2,2,10,03:00-04:50,M W,0309 HUBBARD EDUCATION,"Schippers, Mario",Main Campus
+1,MILS,2920L,51,47905,LEADERSHIP LAB,,0,2,10,03:30-05:30,R,0309 HUBBARD EDUCATION,"Schippers, Mario",Main Campus
+1,MILS,2920L,52,48432,LEADERSHIP LAB,,0,0,10,09:00-11:00,S,0309 HUBBARD EDUCATION,"Schippers, Mario",Main Campus
+1,MILS,3320,1,47338,LEADERSHIP AND ETHICS,,3,1,25,09:30-10:45,T R,0305 HUBBARD EDUCATION,"Lopez-Serda, Octavio",Main Campus
+1,MILS,3320,2,48430,LEADERSHIP AND ETHICS,,3,7,25,12:30-01:45,T R,0305 HUBBARD EDUCATION,"Lopez-Serda, Octavio",Main Campus
+1,MILS,3320L,51,47450,LEADERSHIP AND ETHICS LAB,,0,7,30,03:30-05:30,R,0308 HUBBARD EDUCATION,"Lopez-Serda, Octavio",Main Campus
+1,MILS,3320L,52,47520,LEADERSHIP AND ETHICS LAB,,0,1,15,09:00-11:00,S,0308 HUBBARD EDUCATION,"Lopez-Serda, Octavio",Main Campus
+1,MILS,4420,1,47312,OFFICERSHIP,,1,8,25,09:30-10:45,T R,0302 HUBBARD EDUCATION,"Madison, Shakedia",Main Campus
+1,MILS,4420,2,48431,OFFICERSHIP,,1,3,25,12:30-01:45,T R,0302 HUBBARD EDUCATION,"Madison, Shakedia",Main Campus
+1,MILS,4420L,51,47451,OFFICERSHIP LAB,,0,10,25,03:30-05:30,R,0302 HUBBARD EDUCATION,"Madison, Shakedia",Main Campus
+1,MILS,4420L,52,47452,OFFICERSHIP LAB,,0,1,25,09:00-11:00,S,0302 HUBBARD EDUCATION,"Madison, Shakedia",Main Campus
+1,MILS,4920,1,50470,LEADERSHIP/ARMY VALUES,,3,3,10,02:30-03:45,M W,0305 HUBBARD EDUCATION,"Schippers, Mario",Main Campus
+1,MKTG,3103,WH,47561,PRIN OF MARKETING,,3,36,30,09:30-10:45,M W,0204 COMPUTER TECHNOLOGY/MATHE,"Thompson, Isaac",Main Campus
+1,MKTG,3133,WH,48800,PRIN OF RETAILING,,3,24,30,11:00-12:15,M W,0202 COMPUTER TECHNOLOGY/MATHE,"Thompson, Isaac",Main Campus
+1,MKTG,4103,WH,50436,MARKET COMMUNICATION,,3,10,30,03:30-04:45,M W,0319 COMPUTER TECHNOLOGY/MATHE,"Thompson, Isaac",Main Campus
+1,MKTG,4123,WH,47571,INTERNATIONAL MARKETING,,3,16,30,02:00-03:15,M W,0304 COMPUTER TECHNOLOGY/MATHE,"Thompson, Isaac",Main Campus
+1,MKTG,4253,W1,50292,MARKETING MANAGEMENT,,3,15,30,,,,"Thompson, Isaac",On-Line
+1,MLHC,5770,WH,49851,SUPERVISED PRACTICUM,,3,4,8,06:00-09:00,M,FVSU - Warner Robins Si,"Lovato, Francisco",FVSU-Warner Robins Campus
+1,MLHC,5772,WH,49853,INTERNSHIP I,,3,0,8,06:00-09:00,R,FVSU - Warner Robins Si,"Quintana, Jason",FVSU-Warner Robins Campus
+1,MLHC,5782,WH,49854,INTERNSHIP II,,3,3,8,06:00-09:00,R,FVSU - Warner Robins Si,"Quintana, Jason",FVSU-Warner Robins Campus
+1,MNGT,3103,WH,47415,PRINCIPLES OF MANAGEMENT,,3,31,30,09:30-10:45,T R,0202 COMPUTER TECHNOLOGY/MATHE,"Baxter, Ryan",Main Campus
+1,MNGT,3153,WH,48434,ORGANIZATIONAL THEORY/BEHAVIOR,,3,8,30,02:00-03:15,T R,0304 COMPUTER TECHNOLOGY/MATHE,"Baxter, Ryan",Main Campus
+1,MNGT,3203,WH,50437,HUMAN RESOURCE MANAGEMENT,,3,13,30,12:30-01:45,T R,0202 COMPUTER TECHNOLOGY/MATHE,"Baxter, Ryan",Main Campus
+1,MNGT,3303,WH,47797,OPERATION/PRODUCTION MNGT,,3,17,30,05:30-08:15,T,0301 COMPUTER TECHNOLOGY/MATHE,"Duncan, Jonte",Main Campus
+1,MNGT,4353,W1,47959,SMALL BUSINESS MANAGEMENT,,3,30,30,,,,"Baxter, Ryan",On-Line
+1,MNGT,4383,WH,47528,INTERNATIONAL MANAGEMENT,,3,13,30,11:00-12:15,M W,0319 COMPUTER TECHNOLOGY/MATHE,"Caldera-Velazquez, Sabryna",Main Campus
+1,MNGT,4393,W1,47564,STRATEGIC MNGT,,3,22,30,,,,"Caldera-Velazquez, Sabryna",On-Line
+1,MPAC,5001,W1,50486,FOUNDATIONS OF PUBLIC MNGT,,3,4,20,,,,"Jones, Te'Keisha",On-Line
+1,MPAC,5002,W1,50487,HR MNGT IN PUBLIC SECTOR,,3,5,20,,,,"Jones, Te'Keisha",On-Line
+1,MPAC,5003,W1,50488,LDS & ORGANIZATIONAL BEHAVIOR,,3,5,20,,,,"Jones, Te'Keisha",On-Line
+1,MUSC,1000,1,48852,MUSIC APPRECIATION,,3,35,35,09:00-09:50,M W F,0203 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,1000,2,48853,MUSIC APPRECIATION,,3,36,35,10:00-10:50,M W F,0203 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,1013,1,50191,MUSIC THEORY II,,3,2,15,04:00-04:50,M W F,,"Gip, Henry",Main Campus
+1,MUSC,1141,1,50015,MAJOR APPLIED MUSIC,- No-cost:$0 required txtbk cost,1,5,5,07:00-07:50,F,0101 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,1331,1,49559,MUSIC ENSEMBLE,- No-cost:$0 required txtbk cost,1,11,40,07:00-08:00,MTWR,0102 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,1331,5,48000,CONCERT BAND,,1,32,35,05:00-07:00,M WR,0100 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,1331,7,48845,MUSIC ENSEMBLE,- No-cost:$0 required txtbk cost,1,3,20,06:00-07:00,M W,0103 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,2013,3,50428,MUSIC THEORY IV,,3,4,15,02:00-02:50,T,0200 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,2141,1,50016,MAJOR APPLIED MUSIC,- No-cost:$0 required txtbk cost,1,3,5,08:00-09:00,F,0101 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,2314,1,50477,CONDUCTING FUNDAMENTALS,- No-cost:$0 required txtbk cost,1,4,25,09:00-09:50,M,PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,2331,1,49561,MUSIC ENSEMBLE,- No-cost:$0 required txtbk cost,1,5,40,07:00-08:00,MTWR,0102 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,2331,5,48005,MUSIC ENSEMBLE CONCERT BAND,,1,10,35,05:00-06:00,M WR,0100 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,2362,0,49567,CLASS PIANO I,- No-cost:$0 required txtbk cost,1,2,16,11:00-11:50,M,0201 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,3000,1,49452,MUSIC BUSINESS PRACTICES,- No-cost:$0 required txtbk cost,3,21,15,09:30-10:45,T R,0200 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,3294,1,47504,JAZZ HISTORY,,2,2,35,01:00-02:00,T R,0200 PATTON ACADEMIC,"Benally, J'Rita",Main Campus
+1,MUSC,3331,1,49562,MUSIC ENSEMBLE,- No-cost:$0 required txtbk cost,1,5,40,07:00-08:00,MTWR,0102 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,3331,5,48002,MUSIC ENSEMBLE CONCERT BAND,,1,8,35,05:00-07:00,M WR,0100 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4003,1,50476,MUSIC HISTORY & LIT III,- No-cost:$0 required txtbk cost,2,5,30,03:00-03:50,M W,0211 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4141,1,50018,MAJOR APPLIED MUSIC,- No-cost:$0 required txtbk cost,1,2,5,12:00-01:00,F,0101 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4262,1,50427,FORM AND ANALYSIS,,2,5,15,03:00-03:50,T R,0200 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4331,1,49563,MUSIC ENSEMBLE,- No-cost:$0 required txtbk cost,1,5,40,07:00-08:00,T R,0102 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4331,5,48009,MUSIC ENSEMBLE CONCERT BAND,,1,1,35,05:00-07:00,M WR,0100 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4797,1,50019,MUSIC SEMINAR,,2,4,15,02:00-02:50,M W,0200 PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,MUSC,4798,0,50491,SENIOR RECITAL,,3,5,25,04:00-07:00,R,PATTON ACADEMIC,"Gip, Henry",Main Campus
+1,NURS,3100K,1,50125,CON.PSYCHIATRIC MH NURSING,,5,16,40,09:00-11:30,F,0108 MYERS HOME EC,"Paner, Christopher",Main Campus
+1,NURS,3100L,1,50126,CON.PSYCH MH NURSING LAB,,0,16,40,06:30-12:30,M,0108 MYERS HOME EC,"Paner, Christopher",Main Campus
+1,NURS,3110K,1,50123,ADLT NURS & HLTH DISPARITIES i,,7,16,40,08:00-11:20,T,0108 MYERS HOME EC,"Paner, Christopher",Main Campus
+1,NURS,3110L,1,50124,ADLT NURS & HLTH DISPAR LAB,,0,16,40,06:30-04:00,W,,"Paner, Christopher",Main Campus
+1,NURS,3120,1,50127,RESEARCH METHODS IN NURSING,,3,16,40,12:30-03:00,T,0108 MYERS HOME EC,"Paner, Christopher",Main Campus
+1,NURS,4100,1,50450,NURSE AS A LEADER,,3,6,6,02:30-05:00,W,,"al-Khawaja, Faadil",Main Campus
+1,NURS,4110K,1,50451,NURSING CARE OF CHILDREN,,4,6,6,12:00-02:00,W,,"al-Khawaja, Faadil",Main Campus
+1,NURS,4110L,0,50453,NURSING CARE OF CHILDREN LAB,,0,6,6,07:00-07:00,T,,"al-Khawaja, Faadil",Off Campus
+1,NURS,4120K,1,50452,ENTRY INTO NURSING PRACTICE,,8,6,6,08:00-10:30,W,,"Wright, Jazminn",Main Campus
+1,NURS,4120L,1,50454,ENTRY INTO NURS PRACTICE LAB,,0,6,6,,WRF,,"Wright, Jazminn",Off Campus
+1,PBHL,5103,WH,49802,ENVIRONMENTAL HEALTH,,3,7,30,06:00-09:00,M,ONEAL VET TECH BLD,"Williams, Ross",Main Campus
+1,PBHL,5113,WH,50390,ENVIRONMENTAL POLLUTION,,3,8,30,06:00-09:00,T,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,PBHL,5133,WH,49893,NUTRI AGRONOMICS /FOOD CULTURE,,3,3,30,06:00-09:00,W,ONEAL VET TECH BLD,"Scott, Kevin",Main Campus
+1,PBHL,5183,WH,50389,ENVIRONMENTAL LAW,,3,9,30,06:00-09:00,T,ONEAL VET TECH BLD,"Williams, Ross",Main Campus
+1,PBHL,5193,WH,49806,INDUSTRIAL HLTH & HAZARD MNGT,- No-cost:$0 required txtbk cost,3,8,30,06:00-09:00,W,ONEAL VET TECH BLD,"Williams, Ross",Main Campus
+1,PBHL,5200,WH,50386,HLTH BEHAVIOR/HLTH PROMOTION,,3,6,30,06:00-09:00,M,ONEAL VET TECH BLD,"Scott, Kevin",Main Campus
+1,PBHL,5223,WH,50387,OCCUPATION SFTY & EPIDEMIOLOGY,,3,2,30,06:00-09:00,T,ONEAL VET TECH BLD,"Scott, Kevin",Main Campus
+1,PBHL,5324,WH,49810,ZOONOSES OF ANIMAL & HUMAN POP,- No-cost:$0 required txtbk cost,3,4,30,06:00-09:00,M,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,PBHL,5850,WH,49808,FIELD EXPERIENCE,- No-cost:$0 required txtbk cost,1,3,30,05:00-06:00,R,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,PBHL,5999,WH,49809,THESIS/RESEARCH,- No-cost:$0 required txtbk cost,1,4,30,07:00-08:00,R,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,PEDW,1402,1,47251,FITS/LIFESTY ASSESSES,,1,45,50,09:00-09:50,M W,0348 HPE BUILDING,"Wiens, Melanie",Main Campus
+1,PEDW,1402,2,48623,FITS/LIFESTY ASSESSES,- No-cost:$0 required txtbk cost,1,44,50,10:00-10:50,M W,0348 HPE BUILDING,"Wiens, Melanie",Main Campus
+1,PEDW,1402,3,49864,FITS/LIFESTY ASSESSES,,1,33,50,01:30-02:20,T R,0344 HPE BUILDING,"Wiens, Melanie",Main Campus
+1,PEDW,1410,1,48624,BEGINNING SWIMMING,- No-cost:$0 required txtbk cost,1,17,25,05:00-06:00,F,0350 HPE BUILDING,"Eckert, Kristjan",Main Campus
+1,PEDW,1444,1,47425,WALKING/JOGGING,,1,49,50,06:00-06:50,M W,HPE BUILDING,"Wiens, Melanie",Main Campus
+1,PEDW,1631,1,49238,BASIC WEIGHT TRAINING,,1,51,50,05:00-05:50,M W,0352 HPE BUILDING,"Eckert, Kristjan",Main Campus
+1,PEDW,1771,1,48897,RHYTHMIC AEROBICS,- No-cost:$0 required txtbk cost,1,22,50,06:00-06:50,T R,0344 HPE BUILDING,"Wiens, Melanie",Main Campus
+1,PEDW,2522,1,48569,PERSON AND COMM HLTH,,2,52,50,11:00-11:50,M W,0348 HPE BUILDING,"al-Ahmadi, Ibrahim",Main Campus
+1,PEDW,2522,W1,48475,PERSON AND COMM HLTH,,2,63,50,,,,"al-Ahmadi, Ibrahim",On-Line
+1,PEDW,2522,W2,49236,PERSON AND COMM HLTH,,2,65,50,,,,"al-Ahmadi, Ibrahim",On-Line
+1,PHIL,2010,WH1,49552,INTRO TO PHILOSOPHY,- No-cost:$0 required txtbk cost,3,36,40,09:30-10:45,T R,0102 MILLER HALL,"Jones, Ariel",Main Campus
+1,PHIL,2010,WH2,49630,INTRO TO PHILOSOPHY,- No-cost:$0 required txtbk cost,3,22,40,04:00-04:50,M W F,0104 MILLER HALL,"Cottonwood, Dandrew",Main Campus
+1,PHIL,2010,WH3,49772,INTRO TO PHILOSOPHY,- No-cost:$0 required txtbk cost,3,11,40,08:00-09:15,T R,0102 MILLER HALL,"Elvove, Matthew",Main Campus
+1,PHIL,2010,WH4,50357,INTRO TO PHILOSOPHY,- No-cost:$0 required txtbk cost,3,33,40,09:00-09:50,M W F,0102 MILLER HALL,"Cottonwood, Dandrew",Main Campus
+1,PHIL,2010,WH5,50371,INTRO TO PHILOSOPHY,- No-cost:$0 required txtbk cost,3,30,40,12:30-01:45,T R,0212 MILLER HALL,"Elvove, Matthew",Main Campus
+1,PHIL,2030,WH1,49553,ETHICS,,3,40,40,02:00-03:15,T R,0102 MILLER HALL,"Jones, Ariel",Main Campus
+1,PHIL,2030,WH2,49631,ETHICS,,3,12,40,05:00-06:15,M W,0104 MILLER HALL,"Cottonwood, Dandrew",Main Campus
+1,PHIL,2030,WH3,50358,ETHICS,,3,38,40,12:30-01:45,T R,0102 MILLER HALL,"Jones, Ariel",Main Campus
+1,PHIL,4002,WH1,50359,MAJOR THEORIES IN AESTHETICS,,3,13,15,09:30-10:45,T R,0206 MILLER HALL,"Elvove, Matthew",Main Campus
+1,PHSC,1101,1,47313,INTRO PHYSICAL SCI I,,3,42,40,12:30-01:45,T R,0314 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,PHSC,2012,1,47375,INTRO NON-TRDTL FORMS OF ENRGY,,1,13,30,06:00-06:50,W,0212 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,PHYS,1112,1,47307,INTRO PHYSICS II,,4,28,35,09:00-09:50,M W F,0201 COMPUTER TECHNOLOGY/MATHE,"Varney, Jayla",Main Campus
+1,PHYS,1112,W1,50379,INTRO PHYSICS II,#NAME?,4,43,35,,,,"Varney, Jayla",On-Line
+1,PHYS,1112L,51,47435,INTRO PHYS II-LAB,,0,33,35,01:00-02:50,F,0225 ACADEMIC CLASSROOM BUILDI,"Varney, Jayla",Main Campus
+1,PHYS,1112L,W51,50382,INTRO PHYS II-LAB,,0,39,35,,,,"Varney, Jayla",On-Line
+1,PHYS,2212,1,47329,PRINCIPLES OF PHYSICS II,,4,15,35,10:00-10:50,M W F,0201 COMPUTER TECHNOLOGY/MATHE,"Varney, Jayla",Main Campus
+1,PHYS,2212L,51,47437,PRIN PHYS LAB II,,0,12,35,04:00-05:50,R,0225 ACADEMIC CLASSROOM BUILDI,"Varney, Jayla",Main Campus
+1,POLS,1101,WH,50083,AMERICAN GOVERNMENT,- No-cost:$0 required txtbk cost,3,41,35,12:30-01:45,T R,0118 BOND ACADEMIC BLDG,"el-Akhtar, Suhaa",Main Campus
+1,POLS,1101,WH2,49797,AMERICAN GOVERNMENT,- No-cost:$0 required txtbk cost,3,40,35,09:00-09:50,M W F,0118 BOND ACADEMIC BLDG,"Jones, Te'Keisha",Main Campus
+1,POLS,1101,WH3,50084,AMERICAN GOVERNMENT,- No-cost:$0 required txtbk cost,3,41,35,10:00-10:50,M W F,0222 BOND ACADEMIC BLDG,"Pettway, Caitlin",Main Campus
+1,POLS,1101,WH4,47420,AMERICAN GOVERNMENT,,3,37,35,08:00-09:15,T R,0117 BOND ACADEMIC BLDG,"Brown, Cecily",Main Campus
+1,POLS,1101,WH5,49796,AMERICAN GOVERNMENT,- No-cost:$0 required txtbk cost,3,37,35,09:30-10:45,T R,0123 BOND ACADEMIC BLDG,"Brown, Cecily",Main Campus
+1,POLS,1101,WH6,50440,AMERICAN GOVERNMENT,- No-cost:$0 required txtbk cost,3,34,35,12:30-01:45,T R,0222 BOND ACADEMIC BLDG,"Brown, Cecily",Main Campus
+1,POLS,3301,WH,49800,POLITICAL SCI RSCH MTHDS,,3,14,35,01:00-01:50,M W F,0122 BOND ACADEMIC BLDG,"Jones, Te'Keisha",Main Campus
+1,POLS,4402,WH,50445,AFRICAN POLITICS,,3,7,35,01:00-01:50,M W F,0218 BOND ACADEMIC BLDG,"Pettway, Caitlin",Main Campus
+1,PSCI,1804,1,47325,PLANT SCIENCE,,4,26,30,02:00-02:50,M W F,0105 TABOR AGR ACAD,"Terriquez Rendon, Samantha",Main Campus
+1,PSCI,1804L,51,47428,PLANT SCIENCE LAB,,0,26,30,01:00-02:50,R,0124 TABOR AGR ACAD,"Terriquez Rendon, Samantha",Main Campus
+1,PSCI,2803,1,47810,INTRO TO BIOTECHNOLOGY,,3,6,20,09:30-10:45,T R,0123 TABOR AGR ACAD,"al-Shaikh, Manaahil",Main Campus
+1,PSCI,3862,1,50467,PLANT PHYSIOLOGY,,3,5,10,05:30-08:30,M,0123 TABOR AGR ACAD,"Wako, Steffen",Main Campus
+1,PSCI,3862L,51,50462,PLANT PHYSIOLOGY LAB,,0,5,10,08:30-10:20,S,0123 TABOR AGR ACAD,"Wako, Steffen",Main Campus
+1,PSCI,4833,1,49901,PRIN OF PLANT BREEDING,,3,6,15,09:30-10:45,T R,0114 TABOR AGR ACAD,"Fhuere, Alexandra",Main Campus
+1,PSCI,4833L,51,49903,PRIN OF PLANT BREEDING LAB,,0,6,15,05:30-07:20,F,0114 TABOR AGR ACAD,"Fhuere, Alexandra",Main Campus
+1,PSCI,4843K,1,49907,TECH. IN MOLECULAR BIOLOGY,,3,5,15,11:00-11:50,M W,0115 TABOR AGR ACAD,"al-Shaikh, Manaahil",Main Campus
+1,PSCI,4843L,51,49908,TECH. MOLEC. BIO. LAB,,0,5,15,10:00-11:50,F,0123 TABOR AGR ACAD,"al-Shaikh, Manaahil",Main Campus
+1,PSCI,4863,1,50461,PLANT BIOTECHNOLOGY,,3,3,10,05:30-08:30,T,0114 TABOR AGR ACAD,"al-Shaikh, Manaahil",Main Campus
+1,PSCI,4863L,51,50479,PLANT BIOTECHNOLOGY LAB,,0,3,15,03:30-06:15,R,0115 TABOR AGR ACAD,"al-Shaikh, Manaahil",Main Campus
+1,PSYC,1101,W1,49237,GENERAL PSYCHOLOGY,- No-cost:$0 required txtbk cost,3,48,40,,,,"Rocha, Chance",On-Line
+1,PSYC,1101,WH,48338,GENERAL PSYCHOLOGY,,3,42,40,11:00-11:50,M W F,0117 BOND ACADEMIC BLDG,"Amphonephong, Vanessa",Main Campus
+1,PSYC,1101,WH2,49049,GENERAL PSYCHOLOGY,- No-cost:$0 required txtbk cost,3,45,40,01:00-01:50,M W F,0118 BOND ACADEMIC BLDG,"Amphonephong, Vanessa",Main Campus
+1,PSYC,1101,WH3,50290,GENERAL PSYCHOLOGY,- No-cost:$0 required txtbk cost,3,16,30,10:00-10:50,M W F,0123 BOND ACADEMIC BLDG,"Amphonephong, Vanessa",Main Campus
+1,PSYC,2902,W1,47595,CAREERS & ISSUES IN PSYC,,2,51,40,,,,"al-Siddiqi, Maisoon",On-Line
+1,PSYC,2902,WH,49519,CAREERS & ISSUES IN PSYC,,2,46,40,12:00-12:50,M W,0118 BOND ACADEMIC BLDG,"al-Siddiqi, Maisoon",Main Campus
+1,PSYC,3013,W1,47542,PSYCHO RSCH II,,3,35,40,,,,"Pierce, Henry",On-Line
+1,PSYC,3013,WH,47320,PSYCHO RSCH II,,3,26,40,03:30-04:45,T R,0118 BOND ACADEMIC BLDG,"Pierce, Henry",Main Campus
+1,PSYC,3023,W1,47543,ABNORMAL PSYCHOLOGY,,3,44,40,,,,"Karr, Katherine",On-Line
+1,PSYC,3023,WH,47400,ABNORMAL PSYCHOLOGY,,3,46,40,09:30-10:45,T R,MILLER HALL,"Gooding, Benjamin",Main Campus
+1,PSYC,3043,W1,47941,PSYCHOLOGY OF LEARNING,,3,48,40,,,,"Karr, Katherine",On-Line
+1,PSYC,3063,W1,47596,PERSONALITY,,3,46,40,,,,"Gooding, Benjamin",On-Line
+1,PSYC,3063,WH,49051,PERSONALITY,,3,44,40,01:00-01:50,M W F,0102 MILLER HALL,"Gooding, Benjamin",Main Campus
+1,PSYC,4053,W1,47540,BEHAVIOR MODIFICATION,,3,47,40,,,,"al-Siddiqi, Maisoon",On-Line
+1,PSYC,4053,WH,47858,BEHAVIOR MODIFICATION,,3,43,40,11:00-11:50,M W F,0123 BOND ACADEMIC BLDG,"al-Siddiqi, Maisoon",Main Campus
+1,PSYC,4073,W1,47912,CROSS-CULTURAL PSYCHOLOGY,,3,39,40,,,,"Pierce, Henry",On-Line
+1,PSYC,4073,WH,49521,CROSS-CULTURAL PSYCHOLOGY,,3,26,40,02:00-03:15,T R,0118 BOND ACADEMIC BLDG,"Pierce, Henry",Main Campus
+1,PSYC,4083,W1,47597,FORENSIC PSYCHOLOGY,,3,44,40,,,,"Johnson, James",On-Line
+1,PSYC,4083,WH,47497,FORENSIC PSYCHOLOGY,,3,43,40,12:30-01:45,T R,0123 BOND ACADEMIC BLDG,"Rocha, Chance",Main Campus
+1,PSYC,4910,W1,48601,"PRO ETHICS,STANDARD,CAREER DEV",,3,36,40,,,,"Rocha, Chance",On-Line
+1,PSYC,4910,WH,49052,"PRO ETHICS,STANDARD,CAREER DEV",,3,21,40,10:00-10:50,M W F,0122 BOND ACADEMIC BLDG,"Rocha, Chance",Main Campus
+1,PSYC,4912,W1,48619,PSYCHOLOGY INTERNSHIP,,6,11,15,,,,"Rocha, Chance",On-Line
+1,RCCM,5423,W1,47360,MEDICAL CASE MANAGEMENT,,3,13,15,,,WEB/ D2L ONLINE,"Lovan, Timothy",On-Line
+1,RCCM,5441,W1,47361,PRACTICUM IN REHABILITATION,- $40 or under req txtbks cost,3,3,12,,,WEB/ D2L ONLINE,"Sloan, Kehaulani",On-Line
+1,RCCM,5706,W1,47362,INTERSHIP REHABILITATION,- $40 or under req txtbks cost,3,5,6,,,WEB/ D2L ONLINE,"Sloan, Kehaulani",On-Line
+1,RCCM,5706,W2,50439,INTERSHIP REHABILITATION,,3,0,6,,,WEB/ D2L ONLINE,"Sloan, Kehaulani",On-Line
+1,RCCM,6001,W1,47574,COMPREHENSIVE REVIEW,- $40 or under req txtbks cost,0,4,15,,,WEB/ D2L ONLINE,"Lovan, Timothy",On-Line
+1,READ,2100,1,50483,LITERACY COMPREHENSION,,3,2,10,,,HUBBARD EDUCATION,"Villegas, Iris",Main Campus
+1,READ,3820,WH,49845,EXPAND LIT ACROSS CONTENT/ECSP,,3,26,25,05:30-08:30,W,HUBBARD EDUCATION,"Villegas, Iris",On-Line
+1,READ,3823,WH,49703,EXPANDING LITERACY IN MID GRD.,,3,7,25,05:30-08:30,W,HUBBARD EDUCATION,"Villegas, Iris",On-Line
+1,READ,5434,70,49937,CONTENT AREA LITERACY,,3,1,12,09:00-12:00,S,0131 FVSU - Warner Robins Si,"Nelson, Alexander",FVSU-Warner Robins Campus
+1,SCIE,3102K,1,47761,PRIN. OF PHYSICAL SCIENCE II,,3,7,15,05:00-07:30,T,0212 ACADEMIC CLASSROOM BUILDI,"Fang, Mason",Main Campus
+1,SCIE,3103,W1,47872,PRIN OF ENVIRONMENTAL SCIENCE,,3,12,15,,,,"Qu, Austin",On-Line
+1,SOWK,2002,1,47579,SOCIAL WORK ETHICS,,3,13,20,08:00-08:50,M W F,0216 BOND ACADEMIC BLDG,"Clark, Francena",Main Campus
+1,SOWK,3002,1,49841,HUMN. BEHAV. & SOC. ENV. II,,3,21,20,09:30-10:45,T R,0121 BOND ACADEMIC BLDG,"Clark, Francena",Main Campus
+1,SOWK,3002,WH,50401,HUMN. BEHAV. & SOC. ENV. II,,3,6,25,05:30-06:45,M W,0121 BOND ACADEMIC BLDG,"Clark, Francena",Main Campus
+1,SOWK,3012,1,50071,THRY & MTHDS-SOC WRK PRACT II,,3,19,20,12:30-01:45,T R,0121 BOND ACADEMIC BLDG,"Clark, Francena",Main Campus
+1,SOWK,3012,WH,49275,THRY & MTHDS-SOC WRK PRACT II,,3,8,20,06:30-07:45,T R,0121 BOND ACADEMIC BLDG,"Hamilton, Vanessa",Main Campus
+1,SOWK,4030,W1,50404,SOC WRK-FLD OF GERONTOLOGY,,3,12,25,,,,"Hamilton, Vanessa",On-Line
+1,SOWK,4060,W1,50405,HUMAN SRVCS-RURAL COMM,,3,14,25,,,,"Hamilton, Vanessa",On-Line
+1,SOWK,4099,W1,50076,MEN HLTH & SOC WK PRACTICES,,3,14,20,,,,"Serrato, Gabriel",On-Line
+1,SOWK,4110,1,50075,SOCIAL WELFARE POLICY,,3,15,25,10:00-10:50,M W F,0218 BOND ACADEMIC BLDG,"Padilla-Chavez, Bryan",Main Campus
+1,SOWK,4110,WH,49842,SOCIAL WELFARE POLICY,,3,6,20,07:00-08:15,M W,0216 BOND ACADEMIC BLDG,"Padilla-Chavez, Bryan",Main Campus
+1,SOWK,4132,1,50077,SOCIAL RESEARCH SEMINAR,,3,4,20,05:30-06:45,M W,0216 BOND ACADEMIC BLDG,"Padilla-Chavez, Bryan",Main Campus
+1,SOWK,4132,WH,47426,SOCIAL RESEARCH SEMINAR,,3,11,20,11:00-11:50,M W F,0216 BOND ACADEMIC BLDG,"Padilla-Chavez, Bryan",Main Campus
+1,SOWK,4399,1,47952,FIELD OBSERVATION & EXPERIENCE,,3,22,25,01:00-01:50,M W F,0216 BOND ACADEMIC BLDG,"Serrato, Gabriel",Main Campus
+1,SOWK,4402,1,47819,PRACTICUM II,,6,19,20,06:00-07:15,T R,0216 BOND ACADEMIC BLDG,"Serrato, Gabriel",Main Campus
+1,SPAN,1001,1,49675,ELEMENTARY SPANISH I,,3,32,30,09:00-09:50,M W F,0104 MILLER HALL,"Mcwilliams, Royal",Main Campus
+1,SPAN,1002,1,49676,ELEMENTARY SPANISH II,- $40 or under req txtbks cost,3,38,30,10:00-10:50,M W F,0104 MILLER HALL,"Mcwilliams, Royal",Main Campus
+1,SPAN,1002,2,50307,ELEMENTARY SPANISH II,- $40 or under req txtbks cost,3,36,30,12:00-12:50,M W F,0104 MILLER HALL,"Mcwilliams, Royal",Main Campus
+1,SPAN,1002,3,50355,ELEMENTARY SPANISH II,- $40 or under req txtbks cost,3,39,30,01:00-01:50,M W F,0104 MILLER HALL,"Mcwilliams, Royal",Main Campus
+1,SPAN,2001,1,50356,INTERMEDIATE SPANISH I,- No-cost:$0 required txtbk cost,3,48,30,02:00-02:50,M W F,0104 MILLER HALL,"Mcwilliams, Royal",Main Campus
+1,SSCI,3813,1,50113,SOIL FERTLTY/FERTILIZTN,,3,12,10,09:00-09:50,M W,0124 TABOR AGR ACAD,"Terriquez Rendon, Samantha",Main Campus
+1,SSCI,3813L,51,50114,SOIL FER/FERT LAB,,0,12,10,03:00-04:50,M,0124 TABOR AGR ACAD,"Terriquez Rendon, Samantha",Main Campus
+1,STAT,3000,1,48866,STATISTICAL METHODS I,,3,7,30,02:00-03:40,M,0202 COMPUTER TECHNOLOGY/MATHE,"Mcroy, Charneissha",Main Campus
+1,STAT,3000L,51,48867,STATISTICAL METHODS I LAB,,0,7,30,02:00-03:40,W,0218 COMPUTER TECHNOLOGY/MATHE,"Mcroy, Charneissha",Main Campus
+1,VETY,1812,1,47453,MEDICAL TERMINOLOGY,- No-cost:$0 required txtbk cost,1,7,60,01:00-01:50,W,0117 ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,1824,1,47644,ANIMAL ANATOMY AND PHYSIOLOGY,- No-cost:$0 required txtbk cost,4,55,54,12:30-01:45,T R,0117 ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,1824L,51,47645,ANIMAL ANATOMY & PHYS LAB,- No-cost:$0 required txtbk cost,0,18,18,09:00-10:50,T,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,1824L,52,47646,ANIMAL ANATOMY & PHYS LAB,- No-cost:$0 required txtbk cost,0,19,18,02:00-03:50,T,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,1824L,53,48856,ANIMAL ANATOMY & PHYS LAB,- No-cost:$0 required txtbk cost,0,18,18,09:00-10:50,R,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,2824,1,47283,HOSPITAL PROCEDURES,- No-cost:$0 required txtbk cost,2,21,28,10:00-10:50,M,0117 ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2824L,51,47454,HOSPITAL PROCEDURES LAB,- No-cost:$0 required txtbk cost,0,17,14,10:00-11:50,W,ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2824L,52,48386,HOSPITAL PROCEDURES LAB,- No-cost:$0 required txtbk cost,0,4,14,01:00-02:50,W,ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2873,1,47284,RADIOLOGY,- No-cost:$0 required txtbk cost,3,21,32,09:30-10:20,T R,0117 ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2873L,51,47455,RADIOLOGY LAB,- No-cost:$0 required txtbk cost,0,14,16,01:00-02:50,R,ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2873L,52,47806,RADIOLOGY LAB,- No-cost:$0 required txtbk cost,0,7,16,03:00-04:50,R,ONEAL VET TECH BLD,"Likianos, Sylvanus",Main Campus
+1,VETY,2893,1,47478,VETERINARY MICROBIOLOGY,- No-cost:$0 required txtbk cost,3,14,30,02:00-02:50,M W,0132 ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,2893L,51,47456,VETY MICROBIOLOGY LAB,- No-cost:$0 required txtbk cost,0,10,15,03:00-04:50,M,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,2893L,52,48650,VETY MICROBIOLOGY LAB,- No-cost:$0 required txtbk cost,0,4,15,03:00-04:50,W,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,3924,1,47285,VETERINARY CLINICAL PATH & CHM,- No-cost:$0 required txtbk cost,3,21,30,09:00-09:50,M W,0132 ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,VETY,3924L,51,47457,VETERINARY CLIN PATH & CHM LAB,- No-cost:$0 required txtbk cost,0,12,15,12:30-02:20,T,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,VETY,3924L,52,48458,VETERINARY CLIN PATH & CHM LAB,- No-cost:$0 required txtbk cost,0,8,15,12:30-02:20,R,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,VETY,3924L,53,50497,VETERINARY CLIN PATH & CHM LAB,,0,1,1,03:00-05:50,F,ONEAL VET TECH BLD,"el-Saah, Badruddeen",Main Campus
+1,VETY,4863,1,48108,BIOMEDICAL RESEARCH METHODS,- No-cost:$0 required txtbk cost,2,5,20,11:00-11:50,M,0157 ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,4863L,51,48861,BIOMEDICAL RESEARCH LAB,- No-cost:$0 required txtbk cost,0,5,20,11:00-12:50,W,ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,4883,1,47758,SPECIAL TOPICS,- No-cost:$0 required txtbk cost,2,10,20,03:00-04:50,R,0132 ONEAL VET TECH BLD,"Coleman, Aerial",Main Campus
+1,VETY,4923,1,47286,CLINICS-SMALL ANIM SURG & MED,- No-cost:$0 required txtbk cost,3,10,20,08:00-05:00,MTWRF,UGA-VET,"Coleman, Aerial",Main Campus
+1,VETY,4933,1,47287,CLINICS-RECEIVING & CENTRAL,- No-cost:$0 required txtbk cost,3,10,20,08:00-05:00,MTWRF,UGA-VET,"Coleman, Aerial",Main Campus
+1,VETY,4943,1,47288,CLINICS-ANESTHESIOLOGY,- No-cost:$0 required txtbk cost,3,10,20,08:00-05:00,MTWRF,UGA-VET,"Coleman, Aerial",Main Campus
+1,VETY,4953,1,47289,CLINICS-CLINICAL APPLICATIONS,- No-cost:$0 required txtbk cost,3,10,20,08:00-05:00,MTWRF,UGA-VET,"Coleman, Aerial",Main Campus
+1,ZOOL,3203K,1,47346,ENTOMOLOGY,,4,19,30,03:30-04:45,T R,0111 ACADEMIC CLASSROOM BUILDI,"Hang, Lily",Main Campus
+1,ZOOL,3203L,51,47473,ENTOMOLOGY LAB,,0,19,30,01:00-02:50,F,0134 ACADEMIC CLASSROOM BUILDI,"Hang, Lily",Main Campus
+1,ZOOL,3214K,1,50065,COMPARATIVE VERTEBRATE ANATOMY,,4,23,30,09:00-09:50,M W F,0314 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,ZOOL,3214L,51,50066,COMPARATIVE VERT-LAB,,0,23,30,02:00-04:50,T,0326 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus
+1,ZOOL,3254K,1,48803,HISTOLOGY,- $40 or under req txtbks cost,4,18,30,12:00-12:50,M W F,0111 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,ZOOL,3254L,51,48804,HISTOLOGY-LAB,- $40 or under req txtbks cost,0,15,30,01:00-03:50,W,0324 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,ZOOL,3254L,52,50508,HISTOLOGY-LAB,- $40 or under req txtbks cost,0,3,2,05:30-08:30,T,0324 ACADEMIC CLASSROOM BUILDI,"Ramirez, Joel",Main Campus
+1,ZOOL,3384K,1,50393,ICHTYOLOGY,,4,7,20,10:00-10:50,M W F,0134 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,ZOOL,3384L,51,50430,ICHTYOLOGY LAB,,0,4,20,11:00-01:50,M,0134 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,ZOOL,3384L,52,50499,ICHTYOLOGY LAB,,0,3,2,02:00-04:50,F,0131 ACADEMIC CLASSROOM BUILDI,"Baker, Danielle",Main Campus
+1,ZOOL,4294K,1,47373,VERTEBRATE PHYSIOLOGY,,4,33,24,11:00-11:50,M W F,0314 ACADEMIC CLASSROOM BUILDI,"al-Saad, Najeema",Main Campus
+1,ZOOL,4294L,51,47474,VERTEBRATE PHYSIOLOGY LAB,,0,33,24,12:00-02:50,W,0134 ACADEMIC CLASSROOM BUILDI,"al-Saad, Najeema",Main Campus
+1,ZOOL,4393,1,50374,POPULATION DYNAMICS,,3,3,20,01:00-01:50,M W F,0111 ACADEMIC CLASSROOM BUILDI,"Kim, Chuan-Kun",Main Campus

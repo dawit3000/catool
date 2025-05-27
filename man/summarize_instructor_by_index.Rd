@@ -4,12 +4,27 @@
 \alias{summarize_instructor_by_index}
 \title{Summarize Overload Compensation for One Instructor (by Index)}
 \usage{
-summarize_instructor_by_index(i, schedule_df = schedule)
+summarize_instructor_by_index(
+  i,
+  schedule_df = schedule,
+  L = 4,
+  U = 9,
+  rate_per_cr = 2500/3,
+  reg_load = 12
+)
 }
 \arguments{
 \item{i}{Integer index of the instructor (from \code{list_unique_instructors()}).}
 
 \item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.}
+
+\item{L}{Lower bound of enrollment illegible for peroration (inclusive)}
+
+\item{U}{Upper bound of enrollment illegible for peroration (inclusive)}
+
+\item{rate_per_cr}{Numeric value indicating the rate paid per credit hour.}
+
+\item{reg_load}{A numeric value indicating the regular teaching load (in credit hours).}
 }
 \value{
 Invisibly returns a tibble with the instructor’s overload compensation summary.

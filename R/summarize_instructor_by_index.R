@@ -5,6 +5,10 @@
 #'
 #' @param i Integer index of the instructor (from `list_unique_instructors()`).
 #' @param schedule_df A data frame containing course schedule data with an `INSTRUCTOR` column.
+#' @param rate_per_cr Numeric value indicating the rate paid per credit hour.
+#' @param L Lower bound of enrollment illegible for peroration (inclusive)
+#' @param U Upper bound of enrollment illegible for peroration (inclusive)
+#' @param reg_load A numeric value indicating the regular teaching load (in credit hours).
 #'
 #' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
 #'
@@ -15,12 +19,21 @@
 #' @import tibble
 #' @importFrom scales dollar
 #' @export
-summarize_instructor_by_index <- function(i, schedule_df = schedule) {
+summarize_instructor_by_index <- function(i, schedule_df = schedule,
+                                          L = 4, U = 9,
+                                          rate_per_cr = 2500 / 3,
+                                          reg_load = 12) {
   instructor_name <- list_unique_instructors(schedule_df) %>%
     slice(i) %>%
     pull(INSTRUCTOR)
 
-  summary <- calculate_overload_compensation(get_instructor_schedule(instructor_name, schedule_df))
+  summary <- calculate_overload_compensation(
+    get_instructor_schedule(instructor_name, schedule_df),
+    L = L,
+    U = U,
+    rate_per_cr = rate_per_cr,
+    reg_load = reg_load
+  )
 
   header <- tibble(
     `Overload Pay by Course` = NA_character_,

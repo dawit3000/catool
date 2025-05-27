@@ -16,7 +16,7 @@ library(dplyr)
 
 This vignette demonstrates how to use the `OverloadCompTool` R package to calculate overload pay for instructors based on their course schedules.
 
-You can analyze individual instructors or entire schedules to compute prorated compensation.
+You can analyze individual instructors or entire schedules to compute prorated compensations.
 
 ---
 
@@ -43,8 +43,6 @@ calculate_overload_compensation(IS)
 ```r
 summarize_all_instructors(schedule)
 ```
-
-Got it! Here's the updated version with **`rate_per_cr`** included in the **Default thresholds** under the **Notes** section:
 
 ---
 
