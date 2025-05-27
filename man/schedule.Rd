@@ -6,14 +6,23 @@
 \title{Schedule Data}
 \format{
 An object of class \code{data.frame} with 665 rows and 15 columns.
+
+An object of class \code{data.frame} with 665 rows and 15 columns.
 }
 \source{
-\link{Insert any sources if applicable}
+Included in package as data/schedule.csv
+
+Included in package as data/schedule.csv
 }
 \usage{
 schedule
+
+schedule
 }
 \description{
+This dataset represents a sample class schedule used by several institutions, with some variations in variable names.
+Users are encouraged to ensure that the key variables—\code{HRS}, \code{ENRLD}, and \code{INSTRUCTOR}—are formatted correctly for the package to function properly.
+
 This dataset represents a sample class schedule used by several institutions, with some variations in variable names.
 Users are encouraged to ensure that the key variables—\code{HRS}, \code{ENRLD}, and \code{INSTRUCTOR}—are formatted correctly for the package to function properly.
 }
@@ -21,6 +30,15 @@ Users are encouraged to ensure that the key variables—\code{HRS}, \code{ENRLD}
 A dataset containing the schedule information.
 
 The dataset has \link{number} rows and \link{number} columns, including:
+\describe{
+\item{HRS}{Credit Hours of a course: int  3 3 3 3 3 3 3 0 3 0 ...}
+\item{ENRLD}{Number of students enrolled in a class: int  34 32 34 7 9 8 31 31 12 12 ...}
+\item{INSTRUCTOR}{Name of Instructor Teaching the course—real names changed; Char "Bui, Analie" "Calhoun, Alexandra" "Bui, Analie" "Davis, Kheylen" ...}
+}
+
+A dataset containing the schedule information.
+
+The dataset has 665 rows and 15 columns, including:
 \describe{
 \item{HRS}{Credit Hours of a course: int  3 3 3 3 3 3 3 0 3 0 ...}
 \item{ENRLD}{Number of students enrolled in a class: int  34 32 34 7 9 8 31 31 12 12 ...}
