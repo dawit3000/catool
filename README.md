@@ -1,5 +1,12 @@
 
-# OVERLOAD COMPENSATION ANALYSIS TOOL
+# OVERLOAD COMPENSATION ANALYSIS TOOL (OverloadCompTool)
+
+[![GitHub
+version](https://img.shields.io/github/v/tag/dawit3000/OverloadCompTool?label=GitHub&logo=github)](https://github.com/dawit3000/OverloadCompTool)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+Tool for analyzing faculty overload compensation…
 
 The **Overload Compensation Analysis Tool** is an R package designed to
 calculate fair and transparent overload pay for college instructors. It
