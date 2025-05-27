@@ -2,53 +2,59 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+# OVERLOAD COMPENSATION ANALYSIS TOOL
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
+The **Overload Compensation Analysis Tool** is an R package designed to calculate fair and transparent overload pay for college instructors. It works from a course schedule to identify credit hour overloads and compute prorated pay based on enrollment thresholds.
 
-# OverloadCompTool
+## 🔧 Features
 
-<!-- badges: start -->
-<!-- badges: end -->
+- Automatically filters for qualified courses
+- Calculates prorated overload pay
+- Summarizes compensation per instructor
+- Supports full-schedule batch summaries
+- Output-ready for Excel or PDF formats
 
-The goal of OverloadCompTool is to ...
+## 📦 Installation
 
-## Installation
+```r
+# Install directly from GitHub
+# install.packages("remotes")
+remotes::install_github("yourusername/OverloadCompTool")
+````
 
-You can install the development version of OverloadCompTool like so:
+## 📁 Sample Usage
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```r
 library(OverloadCompTool)
-## basic example code
+
+# Load your schedule data
+schedule <- read.csv("Schedule.csv")
+
+# Get one instructor's pay
+IS <- get_instructor_schedule("Smith, Jane", schedule)
+calculate_overload_compensation(IS)
+
+# Summarize everyone
+summarize_all_instructors(schedule)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## 📄 Inputs
 
-```{r cars}
-summary(cars)
-```
+* A data frame with at least these columns:
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+  * `INSTRUCTOR`
+  * `HRS` (Credit Hours)
+  * `ENRLD` (Enrollment)
 
-You can also embed plots, for example:
+## 📊 Output
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+A tidy data frame including:
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+* Overload Pay by Course
+* Total Compensation (USD)
+* Summary notes
+
+## ✍️ Author
+
+Developed by Dawit Aberra.
+See `vignette("overload-comp-tool")` for a full walkthrough.

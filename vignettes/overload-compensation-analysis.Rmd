@@ -1,21 +1,68 @@
 ---
-title: "overload-compensation-analysis"
+title: "Overload Compensation Tool: Walkthrough"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{overload-compensation-analysis}
+  %\VignetteIndexEntry{Overload Compensation Tool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
+```r
+library(OverloadCompTool)
+library(dplyr)
+````
+
+## 🔍 Introduction
+
+This vignette demonstrates how to use the `OverloadCompTool` R package to calculate overload pay for instructors based on their course schedules.
+
+You can analyze individual instructors or entire schedules to compute prorated compensation.
+
+---
+
+## 📥 Load Data
+
+```r
+schedule <- read.csv("Schedule.csv")
+head(schedule)
 ```
 
-```{r setup, include = FALSE}
-devtools::load_all(".")  # Simulates library(OverloadCompTool)
+---
+
+## 👩‍🏫 Analyze One Instructor
+
+```r
+IS <- get_instructor_schedule("Anderson-Robinson, Nataysha", schedule)
+calculate_overload_compensation(IS)
 ```
 
-Here come the readme
+---
+
+## 📊 Summarize All Instructors
+
+```r
+summarize_all_instructors(schedule)
+```
+
+---
+
+## 📝 Explanation
+
+* Courses with fewer than 4 students are excluded.
+* Courses with 4–9 students are prorated.
+* Courses with ≥10 students count fully.
+* Only hours **above the regular 12-hour load** are paid.
+
+---
+
+## 💡 Notes
+
+* Pay rate can be adjusted via `rate_per_cr`
+* Default thresholds: L = 4, U = 9, regular load = 12
+* Output is human-readable and ready for export
+
+---
+
+## 📫 Questions?
+
+Contact Dawit at aberrad@fvsu.edu

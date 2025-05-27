@@ -1,51 +1,60 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+# OVERLOAD COMPENSATION ANALYSIS TOOL
 
-# OverloadCompTool
+The **Overload Compensation Analysis Tool** is an R package designed to
+calculate fair and transparent overload pay for college instructors. It
+works from a course schedule to identify credit hour overloads and
+compute prorated pay based on enrollment thresholds.
 
-<!-- badges: start -->
+## 🔧 Features
 
-<!-- badges: end -->
+- Automatically filters for qualified courses
+- Calculates prorated overload pay
+- Summarizes compensation per instructor
+- Supports full-schedule batch summaries
+- Output-ready for Excel or PDF formats
 
-The goal of OverloadCompTool is to …
-
-## Installation
-
-You can install the development version of OverloadCompTool like so:
+## 📦 Installation
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# Install directly from GitHub
+# install.packages("remotes")
+remotes::install_github("yourusername/OverloadCompTool")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## 📁 Sample Usage
 
 ``` r
 library(OverloadCompTool)
-## basic example code
+
+# Load your schedule data
+schedule <- read.csv("Schedule.csv")
+
+# Get one instructor's pay
+IS <- get_instructor_schedule("Smith, Jane", schedule)
+calculate_overload_compensation(IS)
+
+# Summarize everyone
+summarize_all_instructors(schedule)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## 📄 Inputs
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+- A data frame with at least these columns:
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+  - `INSTRUCTOR`
+  - `HRS` (Credit Hours)
+  - `ENRLD` (Enrollment)
 
-You can also embed plots, for example:
+## 📊 Output
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+A tidy data frame including:
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+- Overload Pay by Course
+- Total Compensation (USD)
+- Summary notes
+
+## ✍️ Author
+
+Developed by Dawit Aberra. See `vignette("overload-comp-tool")` for a
+full walkthrough.
