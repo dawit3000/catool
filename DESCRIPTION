@@ -1,9 +1,9 @@
 Package: OverloadCompTool
-Title: What the Package Does (One Line, Title Case)
+Title: OVERLOAD COMPENSATION ANALYSIS TOOL
 Version: 1.0.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Dawit", "Aberra", , "aberrad@fvsu.edu", role = c("aut", "cre"))
+Description: tool for analyzing faculty overload compensation.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
