@@ -2,7 +2,7 @@ Package: OverloadCompTool
 Title: OVERLOAD COMPENSATION ANALYSIS TOOL
 Version: 1.0.0
 Authors@R: 
-    person("Dawit", "Aberra", , "aberrad@fvsu.edu", role = c("aut", "cre"))
+    person("Dawit", "Aberra", , "dawit3000@hotmail.com", role = c("aut", "cre"))
 Description: tool for analyzing faculty overload compensation.
 License: MIT + file LICENSE
 Encoding: UTF-8
