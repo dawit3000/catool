@@ -38,11 +38,11 @@ library(OverloadCompTool)
 
 # Load your schedule data
 
-schedule <- read.csv("Schedule.csv")
+schedule <- read.csv("data-raw/schedule.csv")
 
 # Get one instructor's pay default
 
-IS<-get_instructor_schedule("Torres, Adam", schedule)
+IS<-get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 calculate_overload_compensation(IS)
 
 # Get one instructor's overload compensation based on the following institutional guidelines:
@@ -51,7 +51,7 @@ calculate_overload_compensation(IS)
 # - Compensation is prorated if enrollment falls between 3 and 15 students (inclusive).
 # - The compensation rate is $1,000.00 per credit hour.
 
-IS<-get_instructor_schedule("Torres, Adam")
+IS<-get_instructor_schedule("Lalau-Hitchcock, Diksha")
 calculate_overload_compensation(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
 
 

@@ -24,7 +24,7 @@ The tool supports both individual instructor analysis and full-schedule summariz
 ## 🏫 Load schedule
 
 ```r
-schedule <- read.csv("schedule.csv")
+schedule <- read.csv("data-raw/schedule.csv")
 ```
 
 ---
@@ -32,7 +32,7 @@ schedule <- read.csv("schedule.csv")
 ## 📊 Get Schedule for one Instructor
 
 ```r
-get_instructor_schedule("Torres, Adam")
+get_instructor_schedule("Lalau-Hitchcock, Diksha")
 ```
 
 ---
@@ -40,7 +40,7 @@ get_instructor_schedule("Torres, Adam")
 ## 📊 Calculate Overload Compensation of an Instructor from their Schedule (IS)
 
 ```r
-IS <- get_instructor_schedule("Torres, Adam", schedule)
+IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 calculate_overload_compensation(IS) # Uses default institutional policy
 calculate_overload_compensation(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3) # Uses user-defined institutional policy
 
