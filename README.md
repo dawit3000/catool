@@ -10,14 +10,16 @@ Tool for analyzing faculty overload compensation…
 
 The **Overload Compensation Analysis Tool** is an R package designed to
 calculate fair and transparent overload pay for college instructors. It
-works from a course schedule to identify credit hour overloads and
-compute prorated pay based on enrollment thresholds.
+uses course schedule data (such as institutional dynamic course
+scheduling) to identify credit hour overloads and compute prorated
+compensation based on enrollment proration thresholds and the
+compensation rate per credit hour.
 
 ## 🔧 Features
 
-- Automatically filters for qualified courses
+- Automatically filters for qualified credit hours for compensation
 - Calculates prorated overload pay
-- Summarizes compensation per instructor
+- Summarizes compensation per individual instructor
 - Supports full-schedule batch summaries
 - Output-ready for Excel or PDF formats
 

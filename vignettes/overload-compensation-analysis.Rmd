@@ -14,7 +14,7 @@ library(dplyr)
 
 ## 🔍 Introduction
 
-This vignette demonstrates how to use the `OverloadCompTool` R package to calculate overload pay for instructors based on their course schedules.
+This vignette demonstrates how to use the `OverloadCompTool` R package to calculate institutional overload compensations for instructors based on their course schedules.
 
 You can analyze individual instructors or entire schedules to compute prorated compensations.
 
@@ -32,8 +32,9 @@ head(schedule)
 ## 👩‍🏫 Analyze One Instructor
 
 ```r
-IS <- get_instructor_schedule("Anderson-Robinson, Nataysha", schedule)
+IS <- get_instructor_schedule("Torres, Adam", schedule)
 calculate_overload_compensation(IS)
+calculate_overload_compensation(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
 ```
 
 ---
@@ -42,25 +43,26 @@ calculate_overload_compensation(IS)
 
 ```r
 summarize_all_instructors(schedule)
+summarize_all_instructors(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 ```
 
 ---
 
 ## 📝 Explanation
 
-The **Overload Compensation** system determines the payment based on the number of students enrolled and the number of credit hours taught by the instructor. The following rules apply:
+The **Overload Compensation Analysis Tool** determines institutional compensations based on the number of students enrolled (ENRLD), institutional rate of compensation per credit hour (`rate_per_cr`), proration requirements, and the number of qualified credit hours taught by the instructor. The following rules apply:
 
-* **L = 4** (Lower Bound) and **U = 9** (Upper Bound) are the **default values** used for the proration system.
+* **L = 4** (Lower Bound) and **U = 9** (Upper Bound) are the **default values** used for the proration range.
 
   * If a course has **4 or more students enrolled** (i.e., ENRLD ≥ 4), it is **prorated** for compensation, with the exact proration determined based on the number of students.
   * If a course has **fewer than 4 students** (i.e., ENRLD < 4), no overload compensation is provided, as the course does not meet the minimum threshold for proration.
   * Courses with **4 to 9 students** enrolled (i.e., 4 ≤ ENRLD ≤ 9) are **prorated** based on the number of students, so compensation is scaled accordingly.
-  * Courses with **10 or more students** (i.e., ENRLD ≥ 10) receive **full overload compensation**, as they meet the threshold for full credit.
+  * Courses with **10 or more students** (i.e., ENRLD ≥ 10) receive **full overload compensation**, as they meet the threshold for full credit rate compensation.
 
 * **L and U can be customized**:
   While the default values for **L** and **U** are 4 and 9 respectively, users have the option to adjust these values to suit specific needs or institutional policies.
 
-* **Regular load consideration**:
+* **Regular load consideration (`reg_load`)**:
   The **regular load** (by default, **12 credit hours**) is the baseline for calculating overload pay. **Only the credit hours worked beyond the regular load** are eligible for overload compensation. The default regular load is represented by the variable `reg_load` (default value = 12), which can be customized by users. This means users can manipulate the `reg_load` value to match their institution’s standard workload, allowing for more flexible compensation calculations.
 
 * **Pay rate**:
@@ -74,7 +76,8 @@ The **Overload Compensation** system determines the payment based on the number 
   * Lower Bound (L) = 4
   * Upper Bound (U) = 9
   * Regular Load (`reg_load`)= 12 credit hours
-  * **Rate per Credit Hour**(`rate_per_cr`) = **2500 / 3** (default value, can be adjusted)
+  * **Rate per Credit Hour**(`rate_per_cr`) = **2500 / 3** 
+* **Default values** can be adjusted by end product users based on institutional needs
 * **Output is human-readable** and ready for export, ensuring it can be directly shared or used in reports without further formatting.
 
 
