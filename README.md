@@ -1,10 +1,14 @@
 
 # OVERLOAD COMPENSATION ANALYSIS TOOL (OverloadCompTool)
 
+<!-- badges: start -->
+
 [![GitHub
 version](https://img.shields.io/github/v/tag/dawit3000/OverloadCompTool?label=GitHub&logo=github)](https://github.com/dawit3000/OverloadCompTool)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/dawit3000/OverloadCompTool/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/OverloadCompTool/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 Tool for analyzing faculty overload compensation…
 
