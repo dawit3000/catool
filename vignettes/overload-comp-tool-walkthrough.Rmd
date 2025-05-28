@@ -14,43 +14,73 @@ library(dplyr)
 
 ## 🔍 Introduction
 
-This vignette demonstrates how to use the `OverloadCompTool` R package to calculate institutional overload compensations for instructors based on their course schedules.
+This vignette demonstrates how to use the `OverloadCompTool` R package to calculate institutional overload compensations for instructors based on their institutional course schedule and compensation guidelines.
 
-You can analyze individual instructors or entire schedules to compute prorated compensations.
+The tool supports both individual instructor analysis and full-schedule summarization, automatically computing prorated compensation based on institutional policies.
 
 ---
 
-## 📥 Load Data
+
+## 🏫 Load schedule
 
 ```r
-schedule <- read.csv("Schedule.csv")
-head(schedule)
+schedule <- read.csv("schedule.csv")
 ```
 
 ---
 
-## 👩‍🏫 Analyze One Instructor
+## 📊 Get Schedule for one Instructor
+
+```r
+get_instructor_schedule("Torres, Adam")
+```
+
+---
+
+## 📊 Calculate Overload Compensation of an Instructor from their Schedule (IS)
 
 ```r
 IS <- get_instructor_schedule("Torres, Adam", schedule)
-calculate_overload_compensation(IS)
-calculate_overload_compensation(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
+calculate_overload_compensation(IS) # Uses default institutional policy
+calculate_overload_compensation(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3) # Uses user-defined institutional policy
+
+```
+
+
+---
+
+## 📊 List Unique Instructors (scheduled this semester)
+
+```r
+list_unique_instructors(schedule)
+
 ```
 
 ---
 
-## 📊 Summarize All Instructors
+## 📊 Summerize compensation of an Instructor by index. This internally uses the list of unique instructors in the schedule and will summarize Overload Compensation of the n-th instructor in the list of Unique Instructors.
 
 ```r
-summarize_all_instructors(schedule)
-summarize_all_instructors(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
+summarize_instructor_by_index(108, schedule_df = schedule) # the 108-th Instructor compensation summary using default policy
+summarize_instructor_by_index(108, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) # Applies user-inputted institutional policy
+
+```
+
+---
+
+## 📊 Summarize overload compensation of all instructors scheduled this semester
+
+```r
+summarize_all_instructors(schedule) # Uses default institutional policy
+summarize_all_instructors(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) # Applies user-inputted institutional policy
+
 ```
 
 ---
 
 ## 📝 Explanation
 
-The **Overload Compensation Analysis Tool** determines institutional compensations based on the number of students enrolled (ENRLD), institutional rate of compensation per credit hour (`rate_per_cr`), proration requirements, and the number of qualified credit hours taught by the instructor. The following rules apply:
+The **Overload Compensation Analysis Tool `(OverloadCompTool)`** determines institutional compensations based on the number of students enrolled (ENRLD), institutional rate of compensation per credit hour (`rate_per_cr`), proration requirements, and the number of qualified credit hours taught by the instructor. The following rules apply:
 
 * **L = 4** (Lower Bound) and **U = 9** (Upper Bound) are the **default values** used for the proration range.
 

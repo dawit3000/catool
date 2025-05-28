@@ -79,4 +79,4 @@ A tidy data frame including:
 ## ✍️ Author
 
 Developed by Dawit Aberra.
-See `vignette("overload-comp-tool")` for a full walkthrough.
+See the [full vignette](overload-comp-tool-walkthrough) for a complete walkthrough.
