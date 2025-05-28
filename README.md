@@ -75,7 +75,7 @@ A tidy data frame including:
 - Overload Pay by Course
 - Total Compensation (USD)
 - Summary notes
-- Look for the last few newly added columns
+  - Look for the last few newly added columns
 
 ## ✍️ Author
 
