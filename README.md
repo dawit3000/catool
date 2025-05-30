@@ -105,8 +105,3 @@ Developed and maintained by Dawit Aberra.
 See the
 [vignette](https://dawit3000.github.io/coat/coat-walkthrough.html) for a
 full walkthrough.
-
-
-    ---
-
-    Let me know if you want the vignette link replaced with a local `doc/` path instead of GitHub Pages.
