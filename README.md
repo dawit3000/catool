@@ -1,14 +1,11 @@
 
 # COAT: Compensation Analysis Tool
 
-<!-- badges: start -->
-
 [![GitHub
 version](https://img.shields.io/github/v/tag/dawit3000/coat?label=GitHub&logo=github)](https://github.com/dawit3000/coat)
+[![R-CMD-check](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
 
 **COAT** (Compensation Analysis Tool) is an R package designed to
 calculate fair and transparent overload pay for college instructors. It
@@ -40,35 +37,38 @@ remotes::install_github("dawit3000/coat")
 
 ## 📁 Sample Usage
 
-``` r
-library(coat)
+\`\`\`r library(coat)
 
 # Load schedule data
-schedule <- read.csv("data-raw/schedule.csv")
+
+schedule \<- read.csv(“data-raw/schedule.csv”)
 
 # Get overload compensation for one instructor (default policy)
-IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+
+IS \<- get_instructor_schedule(“Lalau-Hitchcock, Diksha”, schedule)
 ol_comp(IS)
 
-# Use custom institutional policy:
-# - Overload pay starts after 9 credit hours
-# - Minimum class size for eligibility: 3 students
-# - Full pay when ENRLD > 15; proration applies within [3,15]
-# - Rate: $1,000 per credit hour
+Apply a custom institutional policy:
 
-IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
-ol_comp(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
+- Overload pay begins after 12 credit hours (reg_load = 12)
+- Prorated pay for 4–9 students (inclusive)
+- No pay if ENRLD ≤ 3
+- Full (unprorated) pay if ENRLD ≥ 10
+- Pay rate: \$2500/3 per credit hour
 
-# Get compensation summaries for all instructors
-ol_comp_summary(schedule)
-ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
-```
+IS \<- get_instructor_schedule(“Lalau-Hitchcock, Diksha”, schedule)
+ol_comp(IS, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
+
+# Get compensation summaries for all instructors listed throughout the schedule
+
+ol_comp_summary(schedule) ol_comp_summary(schedule, L = 4, U = 9,
+rate_per_cr = 2500/3, reg_load = 12)
 
 ------------------------------------------------------------------------
 
 ## 📄 Input Requirements
 
-A data frame with the following columns:
+A data frame with the following minimal number of columns:
 
 - `INSTRUCTOR`: Instructor name
 - `HRS`: Course credit hours
@@ -91,9 +91,8 @@ pay.
 
 ## ✍️ Author
 
-Developed by Dawit Aberra.
+Developed and maintained by Dawit Aberra.
 
-See the [vignette](vignettes/overload-comp-tool-walkthrough.html) for a
-full walkthrough.
-
-\`\`\`\`
+See the
+[vignette](https://your-username.github.io/your-repo-name/coat-walkthrough.html)
+for a full walkthrough.
