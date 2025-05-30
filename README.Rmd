@@ -99,4 +99,4 @@ The last few rows summarize qualified credit hours and total overload pay.
 
 Developed and maintained by Dawit Aberra.
 
-See the [vignette](https://dawit3000.github.io/coat/coat-walkthrough.html) for a full walkthrough.
+See the [Walkthrough](https://dawit3000.github.io/coat/articles/coat-walkthrough.html) for a full walkthrough.

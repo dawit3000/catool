@@ -103,5 +103,5 @@ pay.
 Developed and maintained by Dawit Aberra.
 
 See the
-[vignette](https://dawit3000.github.io/coat/coat-walkthrough.html) for a
-full walkthrough.
+[Walkthrough](https://dawit3000.github.io/coat/articles/coat-walkthrough.html)
+for a full walkthrough.
