@@ -2,23 +2,23 @@
 % Please edit documentation in R/get_instructor_schedule.R
 \name{get_instructor_schedule}
 \alias{get_instructor_schedule}
-\title{Get an Instructor's Course Schedule}
+\title{Filter Course Schedule by Instructor}
 \usage{
 get_instructor_schedule(instructor_name, schedule_df = schedule)
 }
 \arguments{
-\item{instructor_name}{A character string with the instructor's name (must match \code{INSTRUCTOR} column exactly).}
+\item{instructor_name}{A character string with the instructor's full name. Must exactly match a value in the \code{INSTRUCTOR} column.}
 
-\item{schedule_df}{A data frame containing a column named \code{INSTRUCTOR}. Defaults to \code{schedule} if available in the environment.}
+\item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.
+Defaults to \code{schedule} if not specified.}
 }
 \value{
-A data frame of the instructor’s schedule.
+A data frame of courses assigned to the specified instructor.
 }
 \description{
-Returns the subset of a schedule data frame containing only the rows
-for a specific instructor.
+Returns a subset of the course schedule containing only the courses taught by the specified instructor.
 }
 \examples{
-# IS <- get_instructor_schedule("Anderson-Robinson, Nataysha", schedule_df = schedule)
+# get_instructor_schedule("Anderson-Robinson, Nataysha", schedule_df = schedule)
 
 }

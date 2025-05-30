@@ -1,9 +1,9 @@
-Package: OverloadCompTool
-Title: OVERLOAD COMPENSATION ANALYSIS TOOL
+Package: coat
+Title: Compensation Analysis Tool for Faculty Overload Pay
 Version: 1.0.0
 Authors@R: 
-    person("Dawit", "Aberra", , "dawit3000@hotmail.com", role = c("aut", "cre"))
-Description: tool for analyzing faculty overload compensation.
+    person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
+Description: Calculates fair and transparent overload compensation for college instructors based on institutional rules, course loads, and enrollment thresholds. Includes proration logic and generates human-readable summaries.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -22,3 +22,4 @@ Depends:
     R (>= 3.5)
 LazyData: true
 VignetteBuilder: knitr
+

@@ -1,0 +1,116 @@
+---
+title: "Compensation Analysis Tool (COAT): Walkthrough"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Compensation Analysis Tool (COAT): Walkthrough}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```
+
+```r
+library(coat)
+library(dplyr)
+```
+
+---
+
+## 🔍 Introduction
+
+This vignette demonstrates how to use the `coat` R package to calculate overload compensation for instructors based on institutional course schedules and compensation policies.
+
+The package supports both individual instructor analysis and full-schedule summaries, applying proration and eligibility rules based on enrollment and credit hours.
+
+---
+
+## 🏫 Load Schedule
+
+```r
+schedule <- read.csv("data-raw/schedule.csv")
+```
+
+---
+
+## 👤 Get Schedule for One Instructor
+
+```r
+get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+```
+
+---
+
+## 💵 Calculate Overload Compensation for One Instructor
+
+```r
+IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+ol_comp(IS)  # Uses default institutional policy
+
+# Custom policy example
+ol_comp(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
+```
+
+---
+
+## 👥 List Unique Instructors in the Schedule
+
+```r
+get_unique_instructors(schedule)
+```
+
+---
+
+## 🔢 Summarize Overload Compensation for an Instructor by Index
+
+```r
+ol_comp_byindex(108, schedule_df = schedule)
+ol_comp_byindex(108, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+```
+
+---
+
+## 📋 Summarize All Instructors’ Overload Compensation
+
+```r
+ol_comp_summary(schedule)
+ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+```
+
+---
+
+## 📝 Explanation
+
+The **COAT** package determines overload compensation using institutional rules based on:
+
+* Enrollment (`ENRLD`)
+* Credit hours (`HRS`)
+* Regular teaching load (`reg_load`)
+* Per-credit compensation rate (`rate_per_cr`)
+
+### Key Concepts:
+
+* **Default Proration Range**:
+
+  * Lower Bound (`L`) = 4
+  * Upper Bound (`U`) = 9
+  * Courses with `ENRLD < L` → No pay
+  * Courses with `L ≤ ENRLD ≤ U` → Prorated
+  * Courses with `ENRLD > U` → Full pay
+
+* **Regular Load (`reg_load`)**:
+  Only credit hours beyond this are eligible for overload compensation (default = 12 credit hours).
+
+* **Rate per Credit Hour (`rate_per_cr`)**:
+  Default is `2500 / 3` (≈ 833.33), but this is adjustable to reflect your institution’s policy.
+
+---
+
+### Notes
+
+* All thresholds and pay rates are user-adjustable via function arguments.
+* Output is returned as a tidy, human-readable tibble, ready for reporting or export.
+
+---
+
+## 📫 Questions?
+
+For questions or feedback, contact Dawit Aberra at **[aberrad@fvsu.edu](mailto:aberrad@fvsu.edu)**.

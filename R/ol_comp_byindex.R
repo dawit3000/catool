@@ -1,33 +1,33 @@
-#' Summarize Overload Compensation for One Instructor (by Index)
+#' Calculate Overload Compensation for One Instructor (by Index)
 #'
-#' Retrieves the instructor by index from the schedule, calculates their overload compensation,
-#' and prints a clean, readable summary with a header row.
+#' Retrieves the instructor name by index from the schedule, calculates their overload compensation
+#' using `ol_comp()`, and prints a clean, readable summary with a header row.
 #'
 #' @param i Integer index of the instructor (from `list_unique_instructors()`).
 #' @param schedule_df A data frame containing course schedule data with an `INSTRUCTOR` column.
-#' @param rate_per_cr Numeric value indicating the rate paid per credit hour.
-#' @param L Lower bound of enrollment illegible for peroration (inclusive)
-#' @param U Upper bound of enrollment illegible for peroration (inclusive)
-#' @param reg_load A numeric value indicating the regular teaching load (in credit hours).
+#' @param L Lower enrollment bound for overload eligibility (inclusive). Default is 4.
+#' @param U Upper enrollment bound for proration (inclusive). Default is 9.
+#' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
+#' @param reg_load Regular teaching load in credit hours. Default is 12.
 #'
 #' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
 #'
 #' @examples
-#' # summarize_instructor_by_index(5)
+#' # ol_comp_byindex(5)
 #'
 #' @import dplyr
 #' @import tibble
 #' @importFrom scales dollar
 #' @export
-summarize_instructor_by_index <- function(i, schedule_df = schedule,
-                                          L = 4, U = 9,
-                                          rate_per_cr = 2500 / 3,
-                                          reg_load = 12) {
+ol_comp_byindex <- function(i, schedule_df = schedule,
+                            L = 4, U = 9,
+                            rate_per_cr = 2500 / 3,
+                            reg_load = 12) {
   instructor_name <- list_unique_instructors(schedule_df) %>%
     slice(i) %>%
     pull(INSTRUCTOR)
 
-  summary <- calculate_overload_compensation(
+  summary <- ol_comp(
     get_instructor_schedule(instructor_name, schedule_df),
     L = L,
     U = U,

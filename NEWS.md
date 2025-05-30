@@ -1,32 +1,41 @@
-# OverloadCompTool 0.0.0.9000
+# coat 1.0.0
 
-## Initial Development Release
+## First Stable Release 🎉
 
-🎉 **First release of OverloadCompTool!** This version introduces the core functionality to support fair and transparent overload compensation analysis for academic instructors. Key features include:
+🚀 **coat** (Compensation Analysis Tool) is a fully-featured R package for analyzing faculty overload compensation with transparency, consistency, and proration logic based on enrollment thresholds.
 
-### Features
-- `calculate_overload_compensation()`:
-  - Computes prorated overload pay based on course credit hours (`HRS`) and student enrollment (`ENRLD`).
-  - Handles per-course overload pay calculations.
+### ✅ Major Updates
+
+#### 🆕 Function Renames for Clarity & Consistency
+- `calculate_overload_compensation()` → `ol_comp()`
+- `summarize_instructor_by_index()` → `ol_comp_byindex()`
+- `summarize_all_instructors()` → `ol_comp_summary()`
+- `list_unique_instructors()` → `get_unique_instructors()`
+
+#### 📦 Core Features
+- `ol_comp()`:
+  - Calculates prorated overload pay per course.
+  - Applies institutional rules (e.g., enrollment thresholds and regular load).
   
 - `get_instructor_schedule()`:
-  - Extracts a specific instructor's schedule from the dataset.
-  
-- `summarize_instructor_by_index()` and `summarize_all_instructors()`:
-  - Generate detailed overload pay summaries for individuals or all instructors.
-  
-- `list_unique_instructors()`:
-  - Lists all distinct instructors in the dataset.
+  - Extracts one instructor’s schedule from a full course dataset.
 
-### Data
-- `schedule`: Sample dataset with course schedules, instructors, credit hours, and enrollment.
+- `ol_comp_byindex()` and `ol_comp_summary()`:
+  - Generate readable summaries by instructor or across the full schedule.
 
-### Internal Improvements
-- Roxygen2 documentation for all functions and data
-- `R CMD check`: Passed with **0 errors | 0 warnings | 0 notes**
-- Ready for public release and future feature expansions
+- `get_unique_instructors()`:
+  - Returns alphabetically sorted list of instructors.
+
+### 📊 Data
+- `schedule`: Sample dataset for testing with variables `HRS`, `ENRLD`, and `INSTRUCTOR`.
+
+### 🔧 Internal Improvements
+- Standardized roxygen documentation for all exported functions
+- Updated README, vignette, tests, and DESCRIPTION
+- Cleaned global variable declarations to satisfy CRAN checks
+- Passed `R CMD check` with: **0 errors | 0 warnings | 3 notes**  
+  (all notes are documented in `cran-comments.md`)
 
 ---
 
-💡 For usage examples and assumptions, see the package vignette and function documentation.
-
+💡 See the [vignette](vignettes/coat-walkthrough.html) for a complete walkthrough and usage examples.

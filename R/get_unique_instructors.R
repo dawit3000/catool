@@ -1,4 +1,4 @@
-#' List All Unique Instructors
+#' Get Unique Instructor Names
 #'
 #' Extracts a sorted list of unique, non-empty instructor names from a schedule data frame.
 #'
@@ -7,11 +7,11 @@
 #' @return A data frame with one column: unique instructor names sorted alphabetically.
 #'
 #' @examples
-#' # list_unique_instructors(schedule)
+#' # get_unique_instructors(schedule)
 #'
 #' @import dplyr
 #' @export
-list_unique_instructors <- function(schedule_df) {
+get_unique_instructors <- function(schedule_df) {
   schedule_df %>%
     distinct(INSTRUCTOR) %>%
     filter(!is.na(INSTRUCTOR), INSTRUCTOR != "") %>%

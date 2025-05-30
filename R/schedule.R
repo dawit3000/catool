@@ -1,37 +1,18 @@
-#' Schedule Data
+#' Sample Schedule Dataset
 #'
-#' A dataset containing the schedule information.
-#'
-#' @description
-#' This dataset represents a sample class schedule used by several institutions, with some variations in variable names.
-#' Users are encouraged to ensure that the key variables—`HRS`, `ENRLD`, and `INSTRUCTOR`—are formatted correctly for the package to function properly.
-#'
-#' @details
-#' The dataset has [number] rows and [number] columns, including:
-#' \describe{
-#'   \item{HRS}{Credit Hours of a course: int  3 3 3 3 3 3 3 0 3 0 ...}
-#'   \item{ENRLD}{Number of students enrolled in a class: int  34 32 34 7 9 8 31 31 12 12 ...}
-#'   \item{INSTRUCTOR}{Name of Instructor Teaching the course—real names changed; Char "Bui, Analie" "Calhoun, Alexandra" "Bui, Analie" "Davis, Kheylen" ...}
-#' }
-#'
-#' @source Included in package as data/schedule.csv
-"schedule"
-
-#' Schedule Data
-#'
-#' A dataset containing the schedule information.
+#' A dataset containing instructor schedules for overload analysis.
 #'
 #' @description
-#' This dataset represents a sample class schedule used by several institutions, with some variations in variable names.
-#' Users are encouraged to ensure that the key variables—`HRS`, `ENRLD`, and `INSTRUCTOR`—are formatted correctly for the package to function properly.
+#' This dataset represents a sample class schedule used by several institutions, with slight variations in variable names.
+#' Users must ensure that the key variables—`HRS`, `ENRLD`, and `INSTRUCTOR`—are properly named and formatted for the functions in this package to work correctly.
 #'
 #' @details
 #' The dataset has 665 rows and 15 columns, including:
 #' \describe{
-#'   \item{HRS}{Credit Hours of a course: int  3 3 3 3 3 3 3 0 3 0 ...}
-#'   \item{ENRLD}{Number of students enrolled in a class: int  34 32 34 7 9 8 31 31 12 12 ...}
-#'   \item{INSTRUCTOR}{Name of Instructor Teaching the course—real names changed; Char "Bui, Analie" "Calhoun, Alexandra" "Bui, Analie" "Davis, Kheylen" ...}
+#'   \item{HRS}{Credit hours of the course.}
+#'   \item{ENRLD}{Number of students enrolled in the course.}
+#'   \item{INSTRUCTOR}{Name of the instructor teaching the course (anonymized).}
 #' }
 #'
-#' @source Included in package as data/schedule.csv
+#' @source Included in the package under `data/schedule.rda`
 "schedule"

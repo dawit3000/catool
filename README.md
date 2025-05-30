@@ -1,87 +1,99 @@
 
-# OVERLOAD COMPENSATION ANALYSIS TOOL (OverloadCompTool)
+# COAT: Compensation Analysis Tool
 
 <!-- badges: start -->
 
 [![GitHub
-version](https://img.shields.io/github/v/tag/dawit3000/OverloadCompTool?label=GitHub&logo=github)](https://github.com/dawit3000/OverloadCompTool)
+version](https://img.shields.io/github/v/tag/dawit3000/coat?label=GitHub&logo=github)](https://github.com/dawit3000/coat)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![R-CMD-check](https://github.com/dawit3000/OverloadCompTool/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/OverloadCompTool/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/coat/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-Tool for analyzing faculty overload compensation…
-
-The **Overload Compensation Analysis Tool** is an R package designed to
+**COAT** (Compensation Analysis Tool) is an R package designed to
 calculate fair and transparent overload pay for college instructors. It
-uses course schedule data (such as institutional dynamic course
-scheduling) to identify credit hour overloads and compute prorated
-compensation based on enrollment proration thresholds and the
-compensation rate per credit hour.
+works with course schedule data to identify credit hour overloads and
+compute prorated compensation based on enrollment thresholds and pay
+rates.
+
+------------------------------------------------------------------------
 
 ## 🔧 Features
 
-- Automatically filters for qualified credit hours for compensation
-- Calculates prorated overload pay
-- Summarizes compensation per individual instructor
-- Supports full-schedule batch summaries
-- Output-ready for Excel or PDF formats
+- Filters qualified credit hours based on institutional rules
+- Calculates prorated overload pay per course
+- Summarizes total compensation per instructor
+- Supports full-schedule batch processing
+- Output-ready for export to Excel or PDF
+
+------------------------------------------------------------------------
 
 ## 📦 Installation
 
 ``` r
 # Install directly from GitHub
 # install.packages("remotes")
-remotes::install_github("dawit3000/OverloadCompTool")
+remotes::install_github("dawit3000/coat")
 ```
+
+------------------------------------------------------------------------
 
 ## 📁 Sample Usage
 
 ``` r
-library(OverloadCompTool)
+library(coat)
 
-# Load your schedule data
-
+# Load schedule data
 schedule <- read.csv("data-raw/schedule.csv")
 
-# Get one instructor's pay default
+# Get overload compensation for one instructor (default policy)
+IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+ol_comp(IS)
 
-IS<-get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
-calculate_overload_compensation(IS)
+# Use custom institutional policy:
+# - Overload pay starts after 9 credit hours
+# - Minimum class size for eligibility: 3 students
+# - Full pay when ENRLD > 15; proration applies within [3,15]
+# - Rate: $1,000 per credit hour
 
-# Get one instructor's overload compensation based on the following institutional guidelines:
-# - An instructor is eligible for overload pay if they teach credit hours (HRS) exceeding the regular load of 9 credit hours per semester.
-# - Compensation is provided only if the class contributing to the qualifying credit hours has at least 3 students enrolled (ENRLD ≥ 3).
-# - Compensation is prorated if enrollment falls between 3 and 15 students (inclusive).
-# - The compensation rate is $1,000.00 per credit hour.
+IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+ol_comp(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
 
-IS<-get_instructor_schedule("Lalau-Hitchcock, Diksha")
-calculate_overload_compensation(IS, L = 3, U = 15, rate_per_cr = 1000, reg_load = 9)
-
-
-# Summarize everyone
-summarize_all_instructors(schedule)
-summarize_all_instructors(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
+# Get compensation summaries for all instructors
+ol_comp_summary(schedule)
+ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 ```
 
-## 📄 Inputs
+------------------------------------------------------------------------
 
-- A data frame with at least these columns:
+## 📄 Input Requirements
 
-  - `INSTRUCTOR` (Name of Instructors)
-  - `HRS` (Credit Hours)
-  - `ENRLD` (Enrollment)
+A data frame with the following columns:
+
+- `INSTRUCTOR`: Instructor name
+- `HRS`: Course credit hours
+- `ENRLD`: Course enrollment count
+
+------------------------------------------------------------------------
 
 ## 📊 Output
 
-A tidy data frame including:
+A tidy tibble that includes:
 
 - Overload Pay by Course
 - Total Compensation (USD)
-- Summary notes
-  - Look for the last few newly added columns
+- Summary notes (e.g., proration applied)
+
+The final rows summarize total qualified credit hours and total overload
+pay.
+
+------------------------------------------------------------------------
 
 ## ✍️ Author
 
-Developed by Dawit Aberra. See the [full
-vignette](overload-comp-tool-walkthrough) for a complete walkthrough.
+Developed by Dawit Aberra.
+
+See the [vignette](vignettes/overload-comp-tool-walkthrough.html) for a
+full walkthrough.
+
+\`\`\`\`

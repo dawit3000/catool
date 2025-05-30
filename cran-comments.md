@@ -1,9 +1,14 @@
 ## Test environments
-* local: R 4.3.2 on Windows 11 x64
-* GitHub Actions: macOS-latest, Ubuntu-latest, Windows-latest (R 4.3)
+* Local Windows 11, R 4.4.0
+* devtools::check() results:
+  0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
-## R CMD check results
-There were no ERRORs, WARNINGs, or NOTEs.
+## R CMD check notes
 
-## Downstream dependencies
-This is a new package. There are no reverse dependencies.
+### 1. Undefined global functions or variables
+> ol_comp_byindex: no visible global function definition for ‘get_unique_instructors’  
+> ol_comp_summary: no visible global function definition for ‘get_unique_instructors’
+
+These are standard tidyverse evaluation issues. I have addressed this with:
+```r
+utils::globalVariables(c("get_unique_instructors"))

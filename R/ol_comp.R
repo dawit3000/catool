@@ -1,24 +1,27 @@
-#' Calculate Overload Compensation for Instructors
+#' Calculate Overload Compensation for One Instructor
 #'
-#' Computes prorated overload pay and total qualified credit hours for an instructor
-#' based on course enrollment and credit hour policies.
+#' Computes prorated overload pay and qualified credit hours for a single instructor
+#' based on course credit hours, enrollment, and institutional overload rules.
 #'
-#' @param instructor_schedule A data frame with columns `ENRLD` (enrollment) and `HRS` (credit hours).
-#' @param L Lower enrollment threshold for overload pay qualification (default is 4).
-#' @param U Upper enrollment threshold of proration for full-rate overload pay (default is 9).
-#' @param rate_per_cr The base overload pay per credit hour (default is 2500/3).
-#' @param reg_load Regular teaching load in credit hours (default is 12).
+#' @param instructor_schedule A data frame of the instructor's courses, with columns `ENRLD` (enrollment) and `HRS` (credit hours).
+#' @param L Lower enrollment threshold for overload pay qualification (default = 4).
+#' @param U Upper limit of proration; courses with ENRLD > U get full-rate pay (default = 9).
+#' @param rate_per_cr Base overload pay per credit hour (default = 2500/3).
+#' @param reg_load Regular teaching load in credit hours (default = 12).
 #'
-#' @return A tibble with the original schedule, calculated overload pay per course,
-#' a summary of total qualified hours, and total compensation in USD.
+#' @return A tibble that includes:
+#' - Original schedule
+#' - Overload Pay by Course
+#' - Summary of total qualified credit hours
+#' - Total Compensation (USD)
 #'
 #' @examples
-#' # calculate_overload_compensation(IS)
+#' # ol_comp(get_instructor_schedule("Smith, Abigail", schedule))
 #'
 #' @import dplyr
 #' @importFrom scales dollar
 #' @export
-calculate_overload_compensation <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) {
+ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) {
   input <- instructor_schedule %>%
     mutate(
       ENRLD = as.numeric(ENRLD),
