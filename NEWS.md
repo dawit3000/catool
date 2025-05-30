@@ -38,4 +38,5 @@
 
 ---
 
-💡 See the [vignette](vignettes/coat-walkthrough.html) for a complete walkthrough and usage examples.
+💡 For a full walkthrough, see the [package vignette](https://dawit3000.github.io/coat/articles/coat-walkthrough.html).
+

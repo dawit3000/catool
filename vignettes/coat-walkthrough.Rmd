@@ -1,18 +1,16 @@
 ---
-title: "Compensation Analysis Tool (COAT): Walkthrough"
+title: "coat-walkthrough"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Compensation Analysis Tool (COAT): Walkthrough}
+  %\VignetteIndexEntry{coat-walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-```
 
-```r
+```{r setup, include=FALSE}
 library(coat)
 library(dplyr)
 ```
-
 ---
 
 ## 🔍 Introduction
@@ -114,3 +112,4 @@ The **COAT** package determines overload compensation using institutional rules 
 ## 📫 Questions?
 
 For questions or feedback, contact Dawit Aberra at **[aberrad@fvsu.edu](mailto:aberrad@fvsu.edu)**.
+
