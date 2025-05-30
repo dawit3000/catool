@@ -3,7 +3,7 @@ Title: Compensation Analysis Tool for Faculty Overload Pay
 Version: 1.0.0
 Authors@R: 
     person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
-Description: Calculates fair and transparent overload compensation for college instructors based on institutional rules, course loads, and enrollment thresholds. Includes proration logic and generates human-readable summaries.
+Description: Calculates fair and transparent overload compensation for college instructors based on institutional policies, teaching loads, and student enrollment thresholds. The package includes proration logic and generates human-readable summaries to support equitable compensation decisions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

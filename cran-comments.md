@@ -1,14 +1,11 @@
 ## Test environments
-* Local Windows 11, R 4.4.0
-* devtools::check() results:
-  0 errors ✔ | 0 warnings ✔ | 3 notes ✖
+* local: Windows 11, R 4.4.0
+* GitHub Actions CI: ubuntu-latest, macOS-latest, Windows-latest
 
-## R CMD check notes
+## R CMD check results
+There were no ERRORs, WARNINGs or NOTEs.
 
-### 1. Undefined global functions or variables
-> ol_comp_byindex: no visible global function definition for ‘get_unique_instructors’  
-> ol_comp_summary: no visible global function definition for ‘get_unique_instructors’
+## Comments
+This is the initial submission of the `coat` package, which provides a reproducible and policy-compliant method for calculating overload compensation for higher-ed instructors. It automates enrollment-prorated credit hour adjustments and compensation amounts.
 
-These are standard tidyverse evaluation issues. I have addressed this with:
-```r
-utils::globalVariables(c("get_unique_instructors"))
+NOTE: The file `cran-comments.md` is included only to assist CRAN reviewers and is not part of the installed package.
