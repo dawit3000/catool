@@ -30,13 +30,14 @@
 - `schedule`: Sample dataset for testing with variables `HRS`, `ENRLD`, and `INSTRUCTOR`.
 
 ### 🔧 Internal Improvements
-- Standardized roxygen documentation for all exported functions
-- Updated README, vignette, tests, and DESCRIPTION
-- Cleaned global variable declarations to satisfy CRAN checks
+- Standardized roxygen documentation for all exported functions.
+- Updated README, vignette, tests, and DESCRIPTION.
+- Cleaned global variable declarations to satisfy CRAN checks.
 - Passed `R CMD check` with: **0 errors | 0 warnings | 3 notes**  
-  (all notes are documented in `cran-comments.md`)
+  (all notes are documented in `cran-comments.md`).
 
 ---
 
-💡 For a full walkthrough, see the [package vignette](https://dawit3000.github.io/coat/articles/coat-walkthrough.html).
-
+💡 To explore package usage, run:
+```r
+vignette("coat-walkthrough")
