@@ -3,7 +3,7 @@
 #' Retrieves the instructor name by index from the schedule, calculates their overload compensation
 #' using `ol_comp()`, and prints a clean, readable summary with a header row.
 #'
-#' @param i Integer index of the instructor (from `list_unique_instructors()`).
+#' @param i Integer index of the instructor (from `get_unique_instructors()`).
 #' @param schedule_df A data frame containing course schedule data with an `INSTRUCTOR` column.
 #' @param L Lower enrollment bound for overload eligibility (inclusive). Default is 4.
 #' @param U Upper enrollment bound for proration (inclusive). Default is 9.
@@ -23,7 +23,7 @@ ol_comp_byindex <- function(i, schedule_df = schedule,
                             L = 4, U = 9,
                             rate_per_cr = 2500 / 3,
                             reg_load = 12) {
-  instructor_name <- list_unique_instructors(schedule_df) %>%
+  instructor_name <- get_unique_instructors(schedule_df) %>%
     slice(i) %>%
     pull(INSTRUCTOR)
 

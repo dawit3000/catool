@@ -1,4 +1,4 @@
-^OverloadCompTool\.Rproj$
+^coat\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^LICENSE\.md$
@@ -9,3 +9,4 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^cran-comments\.md$

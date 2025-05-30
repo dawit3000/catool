@@ -14,7 +14,7 @@ ol_comp_byindex(
 )
 }
 \arguments{
-\item{i}{Integer index of the instructor (from \code{list_unique_instructors()}).}
+\item{i}{Integer index of the instructor (from \code{get_unique_instructors()}).}
 
 \item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.}
 

@@ -24,35 +24,35 @@ ol_comp_summary <- function(schedule_df = schedule,
                             L = 4, U = 9,
                             rate_per_cr = 2500 / 3,
                             reg_load = 12) {
-  instructor_list <- list_unique_instructors(schedule_df) %>% pull(INSTRUCTOR)
+  instructor_list <- get_unique_instructors(schedule_df) %>% dplyr::pull(INSTRUCTOR)
 
-  all_outputs <- map(seq_along(instructor_list), function(i) {
+  all_outputs <- purrr::map(seq_along(instructor_list), function(i) {
     result <- ol_comp_byindex(i, schedule_df,
                               L = L, U = U,
                               rate_per_cr = rate_per_cr,
                               reg_load = reg_load)
-    spacer <- as_tibble(setNames(rep(list(""), ncol(result)), names(result)))
-    bind_rows(result, spacer)
+    spacer <- tibble::as_tibble(setNames(rep(list(""), ncol(result)), names(result)))
+    dplyr::bind_rows(result, spacer)
   })
 
-  final_result <- bind_rows(all_outputs)
+  final_result <- dplyr::bind_rows(all_outputs)
 
   cols <- names(final_result)
-  target_order <- c(
-    setdiff(cols, c("Overload Pay by Course", "Summary", "Total Compensation (USD)")),
-    "Overload Pay by Course", "Summary", "Total Compensation (USD)"
-  )
-  final_result <- final_result[, target_order]
+  special_cols <- c("Overload Pay by Course", "Summary", "Total Compensation (USD)")
+  present_special <- intersect(special_cols, cols)
+  target_order <- c(setdiff(cols, present_special), present_special)
+  final_result <- final_result[, target_order, drop = FALSE]
 
   final_result <- final_result %>%
-    mutate(
-      `Overload Pay by Course` = ifelse(
-        suppressWarnings(!is.na(as.numeric(`Overload Pay by Course`)) & as.numeric(`Overload Pay by Course`) > 0),
-        dollar(as.numeric(`Overload Pay by Course`)),
+    dplyr::mutate(
+      `Overload Pay by Course` = dplyr::if_else(
+        suppressWarnings(!is.na(as.numeric(`Overload Pay by Course`)) &
+                           as.numeric(`Overload Pay by Course`) > 0),
+        scales::dollar(as.numeric(`Overload Pay by Course`)),
         `Overload Pay by Course`
       ),
-      across(everything(), ~ ifelse(is.na(.), "", .))
+      dplyr::across(dplyr::everything(), ~ ifelse(is.na(.), "", .))
     )
 
-  final_result
+  return(final_result)
 }
