@@ -1,3 +1,5 @@
+catool: Compensation Analysis Tool
+================
 
 # catool: Compensation Analysis Tool
 
@@ -9,22 +11,22 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![GitHub
 version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)
 
-**catool** (Compensation Analysis Tool) is an R package for calculating
+**catool** (Compensation Analysis Tool) is an R package that calculates
 fair and transparent overload pay for college instructors. It processes
-course schedules to identify overload credit hours and computes prorated
-compensation based on institutional policy, enrollment thresholds, and
-pay rates.
+course schedule data, identifies overload credit hours, and applies
+enrollment-based proration logic to compute compensation aligned with
+institutional policies.
 
 ------------------------------------------------------------------------
 
 ## 🔧 Features
 
-- Filters qualified credit hours by enrollment and subject
+- Filters qualified credit hours by enrollment
 - Computes prorated overload compensation per course
-- Summarizes total pay per instructor
-- Allows full-schedule batch analysis
-- Includes flexible filters for subject, division, and instructor
-- Export-ready output for reports or payroll
+- Summarizes instructor-level pay
+- Batch-processes full schedules
+- Filters by subject, instructor, or division
+- Outputs clean, export-ready summary tables
 
 ------------------------------------------------------------------------
 
@@ -32,40 +34,26 @@ pay rates.
 
 ``` r
 # Install directly from GitHub
-# install.packages("remotes")  # If not already installed
+# install.packages("remotes")  # Only if not installed
 remotes::install_github("dawit3000/catool")
 ```
 
 ------------------------------------------------------------------------
 
-## 🗂️ Sample Usage
+## 🗂️ Example Usage
 
 ``` r
 library(catool)
-```
-
-### Load schedule data
-
-``` r
 schedule <- read.csv("data-raw/schedule.csv")
-```
 
-### Overload compensation for one instructor
+# One instructor
+ol_comp(get_instructor_schedule("Lalau-Hitchcock", schedule))
 
-``` r
-IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
-ol_comp(IS)
-```
+# With custom policy
+ol_comp(get_instructor_schedule("Smith", schedule),
+        L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
-### Apply a custom institutional policy
-
-``` r
-ol_comp(IS, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
-```
-
-### Full-schedule compensation summary
-
-``` r
+# Full summary
 ol_comp_summary(schedule)
 ```
 
@@ -74,37 +62,44 @@ ol_comp_summary(schedule)
 ## 🔍 Advanced Filtering
 
 ``` r
-# Filter by division
 get_division_schedule("Business Administration", schedule)
-
-# Filter by subject code pattern (regex)
 get_subject_schedule("^MATH|^STAT", schedule)
-
-# Combine filters
 filter_schedule(schedule, division = "Nursing", instructor_pattern = "lee")
 ```
 
 ------------------------------------------------------------------------
 
-## 📄 Input Requirements
+## 📄 Input Format
 
-A data frame with these required columns:
+Your course schedule must contain these columns:
 
-- `INSTRUCTOR`: Instructor name
-- `HRS`: Credit hours per course
-- `ENRLD`: Student enrollment
-- `SUBJ`: Subject code (for advanced filtering)
+| Column       | Description                     |
+|--------------|---------------------------------|
+| `INSTRUCTOR` | Instructor name                 |
+| `HRS`        | Credit hours per course         |
+| `ENRLD`      | Course enrollment count         |
+| `SUBJ`       | Subject code (e.g., MATH, ENGL) |
 
 ------------------------------------------------------------------------
 
 ## 📊 Output
 
-The result is a tidy tibble that includes:
+The package returns a tidy tibble with:
 
-- Overload Pay by Course
-- Total Compensation (USD)
-- Summary notes
-- Course-level and instructor-level breakdowns
+- Overload pay per course
+- Qualified credit hours
+- Summary block with total compensation
+- Labels and formatting for readability
+
+------------------------------------------------------------------------
+
+## 📚 Documentation
+
+🔗 [**View the Full
+Walkthrough**](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
+
+This vignette explains the methodology, assumptions, policy logic, and
+examples in detail.
 
 ------------------------------------------------------------------------
 
@@ -112,6 +107,5 @@ The result is a tidy tibble that includes:
 
 Developed and maintained by **Dawit Aberra**.
 
-See the
-[Walkthrough](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
-for full details and methodology.
+Licensed under AGPL-3. Please cite appropriately when using this tool in
+research or administrative systems.

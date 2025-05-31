@@ -1,8 +1,8 @@
 ---
-title: "catool-walkthrough"
+title: "catool: Walkthrough"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{catool: Overload Compensation Tool Walkthrough}
+  %\VignetteIndexEntry{catool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
