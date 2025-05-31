@@ -1,5 +1,4 @@
 ---
-title: "catool: Compensation Analysis Tool"
 output: github_document
 ---
 

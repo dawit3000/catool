@@ -1,5 +1,3 @@
-catool: Compensation Analysis Tool
-================
 
 # catool: Compensation Analysis Tool
 
