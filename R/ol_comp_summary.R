@@ -15,52 +15,53 @@
 #' @import dplyr
 #' @import tibble
 #' @importFrom scales comma
+#' @importFrom rlang .data
 #' @export
 ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
                             rate_per_cr = 2500 / 3, reg_load = 12) {
   df <- schedule_df %>%
-    filter(!is.na(INSTRUCTOR)) %>%
+    filter(!is.na(.data$INSTRUCTOR)) %>%
     mutate(across(everything(), ~ ifelse(. == "", NA, .)))
 
   if (!is.null(instructor)) {
-    df <- df %>% filter(INSTRUCTOR == instructor)
+    df <- df %>% filter(.data$INSTRUCTOR == instructor)
   }
 
   instructors <- df %>%
-    distinct(INSTRUCTOR) %>%
-    arrange(INSTRUCTOR) %>%
-    pull(INSTRUCTOR)
+    distinct(.data$INSTRUCTOR) %>%
+    arrange(.data$INSTRUCTOR) %>%
+    pull(.data$INSTRUCTOR)
 
   results <- purrr::map_dfr(instructors, function(instr) {
     course_table <- df %>%
-      filter(INSTRUCTOR == instr) %>%
+      filter(.data$INSTRUCTOR == instr) %>%
       mutate(
-        HRS = as.numeric(HRS),
-        ENRLD = as.numeric(ENRLD)
+        HRS = as.numeric(.data$HRS),
+        ENRLD = as.numeric(.data$ENRLD)
       ) %>%
-      arrange(desc(ENRLD)) %>%
+      arrange(desc(.data$ENRLD)) %>%
       mutate(
-        is_qualified = ENRLD >= L,
-        qualified_cr = if_else(is_qualified, HRS, 0)
+        is_qualified = .data$ENRLD >= L,
+        qualified_cr = if_else(.data$is_qualified, .data$HRS, 0)
       ) %>%
-      mutate(cum_qualified = cumsum(qualified_cr)) %>%
-      mutate(QUALIFIED_CR = pmax(0, cum_qualified - reg_load)) %>%
-      mutate(QUALIFIED_CR = pmin(QUALIFIED_CR, qualified_cr)) %>%
+      mutate(cum_qualified = cumsum(.data$qualified_cr)) %>%
+      mutate(QUALIFIED_CR = pmax(0, .data$cum_qualified - reg_load)) %>%
+      mutate(QUALIFIED_CR = pmin(.data$QUALIFIED_CR, .data$qualified_cr)) %>%
       mutate(
         prorated_rate = case_when(
-          ENRLD >= 10 ~ rate_per_cr,
-          ENRLD >= L  ~ rate_per_cr * ENRLD / 10,
-          TRUE        ~ 0
+          .data$ENRLD > U ~ rate_per_cr,
+          .data$ENRLD >= L  ~ rate_per_cr * .data$ENRLD / 10,
+          TRUE              ~ 0
         ),
-        ROW_AMOUNT = round(prorated_rate * QUALIFIED_CR, 2),
+        ROW_AMOUNT = round(.data$prorated_rate * .data$QUALIFIED_CR, 2),
         TYPE = case_when(
-          QUALIFIED_CR > 0 & ENRLD < 10 ~ "PRORATED",
-          QUALIFIED_CR > 0 & ENRLD >= 10 ~ "UNPRORATED",
+          .data$QUALIFIED_CR > 0 & .data$ENRLD <= U ~ "PRORATED",
+          .data$QUALIFIED_CR > 0 & .data$ENRLD > U ~ "",
           TRUE ~ ""
         ),
         SUMMARY = ""
       ) %>%
-      select(-qualified_cr, -cum_qualified, -is_qualified, -prorated_rate)
+      select(-.data$qualified_cr, -.data$cum_qualified, -.data$is_qualified, -.data$prorated_rate)
 
     total_qualified <- sum(course_table$QUALIFIED_CR, na.rm = TRUE)
     total_comp <- sum(course_table$ROW_AMOUNT, na.rm = TRUE)

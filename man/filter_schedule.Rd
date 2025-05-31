@@ -5,14 +5,14 @@
 \title{Filter Course Schedule by Division, Subject, and/or Instructor}
 \usage{
 filter_schedule(
-  schedule_df,
+  schedule,
   division = NULL,
   subject_pattern = NULL,
   instructor_pattern = NULL
 )
 }
 \arguments{
-\item{schedule_df}{A data frame containing the course schedule with \code{INSTRUCTOR} and \code{SUBJ} columns.}
+\item{schedule}{A data frame containing the course schedule with \code{INSTRUCTOR} and \code{SUBJ} columns.}
 
 \item{division}{Optional character string naming a division (must match known values).}
 
@@ -28,9 +28,12 @@ Applies one or more filters to a course schedule: by instructor name (regex), su
 and/or academic division. Matching is case-insensitive and all filters are optional.
 }
 \examples{
-filter_schedule(schedule_df, division = "Nursing")
-filter_schedule(schedule_df, subject_pattern = "^MATH|^STAT")
-filter_schedule(schedule_df, instructor_pattern = "smith")
-filter_schedule(schedule_df, division = "Business Administration", instructor_pattern = "Lee")
+schedule <- data.frame(INSTRUCTOR = c("Lee", "Smith"),
+                       SUBJ = c("MATH", "NURS"),
+                       stringsAsFactors = FALSE)
+filter_schedule(schedule, division = "Nursing")
+filter_schedule(schedule, subject_pattern = "^MATH|^STAT")
+filter_schedule(schedule, instructor_pattern = "smith")
+filter_schedule(schedule, division = "Business Administration", instructor_pattern = "Lee")
 
 }

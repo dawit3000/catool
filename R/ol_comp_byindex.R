@@ -14,18 +14,11 @@
 #' @return Invisibly returns a tibble with the instructor’s overload compensation summary,
 #' formatted for display.
 #'
-#' @examples
-#' # Calculate overload compensation for the 5th instructor in the dataset:
-#' # ol_comp_byindex(5, schedule_df = your_schedule_data)
-#'
 #' @import dplyr
 #' @import tibble
 #' @importFrom scales dollar
 #' @export
-ol_comp_byindex <- function(i, schedule_df = schedule,
-                            L = 4, U = 9,
-                            rate_per_cr = 2500 / 3,
-                            reg_load = 12) {
+ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) {
   instructor_name <- get_unique_instructors(schedule_df) %>%
     slice(i) %>%
     pull(INSTRUCTOR)

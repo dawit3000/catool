@@ -4,12 +4,12 @@
 \alias{get_division_schedule}
 \title{Filter Course Schedule by Division}
 \usage{
-get_division_schedule(division_name, schedule_df)
+get_division_schedule(division_name, schedule)
 }
 \arguments{
 \item{division_name}{A character string naming the division (must match one of the known values).}
 
-\item{schedule_df}{A data frame containing course schedule data with a \code{SUBJ} column.}
+\item{schedule}{A data frame containing course schedule data with a \code{SUBJ} column.}
 }
 \value{
 A filtered data frame containing only courses in the specified division.
@@ -19,7 +19,8 @@ Returns a subset of the schedule matching a named academic division. The functio
 division names to associated subject codes and filters accordingly.
 }
 \examples{
-get_division_schedule("Natural and Computational Sciences", schedule_df)
-get_division_schedule("Business Administration", schedule_df)
+schedule <- data.frame(SUBJ = c("MATH", "NURS", "BIOL"))
+get_division_schedule("Natural and Computational Sciences", schedule)
+get_division_schedule("Nursing", schedule)
 
 }

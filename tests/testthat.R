@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(coat)
+library(catool)
 
-test_check("coat")
+test_check("catool")

@@ -4,12 +4,12 @@
 \alias{get_subject_schedule}
 \title{Filter Course Schedule by Subject Code (Regex-Friendly)}
 \usage{
-get_subject_schedule(subject_pattern, schedule_df)
+get_subject_schedule(subject_pattern, schedule)
 }
 \arguments{
 \item{subject_pattern}{A character string or regular expression to match subject codes.}
 
-\item{schedule_df}{A data frame containing course schedule data with a \code{SUBJ} column.}
+\item{schedule}{A data frame containing course schedule data with a \code{SUBJ} column.}
 }
 \value{
 A filtered data frame containing only matching subject codes.
@@ -19,7 +19,8 @@ Returns a subset of the schedule where the \code{SUBJ} (subject code) column mat
 Matching is case-insensitive and supports regular expressions.
 }
 \examples{
-get_subject_schedule("CSCI", schedule_df)
-get_subject_schedule("^MATH|^STAT", schedule_df)
+schedule <- data.frame(SUBJ = c("CSCI", "MATH", "STAT"))
+get_subject_schedule("CSCI", schedule)
+get_subject_schedule("^MATH|^STAT", schedule)
 
 }

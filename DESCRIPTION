@@ -12,7 +12,8 @@ Imports:
     dplyr,
     tibble,
     purrr,
-    scales
+    scales,
+    rlang
 Suggests: 
     knitr,
     rmarkdown,

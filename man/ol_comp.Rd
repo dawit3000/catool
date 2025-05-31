@@ -18,19 +18,9 @@ ol_comp(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 \item{reg_load}{Regular teaching load in credit hours (default = 12).}
 }
 \value{
-A tibble that includes:
-\itemize{
-\item Original schedule
-\item Overload Pay by Course
-\item Summary of total qualified credit hours
-\item Total Compensation (USD)
-}
+A tibble with original schedule, overload pay by course, and a summary block.
 }
 \description{
 Computes prorated overload pay and qualified credit hours for a single instructor
 based on course credit hours, enrollment, and institutional overload rules.
-}
-\examples{
-# ol_comp(get_instructor_schedule("Smith, Abigail", schedule))
-
 }

@@ -9,14 +9,7 @@
 #' @param rate_per_cr Base overload pay per credit hour (default = 2500/3).
 #' @param reg_load Regular teaching load in credit hours (default = 12).
 #'
-#' @return A tibble that includes:
-#' - Original schedule
-#' - Overload Pay by Course
-#' - Summary of total qualified credit hours
-#' - Total Compensation (USD)
-#'
-#' @examples
-#' # ol_comp(get_instructor_schedule("Smith, Abigail", schedule))
+#' @return A tibble with original schedule, overload pay by course, and a summary block.
 #'
 #' @import dplyr
 #' @importFrom scales dollar
@@ -25,7 +18,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
   input <- instructor_schedule %>%
     mutate(
       ENRLD = as.numeric(ENRLD),
-      HRS   = as.numeric(HRS),
+      HRS = as.numeric(HRS),
       Summary = "",
       `Total Compensation (USD)` = "",
       `Overload Pay by Course` = 0
@@ -54,9 +47,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     m <- m - 1
   }
 
-  count <- qualifying %>%
-    filter(ENRLD <= U) %>%
-    nrow()
+  count <- qualifying %>% filter(ENRLD <= U) %>% nrow()
 
   note_text <- if (count > 0 && prorated_pay > 0) {
     "Classes with 4 <= ENRLD <= 9 were prorated."
@@ -97,3 +88,4 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
       across(everything(), ~ ifelse(is.na(.), "", .))
     )
 }
+

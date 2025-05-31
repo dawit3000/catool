@@ -6,7 +6,7 @@
 \usage{
 ol_comp_byindex(
   i,
-  schedule_df = schedule,
+  schedule_df,
   L = 4,
   U = 9,
   rate_per_cr = 2500/3,
@@ -34,9 +34,4 @@ formatted for display.
 Retrieves an instructor's name by index from the schedule and calculates their overload compensation
 using \code{\link[=ol_comp]{ol_comp()}}. Returns a clean, readable summary with a labeled header row, consistent with the
 Shiny App output.
-}
-\examples{
-# Calculate overload compensation for the 5th instructor in the dataset:
-# ol_comp_byindex(5, schedule_df = your_schedule_data)
-
 }
