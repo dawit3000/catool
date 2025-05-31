@@ -1,11 +1,13 @@
 
 # catool: Compensation Analysis Tool
 
-[![GitHub
-version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/catool)](https://CRAN.R-project.org/package=catool)
 [![R-CMD-check](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![GitHub
+version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)
 
 **catool** (Compensation Analysis Tool) is an R package for calculating
 fair and transparent overload pay for college instructors. It processes
