@@ -14,26 +14,29 @@ ol_comp_byindex(
 )
 }
 \arguments{
-\item{i}{Integer index of the instructor (from \code{get_unique_instructors()}).}
+\item{i}{Integer index of the instructor (as returned by \code{\link[=get_unique_instructors]{get_unique_instructors()}}).}
 
-\item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.}
+\item{schedule_df}{A data frame of the full course schedule containing an \code{INSTRUCTOR} column.}
 
-\item{L}{Lower enrollment bound for overload eligibility (inclusive). Default is 4.}
+\item{L}{Lower enrollment threshold for overload eligibility (inclusive). Default is 4.}
 
-\item{U}{Upper enrollment bound for proration (inclusive). Default is 9.}
+\item{U}{Upper enrollment limit for proration (inclusive). Default is 9.}
 
 \item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 }
 \value{
-Invisibly returns a tibble with the instructor’s overload compensation summary.
+Invisibly returns a tibble with the instructor’s overload compensation summary,
+formatted for display.
 }
 \description{
-Retrieves the instructor name by index from the schedule, calculates their overload compensation
-using \code{ol_comp()}, and prints a clean, readable summary with a header row.
+Retrieves an instructor's name by index from the schedule and calculates their overload compensation
+using \code{\link[=ol_comp]{ol_comp()}}. Returns a clean, readable summary with a labeled header row, consistent with the
+Shiny App output.
 }
 \examples{
-# ol_comp_byindex(5)
+# Calculate overload compensation for the 5th instructor in the dataset:
+# ol_comp_byindex(5, schedule_df = your_schedule_data)
 
 }

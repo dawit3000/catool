@@ -1,0 +1,134 @@
+Your vignette looks excellent, Buddy — just a few final polish touches and standardization. Here's the **clean, corrected, and final version** of your `catool-walkthrough.Rmd`:
+
+````rmd
+---
+title: "catool-walkthrough"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{catool: Overload Compensation Tool Walkthrough}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+library(catool)
+library(dplyr)
+````
+
+---
+
+## 🔍 Introduction
+
+This vignette demonstrates how to use the `catool` R package to calculate overload compensation for college instructors based on institutional course schedules and policy rules.
+
+The package supports both individual instructor analysis and full-schedule summaries, applying proration and eligibility rules based on enrollment and credit hour thresholds.
+
+---
+
+## 🏫 Load Schedule
+
+```r
+schedule <- read.csv("data-raw/schedule.csv")
+```
+
+---
+
+## 👤 Get Schedule for One Instructor
+
+```r
+get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+```
+
+---
+
+## 💵 Calculate Overload Compensation for One Instructor
+
+```r
+IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+ol_comp(IS)  # Uses default institutional policy
+
+# Custom policy example
+ol_comp(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
+```
+
+---
+
+## 👥 List Unique Instructors in the Schedule
+
+```r
+get_unique_instructors(schedule)
+```
+
+---
+
+## 🔢 Summarize Overload Compensation by Index
+
+```r
+ol_comp_byindex(108, schedule_df = schedule)
+ol_comp_byindex(108, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+```
+
+---
+
+## 📋 Summarize All Instructors’ Overload Compensation
+
+```r
+ol_comp_summary(schedule)
+ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+```
+
+---
+
+## 📝 Explanation
+
+The **catool** package calculates overload compensation using institutional rules that account for:
+
+* **Enrollment** (`ENRLD`)
+* **Credit hours** (`HRS`)
+* **Regular teaching load** (`reg_load`)
+* **Per-credit compensation rate** (`rate_per_cr`)
+
+### Key Concepts
+
+* **Default Proration Range:**
+
+  * Lower Bound (`L`) = 4
+  * Upper Bound (`U`) = 9
+  * `ENRLD < L` → No pay
+  * `L ≤ ENRLD ≤ U` → Prorated pay
+  * `ENRLD > U` → Full pay (unprorated)
+
+* **Regular Load (`reg_load`)**:
+
+  * Only credit hours beyond this are eligible for overload pay (default = 12)
+
+* **Rate per Credit Hour (`rate_per_cr`)**:
+
+  * Default is `2500 / 3` (\~833.33), but user-customizable
+
+---
+
+### Notes
+
+* All thresholds and rates are user-adjustable via function arguments.
+* Output is returned as a tidy tibble, readable and export-ready.
+
+---
+
+## 📫 Questions?
+
+For questions or feedback, contact Dawit Aberra at
+📧 [aberrad@fvsu.edu](mailto:aberrad@fvsu.edu)
+
+```
+
+---
+
+✅ Now go ahead and:
+1. Replace your old vignette content with this.
+2. Save the file.
+3. Run `devtools::build_vignettes()` again.
+4. Commit and push.
+
+Let me know once it’s live on GitHub Pages — we’ll update your README badge next!
+```

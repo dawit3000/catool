@@ -1,21 +1,22 @@
 ---
-title: "coat-walkthrough"
+title: "catool-walkthrough"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{coat-walkthrough}
+  %\VignetteIndexEntry{catool: Overload Compensation Tool Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
-library(coat)
+library(catool)
 library(dplyr)
 ```
+
 ---
 
 ## 🔍 Introduction
 
-This vignette demonstrates how to use the `coat` R package to calculate overload compensation for instructors based on institutional course schedules and compensation policies.
+This vignette demonstrates how to use the `catool` R package to calculate overload compensation for instructors based on institutional course schedules and compensation policies.
 
 The package supports both individual instructor analysis and full-schedule summaries, applying proration and eligibility rules based on enrollment and credit hours.
 
@@ -23,15 +24,22 @@ The package supports both individual instructor analysis and full-schedule summa
 
 ## 🏫 Load Schedule
 
-```r
-schedule <- read.csv("data-raw/schedule.csv")
+```{r}
+# Replace with your actual file path or upload method
+# Example fallback data (for build safety)
+schedule <- data.frame(
+  INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Smith, John"),
+  ENRLD = c(12, 7, 4),
+  HRS = c(3, 3, 3),
+  stringsAsFactors = FALSE
+)
 ```
 
 ---
 
 ## 👤 Get Schedule for One Instructor
 
-```r
+```{r}
 get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 ```
 
@@ -39,7 +47,7 @@ get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 
 ## 💵 Calculate Overload Compensation for One Instructor
 
-```r
+```{r}
 IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 ol_comp(IS)  # Uses default institutional policy
 
@@ -51,7 +59,7 @@ ol_comp(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
 
 ## 👥 List Unique Instructors in the Schedule
 
-```r
+```{r}
 get_unique_instructors(schedule)
 ```
 
@@ -59,16 +67,16 @@ get_unique_instructors(schedule)
 
 ## 🔢 Summarize Overload Compensation for an Instructor by Index
 
-```r
-ol_comp_byindex(108, schedule_df = schedule)
-ol_comp_byindex(108, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+```{r}
+ol_comp_byindex(1, schedule_df = schedule)
+ol_comp_byindex(1, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 ```
 
 ---
 
 ## 📋 Summarize All Instructors’ Overload Compensation
 
-```r
+```{r}
 ol_comp_summary(schedule)
 ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 ```
@@ -77,7 +85,7 @@ ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
 ## 📝 Explanation
 
-The **COAT** package determines overload compensation using institutional rules based on:
+The **catool** package determines overload compensation using institutional rules based on:
 
 * Enrollment (`ENRLD`)
 * Credit hours (`HRS`)
@@ -112,4 +120,3 @@ The **COAT** package determines overload compensation using institutional rules 
 ## 📫 Questions?
 
 For questions or feedback, contact Dawit Aberra at **[aberrad@fvsu.edu](mailto:aberrad@fvsu.edu)**.
-

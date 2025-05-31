@@ -58,6 +58,12 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     filter(ENRLD <= U) %>%
     nrow()
 
+  note_text <- if (count > 0 && prorated_pay > 0) {
+    "Classes with 4 <= ENRLD <= 9 were prorated."
+  } else {
+    ""
+  }
+
   summary_rows <- tibble(
     Summary = c(
       paste0("Over ", reg_load, " QUALIFIED CR. HRS:"),
@@ -67,11 +73,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     `Total Compensation (USD)` = c(
       total_hours,
       dollar(prorated_pay),
-      if (count > 0 && prorated_pay > 0) {
-        "Classes with 4 <= ENRLD <= 9 were prorated."
-      } else {
-        ""
-      }
+      note_text
     ),
     `Overload Pay by Course` = c(NA_real_, NA_real_, NA_real_)
   )
@@ -87,7 +89,8 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
   final_result %>%
     mutate(
       `Overload Pay by Course` = ifelse(
-        suppressWarnings(!is.na(as.numeric(`Overload Pay by Course`)) & as.numeric(`Overload Pay by Course`) > 0),
+        suppressWarnings(!is.na(as.numeric(`Overload Pay by Course`)) &
+                           as.numeric(`Overload Pay by Course`) > 0),
         dollar(as.numeric(`Overload Pay by Course`)),
         `Overload Pay by Course`
       ),

@@ -2,23 +2,27 @@
 % Please edit documentation in R/get_instructor_schedule.R
 \name{get_instructor_schedule}
 \alias{get_instructor_schedule}
-\title{Filter Course Schedule by Instructor}
+\title{Filter Course Schedule by Instructor (Regex-Friendly, Case-Insensitive)}
 \usage{
 get_instructor_schedule(instructor_name, schedule_df = schedule)
 }
 \arguments{
-\item{instructor_name}{A character string with the instructor's full name. Must exactly match a value in the \code{INSTRUCTOR} column.}
+\item{instructor_name}{A character string (or regular expression) used to match against values in the \code{INSTRUCTOR} column.}
 
 \item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.
 Defaults to \code{schedule} if not specified.}
 }
 \value{
-A data frame of courses assigned to the specified instructor.
+A data frame of courses assigned to instructors matching the given pattern.
 }
 \description{
-Returns a subset of the course schedule containing only the courses taught by the specified instructor.
+Returns a subset of the course schedule containing courses taught by the specified instructor.
+Matching is case-insensitive and supports regular expressions, allowing flexible partial or pattern-based matching.
+If no match is found, a warning is issued and an empty data frame is returned.
 }
 \examples{
-# get_instructor_schedule("Anderson-Robinson, Nataysha", schedule_df = schedule)
+get_instructor_schedule("smith", schedule_df = schedule)  # partial match
+get_instructor_schedule("^Smith,", schedule_df = schedule)  # regex: starts with Smith
+get_instructor_schedule("Robinson|Smith", schedule_df = schedule)  # regex: matches either
 
 }

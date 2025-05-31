@@ -1,19 +1,22 @@
 #' Calculate Overload Compensation for One Instructor (by Index)
 #'
-#' Retrieves the instructor name by index from the schedule, calculates their overload compensation
-#' using `ol_comp()`, and prints a clean, readable summary with a header row.
+#' Retrieves an instructor's name by index from the schedule and calculates their overload compensation
+#' using [ol_comp()]. Returns a clean, readable summary with a labeled header row, consistent with the
+#' Shiny App output.
 #'
-#' @param i Integer index of the instructor (from `get_unique_instructors()`).
-#' @param schedule_df A data frame containing course schedule data with an `INSTRUCTOR` column.
-#' @param L Lower enrollment bound for overload eligibility (inclusive). Default is 4.
-#' @param U Upper enrollment bound for proration (inclusive). Default is 9.
+#' @param i Integer index of the instructor (as returned by [get_unique_instructors()]).
+#' @param schedule_df A data frame of the full course schedule containing an `INSTRUCTOR` column.
+#' @param L Lower enrollment threshold for overload eligibility (inclusive). Default is 4.
+#' @param U Upper enrollment limit for proration (inclusive). Default is 9.
 #' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
 #'
-#' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
+#' @return Invisibly returns a tibble with the instructor’s overload compensation summary,
+#' formatted for display.
 #'
 #' @examples
-#' # ol_comp_byindex(5)
+#' # Calculate overload compensation for the 5th instructor in the dataset:
+#' # ol_comp_byindex(5, schedule_df = your_schedule_data)
 #'
 #' @import dplyr
 #' @import tibble

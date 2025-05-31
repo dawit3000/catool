@@ -2,10 +2,11 @@
 % Please edit documentation in R/ol_comp_summary.R
 \name{ol_comp_summary}
 \alias{ol_comp_summary}
-\title{Summarize Overload Compensation for All Instructors}
+\title{Summarize Overload Compensation for One or All Instructors}
 \usage{
 ol_comp_summary(
-  schedule_df = schedule,
+  schedule_df,
+  instructor = NULL,
   L = 4,
   U = 9,
   rate_per_cr = 2500/3,
@@ -13,25 +14,22 @@ ol_comp_summary(
 )
 }
 \arguments{
-\item{schedule_df}{A data frame containing course schedule data with an \code{INSTRUCTOR} column.
-Defaults to \code{schedule} if not specified.}
+\item{schedule_df}{A data frame containing the full course schedule, including \code{INSTRUCTOR}, \code{HRS}, and \code{ENRLD}.}
 
-\item{L}{Lower enrollment bound for overload eligibility (inclusive). Default is 4.}
+\item{instructor}{Optional string. If provided, limits output to that instructor. Default is NULL (all).}
 
-\item{U}{Upper bound for proration (inclusive). Default is 9.}
+\item{L}{Lower enrollment threshold for overload eligibility (default = 4).}
 
-\item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
+\item{U}{Upper limit of proration. ENRLD > U gets full-rate pay (default = 9).}
 
-\item{reg_load}{Regular teaching load in credit hours. Default is 12.}
+\item{rate_per_cr}{Pay rate per credit hour (default = 2500/3).}
+
+\item{reg_load}{Regular teaching load in credit hours (default = 12).}
 }
 \value{
-A tibble with formatted overload compensation summaries for all instructors.
+A tibble combining course-level pay and instructor summaries for one or more instructors.
 }
 \description{
-Applies the overload compensation calculation to each unique instructor
-in the schedule and combines the results into one formatted summary table.
-}
-\examples{
-# ol_comp_summary(schedule)
-
+Calculates overload compensation for each instructor (or a selected one) based on institutional policies.
+Output includes course-level pay, qualified credit hours, and a readable summary section for each instructor.
 }
