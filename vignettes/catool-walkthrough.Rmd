@@ -12,21 +12,25 @@ library(catool)
 library(dplyr)
 ```
 
----
-
 ## 🔍 Introduction
 
-This vignette demonstrates how to use the `catool` R package to calculate overload compensation for instructors based on institutional course schedules and compensation policies.
+This vignette demonstrates how to use the `catool` R package to calculate fair and transparent overload compensation for college instructors, based on institutional course schedules and compensation policies.
 
-The package supports both individual instructor analysis and full-schedule summaries, applying proration and eligibility rules based on enrollment and credit hours.
+The package supports analysis for both individual instructors and full teaching schedules using well-defined eligibility and proration rules based on enrollment and credit hour thresholds.
 
 ---
 
-## 🏫 Load Schedule
+## 🏫 Prepare Your Schedule Data
 
-```{r}
-# Replace with your actual file path
-# Fallback example for demonstration
+To use `catool`, your schedule data must include at minimum:
+
+* `INSTRUCTOR`: Instructor name (e.g., "Smith, John")
+* `ENRLD`: Enrollment count for each course
+* `HRS`: Credit hours for each course
+
+You can import data from a `.csv` file using `read.csv("yourfile.csv")`. Here's a small example:
+
+```{r, echo=TRUE, results="hide"}
 schedule <- data.frame(
   INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Smith, John"),
   ENRLD = c(12, 7, 4),
@@ -37,81 +41,79 @@ schedule <- data.frame(
 
 ---
 
-## 👤 Get Schedule for One Instructor
+## 👤 Analyze One Instructor
 
-```{r}
-get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
+```{r, echo=TRUE, results="hide"}
+# Filter by instructor name (case-insensitive)
+inst_schedule <- get_instructor_schedule("Lalau-Hitchcock", schedule)
+
+# Calculate overload compensation using default policy
+ol_comp(inst_schedule)
+
+# You can also apply custom policy parameters
+ol_comp(inst_schedule, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
 ```
 
 ---
 
-## 💵 Calculate Overload Compensation for One Instructor
+## 👥 See All Instructors in the Schedule
 
-```{r}
-IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
-ol_comp(IS)  # Default institutional policy
-
-# Custom policy example
-ol_comp(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
-```
-
----
-
-## 👥 List Unique Instructors in the Schedule
-
-```{r}
+```{r, echo=TRUE, results="hide"}
 get_unique_instructors(schedule)
 ```
 
 ---
 
-## 🔢 Summarize Overload Compensation by Instructor Index
+## 🔢 Analyze by Instructor Index
 
-```{r}
+```{r, echo=TRUE, results="hide"}
+# Get summary for a specific instructor by index
 ol_comp_byindex(1, schedule_df = schedule)
-ol_comp_byindex(1, schedule_df = schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+
+# With custom policy
+ol_comp_byindex(1, schedule_df = schedule, L = 4, U = 9, reg_load = 12, rate_per_cr = 2500 / 3)
 ```
 
 ---
 
-## 📋 Summarize All Instructors’ Overload Compensation
+## 📋 Summarize All Instructors
 
-```{r}
+```{r, echo=TRUE, results="hide"}
 ol_comp_summary(schedule)
-ol_comp_summary(schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
+
+# With custom institutional policy
+ol_comp_summary(schedule, L = 4, U = 9, reg_load = 12, rate_per_cr = 2500 / 3)
 ```
 
 ---
 
-## 📝 Explanation
+## 🧮 Explanation of Policy Rules
 
-The **catool** package determines overload compensation using institutional rules based on:
+The overload compensation algorithm in **catool** reflects typical institutional policy logic designed to ensure fairness and consistency.
 
-* Enrollment (`ENRLD`)
-* Credit hours (`HRS`)
-* Regular teaching load (`reg_load`)
-* Per-credit compensation rate (`rate_per_cr`)
+### 💡 Policy Parameters
 
-### Key Concepts
+* **`ENRLD`**: Course enrollment
+* **`HRS`**: Credit hours per course
+* **`reg_load`**: Regular teaching load (default = 12 credit hours)
+* **`rate_per_cr`**: Compensation per qualified credit hour (default = 2500 / 3)
 
-* **Proration Range**:
+### ⚖️ Key Rules
 
-  * Courses with `ENRLD < 4`: No compensation
-  * `ENRLD` between `4` and `9`: Prorated pay
-  * `ENRLD ≥ 10`: Full pay (no proration)
+1. **Qualified Credit Hours**
+   Only credit hours exceeding the instructor’s regular load (`reg_load`) are eligible for overload pay.
 
-* **Regular Load (`reg_load`)**:
-  Only credit hours beyond this are considered for overload compensation.
+2. **Enrollment-Based Eligibility**
 
-* **Rate per Credit Hour**:
-  Default rate is `2500 / 3` (\~833.33), customizable by the user.
+   * Courses with `ENRLD < L` (default `L = 4`) are excluded from compensation.
+   * If **enrollment corresponding to qualified credit hours is less than 10**, pay is **prorated**.
+   * If **enrollment is 10 or more**, pay is awarded in full.
 
----
+3. **Fair Distribution**
 
-### Notes
-
-* All thresholds and pay rates are user-adjustable.
-* Output is returned as a tidy, readable tibble—ready for reporting or export.
+   * Courses are sorted by enrollment in **descending order**.
+   * Qualified hours are counted from the **least-enrolled eligible course upward**, ensuring the most populated classes are taught as part of the regular load.
+     This reflects standard policy assumptions: institutions prioritize assigning higher-impact (larger) courses to regular load, and identify overload from less-enrolled offerings.
 
 ---
 
