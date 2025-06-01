@@ -70,18 +70,20 @@
 <div class="page-header"><h1 id="catool-compensation-analysis-tool">catool: Compensation Analysis Tool<a class="anchor" aria-label="anchor" href="#catool-compensation-analysis-tool"></a>
 </h1></div>
 <p><a href="https://CRAN.R-project.org/package=catool" class="external-link"><img src="https://www.r-pkg.org/badges/version/catool" alt="CRAN status"></a> <a href="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a> <a href="https://github.com/dawit3000/catool" class="external-link"><img src="https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&amp;logo=github" alt="GitHub version"></a></p>
-<p><strong>catool</strong> (Compensation Analysis Tool) is an R package that calculates fair and transparent overload pay for college instructors. It processes course schedule data, identifies overload credit hours, and applies enrollment-based proration logic to compute compensation aligned with institutional policies.</p>
+<p><strong>catool</strong> (Compensation Analysis Tool) is an R package that calculates fair and transparent overload pay for college instructors. It processes course schedule data, identifies credit hour overloads, and applies proration rules to compute compensation based on institutional policies.</p>
+<p>Unlike simple per-course systems, <strong>catool</strong> prorates pay based on <strong>qualified credit hours</strong> only — and only when enrollment thresholds are not met.</p>
 <hr>
 <div class="section level2">
 <h2 id="wrench-features">🔧 Features<a class="anchor" aria-label="anchor" href="#wrench-features"></a>
 </h2>
 <ul>
-<li>Filters qualified credit hours based on enrollment thresholds</li>
-<li>Computes prorated overload compensation per course</li>
-<li>Generates instructor-level summaries with totals and notes</li>
-<li>Batch-processes full schedules across all instructors</li>
-<li>Supports flexible filtering by subject, instructor name, or division</li>
-<li>Returns clean, export-ready tibbles for downstream use</li>
+<li>Filters out courses ineligible for compensation (e.g., under-enrolled)</li>
+<li>Identifies overload based on regular teaching load</li>
+<li>Computes pay per <strong>qualified credit hour</strong>, prorated where applicable</li>
+<li>Prioritizes assigning higher-enrollment courses to regular load</li>
+<li>Summarizes compensation by instructor and across full schedules</li>
+<li>Supports flexible filtering by subject, instructor, or division</li>
+<li>Returns export-ready, human-readable tibble output</li>
 </ul>
 <hr>
 </div>
@@ -90,7 +92,7 @@
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install from GitHub</span></span>
-<span><span class="co"># install.packages("remotes")  # If not already installed</span></span>
+<span><span class="co"># install.packages("remotes")  # If needed</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"dawit3000/catool"</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
@@ -104,11 +106,11 @@
 <span><span class="co"># Analyze one instructor</span></span>
 <span><span class="fu"><a href="reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="fu"><a href="reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock"</span>, <span class="va">schedule</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># With custom institutional policy</span></span>
+<span><span class="co"># With a custom institutional policy</span></span>
 <span><span class="fu"><a href="reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="fu"><a href="reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Smith"</span>, <span class="va">schedule</span><span class="op">)</span>,</span>
 <span>        L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span>, reg_load <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Full schedule summary</span></span>
+<span><span class="co"># Summarize compensation across the full schedule</span></span>
 <span><span class="fu"><a href="reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
@@ -116,13 +118,13 @@
 <h2 id="mag-advanced-filtering">🔍 Advanced Filtering<a class="anchor" aria-label="anchor" href="#mag-advanced-filtering"></a>
 </h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Division-level schedule</span></span>
+<code class="sourceCode R"><span><span class="co"># Filter by division</span></span>
 <span><span class="fu"><a href="reference/get_division_schedule.html">get_division_schedule</a></span><span class="op">(</span><span class="st">"Business Administration"</span>, <span class="va">schedule</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Subject code pattern matching</span></span>
+<span><span class="co"># Filter by subject codes using regex</span></span>
 <span><span class="fu"><a href="reference/get_subject_schedule.html">get_subject_schedule</a></span><span class="op">(</span><span class="st">"^MATH|^STAT"</span>, <span class="va">schedule</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Combined filters</span></span>
+<span><span class="co"># Apply combined filters</span></span>
 <span><span class="fu"><a href="reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>,</span>
 <span>                division <span class="op">=</span> <span class="st">"Nursing"</span>,</span>
 <span>                instructor_pattern <span class="op">=</span> <span class="st">"lee"</span><span class="op">)</span></span></code></pre></div>
@@ -131,7 +133,7 @@
 <div class="section level2">
 <h2 id="page_facing_up-input-format">📄 Input Format<a class="anchor" aria-label="anchor" href="#page_facing_up-input-format"></a>
 </h2>
-<p>Your course schedule must contain these columns:</p>
+<p>Your input schedule must include the following columns:</p>
 <table class="table">
 <thead><tr>
 <th>Column</th>
@@ -140,7 +142,7 @@
 <tbody>
 <tr>
 <td><code>INSTRUCTOR</code></td>
-<td>Instructor name</td>
+<td>Instructor’s name</td>
 </tr>
 <tr>
 <td><code>HRS</code></td>
@@ -148,7 +150,7 @@
 </tr>
 <tr>
 <td><code>ENRLD</code></td>
-<td>Course enrollment</td>
+<td>Enrollment in the course</td>
 </tr>
 <tr>
 <td><code>SUBJ</code></td>
@@ -156,35 +158,39 @@
 </tr>
 </tbody>
 </table>
-<p>Additional fields like <code>TITLE</code>, <code>DAYS</code>, or <code>LOCATION</code> are allowed but not required.</p>
+<p>Additional columns like <code>TITLE</code>, <code>DAYS</code>, or <code>LOCATION</code> are allowed but not required.</p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="bar_chart-output">📊 Output<a class="anchor" aria-label="anchor" href="#bar_chart-output"></a>
+<h2 id="bar_chart-output-overview">📊 Output Overview<a class="anchor" aria-label="anchor" href="#bar_chart-output-overview"></a>
 </h2>
-<p>The output is a tidy tibble that includes:</p>
+<p>The output is a tidy tibble with:</p>
 <ul>
-<li>Per-course overload compensation (<code>ROW_AMOUNT</code>)</li>
-<li>Qualified credit hours (<code>QUALIFIED_CR</code>)</li>
-<li>Payment type (<code>TYPE</code>: PRORATED or blank)</li>
-<li>Instructor-level summary block (e.g., TOTAL row, note lines)</li>
-<li>Final <code>SUMMARY</code> column (always last) with readable labels</li>
+<li>
+<code>QUALIFIED_CR</code>: Credit hours eligible for overload pay</li>
+<li>
+<code>ROW_AMOUNT</code>: Compensation amount for those hours</li>
+<li>
+<code>TYPE</code>: <code>"PRORATED"</code> where enrollment is below threshold; blank otherwise</li>
+<li>A summary block showing total compensation, rate used, and policy notes</li>
+<li>
+<code>SUMMARY</code>: A final column providing labeled context (e.g., “INSTRUCTOR: Smith”)</li>
 </ul>
+<p>Pay is calculated <em>only</em> on qualified credit hours <strong>beyond regular teaching load</strong>. When enrollment for those hours is below 10, pay is prorated accordingly — not per course.</p>
 <hr>
 </div>
 <div class="section level2">
 <h2 id="books-documentation">📚 Documentation<a class="anchor" aria-label="anchor" href="#books-documentation"></a>
 </h2>
-<p>📖 <a href="https://dawit3000.github.io/catool/articles/catool-walkthrough.html" class="external-link"><strong>Full Walkthrough</strong></a></p>
-<p>The vignette includes methodology, assumptions, institutional policy rules, and full examples.</p>
+<p>📖 <a href="https://dawit3000.github.io/catool/articles/catool-walkthrough.html" class="external-link"><strong>Full Walkthrough Vignette</strong></a></p>
+<p>Includes policy logic, assumptions, and examples for individual and batch analyses.</p>
 <hr>
 </div>
 <div class="section level2">
 <h2 id="writing_hand-author">✍️ Author<a class="anchor" aria-label="anchor" href="#writing_hand-author"></a>
 </h2>
-<p>Developed and maintained by <strong>Dawit Aberra</strong>.</p>
-<p>Licensed under <strong>AGPL-3</strong>. Please cite appropriately when using this tool in research, institutional reporting, or compensation policy audits.</p>
-<p>For questions or feedback, please open a <a href="https://github.com/dawit3000/catool/issues" class="external-link">GitHub issue</a> or contact the author at <a href="mailto:dawit3000@hotmail.com" class="email">dawit3000@hotmail.com</a>.</p>
+<p>Developed and maintained by <strong>Dawit Aberra</strong> 📧 <a href="mailto:dawit3000@hotmail.com" class="email">dawit3000@hotmail.com</a> Licensed under <strong>AGPL-3</strong></p>
+<p>Please cite appropriately when using this tool in research, audits, or policy design. For issues or suggestions, open a <a href="https://github.com/dawit3000/catool/issues" class="external-link">GitHub issue</a>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

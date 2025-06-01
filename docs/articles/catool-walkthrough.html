@@ -80,25 +80,35 @@
 
     
     
-<hr>
 <div class="section level2">
 <h2 id="introduction">🔍 Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <p>This vignette demonstrates how to use the <code>catool</code> R
-package to calculate overload compensation for instructors based on
-institutional course schedules and compensation policies.</p>
-<p>The package supports both individual instructor analysis and
-full-schedule summaries, applying proration and eligibility rules based
-on enrollment and credit hours.</p>
+package to calculate fair and transparent overload compensation for
+college instructors, based on institutional course schedules and
+compensation policies.</p>
+<p>The package supports analysis for both individual instructors and
+full teaching schedules using well-defined eligibility and proration
+rules based on enrollment and credit hour thresholds.</p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="load-schedule">🏫 Load Schedule<a class="anchor" aria-label="anchor" href="#load-schedule"></a>
+<h2 id="prepare-your-schedule-data">🏫 Prepare Your Schedule Data<a class="anchor" aria-label="anchor" href="#prepare-your-schedule-data"></a>
 </h2>
+<p>To use <code>catool</code>, your schedule data must include at
+minimum:</p>
+<ul>
+<li>
+<code>INSTRUCTOR</code>: Instructor name (e.g., “Smith, John”)</li>
+<li>
+<code>ENRLD</code>: Enrollment count for each course</li>
+<li>
+<code>HRS</code>: Credit hours for each course</li>
+</ul>
+<p>You can import data from a <code>.csv</code> file using
+<code>read.csv("yourfile.csv")</code>. Here’s a small example:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Replace with your actual file path</span></span>
-<span><span class="co"># Fallback example for demonstration</span></span>
-<span><span class="va">schedule</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">schedule</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  INSTRUCTOR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Smith, John"</span><span class="op">)</span>,</span>
 <span>  ENRLD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">12</span>, <span class="fl">7</span>, <span class="fl">4</span><span class="op">)</span>,</span>
 <span>  HRS <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>,</span>
@@ -107,228 +117,100 @@ on enrollment and credit hours.</p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="get-schedule-for-one-instructor">👤 Get Schedule for One Instructor<a class="anchor" aria-label="anchor" href="#get-schedule-for-one-instructor"></a>
+<h2 id="analyze-one-instructor">👤 Analyze One Instructor<a class="anchor" aria-label="anchor" href="#analyze-one-instructor"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                INSTRUCTOR ENRLD HRS</span></span>
-<span><span class="co">## 1 Lalau-Hitchcock, Diksha    12   3</span></span>
-<span><span class="co">## 2 Lalau-Hitchcock, Diksha     7   3</span></span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Filter by instructor name (case-insensitive)</span></span>
+<span><span class="va">inst_schedule</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock"</span>, <span class="va">schedule</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Calculate overload compensation using default policy</span></span>
+<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># You can also apply custom policy parameters</span></span>
+<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">8</span>, reg_load <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">5000</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="calculate-overload-compensation-for-one-instructor">💵 Calculate Overload Compensation for One Instructor<a class="anchor" aria-label="anchor" href="#calculate-overload-compensation-for-one-instructor"></a>
+<h2 id="see-all-instructors-in-the-schedule">👥 See All Instructors in the Schedule<a class="anchor" aria-label="anchor" href="#see-all-instructors-in-the-schedule"></a>
+</h2>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_unique_instructors.html">get_unique_instructors</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
+<hr>
+</div>
+<div class="section level2">
+<h2 id="analyze-by-instructor-index">🔢 Analyze by Instructor Index<a class="anchor" aria-label="anchor" href="#analyze-by-instructor-index"></a>
 </h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">IS</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="va">schedule</span><span class="op">)</span></span>
-<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">IS</span><span class="op">)</span>  <span class="co"># Default institutional policy</span></span></code></pre></div>
-<pre><code><span><span class="co">##                INSTRUCTOR ENRLD HRS Overload Pay by Course</span></span>
-<span><span class="co">## 1 Lalau-Hitchcock, Diksha    12   3                      0</span></span>
-<span><span class="co">## 2 Lalau-Hitchcock, Diksha     7   3                      0</span></span>
-<span><span class="co">## 3                                                         </span></span>
-<span><span class="co">## 4                                                         </span></span>
-<span><span class="co">## 5                                                         </span></span>
-<span><span class="co">##                      Summary Total Compensation (USD)</span></span>
-<span><span class="co">## 1                                                    </span></span>
-<span><span class="co">## 2                                                    </span></span>
-<span><span class="co">## 3 Over 12 QUALIFIED CR. HRS:                        0</span></span>
-<span><span class="co">## 4              OVERLOAD PAY:                       $0</span></span>
-<span><span class="co">## 5                      NOTE:</span></span></code></pre>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Custom policy example</span></span>
-<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">IS</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">8</span>, reg_load <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">5000</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                INSTRUCTOR ENRLD HRS Overload Pay by Course</span></span>
-<span><span class="co">## 1 Lalau-Hitchcock, Diksha    12   3                      0</span></span>
-<span><span class="co">## 2 Lalau-Hitchcock, Diksha     7   3                      0</span></span>
-<span><span class="co">## 3                                                         </span></span>
-<span><span class="co">## 4                                                         </span></span>
-<span><span class="co">## 5                                                         </span></span>
-<span><span class="co">##                     Summary Total Compensation (USD)</span></span>
-<span><span class="co">## 1                                                   </span></span>
-<span><span class="co">## 2                                                   </span></span>
-<span><span class="co">## 3 Over 9 QUALIFIED CR. HRS:                        0</span></span>
-<span><span class="co">## 4             OVERLOAD PAY:                       $0</span></span>
-<span><span class="co">## 5                     NOTE:</span></span></code></pre>
+<code class="sourceCode R"><span><span class="co"># Get summary for a specific instructor by index</span></span>
+<span><span class="fu"><a href="../reference/ol_comp_byindex.html">ol_comp_byindex</a></span><span class="op">(</span><span class="fl">1</span>, schedule_df <span class="op">=</span> <span class="va">schedule</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># With custom policy</span></span>
+<span><span class="fu"><a href="../reference/ol_comp_byindex.html">ol_comp_byindex</a></span><span class="op">(</span><span class="fl">1</span>, schedule_df <span class="op">=</span> <span class="va">schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, reg_load <span class="op">=</span> <span class="fl">12</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="list-unique-instructors-in-the-schedule">👥 List Unique Instructors in the Schedule<a class="anchor" aria-label="anchor" href="#list-unique-instructors-in-the-schedule"></a>
+<h2 id="summarize-all-instructors">📋 Summarize All Instructors<a class="anchor" aria-label="anchor" href="#summarize-all-instructors"></a>
 </h2>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/get_unique_instructors.html">get_unique_instructors</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                INSTRUCTOR</span></span>
-<span><span class="co">## 1 Lalau-Hitchcock, Diksha</span></span>
-<span><span class="co">## 2             Smith, John</span></span></code></pre>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># With custom institutional policy</span></span>
+<span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, reg_load <span class="op">=</span> <span class="fl">12</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="summarize-overload-compensation-by-instructor-index">🔢 Summarize Overload Compensation by Instructor Index<a class="anchor" aria-label="anchor" href="#summarize-overload-compensation-by-instructor-index"></a>
+<h2 id="explanation-of-policy-rules">🧮 Explanation of Policy Rules<a class="anchor" aria-label="anchor" href="#explanation-of-policy-rules"></a>
 </h2>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_byindex.html">ol_comp_byindex</a></span><span class="op">(</span><span class="fl">1</span>, schedule_df <span class="op">=</span> <span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##               INSTRUCTOR ENRLD HRS Overload Pay by Course</span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##  Lalau-Hitchcock, Diksha    12   3                      0</span></span>
-<span><span class="co">##  Lalau-Hitchcock, Diksha     7   3                      0</span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                              Summary Total Compensation (USD)</span></span>
-<span><span class="co">##  INSTRUCTOR: Lalau-Hitchcock, Diksha                         </span></span>
-<span><span class="co">##                                                              </span></span>
-<span><span class="co">##                                                              </span></span>
-<span><span class="co">##           Over 12 QUALIFIED CR. HRS:                        0</span></span>
-<span><span class="co">##                        OVERLOAD PAY:                       $0</span></span>
-<span><span class="co">##                                NOTE:</span></span></code></pre>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_byindex.html">ol_comp_byindex</a></span><span class="op">(</span><span class="fl">1</span>, schedule_df <span class="op">=</span> <span class="va">schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span>, reg_load <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##               INSTRUCTOR ENRLD HRS Overload Pay by Course</span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##  Lalau-Hitchcock, Diksha    12   3                      0</span></span>
-<span><span class="co">##  Lalau-Hitchcock, Diksha     7   3                      0</span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                                                          </span></span>
-<span><span class="co">##                              Summary Total Compensation (USD)</span></span>
-<span><span class="co">##  INSTRUCTOR: Lalau-Hitchcock, Diksha                         </span></span>
-<span><span class="co">##                                                              </span></span>
-<span><span class="co">##                                                              </span></span>
-<span><span class="co">##           Over 12 QUALIFIED CR. HRS:                        0</span></span>
-<span><span class="co">##                        OVERLOAD PAY:                       $0</span></span>
-<span><span class="co">##                                NOTE:</span></span></code></pre>
-<hr>
-</div>
-<div class="section level2">
-<h2 id="summarize-all-instructors-overload-compensation">📋 Summarize All Instructors’ Overload Compensation<a class="anchor" aria-label="anchor" href="#summarize-all-instructors-overload-compensation"></a>
-</h2>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                 INSTRUCTOR ENRLD HRS QUALIFIED_CR ROW_AMOUNT  TYPE</span></span>
-<span><span class="co">## 1  Lalau-Hitchcock, Diksha    12   3            0          0      </span></span>
-<span><span class="co">## 2  Lalau-Hitchcock, Diksha     7   3            0          0      </span></span>
-<span><span class="co">## 3                                                          0 TOTAL</span></span>
-<span><span class="co">## 4                                                                 </span></span>
-<span><span class="co">## 5                                                                 </span></span>
-<span><span class="co">## 6                                                                 </span></span>
-<span><span class="co">## 7                                                                 </span></span>
-<span><span class="co">## 8                                                                 </span></span>
-<span><span class="co">## 9                                                                 </span></span>
-<span><span class="co">## 10                                                                </span></span>
-<span><span class="co">## 11             Smith, John     4   3            0          0      </span></span>
-<span><span class="co">## 12                                                         0 TOTAL</span></span>
-<span><span class="co">## 13                                                                </span></span>
-<span><span class="co">## 14                                                                </span></span>
-<span><span class="co">## 15                                                                </span></span>
-<span><span class="co">## 16                                                                </span></span>
-<span><span class="co">## 17                                                                </span></span>
-<span><span class="co">## 18                                                                </span></span>
-<span><span class="co">## 19                                                                </span></span>
-<span><span class="co">##                                SUMMARY</span></span>
-<span><span class="co">## 1                                     </span></span>
-<span><span class="co">## 2                                     </span></span>
-<span><span class="co">## 3  INSTRUCTOR: Lalau-Hitchcock, Diksha</span></span>
-<span><span class="co">## 4         Over 12 QUALIFIED CR. HRS: 0</span></span>
-<span><span class="co">## 5           Overload Pay Rate: $833.33</span></span>
-<span><span class="co">## 6      Total Overload Compensation: $0</span></span>
-<span><span class="co">## 7                                     </span></span>
-<span><span class="co">## 8                                     </span></span>
-<span><span class="co">## 9                                     </span></span>
-<span><span class="co">## 10                                    </span></span>
-<span><span class="co">## 11                                    </span></span>
-<span><span class="co">## 12             INSTRUCTOR: Smith, John</span></span>
-<span><span class="co">## 13        Over 12 QUALIFIED CR. HRS: 0</span></span>
-<span><span class="co">## 14          Overload Pay Rate: $833.33</span></span>
-<span><span class="co">## 15     Total Overload Compensation: $0</span></span>
-<span><span class="co">## 16                                    </span></span>
-<span><span class="co">## 17                                    </span></span>
-<span><span class="co">## 18                                    </span></span>
-<span><span class="co">## 19</span></span></code></pre>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span>, reg_load <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##                 INSTRUCTOR ENRLD HRS QUALIFIED_CR ROW_AMOUNT  TYPE</span></span>
-<span><span class="co">## 1  Lalau-Hitchcock, Diksha    12   3            0          0      </span></span>
-<span><span class="co">## 2  Lalau-Hitchcock, Diksha     7   3            0          0      </span></span>
-<span><span class="co">## 3                                                          0 TOTAL</span></span>
-<span><span class="co">## 4                                                                 </span></span>
-<span><span class="co">## 5                                                                 </span></span>
-<span><span class="co">## 6                                                                 </span></span>
-<span><span class="co">## 7                                                                 </span></span>
-<span><span class="co">## 8                                                                 </span></span>
-<span><span class="co">## 9                                                                 </span></span>
-<span><span class="co">## 10                                                                </span></span>
-<span><span class="co">## 11             Smith, John     4   3            0          0      </span></span>
-<span><span class="co">## 12                                                         0 TOTAL</span></span>
-<span><span class="co">## 13                                                                </span></span>
-<span><span class="co">## 14                                                                </span></span>
-<span><span class="co">## 15                                                                </span></span>
-<span><span class="co">## 16                                                                </span></span>
-<span><span class="co">## 17                                                                </span></span>
-<span><span class="co">## 18                                                                </span></span>
-<span><span class="co">## 19                                                                </span></span>
-<span><span class="co">##                                SUMMARY</span></span>
-<span><span class="co">## 1                                     </span></span>
-<span><span class="co">## 2                                     </span></span>
-<span><span class="co">## 3  INSTRUCTOR: Lalau-Hitchcock, Diksha</span></span>
-<span><span class="co">## 4         Over 12 QUALIFIED CR. HRS: 0</span></span>
-<span><span class="co">## 5           Overload Pay Rate: $833.33</span></span>
-<span><span class="co">## 6      Total Overload Compensation: $0</span></span>
-<span><span class="co">## 7                                     </span></span>
-<span><span class="co">## 8                                     </span></span>
-<span><span class="co">## 9                                     </span></span>
-<span><span class="co">## 10                                    </span></span>
-<span><span class="co">## 11                                    </span></span>
-<span><span class="co">## 12             INSTRUCTOR: Smith, John</span></span>
-<span><span class="co">## 13        Over 12 QUALIFIED CR. HRS: 0</span></span>
-<span><span class="co">## 14          Overload Pay Rate: $833.33</span></span>
-<span><span class="co">## 15     Total Overload Compensation: $0</span></span>
-<span><span class="co">## 16                                    </span></span>
-<span><span class="co">## 17                                    </span></span>
-<span><span class="co">## 18                                    </span></span>
-<span><span class="co">## 19</span></span></code></pre>
-<hr>
-</div>
-<div class="section level2">
-<h2 id="explanation">📝 Explanation<a class="anchor" aria-label="anchor" href="#explanation"></a>
-</h2>
-<p>The <strong>catool</strong> package determines overload compensation
-using institutional rules based on:</p>
-<ul>
-<li>Enrollment (<code>ENRLD</code>)</li>
-<li>Credit hours (<code>HRS</code>)</li>
-<li>Regular teaching load (<code>reg_load</code>)</li>
-<li>Per-credit compensation rate (<code>rate_per_cr</code>)</li>
-</ul>
+<p>The overload compensation algorithm in <strong>catool</strong>
+reflects typical institutional policy logic designed to ensure fairness
+and consistency.</p>
 <div class="section level3">
-<h3 id="key-concepts">Key Concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a>
+<h3 id="policy-parameters">💡 Policy Parameters<a class="anchor" aria-label="anchor" href="#policy-parameters"></a>
 </h3>
 <ul>
 <li>
-<p><strong>Proration Range</strong>:</p>
+<strong><code>ENRLD</code></strong>: Course enrollment</li>
+<li>
+<strong><code>HRS</code></strong>: Credit hours per course</li>
+<li>
+<strong><code>reg_load</code></strong>: Regular teaching load
+(default = 12 credit hours)</li>
+<li>
+<strong><code>rate_per_cr</code></strong>: Compensation per
+qualified credit hour (default = 2500 / 3)</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="key-rules">⚖️ Key Rules<a class="anchor" aria-label="anchor" href="#key-rules"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Qualified Credit Hours</strong> Only credit hours
+exceeding the instructor’s regular load (<code>reg_load</code>) are
+eligible for overload pay.</p></li>
+<li>
+<p><strong>Enrollment-Based Eligibility</strong></p>
 <ul>
-<li>Courses with <code>ENRLD &lt; 4</code>: No compensation</li>
-<li>
-<code>ENRLD</code> between <code>4</code> and <code>9</code>:
-Prorated pay</li>
-<li>
-<code>ENRLD ≥ 10</code>: Full pay (no proration)</li>
+<li>Courses with <code>ENRLD &lt; L</code> (default <code>L = 4</code>)
+are excluded from compensation.</li>
+<li>If <strong>enrollment corresponding to qualified credit hours is
+less than 10</strong>, pay is <strong>prorated</strong>.</li>
+<li>If <strong>enrollment is 10 or more</strong>, pay is awarded in
+full.</li>
 </ul>
 </li>
-<li><p><strong>Regular Load (<code>reg_load</code>)</strong>: Only
-credit hours beyond this are considered for overload
-compensation.</p></li>
-<li><p><strong>Rate per Credit Hour</strong>: Default rate is
-<code>2500 / 3</code> (~833.33), customizable by the user.</p></li>
-</ul>
-<hr>
-</div>
-<div class="section level3">
-<h3 id="notes">Notes<a class="anchor" aria-label="anchor" href="#notes"></a>
-</h3>
+<li>
+<p><strong>Fair Distribution</strong></p>
 <ul>
-<li>All thresholds and pay rates are user-adjustable.</li>
-<li>Output is returned as a tidy, readable tibble—ready for reporting or
-export.</li>
+<li>Courses are sorted by enrollment in <strong>descending
+order</strong>.</li>
+<li>Qualified hours are counted from the <strong>least-enrolled eligible
+course upward</strong>, ensuring the most populated classes are taught
+as part of the regular load. This reflects standard policy assumptions:
+institutions prioritize assigning higher-impact (larger) courses to
+regular load, and identify overload from less-enrolled offerings.</li>
 </ul>
+</li>
+</ol>
 <hr>
 </div>
 </div>
