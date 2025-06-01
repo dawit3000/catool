@@ -3,8 +3,9 @@ library(dplyr)
 library(catool)
 
 test_that("ol_comp returns all expected output columns", {
-  # Define a test dataset
+  # Define a test dataset including COURSE
   example_data <- tibble::tibble(
+    COURSE = c("ENG101", "ENG102", "ENG103"),
     HRS = c(3, 3, 4),
     ENRLD = c(10, 5, 2),
     INSTRUCTOR = c("Smith, John", "Smith, John", "Smith, John")
@@ -19,9 +20,9 @@ test_that("ol_comp returns all expected output columns", {
     reg_load = 6
   )
 
-  # Define expected column names (actual column names from ol_comp output)
+  # Define expected column names
   expected_columns <- c(
-    "INSTRUCTOR", "COURSE", "HRS", "ENRLD",
+    "COURSE", "HRS", "ENRLD", "INSTRUCTOR",
     "QUALIFIED_CR", "ROW_AMOUNT", "TYPE", "SUMMARY"
   )
 
