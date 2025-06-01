@@ -11,20 +11,24 @@ version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=
 
 **catool** (Compensation Analysis Tool) is an R package that calculates
 fair and transparent overload pay for college instructors. It processes
-course schedule data, identifies overload credit hours, and applies
-enrollment-based proration logic to compute compensation aligned with
-institutional policies.
+course schedule data, identifies credit hour overloads, and applies
+proration rules to compute compensation based on institutional policies.
+
+Unlike simple per-course systems, **catool** prorates pay based on
+**qualified credit hours** only — and only when enrollment thresholds
+are not met.
 
 ------------------------------------------------------------------------
 
 ## 🔧 Features
 
-- Filters qualified credit hours based on enrollment thresholds
-- Computes prorated overload compensation per course
-- Generates instructor-level summaries with totals and notes
-- Batch-processes full schedules across all instructors
-- Supports flexible filtering by subject, instructor name, or division
-- Returns clean, export-ready tibbles for downstream use
+- Filters out courses ineligible for compensation (e.g., under-enrolled)
+- Identifies overload based on regular teaching load
+- Computes pay per **qualified credit hour**, prorated where applicable
+- Prioritizes assigning higher-enrollment courses to regular load
+- Summarizes compensation by instructor and across full schedules
+- Supports flexible filtering by subject, instructor, or division
+- Returns export-ready, human-readable tibble output
 
 ------------------------------------------------------------------------
 
@@ -32,7 +36,7 @@ institutional policies.
 
 ``` r
 # Install from GitHub
-# install.packages("remotes")  # If not already installed
+# install.packages("remotes")  # If needed
 remotes::install_github("dawit3000/catool")
 ```
 
@@ -47,11 +51,11 @@ schedule <- read.csv("data-raw/schedule.csv")
 # Analyze one instructor
 ol_comp(get_instructor_schedule("Lalau-Hitchcock", schedule))
 
-# With custom institutional policy
+# With a custom institutional policy
 ol_comp(get_instructor_schedule("Smith", schedule),
         L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
-# Full schedule summary
+# Summarize compensation across the full schedule
 ol_comp_summary(schedule)
 ```
 
@@ -60,13 +64,13 @@ ol_comp_summary(schedule)
 ## 🔍 Advanced Filtering
 
 ``` r
-# Division-level schedule
+# Filter by division
 get_division_schedule("Business Administration", schedule)
 
-# Subject code pattern matching
+# Filter by subject codes using regex
 get_subject_schedule("^MATH|^STAT", schedule)
 
-# Combined filters
+# Apply combined filters
 filter_schedule(schedule,
                 division = "Nursing",
                 instructor_pattern = "lee")
@@ -76,50 +80,54 @@ filter_schedule(schedule,
 
 ## 📄 Input Format
 
-Your course schedule must contain these columns:
+Your input schedule must include the following columns:
 
 | Column       | Description                     |
 |--------------|---------------------------------|
-| `INSTRUCTOR` | Instructor name                 |
+| `INSTRUCTOR` | Instructor’s name               |
 | `HRS`        | Credit hours per course         |
-| `ENRLD`      | Course enrollment               |
+| `ENRLD`      | Enrollment in the course        |
 | `SUBJ`       | Subject code (e.g., MATH, ENGL) |
 
-Additional fields like `TITLE`, `DAYS`, or `LOCATION` are allowed but
+Additional columns like `TITLE`, `DAYS`, or `LOCATION` are allowed but
 not required.
 
 ------------------------------------------------------------------------
 
-## 📊 Output
+## 📊 Output Overview
 
-The output is a tidy tibble that includes:
+The output is a tidy tibble with:
 
-- Per-course overload compensation (`ROW_AMOUNT`)
-- Qualified credit hours (`QUALIFIED_CR`)
-- Payment type (`TYPE`: PRORATED or blank)
-- Instructor-level summary block (e.g., TOTAL row, note lines)
-- Final `SUMMARY` column (always last) with readable labels
+- `QUALIFIED_CR`: Credit hours eligible for overload pay
+- `ROW_AMOUNT`: Compensation amount for those hours
+- `TYPE`: `"PRORATED"` where enrollment is below threshold; blank
+  otherwise
+- A summary block showing total compensation, rate used, and policy
+  notes
+- `SUMMARY`: A final column providing labeled context (e.g.,
+  “INSTRUCTOR: Smith”)
+
+Pay is calculated *only* on qualified credit hours **beyond regular
+teaching load**. When enrollment for those hours is below 10, pay is
+prorated accordingly — not per course.
 
 ------------------------------------------------------------------------
 
 ## 📚 Documentation
 
-📖 [**Full
-Walkthrough**](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
+📖 [**Full Walkthrough
+Vignette**](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
 
-The vignette includes methodology, assumptions, institutional policy
-rules, and full examples.
+Includes policy logic, assumptions, and examples for individual and
+batch analyses.
 
 ------------------------------------------------------------------------
 
 ## ✍️ Author
 
-Developed and maintained by **Dawit Aberra**.
+Developed and maintained by **Dawit Aberra** 📧 <dawit3000@hotmail.com>
+Licensed under **AGPL-3**
 
-Licensed under **AGPL-3**. Please cite appropriately when using this
-tool in research, institutional reporting, or compensation policy
-audits.
-
-For questions or feedback, please open a [GitHub
-issue](https://github.com/dawit3000/catool/issues) or contact the author
-at <dawit3000@hotmail.com>.
+Please cite appropriately when using this tool in research, audits, or
+policy design. For issues or suggestions, open a [GitHub
+issue](https://github.com/dawit3000/catool/issues).
