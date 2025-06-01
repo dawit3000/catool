@@ -2,38 +2,52 @@
 % Please edit documentation in R/filter_schedule.R
 \name{filter_schedule}
 \alias{filter_schedule}
-\title{Filter Course Schedule by Division, Subject, and/or Instructor}
+\title{Filter Course Schedule by College, Department, Program, Subject, and/or Instructor}
 \usage{
 filter_schedule(
   schedule,
-  division = NULL,
   subject_pattern = NULL,
-  instructor_pattern = NULL
+  instructor_pattern = NULL,
+  college_pattern = NULL,
+  department_pattern = NULL,
+  program_pattern = NULL
 )
 }
 \arguments{
-\item{schedule}{A data frame containing the course schedule with \code{INSTRUCTOR} and \code{SUBJ} columns.}
+\item{schedule}{A data frame containing the course schedule with required columns: \code{INSTRUCTOR}, \code{SUBJ}.
+Optional columns include: \code{COLLEGE}, \code{DEPARTMENT}, \code{PROGRAM}.}
 
-\item{division}{Optional character string naming a division (must match known values).}
+\item{subject_pattern}{Optional regex pattern to match subject codes (e.g., "CSCI", "^MATH").}
 
-\item{subject_pattern}{Optional regex pattern for filtering subject codes (e.g., "CSCI", "^MATH").}
+\item{instructor_pattern}{Optional regex pattern to match instructor names (e.g., "Smith", "^Jones").}
 
-\item{instructor_pattern}{Optional regex pattern for instructor name (e.g., "Smith", "^Jones").}
+\item{college_pattern}{Optional regex pattern to match college names (e.g., "Science", "Engineering").}
+
+\item{department_pattern}{Optional regex pattern to match department names (e.g., "Math", "Biology").}
+
+\item{program_pattern}{Optional regex pattern to match program names (e.g., "Undergraduate", "MBA").}
 }
 \value{
-A filtered course schedule data frame.
+A filtered data frame of matching courses.
 }
 \description{
-Applies one or more filters to a course schedule: by instructor name (regex), subject code (regex),
-and/or academic division. Matching is case-insensitive and all filters are optional.
+Applies one or more filters to a course schedule using pattern matching on instructor, subject,
+college, department, and program. All matching is case-insensitive and based on partial string matching.
 }
 \examples{
-schedule <- data.frame(INSTRUCTOR = c("Lee", "Smith"),
-                       SUBJ = c("MATH", "NURS"),
-                       stringsAsFactors = FALSE)
-filter_schedule(schedule, division = "Nursing")
+schedule <- data.frame(
+  INSTRUCTOR = c("Lee", "Smith", "Jones", "Dawson", "Garcia"),
+  SUBJ = c("MATH", "NURS", "CSCI", "ENGL", "COMM"),
+  COLLEGE = c("Science", "Nursing", "Science", "Arts and Sciences", "Arts and Communication"),
+  DEPARTMENT = c("Math", "Nursing", "CS", "English", "Comm Studies"),
+  PROGRAM = c("BS", "BSN", "BS", "BA", "BA"),
+  stringsAsFactors = FALSE
+)
+
 filter_schedule(schedule, subject_pattern = "^MATH|^STAT")
 filter_schedule(schedule, instructor_pattern = "smith")
-filter_schedule(schedule, division = "Business Administration", instructor_pattern = "Lee")
+filter_schedule(schedule, college_pattern = "Science")
+filter_schedule(schedule, department_pattern = "Comm")
+filter_schedule(schedule, program_pattern = "^BA$")
 
 }

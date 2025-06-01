@@ -1,28 +1,30 @@
 Package: catool
-Title: Compensation Analysis Tool for Faculty Overload Pay
+Type: Package
+Title: Compensation Analysis Tool for Instructor Overload Pay
 Version: 1.0.0
 Authors@R: 
     person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
-Description: Calculates fair and transparent overload compensation for college instructors based on institutional policies, regular teaching loads, and enrollment thresholds. The package applies proration rules, tracks qualified credit hours, and generates structured, human-readable summary tables to support equitable and consistent compensation decisions. Full methodology and examples are detailed in the package vignette and a forthcoming article submitted to *The R Journal* (Aberra, 2025).
-License: AGPL-3 + file LICENSE
+Description: Calculates fair and transparent overload compensation for college instructors 
+    based on institutional policies, teaching load limits, and enrollment thresholds. 
+    The package identifies qualified credit hours above regular load, applies enrollment-based 
+    proration where appropriate, and produces spreadsheet-ready, human-readable summary tables 
+    for instructors and full schedules. Includes functions for flexible filtering, policy customization, 
+    and output suitable for audits and administrative reporting.
+License: AGPL-3
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
+Depends: R (>= 3.5.0)
 Imports:
     dplyr,
-    tibble,
     purrr,
-    scales,
-    rlang,
-    stats
-Suggests: 
+    tibble,
+    stringr
+Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-Config/testthat/edition: 3
-Depends: 
-    R (>= 3.5)
-LazyData: true
 VignetteBuilder: knitr
-URL: https://dawit3000.github.io/catool
+URL: https://github.com/dawit3000/catool
 BugReports: https://github.com/dawit3000/catool/issues

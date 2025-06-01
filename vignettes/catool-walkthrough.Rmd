@@ -1,10 +1,12 @@
 ---
 title: "catool: Walkthrough"
 output: rmarkdown::html_vignette
+editor_options:
+  chunk_output_type: console
 vignette: >
+  %\VignetteEncoding{UTF-8}
   %\VignetteIndexEntry{catool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -28,9 +30,9 @@ To use `catool`, your schedule data must include at minimum:
 * `ENRLD`: Enrollment count for each course
 * `HRS`: Credit hours for each course
 
-You can import data from a `.csv` file using `read.csv("yourfile.csv")`. Here's a small example:
+You can import data from a `.csv` file of yours using `read.csv("yourfile.csv")`. Here's a small example:
 
-```{r, echo=TRUE, results="hide"}
+```{r, echo=TRUE, results="hide", eval = FALSE}
 schedule <- data.frame(
   INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Smith, John"),
   ENRLD = c(12, 7, 4),
@@ -39,11 +41,36 @@ schedule <- data.frame(
 )
 ```
 
+If you have extended data including subject codes, departments, colleges, and programs, make sure those columns are labeled as `SUBJ`, `DEPARTMENT`, `COLLEGE`, and `PROGRAM` respectively.
+
+---
+
+## 🔎 Filter Schedules with `filter_schedule()`
+
+You can filter a schedule using subject codes, instructor names, department, college, or program using pattern matching.
+
+```{r, echo=TRUE, results="hide", warning=FALSE, eval = FALSE}
+# Filter by subject pattern
+filter_schedule(schedule, subject_pattern = "MATH|CSCI")
+
+# Filter by instructor
+filter_schedule(schedule, instructor_pattern = "aberra|zeng")
+
+# Filter by department
+filter_schedule(schedule, department_pattern = "Business Administration")
+
+# Filter by college
+filter_schedule(schedule, college_pattern = "arts")
+
+# Filter by program
+filter_schedule(schedule, program_pattern = "computation")
+```
+
 ---
 
 ## 👤 Analyze One Instructor
 
-```{r, echo=TRUE, results="hide"}
+```{r, echo=TRUE, results="hide", eval = FALSE}
 # Filter by instructor name (case-insensitive)
 inst_schedule <- get_instructor_schedule("Lalau-Hitchcock", schedule)
 
@@ -58,7 +85,7 @@ ol_comp(inst_schedule, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
 
 ## 👥 See All Instructors in the Schedule
 
-```{r, echo=TRUE, results="hide"}
+```{r, echo=TRUE, results="hide", eval = FALSE}
 get_unique_instructors(schedule)
 ```
 
@@ -66,7 +93,7 @@ get_unique_instructors(schedule)
 
 ## 🔢 Analyze by Instructor Index
 
-```{r, echo=TRUE, results="hide"}
+```{r, echo=TRUE, results="hide", eval = FALSE}
 # Get summary for a specific instructor by index
 ol_comp_byindex(1, schedule_df = schedule)
 
@@ -78,16 +105,29 @@ ol_comp_byindex(1, schedule_df = schedule, L = 4, U = 9, reg_load = 12, rate_per
 
 ## 📋 Summarize All Instructors
 
-```{r, echo=TRUE, results="hide"}
-ol_comp_summary(schedule)
+The `ol_comp_summary()` function generates a comprehensive compensation report for **all instructors** in the schedule.
 
-# With custom institutional policy
+**Purpose:**
+- Aggregate overload pay calculations for payroll or administration.
+- Enforce consistent application of institutional policy.
+
+**Default usage:**
+
+```{r, echo=TRUE, eval = FALSE}
+ol_comp_summary(schedule)
+```
+
+**Custom policy parameters:**
+
+```{r, echo=TRUE, eval = FALSE}
 ol_comp_summary(schedule, L = 4, U = 9, reg_load = 12, rate_per_cr = 2500 / 3)
 ```
 
+The output is formatted for easy import into Excel or use in administrative reports.
+
 ---
 
-## 🧮 Explanation of Policy Rules
+## 🧲 Explanation of Policy Rules
 
 The overload compensation algorithm in **catool** reflects typical institutional policy logic designed to ensure fairness and consistency.
 
@@ -117,7 +157,7 @@ The overload compensation algorithm in **catool** reflects typical institutional
 
 ---
 
-## 📫 Questions?
+## 📨 Questions?
 
-For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)
+For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)  
 or contact **Dawit Aberra** at [aberrad@fvsu.edu](mailto:aberrad@fvsu.edu).

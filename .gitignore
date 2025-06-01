@@ -1,9 +1,28 @@
+# RStudio files
 .Rproj.user
 .Rhistory
-.Rdata
-.httr-oauth
-.DS_Store
+.RData
+.Ruserdata
+
+# Quarto build files
 .quarto
-inst/doc
-/Meta/
-/docs/
+*.qmd
+
+# System files
+.DS_Store
+Thumbs.db
+
+# OAuth and credentials
+.httr-oauth
+
+# CRAN and R build artifacts
+.Rcheck/
+*.tar.gz
+*.Rproj
+
+# Vignettes and documentation artifacts
+inst/doc/
+Meta/
+docs/
+vignettes/*.html
+vignettes/*.pdf
