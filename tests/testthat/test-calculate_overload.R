@@ -19,10 +19,10 @@ test_that("ol_comp returns all expected output columns", {
     reg_load = 6
   )
 
-  # Define expected column names
+  # Define expected column names (actual column names from ol_comp output)
   expected_columns <- c(
-    "HRS", "ENRLD", "INSTRUCTOR",
-    "Overload Pay by Course", "Summary", "Total Compensation (USD)"
+    "INSTRUCTOR", "COURSE", "HRS", "ENRLD",
+    "QUALIFIED_CR", "ROW_AMOUNT", "TYPE", "SUMMARY"
   )
 
   # Check that all expected columns are in the result

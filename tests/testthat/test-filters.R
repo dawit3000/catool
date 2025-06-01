@@ -3,7 +3,11 @@ library(dplyr)
 library(catool)
 
 test_that("get_instructor_schedule handles partial and case-insensitive matches", {
-  df <- tibble(INSTRUCTOR = c("Smith, John", "LEE, Sarah", "Jones, Emily"))
+  df <- tibble(
+    INSTRUCTOR = c("Smith, John", "LEE, Sarah", "Jones, Emily"),
+    ENRLD = c(10, 8, 12),  # required for internal arrange()
+    HRS = c(3, 3, 3)       # required by other functions
+  )
 
   expect_equal(nrow(get_instructor_schedule("smith", df)), 1)
   expect_equal(nrow(get_instructor_schedule("LEE", df)), 1)
@@ -12,7 +16,11 @@ test_that("get_instructor_schedule handles partial and case-insensitive matches"
 })
 
 test_that("get_subject_schedule supports regex filtering", {
-  df <- tibble(SUBJ = c("CSCI", "MATH", "STAT", "ENGL"))
+  df <- tibble(
+    SUBJ = c("CSCI", "MATH", "STAT", "ENGL"),
+    ENRLD = c(10, 15, 20, 12),  # required if filtered data gets arranged
+    HRS = c(3, 3, 3, 3)         # add for completeness
+  )
 
   expect_equal(nrow(get_subject_schedule("^MATH|^STAT", df)), 2)
   expect_equal(nrow(get_subject_schedule("csci", df)), 1)
@@ -20,7 +28,11 @@ test_that("get_subject_schedule supports regex filtering", {
 })
 
 test_that("get_division_schedule filters known divisions", {
-  df <- tibble(SUBJ = c("CSCI", "MATH", "NURS", "ENGL", "ACCT"))
+  df <- tibble(
+    SUBJ = c("CSCI", "MATH", "NURS", "ENGL", "ACCT"),
+    ENRLD = c(10, 12, 8, 15, 14),
+    HRS = c(3, 3, 3, 3, 3)
+  )
 
   expect_equal(nrow(get_division_schedule("Nursing", df)), 1)
   expect_equal(nrow(get_division_schedule("Business Administration", df)), 1)
@@ -30,7 +42,9 @@ test_that("get_division_schedule filters known divisions", {
 test_that("filter_schedule applies multiple filters", {
   df <- tibble(
     INSTRUCTOR = c("Smith, John", "Smith, Jane", "Lee, Mike"),
-    SUBJ = c("MATH", "STAT", "NURS")
+    SUBJ = c("MATH", "STAT", "NURS"),
+    ENRLD = c(14, 9, 7),
+    HRS = c(3, 3, 3)
   )
 
   expect_equal(nrow(filter_schedule(df, subject_pattern = "MATH")), 1)

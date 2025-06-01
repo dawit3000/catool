@@ -20,10 +20,10 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     mutate(
       ENRLD = as.numeric(ENRLD),
       HRS = as.numeric(HRS),
-      SUMMARY = "",
       QUALIFIED_CR = 0,
       ROW_AMOUNT = 0,
-      TYPE = ""
+      TYPE = "",
+      SUMMARY = ""
     ) %>%
     arrange(desc(ENRLD))
 
@@ -84,29 +84,15 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     )
   )
 
-  # Add any missing columns from input
-  missing_cols <- setdiff(names(input), names(summary_block))
-  for (col in missing_cols) {
-    sample_val <- input[[col]]
-    template_value <- suppressWarnings(first(na.omit(sample_val), default = NA))
-
-    if (is.numeric(template_value)) {
-      summary_block[[col]] <- as.numeric(NA)
-    } else if (is.logical(template_value)) {
-      summary_block[[col]] <- as.logical(NA)
-    } else {
-      summary_block[[col]] <- as.character(NA)
-    }
+  # Add any missing columns to summary_block
+  for (col in setdiff(names(input), names(summary_block))) {
+    summary_block[[col]] <- NA
   }
 
-  # Align column order and move SUMMARY to last
-  summary_block <- summary_block[, names(input)] %>%
-    mutate(SUMMARY = summary_block$SUMMARY) %>%
-    select(-SUMMARY, SUMMARY)
+  # Align column order
+  summary_block <- summary_block[, names(input)]
 
-  input <- input %>%
-    select(-SUMMARY, SUMMARY)
-
+  # Combine and format
   bind_rows(input, summary_block) %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .))) %>%
     select(-SUMMARY, SUMMARY)

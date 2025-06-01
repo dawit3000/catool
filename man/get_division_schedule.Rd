@@ -7,16 +7,16 @@
 get_division_schedule(division_name, schedule)
 }
 \arguments{
-\item{division_name}{A character string naming the division (must match one of the known values).}
+\item{division_name}{A character string naming the academic division (must match a known value).}
 
-\item{schedule}{A data frame containing course schedule data with a \code{SUBJ} column.}
+\item{schedule}{A data frame containing a \code{SUBJ} column (subject code).}
 }
 \value{
-A filtered data frame containing only courses in the specified division.
+A filtered data frame with only courses from the specified division.
 }
 \description{
-Returns a subset of the schedule matching a named academic division. The function maps
-division names to associated subject codes and filters accordingly.
+Returns a subset of the course schedule for a specified academic division.
+Division names are mapped to associated subject codes, and only those subjects are retained.
 }
 \examples{
 schedule <- data.frame(SUBJ = c("MATH", "NURS", "BIOL"))
