@@ -15,11 +15,12 @@
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
 #'
 #' @return A tibble combining course-level compensation and a summary section for each instructor.
-#'
+#' @importFrom stats na.omit
 #' @import dplyr
 #' @import tibble
 #' @importFrom purrr map_dfr
 #' @importFrom scales comma
+#'
 #' @importFrom rlang .data
 #' @export
 ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
