@@ -2,7 +2,7 @@
 % Please edit documentation in R/ol_comp_summary.R
 \name{ol_comp_summary}
 \alias{ol_comp_summary}
-\title{Summarize Overload Compensation for One or All Instructors}
+\title{Summarize Overload Compensation}
 \usage{
 ol_comp_summary(
   schedule_df,
@@ -14,22 +14,26 @@ ol_comp_summary(
 )
 }
 \arguments{
-\item{schedule_df}{A data frame containing the full course schedule, including \code{INSTRUCTOR}, \code{HRS}, and \code{ENRLD}.}
+\item{schedule_df}{A data frame containing course schedule information. Must include
+columns such as \code{INSTRUCTOR}, \code{HRS}, and \code{ENRLD}.}
 
-\item{instructor}{Optional string. If provided, limits output to that instructor. Default is NULL (all).}
+\item{instructor}{Optional string. If provided, limits the summary to a single instructor.
+Default is NULL (includes all instructors).}
 
-\item{L}{Lower enrollment threshold for overload eligibility (default = 4).}
+\item{L}{Minimum enrollment required for overload pay eligibility. Default is 4.}
 
-\item{U}{Upper limit of proration. ENRLD > U gets full-rate pay (default = 9).}
+\item{U}{Upper threshold for proration. Courses with ENRLD > U receive full-rate pay.
+Default is 9.}
 
-\item{rate_per_cr}{Pay rate per credit hour (default = 2500/3).}
+\item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
 
-\item{reg_load}{Regular teaching load in credit hours (default = 12).}
+\item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 }
 \value{
-A tibble combining course-level pay and instructor summaries for one or more instructors.
+A tibble combining course-level compensation and a summary section for each instructor.
 }
 \description{
-Calculates overload compensation for each instructor (or a selected one) based on institutional policies.
-Output includes course-level pay, qualified credit hours, and a readable summary section for each instructor.
+Calculates overload compensation for each instructor based on institutional policy.
+The output includes course-level payments, qualified credit hours, and a readable
+instructor-level summary block that follows each instructor's courses.
 }

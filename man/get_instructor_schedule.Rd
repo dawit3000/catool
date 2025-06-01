@@ -13,7 +13,7 @@ get_instructor_schedule(instructor_name, schedule_df = schedule)
 Defaults to \code{schedule} if not specified.}
 }
 \value{
-A data frame of courses assigned to instructors matching the given pattern.
+A data frame of courses assigned to instructors matching the given pattern, sorted by descending enrollment.
 }
 \description{
 Returns a subset of the course schedule containing courses taught by the specified instructor.

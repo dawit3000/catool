@@ -7,7 +7,7 @@
 ol_comp(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 }
 \arguments{
-\item{instructor_schedule}{A data frame of the instructor's courses, with columns \code{ENRLD} (enrollment) and \code{HRS} (credit hours).}
+\item{instructor_schedule}{A data frame of the instructor's courses, with columns \code{INSTRUCTOR}, \code{ENRLD}, and \code{HRS}.}
 
 \item{L}{Lower enrollment threshold for overload pay qualification (default = 4).}
 
@@ -18,7 +18,7 @@ ol_comp(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 \item{reg_load}{Regular teaching load in credit hours (default = 12).}
 }
 \value{
-A tibble with original schedule, overload pay by course, and a summary block.
+A tibble with course-level compensation and a summary block, matching \code{ol_comp_summary()} format.
 }
 \description{
 Computes prorated overload pay and qualified credit hours for a single instructor

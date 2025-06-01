@@ -10,12 +10,12 @@ get_unique_instructors(schedule_df)
 \item{schedule_df}{A data frame containing an \code{INSTRUCTOR} column.}
 }
 \value{
-A data frame with one column: unique instructor names sorted alphabetically.
+A character vector of instructor names, sorted alphabetically.
 }
 \description{
-Extracts a sorted list of unique, non-empty instructor names from a schedule data frame.
+Extracts a sorted vector of unique, non-empty instructor names from a schedule data frame.
 }
 \examples{
-# get_unique_instructors(schedule)
+get_unique_instructors(schedule)
 
 }

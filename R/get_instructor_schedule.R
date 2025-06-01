@@ -8,17 +8,23 @@
 #' @param schedule_df A data frame containing course schedule data with an `INSTRUCTOR` column.
 #' Defaults to `schedule` if not specified.
 #'
-#' @return A data frame of courses assigned to instructors matching the given pattern.
+#' @return A data frame of courses assigned to instructors matching the given pattern, sorted by descending enrollment.
 #'
 #' @examples
 #' get_instructor_schedule("smith", schedule_df = schedule)  # partial match
 #' get_instructor_schedule("^Smith,", schedule_df = schedule)  # regex: starts with Smith
 #' get_instructor_schedule("Robinson|Smith", schedule_df = schedule)  # regex: matches either
 #'
+#' @import dplyr
 #' @export
 get_instructor_schedule <- function(instructor_name, schedule_df = schedule) {
   result <- schedule_df %>%
-    filter(grepl(instructor_name, INSTRUCTOR, ignore.case = TRUE))
+    filter(
+      !is.na(INSTRUCTOR),
+      INSTRUCTOR != "",
+      grepl(instructor_name, INSTRUCTOR, ignore.case = TRUE)
+    ) %>%
+    arrange(desc(ENRLD))
 
   if (nrow(result) == 0) {
     warning(sprintf("No courses found matching instructor name: '%s'", instructor_name))

@@ -3,7 +3,7 @@ Title: Compensation Analysis Tool for Faculty Overload Pay
 Version: 1.0.0
 Authors@R: 
     person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
-Description: Calculates fair and transparent overload compensation for college instructors based on institutional policies, regular teaching loads, and enrollment thresholds. The package implements proration rules, tracks qualified credit hours, and generates structured, human-readable summary tables to support equitable and consistent compensation decisions. Methodological details are included in the package vignette and a forthcoming article to be submitted to *The R Journal* (Aberra, 2025).
+Description: Calculates fair and transparent overload compensation for college instructors based on institutional policies, regular teaching loads, and enrollment thresholds. The package applies proration rules, tracks qualified credit hours, and generates structured, human-readable summary tables to support equitable and consistent compensation decisions. Methodological details are included in the package vignette and a forthcoming article submitted to *The R Journal* (Aberra, 2025).
 License: AGPL-3 + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

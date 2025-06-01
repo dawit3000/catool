@@ -1,8 +1,7 @@
 #' Calculate Overload Compensation for One Instructor (by Index)
 #'
 #' Retrieves an instructor's name by index from the schedule and calculates their overload compensation
-#' using [ol_comp()]. Returns a clean, readable summary with a labeled header row, consistent with the
-#' Shiny App output.
+#' using [ol_comp()]. Returns a clean, readable summary consistent with the package output.
 #'
 #' @param i Integer index of the instructor (as returned by [get_unique_instructors()]).
 #' @param schedule_df A data frame of the full course schedule containing an `INSTRUCTOR` column.
@@ -11,17 +10,12 @@
 #' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
 #'
-#' @return Invisibly returns a tibble with the instructor’s overload compensation summary,
-#' formatted for display.
+#' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
 #'
 #' @import dplyr
-#' @import tibble
-#' @importFrom scales dollar
 #' @export
 ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) {
-  instructor_name <- get_unique_instructors(schedule_df) %>%
-    slice(i) %>%
-    pull(INSTRUCTOR)
+  instructor_name <- get_unique_instructors(schedule_df)[i]
 
   summary <- ol_comp(
     get_instructor_schedule(instructor_name, schedule_df),
@@ -31,21 +25,8 @@ ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3
     reg_load = reg_load
   )
 
-  header <- tibble(
-    `Overload Pay by Course` = NA_character_,
-    Summary = paste("INSTRUCTOR:", instructor_name),
-    `Total Compensation (USD)` = NA_character_
-  )
-
-  result <- bind_rows(header, summary)
-
-  all_cols <- names(result)
-  result <- result[, c(
-    setdiff(all_cols, c("Overload Pay by Course", "Summary", "Total Compensation (USD)")),
-    "Overload Pay by Course", "Summary", "Total Compensation (USD)"
-  )]
-
-  display <- result %>%
+  # Ensure SUMMARY is last column
+  display <- summary %>%
     mutate(across(
       everything(),
       ~ {
@@ -55,8 +36,9 @@ ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3
           ifelse(is.na(.x), " ", .x)
         }
       }
-    ))
+    )) %>%
+    select(-SUMMARY, SUMMARY)
 
   print(as.data.frame(display), row.names = FALSE)
-  invisible(result)
+  invisible(summary)
 }

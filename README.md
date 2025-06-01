@@ -19,20 +19,20 @@ institutional policies.
 
 ## 🔧 Features
 
-- Filters qualified credit hours by enrollment
+- Filters qualified credit hours based on enrollment thresholds
 - Computes prorated overload compensation per course
-- Summarizes instructor-level pay
-- Batch-processes full schedules
-- Filters by subject, instructor, or division
-- Outputs clean, export-ready summary tables
+- Generates instructor-level summaries with totals and notes
+- Batch-processes full schedules across all instructors
+- Supports flexible filtering by subject, instructor name, or division
+- Returns clean, export-ready tibbles for downstream use
 
 ------------------------------------------------------------------------
 
 ## 📦 Installation
 
 ``` r
-# Install directly from GitHub
-# install.packages("remotes")  # Only if not installed
+# Install from GitHub
+# install.packages("remotes")  # If not already installed
 remotes::install_github("dawit3000/catool")
 ```
 
@@ -44,14 +44,14 @@ remotes::install_github("dawit3000/catool")
 library(catool)
 schedule <- read.csv("data-raw/schedule.csv")
 
-# One instructor
+# Analyze one instructor
 ol_comp(get_instructor_schedule("Lalau-Hitchcock", schedule))
 
-# With custom policy
+# With custom institutional policy
 ol_comp(get_instructor_schedule("Smith", schedule),
         L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
-# Full summary
+# Full schedule summary
 ol_comp_summary(schedule)
 ```
 
@@ -60,9 +60,16 @@ ol_comp_summary(schedule)
 ## 🔍 Advanced Filtering
 
 ``` r
+# Division-level schedule
 get_division_schedule("Business Administration", schedule)
+
+# Subject code pattern matching
 get_subject_schedule("^MATH|^STAT", schedule)
-filter_schedule(schedule, division = "Nursing", instructor_pattern = "lee")
+
+# Combined filters
+filter_schedule(schedule,
+                division = "Nursing",
+                instructor_pattern = "lee")
 ```
 
 ------------------------------------------------------------------------
@@ -75,29 +82,33 @@ Your course schedule must contain these columns:
 |--------------|---------------------------------|
 | `INSTRUCTOR` | Instructor name                 |
 | `HRS`        | Credit hours per course         |
-| `ENRLD`      | Course enrollment count         |
+| `ENRLD`      | Course enrollment               |
 | `SUBJ`       | Subject code (e.g., MATH, ENGL) |
+
+Additional fields like `TITLE`, `DAYS`, or `LOCATION` are allowed but
+not required.
 
 ------------------------------------------------------------------------
 
 ## 📊 Output
 
-The package returns a tidy tibble with:
+The output is a tidy tibble that includes:
 
-- Overload pay per course
-- Qualified credit hours
-- Summary block with total compensation
-- Labels and formatting for readability
+- Per-course overload compensation (`ROW_AMOUNT`)
+- Qualified credit hours (`QUALIFIED_CR`)
+- Payment type (`TYPE`: PRORATED or blank)
+- Instructor-level summary block (e.g., TOTAL row, note lines)
+- Final `SUMMARY` column (always last) with readable labels
 
 ------------------------------------------------------------------------
 
 ## 📚 Documentation
 
-🔗 [**View the Full
+📖 [**Full
 Walkthrough**](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
 
-This vignette explains the methodology, assumptions, policy logic, and
-examples in detail.
+The vignette includes methodology, assumptions, institutional policy
+rules, and full examples.
 
 ------------------------------------------------------------------------
 
@@ -105,5 +116,10 @@ examples in detail.
 
 Developed and maintained by **Dawit Aberra**.
 
-Licensed under AGPL-3. Please cite appropriately when using this tool in
-research or administrative systems.
+Licensed under **AGPL-3**. Please cite appropriately when using this
+tool in research, institutional reporting, or compensation policy
+audits.
+
+For questions or feedback, please open a [GitHub
+issue](https://github.com/dawit3000/catool/issues) or contact the author
+at <dawit3000@hotmail.com>.

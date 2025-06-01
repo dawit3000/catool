@@ -1,19 +1,24 @@
-#' Summarize Overload Compensation for One or All Instructors
+#' Summarize Overload Compensation
 #'
-#' Calculates overload compensation for each instructor (or a selected one) based on institutional policies.
-#' Output includes course-level pay, qualified credit hours, and a readable summary section for each instructor.
+#' Calculates overload compensation for each instructor based on institutional policy.
+#' The output includes course-level payments, qualified credit hours, and a readable
+#' instructor-level summary block that follows each instructor's courses.
 #'
-#' @param schedule_df A data frame containing the full course schedule, including `INSTRUCTOR`, `HRS`, and `ENRLD`.
-#' @param instructor Optional string. If provided, limits output to that instructor. Default is NULL (all).
-#' @param L Lower enrollment threshold for overload eligibility (default = 4).
-#' @param U Upper limit of proration. ENRLD > U gets full-rate pay (default = 9).
-#' @param rate_per_cr Pay rate per credit hour (default = 2500/3).
-#' @param reg_load Regular teaching load in credit hours (default = 12).
+#' @param schedule_df A data frame containing course schedule information. Must include
+#'   columns such as `INSTRUCTOR`, `HRS`, and `ENRLD`.
+#' @param instructor Optional string. If provided, limits the summary to a single instructor.
+#'   Default is NULL (includes all instructors).
+#' @param L Minimum enrollment required for overload pay eligibility. Default is 4.
+#' @param U Upper threshold for proration. Courses with ENRLD > U receive full-rate pay.
+#'   Default is 9.
+#' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
+#' @param reg_load Regular teaching load in credit hours. Default is 12.
 #'
-#' @return A tibble combining course-level pay and instructor summaries for one or more instructors.
+#' @return A tibble combining course-level compensation and a summary section for each instructor.
 #'
 #' @import dplyr
 #' @import tibble
+#' @importFrom purrr map_dfr
 #' @importFrom scales comma
 #' @importFrom rlang .data
 #' @export
@@ -50,8 +55,8 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       mutate(
         prorated_rate = case_when(
           .data$ENRLD > U ~ rate_per_cr,
-          .data$ENRLD >= L  ~ rate_per_cr * .data$ENRLD / 10,
-          TRUE              ~ 0
+          .data$ENRLD >= L ~ rate_per_cr * .data$ENRLD / 10,
+          TRUE ~ 0
         ),
         ROW_AMOUNT = round(.data$prorated_rate * .data$QUALIFIED_CR, 2),
         TYPE = case_when(
@@ -91,9 +96,12 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       )
     )
 
+    # SAFELY add any missing columns
     missing_cols <- setdiff(names(course_table), names(summary_block))
     for (col in missing_cols) {
-      template_value <- course_table[[col]][[1]]
+      sample_val <- course_table[[col]]
+      template_value <- suppressWarnings(first(na.omit(sample_val), default = NA))
+
       if (is.numeric(template_value)) {
         summary_block[[col]] <- as.numeric(NA)
       } else if (is.logical(template_value)) {
@@ -116,3 +124,4 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
   results %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .)))
 }
+

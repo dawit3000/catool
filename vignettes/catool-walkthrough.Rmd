@@ -25,8 +25,8 @@ The package supports both individual instructor analysis and full-schedule summa
 ## 🏫 Load Schedule
 
 ```{r}
-# Replace with your actual file path or upload method
-# Example fallback data (for build safety)
+# Replace with your actual file path
+# Fallback example for demonstration
 schedule <- data.frame(
   INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Smith, John"),
   ENRLD = c(12, 7, 4),
@@ -49,7 +49,7 @@ get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
 
 ```{r}
 IS <- get_instructor_schedule("Lalau-Hitchcock, Diksha", schedule)
-ol_comp(IS)  # Uses default institutional policy
+ol_comp(IS)  # Default institutional policy
 
 # Custom policy example
 ol_comp(IS, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
@@ -65,7 +65,7 @@ get_unique_instructors(schedule)
 
 ---
 
-## 🔢 Summarize Overload Compensation for an Instructor by Index
+## 🔢 Summarize Overload Compensation by Instructor Index
 
 ```{r}
 ol_comp_byindex(1, schedule_df = schedule)
@@ -92,31 +92,30 @@ The **catool** package determines overload compensation using institutional rule
 * Regular teaching load (`reg_load`)
 * Per-credit compensation rate (`rate_per_cr`)
 
-### Key Concepts:
+### Key Concepts
 
-* **Default Proration Range**:
+* **Proration Range**:
 
-  * Lower Bound (`L`) = 4
-  * Upper Bound (`U`) = 9
-  * Courses with `ENRLD < L` → No pay
-  * Courses with `L ≤ ENRLD ≤ U` → Prorated
-  * Courses with `ENRLD > U` → Full pay
+  * Courses with `ENRLD < 4`: No compensation
+  * `ENRLD` between `4` and `9`: Prorated pay
+  * `ENRLD ≥ 10`: Full pay (no proration)
 
 * **Regular Load (`reg_load`)**:
-  Only credit hours beyond this are eligible for overload compensation (default = 12 credit hours).
+  Only credit hours beyond this are considered for overload compensation.
 
-* **Rate per Credit Hour (`rate_per_cr`)**:
-  Default is `2500 / 3` (≈ 833.33), but this is adjustable to reflect your institution’s policy.
+* **Rate per Credit Hour**:
+  Default rate is `2500 / 3` (\~833.33), customizable by the user.
 
 ---
 
 ### Notes
 
-* All thresholds and pay rates are user-adjustable via function arguments.
-* Output is returned as a tidy, human-readable tibble, ready for reporting or export.
+* All thresholds and pay rates are user-adjustable.
+* Output is returned as a tidy, readable tibble—ready for reporting or export.
 
 ---
 
 ## 📫 Questions?
 
-For questions or feedback, contact Dawit Aberra at **[aberrad@fvsu.edu](mailto:aberrad@fvsu.edu)**.
+For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)
+or contact **Dawit Aberra** at [aberrad@fvsu.edu](mailto:aberrad@fvsu.edu).

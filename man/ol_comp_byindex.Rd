@@ -27,11 +27,9 @@ ol_comp_byindex(
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 }
 \value{
-Invisibly returns a tibble with the instructor’s overload compensation summary,
-formatted for display.
+Invisibly returns a tibble with the instructor’s overload compensation summary.
 }
 \description{
 Retrieves an instructor's name by index from the schedule and calculates their overload compensation
-using \code{\link[=ol_comp]{ol_comp()}}. Returns a clean, readable summary with a labeled header row, consistent with the
-Shiny App output.
+using \code{\link[=ol_comp]{ol_comp()}}. Returns a clean, readable summary consistent with the package output.
 }
