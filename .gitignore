@@ -26,3 +26,5 @@ Meta/
 docs/
 vignettes/*.html
 vignettes/*.pdf
+/doc/
+/Meta/
