@@ -26,7 +26,7 @@ The package supports analysis for both individual instructors and full teaching 
 
 To use `catool`, your schedule data must include at minimum:
 
-* `INSTRUCTOR`: Instructor name (e.g., "Smith, John")
+* `INSTRUCTOR`: Instructor name (e.g., "Baker, Danielle")
 * `ENRLD`: Enrollment count for each course
 * `HRS`: Credit hours for each course
 
@@ -37,7 +37,7 @@ The [`schedule.csv`](https://raw.githubusercontent.com/dawit3000/catool/master/i
 
 ```{r, echo=TRUE, results="hide", eval = FALSE}
 schedule <- data.frame(
-  INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Smith, John"),
+  INSTRUCTOR = c("Lalau-Hitchcock, Diksha", "Lalau-Hitchcock, Diksha", "Brown, Cecily"),
   ENRLD = c(12, 7, 4),
   HRS = c(3, 3, 3),
   stringsAsFactors = FALSE
@@ -57,7 +57,7 @@ You can filter a schedule using subject codes, instructor names, department, col
 filter_schedule(schedule, subject_pattern = "MATH|CSCI")
 
 # Filter by instructor
-filter_schedule(schedule, instructor_pattern = "aberra|zeng")
+filter_schedule(schedule, instructor_pattern = "Armbruster|al-Abdul")
 
 # Filter by department
 filter_schedule(schedule, department_pattern = "Business Administration")

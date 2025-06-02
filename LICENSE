@@ -11,18 +11,4 @@ the Free Software Foundation, either version 3 of the License, or
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-```
-
-And be sure to include this in your `DESCRIPTION` file:
-
-```
-License: AGPL-3
-```
-
-If you also want to include the full license text (as you've pasted), save it as a separate file in the root of your package named `COPYING`, but the above short form in `LICENSE` is what CRAN expects.
-
-Let me know when you're ready to proceed with `cran-comments.md` or the package rebuild.
+GNU Affero General Public License for more details, see <https://www.gnu.org/licenses/>.

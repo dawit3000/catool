@@ -43,11 +43,11 @@ remotes::install_github("dawit3000/catool")
 
 Your course schedule data must include:
 
-| Column       | Description                           |
-|--------------|---------------------------------------|
-| `INSTRUCTOR` | Instructor’s name (e.g., “Smith, A.”) |
-| `ENRLD`      | Enrollment in each course             |
-| `HRS`        | Credit hours assigned per course      |
+| Column       | Description                          |
+|--------------|--------------------------------------|
+| `INSTRUCTOR` | Instructor’s name (e.g., “Smith, C”) |
+| `ENRLD`      | Enrollment in each course            |
+| `HRS`        | Credit hours assigned per course     |
 
 Optional: `SUBJ`, `DEPARTMENT`, `COLLEGE`, and `PROGRAM` for advanced
 filtering.
@@ -70,13 +70,13 @@ package. It includes columns such as `SUBJ`, `CRN`,
 library(catool)
 
 schedule <- data.frame(
-  INSTRUCTOR = c("Smith", "Smith", "Doe"),
+  INSTRUCTOR = c("al-Abdul", "baxter", "Smith, Courtney"),
   ENRLD = c(12, 7, 4),
   HRS = c(3, 3, 3)
 )
 
 # Analyze one instructor
-ol_comp(get_instructor_schedule("Smith", schedule))
+ol_comp(get_instructor_schedule("baxter", schedule))
 
 # Apply a custom policy
 ol_comp(get_instructor_schedule("Smith", schedule),
@@ -98,7 +98,7 @@ filter_schedule(schedule, subject_pattern = "^MATH|^STAT")
 filter_schedule(schedule, department_pattern = "Business")
 
 # Filter by instructor
-get_instructor_schedule("aberra", schedule)
+get_instructor_schedule("davis", schedule)
 
 # List all instructors
 get_unique_instructors(schedule)
