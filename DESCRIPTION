@@ -10,7 +10,7 @@ Description: Calculates fair and transparent overload compensation for college i
     when enrollment falls below institutional minimums. The package offers functions for flexible
     filtering, policy customization, and produces clean, spreadsheet-ready summary output
     suitable for audits, payroll, and administrative reporting.
-License: AGPL-3
+License: AGPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
