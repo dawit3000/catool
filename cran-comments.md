@@ -4,7 +4,12 @@
 * R-hub: Windows, Ubuntu, Fedora (R 4.3.2)
 
 ## R CMD check results
-0 errors ✔ | 0 warnings ✔ | 0 notes ✔
+0 errors ✔ | 0 warnings ✔ | 3 notes ✖
+
+Notes:
+* `LICENSE` file is present and standard; declared as `AGPL-3` in DESCRIPTION.
+* Global variable bindings (`COLLEGE`, `DEPARTMENT`, `PROGRAM`) are used in tidyverse-style NSE; acceptable or suppressible via `utils::globalVariables()`.
+* Timestamp note (`unable to verify current time`) is benign and unrelated to functionality.
 
 ## Package purpose
 The `catool` (Compensation Analysis Tool) R package calculates overload compensation for college instructors using institutional policies, teaching loads, and enrollment-based thresholds. It identifies qualified credit hours, applies proration logic when needed, and generates spreadsheet-ready summary tables. The tool supports fairness and transparency while reducing manual administrative errors.
