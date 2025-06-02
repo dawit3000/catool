@@ -108,6 +108,7 @@ ol_comp_byindex(1, schedule_df = schedule, L = 4, U = 9, reg_load = 12, rate_per
 The `ol_comp_summary()` function generates a comprehensive compensation report for **all instructors** in the schedule.
 
 **Purpose:**
+
 - Aggregate overload pay calculations for payroll or administration.
 - Enforce consistent application of institutional policy.
 
