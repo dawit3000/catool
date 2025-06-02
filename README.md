@@ -54,6 +54,16 @@ filtering.
 
 ------------------------------------------------------------------------
 
+📂 **Sample input**:
+
+The
+[`schedule.csv`](https://raw.githubusercontent.com/dawit3000/catool/master/inst/extdata/schedule.csv)
+file provides a realistic example of course schedule data used by the
+package. It includes columns such as `SUBJ`, `CRN`,
+`INSTRUCTOR`,`DEPARTMENT` and `COLLEGE` fields.
+
+------------------------------------------------------------------------
+
 ## 🧪 Quick Start
 
 ``` r

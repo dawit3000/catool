@@ -30,7 +30,10 @@ To use `catool`, your schedule data must include at minimum:
 * `ENRLD`: Enrollment count for each course
 * `HRS`: Credit hours for each course
 
-You can import data from a `.csv` file of yours using `read.csv("yourfile.csv")`. Here's a small example:
+📂 **Sample input**: 
+
+The [`schedule.csv`](https://raw.githubusercontent.com/dawit3000/catool/master/inst/extdata/schedule.csv) file from the "inst/extdata" folder provides a realistic example of course schedule data used by the package. It includes columns such as `SUBJ`, `CRN`, `INSTRUCTOR`,`DEPARTMENT` and `COLLEGE` fields.
+
 
 ```{r, echo=TRUE, results="hide", eval = FALSE}
 schedule <- data.frame(
