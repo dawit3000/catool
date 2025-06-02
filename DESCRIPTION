@@ -4,11 +4,11 @@ Title: Compensation Analysis Tool for Instructor Overload Pay
 Version: 1.0.0
 Authors@R: 
     person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
-Description: Calculates fair and transparent overload compensation for college instructors 
-    based on institutional policies, regular teaching load, and student enrollment thresholds. 
-    Pay is awarded only for qualified credit hours beyond the regular load and is prorated 
-    when enrollments fall below institutional minimums. The package provides functions for 
-    flexible filtering, policy customization, and clean, spreadsheet-ready summary output 
+Description: Calculates fair and transparent overload compensation for college instructors
+    based on institutional policies, regular teaching load limits, and student enrollment thresholds.
+    Compensation is awarded only for qualified credit hours beyond the standard load and is prorated
+    when enrollment falls below institutional minimums. The package offers functions for flexible
+    filtering, policy customization, and produces clean, spreadsheet-ready summary output
     suitable for audits, payroll, and administrative reporting.
 License: AGPL-3
 Encoding: UTF-8
@@ -20,9 +20,8 @@ Imports:
     dplyr,
     purrr,
     tibble,
-    stringr,
-    scales,
-    rlang
+    rlang,
+    scales
 Suggests:
     knitr,
     rmarkdown,
