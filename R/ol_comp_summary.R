@@ -13,7 +13,7 @@
 #'   Default is 9.
 #' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
-#' @param sort_order If "asc", assumes lowest-enrolled qualified courses are counted as regular load.
+#' @param sort_order If "asc", reserves lowest-enrolled qualified courses toward regular load.
 #'
 #' @return A tibble combining course-level compensation and a summary section for each instructor.
 #' @importFrom stats na.omit

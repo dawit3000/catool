@@ -4,7 +4,14 @@
 \alias{ol_comp}
 \title{Calculate Overload Compensation for One Instructor}
 \usage{
-ol_comp(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
+ol_comp(
+  instructor_schedule,
+  L = 4,
+  U = 9,
+  rate_per_cr = 2500/3,
+  reg_load = 12,
+  sort_order = c("desc", "asc")
+)
 }
 \arguments{
 \item{instructor_schedule}{A data frame of the instructor's courses, with columns \code{INSTRUCTOR}, \code{ENRLD}, and \code{HRS}.}
@@ -16,6 +23,9 @@ ol_comp(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500/3, reg_load = 12)
 \item{rate_per_cr}{Base overload pay per credit hour (default = 2500/3).}
 
 \item{reg_load}{Regular teaching load in credit hours (default = 12).}
+
+\item{sort_order}{Order in which to prioritize courses when counting toward the regular load.
+Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).}
 }
 \value{
 A tibble with course-level compensation and a summary block, matching \code{ol_comp_summary()} format.
@@ -23,4 +33,11 @@ A tibble with course-level compensation and a summary block, matching \code{ol_c
 \description{
 Computes prorated overload pay and qualified credit hours for a single instructor
 based on course credit hours, enrollment, and institutional overload rules.
+}
+\details{
+If \code{sort_order = "asc"}, the function still uses the highest-enrolled qualified courses
+for compensation, but it reserves the lowest-enrolled qualified courses
+(bottom of the list) toward the regular teaching load first. Compensation begins only after
+\code{reg_load} credit hours are excluded from the bottom up — \emph{preserving low-enrollment classes
+as part of the regular load} and prioritizing compensation for higher-enrolled courses.
 }

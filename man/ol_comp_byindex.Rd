@@ -10,7 +10,8 @@ ol_comp_byindex(
   L = 4,
   U = 9,
   rate_per_cr = 2500/3,
-  reg_load = 12
+  reg_load = 12,
+  sort_order = c("desc", "asc")
 )
 }
 \arguments{
@@ -25,6 +26,9 @@ ol_comp_byindex(
 \item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
+
+\item{sort_order}{Order in which to prioritize courses when counting toward the regular load.
+Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).}
 }
 \value{
 Invisibly returns a tibble with the instructor’s overload compensation summary.

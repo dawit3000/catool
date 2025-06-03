@@ -10,7 +10,8 @@ ol_comp_summary(
   L = 4,
   U = 9,
   rate_per_cr = 2500/3,
-  reg_load = 12
+  reg_load = 12,
+  sort_order = c("desc", "asc")
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ Default is 9.}
 \item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
+
+\item{sort_order}{If "asc", reserves lowest-enrolled qualified courses toward regular load.}
 }
 \value{
 A tibble combining course-level compensation and a summary section for each instructor.

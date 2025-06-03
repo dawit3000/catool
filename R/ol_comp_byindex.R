@@ -9,12 +9,15 @@
 #' @param U Upper enrollment limit for proration (inclusive). Default is 9.
 #' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
+#' @param sort_order Order in which to prioritize courses when counting toward the regular load.
+#'   Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).
 #'
 #' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
-#'
 #' @import dplyr
 #' @export
-ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12) {
+ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12, sort_order = c("desc", "asc")) {
+  sort_order <- match.arg(sort_order)
+
   instructor_name <- get_unique_instructors(schedule_df)[i]
 
   summary <- ol_comp(
@@ -22,10 +25,10 @@ ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3
     L = L,
     U = U,
     rate_per_cr = rate_per_cr,
-    reg_load = reg_load
+    reg_load = reg_load,
+    sort_order = sort_order
   )
 
-  # Ensure SUMMARY is last column
   display <- summary %>%
     mutate(across(
       everything(),
