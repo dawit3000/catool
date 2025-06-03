@@ -13,6 +13,7 @@
 #'   Default is 9.
 #' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
+#' @param sort_order If "asc", assumes lowest-enrolled qualified courses are counted as regular load.
 #'
 #' @return A tibble combining course-level compensation and a summary section for each instructor.
 #' @importFrom stats na.omit
@@ -20,11 +21,12 @@
 #' @import tibble
 #' @importFrom purrr map_dfr
 #' @importFrom scales comma
-#'
 #' @importFrom rlang .data
 #' @export
 ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
-                            rate_per_cr = 2500 / 3, reg_load = 12) {
+                            rate_per_cr = 2500 / 3, reg_load = 12, sort_order = c("desc", "asc")) {
+  sort_order <- match.arg(sort_order)
+
   df <- schedule_df %>%
     filter(!is.na(.data$INSTRUCTOR)) %>%
     mutate(across(everything(), ~ ifelse(. == "", NA, .)))
@@ -45,33 +47,14 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
         HRS = as.numeric(.data$HRS),
         ENRLD = as.numeric(.data$ENRLD)
       ) %>%
-      arrange(desc(.data$ENRLD)) %>%
-      mutate(
-        is_qualified = .data$ENRLD >= L,
-        qualified_cr = if_else(.data$is_qualified, .data$HRS, 0)
-      ) %>%
-      mutate(cum_qualified = cumsum(.data$qualified_cr)) %>%
-      mutate(QUALIFIED_CR = pmax(0, .data$cum_qualified - reg_load)) %>%
-      mutate(QUALIFIED_CR = pmin(.data$QUALIFIED_CR, .data$qualified_cr)) %>%
-      mutate(
-        prorated_rate = case_when(
-          .data$ENRLD > U ~ rate_per_cr,
-          .data$ENRLD >= L ~ rate_per_cr * .data$ENRLD / 10,
-          TRUE ~ 0
-        ),
-        ROW_AMOUNT = round(.data$prorated_rate * .data$QUALIFIED_CR, 2),
-        TYPE = case_when(
-          .data$QUALIFIED_CR > 0 & .data$ENRLD <= U ~ "PRORATED",
-          .data$QUALIFIED_CR > 0 & .data$ENRLD > U ~ "",
-          TRUE ~ ""
-        ),
-        SUMMARY = ""
-      ) %>%
-      select(-.data$qualified_cr, -.data$cum_qualified, -.data$is_qualified, -.data$prorated_rate)
+      arrange(desc(.data$ENRLD))
 
-    total_qualified <- sum(course_table$QUALIFIED_CR, na.rm = TRUE)
-    total_comp <- sum(course_table$ROW_AMOUNT, na.rm = TRUE)
-    any_prorated <- any(course_table$TYPE == "PRORATED")
+    comp_table <- ol_comp(course_table, L = L, U = U,
+                          rate_per_cr = rate_per_cr, reg_load = reg_load, sort_order = sort_order)
+
+    total_qualified <- sum(as.numeric(comp_table$QUALIFIED_CR), na.rm = TRUE)
+    total_comp <- sum(as.numeric(comp_table$ROW_AMOUNT), na.rm = TRUE)
+    any_prorated <- any(comp_table$TYPE == "PRORATED")
 
     note_line <- if (any_prorated) {
       "Note: Some compensation was prorated due to enrollment under 10."
@@ -97,10 +80,9 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       )
     )
 
-    # SAFELY add any missing columns
-    missing_cols <- setdiff(names(course_table), names(summary_block))
+    missing_cols <- setdiff(names(comp_table), names(summary_block))
     for (col in missing_cols) {
-      sample_val <- course_table[[col]]
+      sample_val <- comp_table[[col]]
       template_value <- suppressWarnings(first(na.omit(sample_val), default = NA))
 
       if (is.numeric(template_value)) {
@@ -112,17 +94,16 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       }
     }
 
-    summary_block <- summary_block[, names(course_table)] %>%
+    summary_block <- summary_block[, names(comp_table)] %>%
       mutate(SUMMARY = summary_block$SUMMARY) %>%
       select(everything(), SUMMARY)
 
-    course_table <- course_table %>%
+    comp_table <- comp_table %>%
       select(everything(), SUMMARY)
 
-    bind_rows(course_table, summary_block)
+    bind_rows(comp_table, summary_block)
   })
 
   results %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .)))
 }
-
