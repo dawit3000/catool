@@ -68,7 +68,7 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       HRS = NA,
       ENRLD = NA,
       QUALIFIED_CR = NA,
-      ROW_AMOUNT = c(total_comp, NA, NA, NA, NA, NA, NA, NA),
+      ROW_AMOUNT = as.numeric(c(total_comp, NA, NA, NA, NA, NA, NA, NA)),
       TYPE = c("TOTAL", NA, NA, NA, NA, NA, NA, NA),
       SUMMARY = c(
         paste0("INSTRUCTOR: ", instr),
@@ -80,6 +80,7 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
       )
     )
 
+    # Add any missing columns to summary_block
     missing_cols <- setdiff(names(comp_table), names(summary_block))
     for (col in missing_cols) {
       sample_val <- comp_table[[col]]
