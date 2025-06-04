@@ -30,7 +30,10 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
   input <- instructor_schedule %>%
     mutate(
       ENRLD = as.numeric(ENRLD),
-      HRS = as.numeric(HRS),
+      HRS = as.numeric(HRS)
+    ) %>%
+    filter(!is.na(HRS) & !is.na(ENRLD)) %>%
+    mutate(
       QUALIFIED_CR = 0,
       ROW_AMOUNT = 0,
       TYPE = "",
@@ -137,17 +140,11 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, r
     )
   )
 
-  all_cols <- union(names(input), names(summary_block))
-
-  for (col in setdiff(all_cols, names(summary_block))) {
+  for (col in setdiff(names(input), names(summary_block))) {
     summary_block[[col]] <- NA
   }
-  for (col in setdiff(all_cols, names(input))) {
-    input[[col]] <- NA
-  }
 
-  summary_block <- summary_block[, all_cols]
-  input <- input[, all_cols]
+  summary_block <- summary_block[, names(input)]
 
   bind_rows(input, summary_block) %>%
     select(-SUMMARY, SUMMARY)
