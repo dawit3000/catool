@@ -16,7 +16,7 @@
 #' @param favor_institution Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.
 #'
 #' @return A tibble combining course-level compensation and a summary section for each instructor.
-#'
+#' @importFrom stats na.omit
 #' @import dplyr
 #' @import tibble
 #' @importFrom purrr map_dfr
@@ -28,8 +28,10 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
                             favor_institution = TRUE) {
 
   df <- schedule_df %>%
-    filter(!is.na(.data$INSTRUCTOR)) %>%
-    mutate(across(everything(), ~ ifelse(. == "", NA, .)))
+    filter(!is.na(.data$INSTRUCTOR), .data$INSTRUCTOR != "") %>%
+    mutate(across(everything(), ~ ifelse(. == "", NA, .))) %>%
+    mutate(HRS = as.numeric(.data$HRS), ENRLD = as.numeric(.data$ENRLD)) %>%
+    filter(!is.na(HRS) & !is.na(ENRLD))  # ✅ Filter out incomplete rows
 
   if (!is.null(instructor)) {
     df <- df %>% filter(.data$INSTRUCTOR == instructor)
@@ -42,26 +44,13 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
 
   results <- purrr::map_dfr(instructors, function(instr) {
     course_table <- df %>%
-      filter(.data$INSTRUCTOR == instr) %>%
-      mutate(
-        HRS = as.numeric(.data$HRS),
-        ENRLD = as.numeric(.data$ENRLD)
-      ) %>%
-      arrange(desc(.data$ENRLD))
+      filter(.data$INSTRUCTOR == instr)
 
     comp_table <- ol_comp(course_table, L = L, U = U,
                           rate_per_cr = rate_per_cr, reg_load = reg_load,
                           favor_institution = favor_institution)
 
-    # Separate summary and data parts
-    summary_part <- comp_table %>% filter(!is.na(SUMMARY) & SUMMARY != "")
-    data_part <- comp_table %>% filter(is.na(SUMMARY) | SUMMARY == "")
-
-    # Remove any accidental duplicates in the data part only
-    data_part <- data_part %>% distinct()
-
-    # Combine back
-    bind_rows(data_part, summary_part)
+    comp_table
   })
 
   results %>%
