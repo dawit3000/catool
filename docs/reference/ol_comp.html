@@ -60,7 +60,14 @@ based on course credit hours, enrollment, and institutional overload rules.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ol_comp</span><span class="op">(</span><span class="va">instructor_schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span><span class="op">/</span><span class="fl">3</span>, reg_load <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">ol_comp</span><span class="op">(</span></span>
+<span>  <span class="va">instructor_schedule</span>,</span>
+<span>  L <span class="op">=</span> <span class="fl">4</span>,</span>
+<span>  U <span class="op">=</span> <span class="fl">9</span>,</span>
+<span>  rate_per_cr <span class="op">=</span> <span class="fl">2500</span><span class="op">/</span><span class="fl">3</span>,</span>
+<span>  reg_load <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  favor_institution <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -84,12 +91,28 @@ based on course credit hours, enrollment, and institutional overload rules.</p>
 <dt>reg_load</dt>
 <dd><p>Regular teaching load in credit hours (default = 12).</p></dd>
 
+
+<dt>favor_institution</dt>
+<dd><p>Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
-<p>A tibble with course-level compensation and a summary block, matching <code><a href="ol_comp_summary.html">ol_comp_summary()</a></code> format.</p>
+<p>A tibble with course-level compensation and a human-readable summary block.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>If <code>favor_institution = TRUE</code> (default), the function assigns <strong>high-enrollment</strong>
+qualified courses to the <strong>regular load first</strong>, resulting in lower compensation
+because only <strong>low-enrollment</strong> courses are left for overload pay — this favors the institution.</p>
+<p>If <code>favor_institution = FALSE</code>, the function assigns <strong>low-enrollment</strong> qualified
+courses to the regular load first, preserving <strong>high-enrollment</strong> courses for compensation —
+this favors the instructor.</p>
+<p><strong>Note:</strong> This function assumes that <code>instructor_schedule</code> is already filtered for one instructor.
+Use <code><a href="get_instructor_schedule.html">get_instructor_schedule()</a></code> to extract an instructor’s schedule using
+flexible, case-insensitive pattern matching (regex supported, e.g., <code>"smith|jones"</code>).</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

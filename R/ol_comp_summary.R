@@ -4,6 +4,10 @@
 #' The output includes course-level payments, qualified credit hours, and a readable
 #' instructor-level summary block that follows each instructor's courses.
 #'
+#' If the `instructor` argument is specified, the function limits the summary to that instructor.
+#' Matching is exact and case-sensitive unless pre-filtered using \code{get_instructor_schedule()},
+#' which supports regex-based, case-insensitive pattern matching (e.g., `"smith|jones"`).
+#'
 #' @param schedule_df A data frame containing course schedule information. Must include
 #'   columns such as `INSTRUCTOR`, `HRS`, and `ENRLD`.
 #' @param instructor Optional string. If provided, limits the summary to a single instructor.

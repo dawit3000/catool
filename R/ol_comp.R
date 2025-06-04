@@ -12,8 +12,8 @@
 #' this favors the instructor.
 #'
 #' **Note:** This function assumes that `instructor_schedule` is already filtered for one instructor.
-#' Use \code{get_instructor_schedule()} to extract instructor schedules using flexible, case-insensitive,
-#' regex-based matching.
+#' Use \code{get_instructor_schedule()} to extract an instructor’s schedule using
+#' flexible, case-insensitive pattern matching (regex supported, e.g., `"smith|jones"`).
 #'
 #' @param instructor_schedule A data frame of the instructor's courses, with columns `INSTRUCTOR`, `ENRLD`, and `HRS`.
 #' @param L Lower enrollment threshold for overload pay qualification (default = 4).

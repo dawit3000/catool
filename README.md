@@ -20,11 +20,12 @@ qualified credit hours and compensation—prorated when needed.
 
 ## 🔧 Key Features
 
-- Filters out under-enrolled or ineligible courses
-- Calculates overload based on **qualified credit hours** only
-- Prorates pay for enrollments below a specified threshold
-- Sorts courses by enrollment and counts from lowest up
-- Produces clear summary tables for individual or full-schedule use
+- Filters out under-enrolled or ineligible courses  
+- Calculates overload based on **qualified credit hours** only  
+- Prorates pay for enrollments below a specified threshold  
+- Sorts courses by enrollment and counts from lowest up  
+- Supports instructor- or institution-favoring strategies  
+- Produces clear summary tables for individual or full-schedule use  
 - Tidy tibble output, ready for export and reporting
 
 ------------------------------------------------------------------------
@@ -54,13 +55,11 @@ filtering.
 
 ------------------------------------------------------------------------
 
-📂 **Sample input**:
-
-The
+📂 **Sample input**: The
 [`schedule.csv`](https://raw.githubusercontent.com/dawit3000/catool/master/inst/extdata/schedule.csv)
 file provides a realistic example of course schedule data used by the
-package. It includes columns such as `SUBJ`, `CRN`,
-`INSTRUCTOR`,`DEPARTMENT` and `COLLEGE` fields.
+package. It includes columns such as `SUBJ`, `CRN`, `INSTRUCTOR`,
+`DEPARTMENT`, and `COLLEGE`.
 
 ------------------------------------------------------------------------
 
@@ -78,11 +77,11 @@ schedule <- data.frame(
 # Analyze one instructor
 ol_comp(get_instructor_schedule("baxter", schedule))
 
-# Apply a custom policy
+# Apply one instructor with  a custom policy
 ol_comp(get_instructor_schedule("Smith", schedule),
         L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
-# Summarize full schedule
+# Summarize full schedule (patroll ready summary of all instructors in the schedule)
 ol_comp_summary(schedule)
 ```
 
@@ -92,7 +91,8 @@ ol_comp_summary(schedule)
 
 ``` r
 # Filter by subject
-filter_schedule(schedule, subject_pattern = "^MATH|^STAT")
+filter_schedule(schedule, subject_pattern = "MATH|STAT")
+filter_schedule(schedule, subject_pattern = "^MATH|^STAT") # If subject codes are always exact prefi
 
 # Filter by department
 filter_schedule(schedule, department_pattern = "Business")
@@ -123,14 +123,41 @@ The `ol_comp_summary()` function returns a clean tibble with:
 
 Default institutional policy:
 
-1.  Regular teaching load = 12 credit hours  
-2.  Courses with `ENRLD < 4` are excluded  
+1.  Regular teaching load = 12 credit hours
+
+2.  Courses with `ENRLD < 4` are excluded
+
 3.  Qualified credit hours beyond regular load are paid at `$2,500 / 3`
-    per hour  
-4.  For `ENRLD < 10`, pay is prorated:  
-    $\text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times \text{rate per CR} \times \text{qualified CR}$
+    per hour
+
+4.  For `ENRLD < 10`, pay is prorated:
+
+    $$
+    \text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times \text{rate per CR} \times \text{qualified CR}
+    $$
+
 5.  Overload hours are counted starting with the **least-enrolled
     eligible courses**
+
+------------------------------------------------------------------------
+
+## 🧭 Instructor vs Institutional Interest Inclination Strategy
+
+You can specify how regular teaching load is assigned when determining
+overload pay:
+
+- **`favor_institution = TRUE`** → *Favor institutional interest* →
+  Assign **high-enrollment courses** to regular load first → Leaves
+  **low-enrollment courses** for compensation → Results in **less total
+  pay**
+
+- **`favor_institution = FALSE`** → *Favor instructor interest* → Assign
+  **low-enrollment courses** to regular load first → Leaves
+  **high-enrollment courses** for compensation → Results in **more total
+  pay**
+
+This option is supported in both `ol_comp()` and `ol_comp_summary()`
+functions.
 
 ------------------------------------------------------------------------
 

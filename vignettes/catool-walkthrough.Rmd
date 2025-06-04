@@ -1,13 +1,14 @@
 ---
 title: "catool: Walkthrough"
 output: rmarkdown::html_vignette
-editor_options:
-  chunk_output_type: console
 vignette: >
-  %\VignetteEncoding{UTF-8}
   %\VignetteIndexEntry{catool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+editor_options:
+  chunk_output_type: console
 ---
+
 
 ```{r setup, include=FALSE}
 library(catool)
@@ -30,10 +31,9 @@ To use `catool`, your schedule data must include at minimum:
 * `ENRLD`: Enrollment count for each course
 * `HRS`: Credit hours for each course
 
-📂 **Sample input**: 
+📂 **Sample input**:
 
 The [`schedule.csv`](https://raw.githubusercontent.com/dawit3000/catool/master/inst/extdata/schedule.csv) file from the "inst/extdata" folder provides a realistic example of course schedule data used by the package. It includes columns such as `SUBJ`, `CRN`, `INSTRUCTOR`,`DEPARTMENT` and `COLLEGE` fields.
-
 
 ```{r, echo=TRUE, results="hide", eval = FALSE}
 schedule <- data.frame(
@@ -82,6 +82,10 @@ ol_comp(inst_schedule)
 
 # You can also apply custom policy parameters
 ol_comp(inst_schedule, L = 4, U = 8, reg_load = 9, rate_per_cr = 5000 / 3)
+
+# Compare institutional vs instructor interest
+ol_comp(inst_schedule, favor_institution = TRUE)  # Less pay
+ol_comp(inst_schedule, favor_institution = FALSE) # More pay
 ```
 
 ---
@@ -112,8 +116,8 @@ The `ol_comp_summary()` function generates a comprehensive compensation report f
 
 **Purpose:**
 
-- Aggregate overload pay calculations for payroll or administration.
-- Enforce consistent application of institutional policy.
+* Aggregate overload pay calculations for payroll or administration.
+* Enforce consistent application of institutional policy.
 
 **Default usage:**
 
@@ -127,41 +131,58 @@ ol_comp_summary(schedule)
 ol_comp_summary(schedule, L = 4, U = 9, reg_load = 12, rate_per_cr = 2500 / 3)
 ```
 
+**Compare strategies for all instructors:**
+
+```{r, echo=TRUE, eval = FALSE}
+# Favoring institution (less total pay)
+ol_comp_summary(schedule, favor_institution = TRUE)
+
+# Favoring instructor (more total pay)
+ol_comp_summary(schedule, favor_institution = FALSE)
+```
+
 The output is formatted for easy import into Excel or use in administrative reports.
 
 ---
 
-## 🧲 Explanation of Policy Rules
+## ⚖️ Policy Logic
 
-The overload compensation algorithm in **catool** reflects typical institutional policy logic designed to ensure fairness and consistency.
+Default institutional policy:
 
-### 💡 Policy Parameters
+1. Regular teaching load = 12 credit hours
+2. Courses with `ENRLD < 4` are excluded
+3. Qualified credit hours beyond regular load are paid at `$2,500 / 3` per hour
+4. For `ENRLD < 10`, pay is prorated:
 
-* **`ENRLD`**: Course enrollment
-* **`HRS`**: Credit hours per course
-* **`reg_load`**: Regular teaching load (default = 12 credit hours)
-* **`rate_per_cr`**: Compensation per qualified credit hour (default = 2500 / 3)
+   $$
+   \text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times \text{rate per CR} \times \text{qualified CR}
+   $$
+5. Overload hours are assigned based on the `favor_institution` strategy:
 
-### ⚖️ Key Rules
+   * If `favor_institution = TRUE`, **least-enrolled eligible courses** are counted toward overload
+   * If `favor_institution = FALSE`, **most-enrolled eligible courses** are preserved for compensation
 
-1. **Qualified Credit Hours**
-   Only credit hours exceeding the instructor’s regular load (`reg_load`) are eligible for overload pay.
+---
 
-2. **Enrollment-Based Eligibility**
+## 🧭 Instructor vs Institutional Interest Inclination Strategy
 
-   * Courses with `ENRLD < L` (default `L = 4`) are excluded from compensation.
-   * If **enrollment corresponding to qualified credit hours is less than 10**, pay is **prorated**.
-   * If **enrollment is 10 or more**, pay is awarded in full.
+You can specify how regular teaching load is assigned when determining overload pay:
 
-3. **Fair Distribution**
+* **`favor_institution = TRUE`** → *Favor institutional interest*
+  → Assign **high-enrollment courses** to regular load first
+  → Leaves **low-enrollment courses** for compensation
+  → Results in **less total pay**
 
-   * Courses are sorted by enrollment in **descending order**.
-   * Qualified hours are counted from the **least-enrolled eligible course upward**, ensuring the most populated classes are taught as part of the regular load.
-     This reflects standard policy assumptions: institutions prioritize assigning higher-impact (larger) courses to regular load, and identify overload from less-enrolled offerings.
+* **`favor_institution = FALSE`** → *Favor instructor interest*
+  → Assign **low-enrollment courses** to regular load first
+  → Leaves **high-enrollment courses** for compensation
+  → Results in **more total pay**
+
+This option is supported in both `ol_comp()` and `ol_comp_summary()` functions.
 
 ---
 
 ## 📨 Questions?
 
-For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)  
+For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)
 or contact **Dawit Aberra** at [aberrad@fvsu.edu](mailto:aberrad@fvsu.edu).

@@ -8,9 +8,9 @@ ol_comp(
   instructor_schedule,
   L = 4,
   U = 9,
-  reg_load = 12,
   rate_per_cr = 2500/3,
-  strategy = c("favor_instructor", "favor_institution")
+  reg_load = 12,
+  favor_institution = TRUE
 )
 }
 \arguments{
@@ -20,25 +20,29 @@ ol_comp(
 
 \item{U}{Upper limit of proration; courses with ENRLD > U get full-rate pay (default = 9).}
 
+\item{rate_per_cr}{Base overload pay per credit hour (default = 2500/3).}
+
 \item{reg_load}{Regular teaching load in credit hours (default = 12).}
 
-\item{rate_per_cr}{Overload pay rate per credit hour (default = 2500/3).}
-
-\item{strategy}{Strategy for assigning courses toward the regular load.
-If "favor_instructor", higher-enrollment courses are prioritized for compensation.
-If "favor_institution", lower-enrollment qualified courses are assigned to the regular load first.}
+\item{favor_institution}{Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.}
 }
 \value{
-A data frame with the original schedule plus columns for QUALIFIED_CR, TYPE, AMOUNT, and ROW_AMOUNT.
+A tibble with course-level compensation and a human-readable summary block.
 }
 \description{
 Computes prorated overload pay and qualified credit hours for a single instructor
 based on course credit hours, enrollment, and institutional overload rules.
 }
 \details{
-If \code{strategy = "favor_institution"}, the function reserves the lowest-enrolled
-qualified courses (bottom of the list) for the regular teaching load first.
-Compensation begins only after \code{reg_load} credit hours are excluded from the bottom up —
-preserving low-enrollment classes as part of the regular load and prioritizing
-compensation for higher-enrolled courses.
+If \code{favor_institution = TRUE} (default), the function assigns \strong{high-enrollment}
+qualified courses to the \strong{regular load first}, resulting in lower compensation
+because only \strong{low-enrollment} courses are left for overload pay — this favors the institution.
+
+If \code{favor_institution = FALSE}, the function assigns \strong{low-enrollment} qualified
+courses to the regular load first, preserving \strong{high-enrollment} courses for compensation —
+this favors the instructor.
+
+\strong{Note:} This function assumes that \code{instructor_schedule} is already filtered for one instructor.
+Use \code{get_instructor_schedule()} to extract an instructor’s schedule using
+flexible, case-insensitive pattern matching (regex supported, e.g., \code{"smith|jones"}).
 }

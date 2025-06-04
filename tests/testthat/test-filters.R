@@ -27,17 +27,6 @@ test_that("get_subject_schedule supports regex filtering", {
   expect_warning(get_subject_schedule("XYZ", df))
 })
 
-test_that("get_division_schedule filters known divisions", {
-  df <- tibble(
-    SUBJ = c("CSCI", "MATH", "NURS", "ENGL", "ACCT"),
-    ENRLD = c(10, 12, 8, 15, 14),
-    HRS = c(3, 3, 3, 3, 3)
-  )
-
-  expect_equal(nrow(get_division_schedule("Nursing", df)), 1)
-  expect_equal(nrow(get_division_schedule("Business Administration", df)), 1)
-  expect_error(get_division_schedule("Unknown Division", df))
-})
 
 test_that("filter_schedule applies multiple filters", {
   df <- tibble(

@@ -99,7 +99,8 @@ rules based on enrollment and credit hour thresholds.</p>
 minimum:</p>
 <ul>
 <li>
-<code>INSTRUCTOR</code>: Instructor name (e.g., “Smith, John”)</li>
+<code>INSTRUCTOR</code>: Instructor name (e.g., “Baker,
+Danielle”)</li>
 <li>
 <code>ENRLD</code>: Enrollment count for each course</li>
 <li>
@@ -114,7 +115,7 @@ course schedule data used by the package. It includes columns such as
 fields.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">schedule</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
-<span>  INSTRUCTOR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Smith, John"</span><span class="op">)</span>,</span>
+<span>  INSTRUCTOR <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Lalau-Hitchcock, Diksha"</span>, <span class="st">"Brown, Cecily"</span><span class="op">)</span>,</span>
 <span>  ENRLD <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">12</span>, <span class="fl">7</span>, <span class="fl">4</span><span class="op">)</span>,</span>
 <span>  HRS <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>,</span>
 <span>  stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span></span>
@@ -135,7 +136,7 @@ department, college, or program using pattern matching.</p>
 <span><span class="fu"><a href="../reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, subject_pattern <span class="op">=</span> <span class="st">"MATH|CSCI"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Filter by instructor</span></span>
-<span><span class="fu"><a href="../reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, instructor_pattern <span class="op">=</span> <span class="st">"aberra|zeng"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, instructor_pattern <span class="op">=</span> <span class="st">"Armbruster|al-Abdul"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Filter by department</span></span>
 <span><span class="fu"><a href="../reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, department_pattern <span class="op">=</span> <span class="st">"Business Administration"</span><span class="op">)</span></span>
@@ -158,7 +159,11 @@ department, college, or program using pattern matching.</p>
 <span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># You can also apply custom policy parameters</span></span>
-<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">8</span>, reg_load <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">5000</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">8</span>, reg_load <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">5000</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Compare institutional vs instructor interest</span></span>
+<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span>, favor_institution <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="co"># Less pay</span></span>
+<span><span class="fu"><a href="../reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="va">inst_schedule</span>, favor_institution <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="co"># More pay</span></span></code></pre></div>
 <hr>
 </div>
 <div class="section level2">
@@ -197,71 +202,72 @@ administration.</li>
 <p><strong>Custom policy parameters:</strong></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span>, L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, reg_load <span class="op">=</span> <span class="fl">12</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Compare strategies for all instructors:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Favoring institution (less total pay)</span></span>
+<span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span>, favor_institution <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Favoring instructor (more total pay)</span></span>
+<span><span class="fu"><a href="../reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span>, favor_institution <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 <p>The output is formatted for easy import into Excel or use in
 administrative reports.</p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="explanation-of-policy-rules">🧲 Explanation of Policy Rules<a class="anchor" aria-label="anchor" href="#explanation-of-policy-rules"></a>
+<h2 id="policy-logic">⚖️ Policy Logic<a class="anchor" aria-label="anchor" href="#policy-logic"></a>
 </h2>
-<p>The overload compensation algorithm in <strong>catool</strong>
-reflects typical institutional policy logic designed to ensure fairness
-and consistency.</p>
-<div class="section level3">
-<h3 id="policy-parameters">💡 Policy Parameters<a class="anchor" aria-label="anchor" href="#policy-parameters"></a>
-</h3>
-<ul>
-<li>
-<strong><code>ENRLD</code></strong>: Course enrollment</li>
-<li>
-<strong><code>HRS</code></strong>: Credit hours per course</li>
-<li>
-<strong><code>reg_load</code></strong>: Regular teaching load
-(default = 12 credit hours)</li>
-<li>
-<strong><code>rate_per_cr</code></strong>: Compensation per
-qualified credit hour (default = 2500 / 3)</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="key-rules">⚖️ Key Rules<a class="anchor" aria-label="anchor" href="#key-rules"></a>
-</h3>
+<p>Default institutional policy:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Qualified Credit Hours</strong> Only credit hours
-exceeding the instructor’s regular load (<code>reg_load</code>) are
-eligible for overload pay.</p></li>
+<li><p>Regular teaching load = 12 credit hours</p></li>
+<li><p>Courses with <code>ENRLD &lt; 4</code> are excluded</p></li>
+<li><p>Qualified credit hours beyond regular load are paid at
+<code>$2,500 / 3</code> per hour</p></li>
 <li>
-<p><strong>Enrollment-Based Eligibility</strong></p>
-<ul>
-<li>Courses with <code>ENRLD &lt; L</code> (default <code>L = 4</code>)
-are excluded from compensation.</li>
-<li>If <strong>enrollment corresponding to qualified credit hours is
-less than 10</strong>, pay is <strong>prorated</strong>.</li>
-<li>If <strong>enrollment is 10 or more</strong>, pay is awarded in
-full.</li>
-</ul>
+<p>For <code>ENRLD &lt; 10</code>, pay is prorated:</p>
+<p><span class="math display">\[
+\text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times
+\text{rate per CR} \times \text{qualified CR}
+\]</span></p>
 </li>
 <li>
-<p><strong>Fair Distribution</strong></p>
+<p>Overload hours are assigned based on the
+<code>favor_institution</code> strategy:</p>
 <ul>
-<li>Courses are sorted by enrollment in <strong>descending
-order</strong>.</li>
-<li>Qualified hours are counted from the <strong>least-enrolled eligible
-course upward</strong>, ensuring the most populated classes are taught
-as part of the regular load. This reflects standard policy assumptions:
-institutions prioritize assigning higher-impact (larger) courses to
-regular load, and identify overload from less-enrolled offerings.</li>
+<li>If <code>favor_institution = TRUE</code>, <strong>least-enrolled
+eligible courses</strong> are counted toward overload</li>
+<li>If <code>favor_institution = FALSE</code>, <strong>most-enrolled
+eligible courses</strong> are preserved for compensation</li>
 </ul>
 </li>
 </ol>
 <hr>
 </div>
+<div class="section level2">
+<h2 id="instructor-vs-institutional-interest-inclination-strategy">🧭 Instructor vs Institutional Interest Inclination Strategy<a class="anchor" aria-label="anchor" href="#instructor-vs-institutional-interest-inclination-strategy"></a>
+</h2>
+<p>You can specify how regular teaching load is assigned when
+determining overload pay:</p>
+<ul>
+<li><p><strong><code>favor_institution = TRUE</code></strong> →
+<em>Favor institutional interest</em> → Assign <strong>high-enrollment
+courses</strong> to regular load first → Leaves <strong>low-enrollment
+courses</strong> for compensation → Results in <strong>less total
+pay</strong></p></li>
+<li><p><strong><code>favor_institution = FALSE</code></strong> →
+<em>Favor instructor interest</em> → Assign <strong>low-enrollment
+courses</strong> to regular load first → Leaves <strong>high-enrollment
+courses</strong> for compensation → Results in <strong>more total
+pay</strong></p></li>
+</ul>
+<p>This option is supported in both <code><a href="../reference/ol_comp.html">ol_comp()</a></code> and
+<code><a href="../reference/ol_comp_summary.html">ol_comp_summary()</a></code> functions.</p>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="questions">📨 Questions?<a class="anchor" aria-label="anchor" href="#questions"></a>
 </h2>
-<p>For questions or feedback, please open a <a href="https://github.com/dawit3000/catool/issues" class="external-link">GitHub issue</a><br>
-or contact <strong>Dawit Aberra</strong> at <a href="mailto:aberrad@fvsu.edu">aberrad@fvsu.edu</a>.</p>
+<p>For questions or feedback, please open a <a href="https://github.com/dawit3000/catool/issues" class="external-link">GitHub issue</a> or
+contact <strong>Dawit Aberra</strong> at <a href="mailto:aberrad@fvsu.edu">aberrad@fvsu.edu</a>.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>

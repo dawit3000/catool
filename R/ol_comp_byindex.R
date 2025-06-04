@@ -9,6 +9,9 @@
 #' If \code{favor_institution = FALSE}, low-enrollment courses are used toward the regular load first,
 #' preserving high-enrollment courses for overload pay.
 #'
+#' This function internally uses \code{get_instructor_schedule()}, which supports flexible,
+#' case-insensitive regex matching for instructor names (e.g., `"^smith$"` or `"johnson|williams"`).
+#'
 #' @param i Integer index of the instructor (as returned by \code{get_unique_instructors()}).
 #' @param schedule_df A data frame of the full course schedule containing an \code{INSTRUCTOR} column.
 #' @param L Lower enrollment threshold for overload pay eligibility (inclusive). Default is 4.

@@ -11,7 +11,7 @@ ol_comp_byindex(
   U = 9,
   rate_per_cr = 2500/3,
   reg_load = 12,
-  strategy = c("favor_instructor", "favor_institution")
+  favor_institution = TRUE
 )
 }
 \arguments{
@@ -27,9 +27,8 @@ ol_comp_byindex(
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 
-\item{strategy}{Strategy for assigning courses toward the regular load.
-If \code{"favor_instructor"}, higher-enrollment courses are prioritized for compensation.
-If \code{"favor_institution"}, lower-enrollment qualified courses are assigned to the regular load first.}
+\item{favor_institution}{Logical: if TRUE (default), favors the institution by prioritizing
+high-enrollment courses for regular load.}
 }
 \value{
 Invisibly returns a tibble with the instructor’s course-level overload compensation summary.
@@ -38,6 +37,16 @@ Also prints a formatted version to the console.
 \description{
 Retrieves an instructor's name by index from the schedule and calculates their overload compensation
 using \code{ol_comp()}. Returns a clean, readable course-level compensation summary.
+}
+\details{
+If \code{favor_institution = TRUE} (default), the function assigns high-enrollment
+courses to the regular load first, minimizing compensation.
+
+If \code{favor_institution = FALSE}, low-enrollment courses are used toward the regular load first,
+preserving high-enrollment courses for overload pay.
+
+This function internally uses \code{get_instructor_schedule()}, which supports flexible,
+case-insensitive regex matching for instructor names (e.g., \code{"^smith$"} or \code{"johnson|williams"}).
 }
 \examples{
 # Example usage with a schedule dataframe:

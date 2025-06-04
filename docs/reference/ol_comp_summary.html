@@ -69,7 +69,8 @@ instructor-level summary block that follows each instructor's courses.</p>
 <span>  L <span class="op">=</span> <span class="fl">4</span>,</span>
 <span>  U <span class="op">=</span> <span class="fl">9</span>,</span>
 <span>  rate_per_cr <span class="op">=</span> <span class="fl">2500</span><span class="op">/</span><span class="fl">3</span>,</span>
-<span>  reg_load <span class="op">=</span> <span class="fl">12</span></span>
+<span>  reg_load <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>  favor_institution <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -101,12 +102,22 @@ Default is 9.</p></dd>
 <dt>reg_load</dt>
 <dd><p>Regular teaching load in credit hours. Default is 12.</p></dd>
 
+
+<dt>favor_institution</dt>
+<dd><p>Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     
 
 <p>A tibble combining course-level compensation and a summary section for each instructor.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>If the <code>instructor</code> argument is specified, the function limits the summary to that instructor.
+Matching is exact and case-sensitive unless pre-filtered using <code><a href="get_instructor_schedule.html">get_instructor_schedule()</a></code>,
+which supports regex-based, case-insensitive pattern matching (e.g., <code>"smith|jones"</code>).</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -11,7 +11,7 @@ ol_comp_summary(
   U = 9,
   rate_per_cr = 2500/3,
   reg_load = 12,
-  strategy = c("favor_instructor", "favor_institution")
+  favor_institution = TRUE
 )
 }
 \arguments{
@@ -30,9 +30,7 @@ Default is 9.}
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 
-\item{strategy}{Strategy for assigning courses toward the regular load.
-If "favor_instructor", higher-enrollment courses are prioritized for compensation.
-If "favor_institution", lower-enrollment qualified courses are assigned to the regular load first.}
+\item{favor_institution}{Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.}
 }
 \value{
 A tibble combining course-level compensation and a summary section for each instructor.
@@ -41,4 +39,9 @@ A tibble combining course-level compensation and a summary section for each inst
 Calculates overload compensation for each instructor based on institutional policy.
 The output includes course-level payments, qualified credit hours, and a readable
 instructor-level summary block that follows each instructor's courses.
+}
+\details{
+If the \code{instructor} argument is specified, the function limits the summary to that instructor.
+Matching is exact and case-sensitive unless pre-filtered using \code{get_instructor_schedule()},
+which supports regex-based, case-insensitive pattern matching (e.g., \code{"smith|jones"}).
 }
