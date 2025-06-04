@@ -11,29 +11,36 @@ ol_comp_byindex(
   U = 9,
   rate_per_cr = 2500/3,
   reg_load = 12,
-  sort_order = c("desc", "asc")
+  strategy = c("favor_instructor", "favor_institution")
 )
 }
 \arguments{
-\item{i}{Integer index of the instructor (as returned by \code{\link[=get_unique_instructors]{get_unique_instructors()}}).}
+\item{i}{Integer index of the instructor (as returned by \code{get_unique_instructors()}).}
 
 \item{schedule_df}{A data frame of the full course schedule containing an \code{INSTRUCTOR} column.}
 
-\item{L}{Lower enrollment threshold for overload eligibility (inclusive). Default is 4.}
+\item{L}{Lower enrollment threshold for overload pay eligibility (inclusive). Default is 4.}
 
 \item{U}{Upper enrollment limit for proration (inclusive). Default is 9.}
 
-\item{rate_per_cr}{Overload pay rate per credit hour. Default is 2500/3.}
+\item{rate_per_cr}{Overload pay rate per qualified credit hour. Default is 2500/3.}
 
 \item{reg_load}{Regular teaching load in credit hours. Default is 12.}
 
-\item{sort_order}{Order in which to prioritize courses when counting toward the regular load.
-Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).}
+\item{strategy}{Strategy for assigning courses toward the regular load.
+If \code{"favor_instructor"}, higher-enrollment courses are prioritized for compensation.
+If \code{"favor_institution"}, lower-enrollment qualified courses are assigned to the regular load first.}
 }
 \value{
-Invisibly returns a tibble with the instructor’s overload compensation summary.
+Invisibly returns a tibble with the instructor’s course-level overload compensation summary.
+Also prints a formatted version to the console.
 }
 \description{
 Retrieves an instructor's name by index from the schedule and calculates their overload compensation
-using \code{\link[=ol_comp]{ol_comp()}}. Returns a clean, readable summary consistent with the package output.
+using \code{ol_comp()}. Returns a clean, readable course-level compensation summary.
+}
+\examples{
+# Example usage with a schedule dataframe:
+# ol_comp_byindex(1, schedule_df = schedule)
+
 }

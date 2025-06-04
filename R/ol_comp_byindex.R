@@ -1,47 +1,64 @@
 #' Calculate Overload Compensation for One Instructor (by Index)
 #'
 #' Retrieves an instructor's name by index from the schedule and calculates their overload compensation
-#' using [ol_comp()]. Returns a clean, readable summary consistent with the package output.
+#' using \code{ol_comp()}. Returns a clean, readable course-level compensation summary.
 #'
-#' @param i Integer index of the instructor (as returned by [get_unique_instructors()]).
-#' @param schedule_df A data frame of the full course schedule containing an `INSTRUCTOR` column.
-#' @param L Lower enrollment threshold for overload eligibility (inclusive). Default is 4.
+#' If \code{favor_institution = TRUE} (default), the function assigns high-enrollment
+#' courses to the regular load first, minimizing compensation.
+#'
+#' If \code{favor_institution = FALSE}, low-enrollment courses are used toward the regular load first,
+#' preserving high-enrollment courses for overload pay.
+#'
+#' @param i Integer index of the instructor (as returned by \code{get_unique_instructors()}).
+#' @param schedule_df A data frame of the full course schedule containing an \code{INSTRUCTOR} column.
+#' @param L Lower enrollment threshold for overload pay eligibility (inclusive). Default is 4.
 #' @param U Upper enrollment limit for proration (inclusive). Default is 9.
-#' @param rate_per_cr Overload pay rate per credit hour. Default is 2500/3.
+#' @param rate_per_cr Overload pay rate per qualified credit hour. Default is 2500/3.
 #' @param reg_load Regular teaching load in credit hours. Default is 12.
-#' @param sort_order Order in which to prioritize courses when counting toward the regular load.
-#'   Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).
+#' @param favor_institution Logical: if TRUE (default), favors the institution by prioritizing
+#'   high-enrollment courses for regular load.
 #'
-#' @return Invisibly returns a tibble with the instructor’s overload compensation summary.
+#' @return Invisibly returns a tibble with the instructor’s course-level overload compensation summary.
+#' Also prints a formatted version to the console.
+#'
+#' @examples
+#' # Example usage with a schedule dataframe:
+#' # ol_comp_byindex(1, schedule_df = schedule)
+#'
 #' @import dplyr
 #' @export
-ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12, sort_order = c("desc", "asc")) {
-  sort_order <- match.arg(sort_order)
+ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3,
+                            reg_load = 12, favor_institution = TRUE) {
 
-  instructor_name <- get_unique_instructors(schedule_df)[i]
+  instructor_list <- get_unique_instructors(schedule_df)
+
+  if (i < 1 || i > length(instructor_list)) {
+    stop("Index 'i' is out of bounds. Check the number of instructors in your dataset.")
+  }
+
+  instructor_name <- instructor_list[i]
+
+  instructor_sched <- get_instructor_schedule(instructor_name, schedule_df)
 
   summary <- ol_comp(
-    get_instructor_schedule(instructor_name, schedule_df),
+    instructor_sched,
     L = L,
     U = U,
     rate_per_cr = rate_per_cr,
     reg_load = reg_load,
-    sort_order = sort_order
+    favor_institution = favor_institution
   )
 
-  display <- summary %>%
+  summary %>%
     mutate(across(
       everything(),
-      ~ {
-        if (is.character(.x)) {
-          ifelse(.x == "" | is.na(.x), " ", .x)
-        } else {
-          ifelse(is.na(.x), " ", .x)
-        }
+      ~ if (is.character(.)) {
+        ifelse(. == "" | is.na(.), " ", .)
+      } else {
+        ifelse(is.na(.), " ", .)
       }
     )) %>%
-    select(-SUMMARY, SUMMARY)
+    print()
 
-  print(as.data.frame(display), row.names = FALSE)
   invisible(summary)
 }

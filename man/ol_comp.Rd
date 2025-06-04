@@ -8,9 +8,9 @@ ol_comp(
   instructor_schedule,
   L = 4,
   U = 9,
-  rate_per_cr = 2500/3,
   reg_load = 12,
-  sort_order = c("desc", "asc")
+  rate_per_cr = 2500/3,
+  strategy = c("favor_instructor", "favor_institution")
 )
 }
 \arguments{
@@ -20,24 +20,25 @@ ol_comp(
 
 \item{U}{Upper limit of proration; courses with ENRLD > U get full-rate pay (default = 9).}
 
-\item{rate_per_cr}{Base overload pay per credit hour (default = 2500/3).}
-
 \item{reg_load}{Regular teaching load in credit hours (default = 12).}
 
-\item{sort_order}{Order in which to prioritize courses when counting toward the regular load.
-Options are "desc" (highest-enrollment courses first, default) or "asc" (lowest-enrollment first).}
+\item{rate_per_cr}{Overload pay rate per credit hour (default = 2500/3).}
+
+\item{strategy}{Strategy for assigning courses toward the regular load.
+If "favor_instructor", higher-enrollment courses are prioritized for compensation.
+If "favor_institution", lower-enrollment qualified courses are assigned to the regular load first.}
 }
 \value{
-A tibble with course-level compensation and a summary block, matching \code{ol_comp_summary()} format.
+A data frame with the original schedule plus columns for QUALIFIED_CR, TYPE, AMOUNT, and ROW_AMOUNT.
 }
 \description{
 Computes prorated overload pay and qualified credit hours for a single instructor
 based on course credit hours, enrollment, and institutional overload rules.
 }
 \details{
-If \code{sort_order = "asc"}, the function still uses the highest-enrolled qualified courses
-for compensation, but it reserves the lowest-enrolled qualified courses
-(bottom of the list) toward the regular teaching load first. Compensation begins only after
-\code{reg_load} credit hours are excluded from the bottom up — \emph{preserving low-enrollment classes
-as part of the regular load} and prioritizing compensation for higher-enrolled courses.
+If \code{strategy = "favor_institution"}, the function reserves the lowest-enrolled
+qualified courses (bottom of the list) for the regular teaching load first.
+Compensation begins only after \code{reg_load} credit hours are excluded from the bottom up —
+preserving low-enrollment classes as part of the regular load and prioritizing
+compensation for higher-enrolled courses.
 }
