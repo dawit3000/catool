@@ -12,7 +12,7 @@ Description: Calculates equitable overload compensation for college instructors
     or optionally from low-enrollment courses for fairness, depending on user-defined strategy.
     Includes tools for flexible policy settings, instructor filtering, and produces
     clean, audit-ready summary tables suitable for payroll and administrative reporting.
-License: AGPL-3 + file LICENSE
+License: AGPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

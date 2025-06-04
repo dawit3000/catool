@@ -10,7 +10,7 @@
 #' preserving high-enrollment courses for overload pay.
 #'
 #' This function internally uses \code{get_instructor_schedule()}, which supports flexible,
-#' case-insensitive regex matching for instructor names (e.g., `"^smith$"` or `"johnson|williams"`).
+#' case-insensitive regex matching for instructor names (e.g., \code{"^smith$"} or \code{"johnson|williams"}).
 #'
 #' @param i Integer index of the instructor (as returned by \code{get_unique_instructors()}).
 #' @param schedule_df A data frame of the full course schedule containing an \code{INSTRUCTOR} column.
@@ -22,7 +22,6 @@
 #'   high-enrollment courses for regular load.
 #'
 #' @return Invisibly returns a tibble with the instructor’s course-level overload compensation summary.
-#' Also prints a formatted version to the console.
 #'
 #' @examples
 #' # Example usage with a schedule dataframe:
@@ -52,16 +51,10 @@ ol_comp_byindex <- function(i, schedule_df, L = 4, U = 9, rate_per_cr = 2500 / 3
     favor_institution = favor_institution
   )
 
-  summary %>%
-    mutate(across(
-      everything(),
-      ~ if (is.character(.)) {
-        ifelse(. == "" | is.na(.), " ", .)
-      } else {
-        ifelse(is.na(.), " ", .)
-      }
-    )) %>%
-    print()
+  if (interactive()) {
+    cat("\nOverload compensation summary for:", instructor_name, "\n\n")
+    print(summary)
+  }
 
   invisible(summary)
 }

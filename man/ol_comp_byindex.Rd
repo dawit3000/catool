@@ -32,7 +32,6 @@ high-enrollment courses for regular load.}
 }
 \value{
 Invisibly returns a tibble with the instructor’s course-level overload compensation summary.
-Also prints a formatted version to the console.
 }
 \description{
 Retrieves an instructor's name by index from the schedule and calculates their overload compensation
