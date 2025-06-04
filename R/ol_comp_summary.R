@@ -17,7 +17,6 @@
 #'
 #' @return A tibble combining course-level compensation and a summary section for each instructor.
 #'
-#' @importFrom stats na.omit
 #' @import dplyr
 #' @import tibble
 #' @importFrom purrr map_dfr
@@ -54,17 +53,17 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
                           rate_per_cr = rate_per_cr, reg_load = reg_load,
                           favor_institution = favor_institution)
 
-    # Prevent duplicate SUMMARY rows — dedupe here
-    comp_table <- comp_table %>%
-      mutate(across(everything(), ~ ifelse(is.na(.), "", .))) %>%
-      group_by(across(-SUMMARY)) %>%
-      mutate(row_num = row_number()) %>%
-      ungroup() %>%
-      filter(!(row_num > 1 & SUMMARY != "")) %>%
-      select(-row_num)
+    # Separate summary and data parts
+    summary_part <- comp_table %>% filter(!is.na(SUMMARY) & SUMMARY != "")
+    data_part <- comp_table %>% filter(is.na(SUMMARY) | SUMMARY == "")
 
-    comp_table
+    # Remove any accidental duplicates in the data part only
+    data_part <- data_part %>% distinct()
+
+    # Combine back
+    bind_rows(data_part, summary_part)
   })
 
-  results
+  results %>%
+    mutate(across(everything(), ~ ifelse(is.na(.), "", .)))
 }
