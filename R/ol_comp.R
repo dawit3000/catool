@@ -24,15 +24,17 @@
 #' @import tibble
 #' @importFrom scales comma
 #' @export
-ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12,
-                    favor_institution = TRUE) {
+ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
+                    reg_load = 12, favor_institution = TRUE) {
 
-  input <- instructor_schedule %>%
+  instructor_schedule <- instructor_schedule %>%
     mutate(
       ENRLD = as.numeric(ENRLD),
       HRS = as.numeric(HRS)
     ) %>%
-    filter(!is.na(HRS) & !is.na(ENRLD)) %>%
+    filter(!is.na(HRS) & !is.na(ENRLD))  # ✅ Filter out incomplete rows early
+
+  input <- instructor_schedule %>%
     mutate(
       QUALIFIED_CR = 0,
       ROW_AMOUNT = 0,
