@@ -11,6 +11,10 @@
 #' courses to the regular load first, preserving **high-enrollment** courses for compensation —
 #' this favors the instructor.
 #'
+#' **Note:** This function assumes that `instructor_schedule` is already filtered for one instructor.
+#' Use \code{get_instructor_schedule()} to extract instructor schedules using flexible, case-insensitive,
+#' regex-based matching.
+#'
 #' @param instructor_schedule A data frame of the instructor's courses, with columns `INSTRUCTOR`, `ENRLD`, and `HRS`.
 #' @param L Lower enrollment threshold for overload pay qualification (default = 4).
 #' @param U Upper limit of proration; courses with ENRLD > U get full-rate pay (default = 9).
@@ -18,7 +22,7 @@
 #' @param reg_load Regular teaching load in credit hours (default = 12).
 #' @param favor_institution Logical: if TRUE (default), prioritizes high-enrollment courses for regular load.
 #'
-#' @return A tibble with course-level compensation and a summary block, matching `ol_comp_summary()` format.
+#' @return A tibble with course-level compensation and a human-readable summary block.
 #'
 #' @import dplyr
 #' @import tibble
@@ -29,10 +33,10 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
 
   instructor_schedule <- instructor_schedule %>%
     mutate(
-      ENRLD = as.numeric(ENRLD),
-      HRS = as.numeric(HRS)
+      ENRLD = as.numeric(trimws(ENRLD)),
+      HRS = as.numeric(trimws(HRS))
     ) %>%
-    filter(!is.na(HRS) & !is.na(ENRLD))  # ✅ Filter out incomplete rows early
+    filter(!is.na(HRS), !is.na(ENRLD))
 
   input <- instructor_schedule %>%
     mutate(
@@ -49,68 +53,41 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
     mutate(row_id = row_number()) %>%
     filter(ENRLD >= L, HRS > 0)
 
-  if (favor_institution) {
-    qualifying <- qualifying %>% arrange(desc(ENRLD))
-    reg_remaining <- reg_load
-
-    for (i in 1:nrow(qualifying)) {
-      idx <- qualifying$row_id[i]
-      hrs <- qualifying$HRS[i]
-      enrld <- qualifying$ENRLD[i]
-
-      if (reg_remaining >= hrs) {
-        reg_remaining <- reg_remaining - hrs
-      } else if (reg_remaining > 0) {
-        qualified_hrs <- hrs - reg_remaining
-        pay_fraction <- min(enrld, U + 1) / (U + 1)
-        row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
-
-        input$QUALIFIED_CR[idx] <- qualified_hrs
-        input$ROW_AMOUNT[idx] <- row_pay
-        if (enrld <= U) input$TYPE[idx] <- "PRORATED"
-
-        reg_remaining <- 0
-      } else {
-        qualified_hrs <- hrs
-        pay_fraction <- min(enrld, U + 1) / (U + 1)
-        row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
-
-        input$QUALIFIED_CR[idx] <- qualified_hrs
-        input$ROW_AMOUNT[idx] <- row_pay
-        if (enrld <= U) input$TYPE[idx] <- "PRORATED"
-      }
-    }
-
+  qualifying <- if (favor_institution) {
+    qualifying %>% arrange(desc(ENRLD))
   } else {
-    qualifying <- qualifying %>% arrange(ENRLD)
-    reg_remaining <- reg_load
+    qualifying %>% arrange(ENRLD)
+  }
 
-    for (i in 1:nrow(qualifying)) {
-      idx <- qualifying$row_id[i]
-      hrs <- qualifying$HRS[i]
-      enrld <- qualifying$ENRLD[i]
+  reg_remaining <- reg_load
 
-      if (reg_remaining >= hrs) {
-        reg_remaining <- reg_remaining - hrs
-      } else if (reg_remaining > 0) {
-        qualified_hrs <- hrs - reg_remaining
-        pay_fraction <- min(enrld, U + 1) / (U + 1)
-        row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
+  for (i in seq_len(nrow(qualifying))) {
+    idx <- qualifying$row_id[i]
+    hrs <- qualifying$HRS[i]
+    enrld <- qualifying$ENRLD[i]
 
-        input$QUALIFIED_CR[idx] <- qualified_hrs
-        input$ROW_AMOUNT[idx] <- row_pay
-        if (enrld <= U) input$TYPE[idx] <- "PRORATED"
+    if (is.na(hrs) || is.na(enrld)) next
 
-        reg_remaining <- 0
-      } else {
-        qualified_hrs <- hrs
-        pay_fraction <- min(enrld, U + 1) / (U + 1)
-        row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
+    if (reg_remaining >= hrs) {
+      reg_remaining <- reg_remaining - hrs
+    } else if (reg_remaining > 0) {
+      qualified_hrs <- hrs - reg_remaining
+      pay_fraction <- min(enrld, U + 1) / (U + 1)
+      row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
 
-        input$QUALIFIED_CR[idx] <- qualified_hrs
-        input$ROW_AMOUNT[idx] <- row_pay
-        if (enrld <= U) input$TYPE[idx] <- "PRORATED"
-      }
+      input$QUALIFIED_CR[idx] <- qualified_hrs
+      input$ROW_AMOUNT[idx] <- row_pay
+      if (enrld <= U) input$TYPE[idx] <- "PRORATED"
+
+      reg_remaining <- 0
+    } else {
+      qualified_hrs <- hrs
+      pay_fraction <- min(enrld, U + 1) / (U + 1)
+      row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
+
+      input$QUALIFIED_CR[idx] <- qualified_hrs
+      input$ROW_AMOUNT[idx] <- row_pay
+      if (enrld <= U) input$TYPE[idx] <- "PRORATED"
     }
   }
 
@@ -130,8 +107,8 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
     HRS = NA,
     ENRLD = NA,
     QUALIFIED_CR = NA,
-    ROW_AMOUNT = c(total_comp, NA, NA, NA, NA, NA, NA, NA),
-    TYPE = c("TOTAL", NA, NA, NA, NA, NA, NA, NA),
+    ROW_AMOUNT = c(total_comp, rep(NA, 7)),
+    TYPE = c("TOTAL", rep(NA, 7)),
     SUMMARY = c(
       paste0("INSTRUCTOR: ", instructor_name),
       paste0("Over ", reg_load, " QUALIFIED CR. HRS: ", total_qualified),
@@ -142,12 +119,15 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
     )
   )
 
+  # Add missing columns and fill with NA (same type as original input)
   for (col in setdiff(names(input), names(summary_block))) {
     summary_block[[col]] <- NA
   }
 
   summary_block <- summary_block[, names(input)]
 
+  # Combine and return
   bind_rows(input, summary_block) %>%
+    mutate(across(everything(), ~ ifelse(is.na(.), "", .))) %>%
     select(-SUMMARY, SUMMARY)
 }
