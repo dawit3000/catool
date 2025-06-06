@@ -1,6 +1,7 @@
 ---
 title: "catool: Walkthrough"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette: default
 vignette: >
   %\VignetteIndexEntry{catool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
@@ -116,8 +117,9 @@ The `ol_comp_summary()` function generates a comprehensive compensation report f
 
 **Purpose:**
 
-* Aggregate overload pay calculations for payroll or administration.
-* Enforce consistent application of institutional policy.
+* Aggregate overload pay calculations for payroll or administration
+* Enforce consistent application of institutional policy
+* Return a tidy summary table with all instructors and their compensation lines
 
 **Default usage:**
 
@@ -141,7 +143,30 @@ ol_comp_summary(schedule, favor_institution = TRUE)
 ol_comp_summary(schedule, favor_institution = FALSE)
 ```
 
-The output is formatted for easy import into Excel or use in administrative reports.
+---
+
+## 📊 Output Format
+
+The output returned by `ol_comp_summary()` includes:
+
+| Column    | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| `SUBJ`    | Course subject (if provided)                                 |
+| `INSTR`   | Instructor name                                              |
+| `HRS`     | Credit hours for the course                                  |
+| `ENRLD`   | Enrollment count                                             |
+| `QHRS`    | Qualified credit hours eligible for compensation             |
+| `TYPE`    | `PRO` if proration applies (ENRLD < U), `TOT` for total rows |
+| `PAY`     | Dollar amount for that row, rounded to two decimal places    |
+| `SUMMARY` | Contains instructor name, policy notes, or total lines       |
+
+**Note:**
+
+* Compensation is calculated based only on **qualified credit hours**
+* Courses with `ENRLD < 4` are excluded
+* Compensation is prorated when `ENRLD < 10` (based on threshold `U`)
+* Total overload amounts appear in the `SUMMARY` column as:
+  `"TOTAL OVERLOAD: $6,833.33"` (rounded to two decimal places)
 
 ---
 
@@ -185,4 +210,4 @@ This option is supported in both `ol_comp()` and `ol_comp_summary()` functions.
 ## 📨 Questions?
 
 For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)
-or contact **Dawit Aberra** at [aberrad@fvsu.edu](mailto:aberrad@fvsu.edu).
+or contact **Dawit Aberra** at [dawit3000@fvsu.edu](mailto:dawit3000@hotmail.com).

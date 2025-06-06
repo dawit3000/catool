@@ -1,21 +1,11 @@
-# Suppress "no visible binding for global variable" notes
+# Suppress "no visible binding for global variable" notes during R CMD check
 utils::globalVariables(c(
-  # Column names from data frames
-  "COLLEGE",
-  "DEPARTMENT",
-  "ENRLD",
-  "HRS",
-  "INSTRUCTOR",
-  "PROGRAM",
-  "SUBJ",
+  # Input column names
+  "INSTRUCTOR", "ENRLD", "HRS", "SUBJ", "DEPARTMENT", "COLLEGE", "PROGRAM",
 
-  # Internal objects or constants
-  "schedule",
-  "setNames",
+  # Output variables in catool functions
+  "INSTR", "QHRS", "PAY", "TYPE", "SUMMARY",
 
-  # Column labels or dynamic text used in output
-  "Overload Pay by Course",
-  "Summary",
-  "SUMMARY",
-  "Total Compensation (USD)"
+  # Constants or display labels (optional but clean)
+  "schedule", "setNames", "Total Compensation (USD)", "Summary", "Overload Pay by Course"
 ))

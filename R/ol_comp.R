@@ -39,15 +39,16 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
     filter(!is.na(HRS), !is.na(ENRLD))
 
   input <- instructor_schedule %>%
+    rename(INSTR = INSTRUCTOR) %>%
     mutate(
-      QUALIFIED_CR = 0,
-      ROW_AMOUNT = 0,
+      QHRS = 0,
+      PAY = 0,
       TYPE = "",
       SUMMARY = ""
     ) %>%
     arrange(desc(ENRLD))
 
-  instructor_name <- unique(input$INSTRUCTOR)[1]
+  instructor_name <- unique(input$INSTR)[1]
 
   qualifying <- input %>%
     mutate(row_id = row_number()) %>%
@@ -75,8 +76,8 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
       pay_fraction <- min(enrld, U + 1) / (U + 1)
       row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
 
-      input$QUALIFIED_CR[idx] <- qualified_hrs
-      input$ROW_AMOUNT[idx] <- row_pay
+      input$QHRS[idx] <- qualified_hrs
+      input$PAY[idx] <- row_pay
       if (enrld <= U) input$TYPE[idx] <- "PRO"
 
       reg_remaining <- 0
@@ -85,22 +86,22 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
       pay_fraction <- min(enrld, U + 1) / (U + 1)
       row_pay <- round(pay_fraction * rate_per_cr * qualified_hrs, 2)
 
-      input$QUALIFIED_CR[idx] <- qualified_hrs
-      input$ROW_AMOUNT[idx] <- row_pay
+      input$QHRS[idx] <- qualified_hrs
+      input$PAY[idx] <- row_pay
       if (enrld <= U) input$TYPE[idx] <- "PRO"
     }
   }
 
-  total_qualified <- sum(input$QUALIFIED_CR, na.rm = TRUE)
-  total_comp <- sum(input$ROW_AMOUNT, na.rm = TRUE)
+  total_qualified <- sum(input$QHRS, na.rm = TRUE)
+  total_comp <- sum(input$PAY, na.rm = TRUE)
 
   summary_block <- tibble(
-    INSTRUCTOR = NA,
+    INSTR = NA,
     SUBJ = NA,
     HRS = NA,
     ENRLD = NA,
-    QUALIFIED_CR = NA,
-    ROW_AMOUNT = c(total_comp, rep(NA, 7)),
+    QHRS = NA,
+    PAY = c(total_comp, rep(NA, 7)),
     TYPE = c("TOT", rep(NA, 7)),
     SUMMARY = c(
       paste0("INSTRUCTOR: ", instructor_name),
@@ -117,14 +118,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
   }
   summary_block <- summary_block[, names(input)]
 
-  result <- bind_rows(input, summary_block) %>%
+  bind_rows(input, summary_block) %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .))) %>%
     select(-SUMMARY, SUMMARY)
-
-  result %>%
-    rename(
-      INSTR = INSTRUCTOR,
-      QHRS = QUALIFIED_CR,
-      PAY = ROW_AMOUNT
-    )
 }

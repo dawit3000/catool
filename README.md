@@ -2,12 +2,12 @@
 # catool: Compensation Analysis Tool
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/catool)](https://CRAN.R-project.org/package=catool)  
-[![R-CMD-check](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml)  
+status](https://www.r-pkg.org/badges/version/catool)](https://CRAN.R-project.org/package=catool)
+[![R-CMD-check](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml)
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)  
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![GitHub
-version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)  
+version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)
 [![Walkthrough
 Vignette](https://img.shields.io/badge/docs-walkthrough-blue)](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
 
@@ -16,21 +16,19 @@ fair and transparent overload pay for college instructors. It analyzes
 course schedules and applies institutional policy rules to determine
 qualified credit hours and compensation—prorated when needed.
 
-------------------------------------------------------------------------
-
 ## 🔧 Key Features
 
-- Filters out under-enrolled or ineligible courses  
-- Calculates overload based on **qualified credit hours** only  
-- Prorates pay for enrollments below a specified threshold  
-- Sorts courses by enrollment and counts from lowest up  
-- Supports instructor- or institution-favoring strategies  
-- Produces clear summary tables for individual or full-schedule use  
+- Filters out under-enrolled or ineligible courses
+- Calculates overload based on **qualified credit hours** only
+- Prorates pay for enrollments below a specified threshold
+- Sorts courses by enrollment and counts from lowest up
+- Supports instructor- or institution-favoring strategies
+- Produces clear summary tables for individual or full-schedule use
 - Tidy tibble output, ready for export and reporting
 
 ------------------------------------------------------------------------
 
-## 📦 Installation
+## 🛆 Installation
 
 ``` r
 # Install from GitHub
@@ -77,11 +75,11 @@ schedule <- data.frame(
 # Analyze one instructor
 ol_comp(get_instructor_schedule("baxter", schedule))
 
-# Apply one instructor with  a custom policy
+# Apply one instructor with a custom policy
 ol_comp(get_instructor_schedule("Smith", schedule),
         L = 4, U = 9, rate_per_cr = 2500 / 3, reg_load = 12)
 
-# Summarize full schedule (patroll ready summary of all instructors in the schedule)
+# Summarize full schedule (payroll-ready summary of all instructors)
 ol_comp_summary(schedule)
 ```
 
@@ -92,7 +90,7 @@ ol_comp_summary(schedule)
 ``` r
 # Filter by subject
 filter_schedule(schedule, subject_pattern = "MATH|STAT")
-filter_schedule(schedule, subject_pattern = "^MATH|^STAT") # If subject codes are always exact prefi
+filter_schedule(schedule, subject_pattern = "^MATH|^STAT") # Prefix match
 
 # Filter by department
 filter_schedule(schedule, department_pattern = "Business")
@@ -110,9 +108,9 @@ get_unique_instructors(schedule)
 
 The `ol_comp_summary()` function returns a clean tibble with:
 
-- `QUALIFIED_CR`: Credit hours above regular load, eligible for pay
-- `ROW_AMOUNT`: Calculated compensation per row
-- `TYPE`: `"PRORATED"` where ENRLD \< 10, blank otherwise
+- `QHRS`: Qualified credit hours above regular load, eligible for pay
+- `PAY`: Calculated compensation per row
+- `TYPE`: `"PRO"` where ENRLD \< 10, blank otherwise
 - `SUMMARY`: Instructor headers, notes, and totals
 
 **Note:** Pay is **never per-course**—only on qualified credit hours.
@@ -141,7 +139,7 @@ Default institutional policy:
 
 ------------------------------------------------------------------------
 
-## 🧭 Instructor vs Institutional Interest Inclination Strategy
+## 🤮 Instructor vs Institutional Interest Inclination Strategy
 
 You can specify how regular teaching load is assigned when determining
 overload pay:

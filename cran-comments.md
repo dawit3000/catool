@@ -11,15 +11,15 @@
 The `catool` (Compensation Analysis Tool) R package calculates overload compensation for college instructors based on institutional policies, regular teaching loads, and enrollment thresholds. It identifies qualified credit hours, applies proration logic when applicable, and generates spreadsheet-ready summary tables. The tool promotes fairness, transparency, and consistency while reducing manual administrative effort.
 
 ## Vignettes and documentation
-Includes a walkthrough vignette explaining policy logic, usage examples, compensation rules, and both full-schedule and individual analysis.  
+Includes a walkthrough vignette explaining policy logic, usage examples, compensation rules, and support for both full-schedule and individual-instructor analysis.  
 📄 https://dawit3000.github.io/catool/articles/catool-walkthrough.html
 
 ## Submission notes
 This is the initial CRAN submission of the `catool` package.  
 * All exported functions are documented and include usage examples.  
-* Console messages have been removed or made suppressible (per CRAN policy).  
-* Global variable warnings (e.g., `COLLEGE`, `DEPARTMENT`) resolved via `globalVariables()`.  
-* The `LICENSE` file has been removed, and the `DESCRIPTION` now correctly declares only `AGPL-3`.
+* Console messages have been removed or made suppressible per CRAN guidelines.  
+* Global variable visibility warnings have been resolved via `globalVariables()`.  
+* The `LICENSE` file has been removed; `DESCRIPTION` correctly declares `License: AGPL-3`.
 
 ## Reverse dependencies
 This is a new package with no reverse dependencies.
