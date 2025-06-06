@@ -34,8 +34,9 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
   df <- schedule_df %>%
     filter(!is.na(.data$INSTRUCTOR), .data$INSTRUCTOR != "") %>%
     mutate(across(everything(), ~ ifelse(. == "", NA, .))) %>%
-    mutate(HRS = as.numeric(.data$HRS), ENRLD = as.numeric(.data$ENRLD)) %>%
-    filter(!is.na(HRS) & !is.na(ENRLD))  # ✅ Filter out incomplete rows
+    mutate(HRS = as.numeric(.data$HRS),
+           ENRLD = as.numeric(.data$ENRLD)) %>%
+    filter(!is.na(HRS) & !is.na(ENRLD))
 
   if (!is.null(instructor)) {
     df <- df %>% filter(.data$INSTRUCTOR == instructor)
@@ -47,16 +48,16 @@ ol_comp_summary <- function(schedule_df, instructor = NULL, L = 4, U = 9,
     pull(.data$INSTRUCTOR)
 
   results <- purrr::map_dfr(instructors, function(instr) {
-    course_table <- df %>%
-      filter(.data$INSTRUCTOR == instr)
+    course_table <- df %>% filter(.data$INSTRUCTOR == instr)
 
-    comp_table <- ol_comp(course_table, L = L, U = U,
-                          rate_per_cr = rate_per_cr, reg_load = reg_load,
-                          favor_institution = favor_institution)
-
-    comp_table
+    ol_comp(course_table,
+            L = L, U = U,
+            rate_per_cr = rate_per_cr,
+            reg_load = reg_load,
+            favor_institution = favor_institution)
   })
 
+  # Ensure all NA values become blank for consistency in final output
   results %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .)))
 }

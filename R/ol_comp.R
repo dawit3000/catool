@@ -77,7 +77,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
 
       input$QUALIFIED_CR[idx] <- qualified_hrs
       input$ROW_AMOUNT[idx] <- row_pay
-      if (enrld <= U) input$TYPE[idx] <- "PRORATED"
+      if (enrld <= U) input$TYPE[idx] <- "PRO"
 
       reg_remaining <- 0
     } else {
@@ -87,47 +87,44 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
 
       input$QUALIFIED_CR[idx] <- qualified_hrs
       input$ROW_AMOUNT[idx] <- row_pay
-      if (enrld <= U) input$TYPE[idx] <- "PRORATED"
+      if (enrld <= U) input$TYPE[idx] <- "PRO"
     }
   }
 
   total_qualified <- sum(input$QUALIFIED_CR, na.rm = TRUE)
   total_comp <- sum(input$ROW_AMOUNT, na.rm = TRUE)
-  any_prorated <- any(input$TYPE == "PRORATED")
-
-  note_line <- if (any_prorated) {
-    "Note: Some compensation was prorated due to enrollment under 10."
-  } else {
-    ""
-  }
 
   summary_block <- tibble(
     INSTRUCTOR = NA,
-    COURSE = NA,
+    SUBJ = NA,
     HRS = NA,
     ENRLD = NA,
     QUALIFIED_CR = NA,
     ROW_AMOUNT = c(total_comp, rep(NA, 7)),
-    TYPE = c("TOTAL", rep(NA, 7)),
+    TYPE = c("TOT", rep(NA, 7)),
     SUMMARY = c(
       paste0("INSTRUCTOR: ", instructor_name),
-      paste0("Over ", reg_load, " QUALIFIED CR. HRS: ", total_qualified),
+      paste0("Over ", reg_load, " QHRS: ", total_qualified),
       paste0("Overload Pay Rate: $", round(rate_per_cr, 2)),
-      paste0("Total Overload Compensation: $", comma(total_comp, accuracy = 1)),
-      note_line,
+      paste0("Total Overload: $", format(round(total_comp, 2), nsmall = 2)),
+      "Note: ENRLD<12 PRO or NO",
       "", "", ""
     )
   )
 
-  # Add missing columns and fill with NA (same type as original input)
   for (col in setdiff(names(input), names(summary_block))) {
     summary_block[[col]] <- NA
   }
-
   summary_block <- summary_block[, names(input)]
 
-  # Combine and return
-  bind_rows(input, summary_block) %>%
+  result <- bind_rows(input, summary_block) %>%
     mutate(across(everything(), ~ ifelse(is.na(.), "", .))) %>%
     select(-SUMMARY, SUMMARY)
+
+  result %>%
+    rename(
+      INSTR = INSTRUCTOR,
+      QHRS = QUALIFIED_CR,
+      PAY = ROW_AMOUNT
+    )
 }

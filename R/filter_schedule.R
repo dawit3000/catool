@@ -63,11 +63,19 @@ filter_schedule <- function(schedule,
   }
 
   if (!is.null(subject_pattern)) {
-    df <- df %>% dplyr::filter(grepl(subject_pattern, SUBJ, ignore.case = TRUE))
+    if ("SUBJ" %in% names(df)) {
+      df <- df %>% dplyr::filter(grepl(subject_pattern, SUBJ, ignore.case = TRUE))
+    } else {
+      warning("No 'SUBJ' column found. Subject filter skipped.")
+    }
   }
 
   if (!is.null(instructor_pattern)) {
-    df <- df %>% dplyr::filter(grepl(instructor_pattern, INSTRUCTOR, ignore.case = TRUE))
+    if ("INSTRUCTOR" %in% names(df)) {
+      df <- df %>% dplyr::filter(grepl(instructor_pattern, INSTRUCTOR, ignore.case = TRUE))
+    } else {
+      warning("No 'INSTRUCTOR' column found. Instructor filter skipped.")
+    }
   }
 
   if (nrow(df) == 0) {
