@@ -2,6 +2,7 @@ Package: catool
 Type: Package
 Title: Compensation Analysis Tool for Instructor Overload Pay
 Version: 1.0.1
+Date: 2025-06-09
 Authors@R: 
     person("Dawit", "Aberra", email = "dawit3000@hotmail.com", role = c("aut", "cre"))
 Description: Calculates equitable overload compensation for college instructors

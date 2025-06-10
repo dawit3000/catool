@@ -7,7 +7,7 @@ status](https://www.r-pkg.org/badges/version/catool)](https://CRAN.R-project.org
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![GitHub
-version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool)
+version](https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&logo=github)](https://github.com/dawit3000/catool/releases)
 [![Walkthrough
 Vignette](https://img.shields.io/badge/docs-walkthrough-blue)](https://dawit3000.github.io/catool/articles/catool-walkthrough.html)
 
