@@ -131,11 +131,11 @@ Default institutional policy:
 4.  For `ENRLD < 10`, pay is prorated:
 
     $$
-    \text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times \text{rate per CR} \times \text{qualified CR}
+    \text{Compensation} = \left(\frac{\text{ENRLD}}{10}\right) \times \text{rate_per_cr } \times \text{QHRS}
     $$
 
-5.  Overload hours are counted starting with the **least-enrolled
-    eligible courses**
+5.  Overload hours are counted based on institutional strategy such as
+    **favor institution** or **favor faculty** or **blended approach.**
 
 ------------------------------------------------------------------------
 
