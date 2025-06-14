@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="index.html">catool</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,31 +69,24 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="catool-compensation-analysis-tool">catool: Compensation Analysis Tool<a class="anchor" aria-label="anchor" href="#catool-compensation-analysis-tool"></a>
 </h1></div>
-<p><a href="https://CRAN.R-project.org/package=catool" class="external-link"><img src="https://www.r-pkg.org/badges/version/catool" alt="CRAN status"></a><br><a href="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a><br><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a><br><a href="https://github.com/dawit3000/catool" class="external-link"><img src="https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&amp;logo=github" alt="GitHub version"></a><br><a href="https://dawit3000.github.io/catool/articles/catool-walkthrough.html" class="external-link"><img src="https://img.shields.io/badge/docs-walkthrough-blue" alt="Walkthrough Vignette"></a></p>
+<p><a href="https://CRAN.R-project.org/package=catool" class="external-link"><img src="https://www.r-pkg.org/badges/version/catool" alt="CRAN status"></a> <a href="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/dawit3000/catool/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a> <a href="https://github.com/dawit3000/catool/releases" class="external-link"><img src="https://img.shields.io/github/v/tag/dawit3000/catool?label=GitHub&amp;logo=github" alt="GitHub version"></a> <a href="https://dawit3000.github.io/catool/articles/catool-walkthrough.html" class="external-link"><img src="https://img.shields.io/badge/docs-walkthrough-blue" alt="Walkthrough Vignette"></a></p>
 <p><strong>catool</strong> (Compensation Analysis Tool) is an R package that calculates fair and transparent overload pay for college instructors. It analyzes course schedules and applies institutional policy rules to determine qualified credit hours and compensation—prorated when needed.</p>
-<hr>
 <div class="section level2">
 <h2 id="wrench-key-features">🔧 Key Features<a class="anchor" aria-label="anchor" href="#wrench-key-features"></a>
 </h2>
 <ul>
-<li>Filters out under-enrolled or ineligible courses<br>
-</li>
-<li>Calculates overload based on <strong>qualified credit hours</strong> only<br>
-</li>
-<li>Prorates pay for enrollments below a specified threshold<br>
-</li>
-<li>Sorts courses by enrollment and counts from lowest up<br>
-</li>
-<li>Supports instructor- or institution-favoring strategies<br>
-</li>
-<li>Produces clear summary tables for individual or full-schedule use<br>
-</li>
+<li>Filters out under-enrolled or ineligible courses</li>
+<li>Calculates overload based on <strong>qualified credit hours</strong> only</li>
+<li>Prorates pay for enrollments below a specified threshold</li>
+<li>Sorts courses by enrollment and counts from lowest up</li>
+<li>Supports instructor- or institution-favoring strategies</li>
+<li>Produces clear summary tables for individual or full-schedule use</li>
 <li>Tidy tibble output, ready for export and reporting</li>
 </ul>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="package-installation">📦 Installation<a class="anchor" aria-label="anchor" href="#package-installation"></a>
+<h2 id="id_-installation">🛆 Installation<a class="anchor" aria-label="anchor" href="#id_-installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install from GitHub</span></span>
@@ -149,7 +142,7 @@
 <span><span class="fu"><a href="reference/ol_comp.html">ol_comp</a></span><span class="op">(</span><span class="fu"><a href="reference/get_instructor_schedule.html">get_instructor_schedule</a></span><span class="op">(</span><span class="st">"Smith"</span>, <span class="va">schedule</span><span class="op">)</span>,</span>
 <span>        L <span class="op">=</span> <span class="fl">4</span>, U <span class="op">=</span> <span class="fl">9</span>, rate_per_cr <span class="op">=</span> <span class="fl">2500</span> <span class="op">/</span> <span class="fl">3</span>, reg_load <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Summarize full schedule (payroll-ready summary of all instructors in the schedule)</span></span>
+<span><span class="co"># Summarize full schedule (payroll-ready summary of all instructors)</span></span>
 <span><span class="fu"><a href="reference/ol_comp_summary.html">ol_comp_summary</a></span><span class="op">(</span><span class="va">schedule</span><span class="op">)</span></span></code></pre></div>
 <hr>
 </div>
@@ -159,7 +152,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Filter by subject</span></span>
 <span><span class="fu"><a href="reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, subject_pattern <span class="op">=</span> <span class="st">"MATH|STAT"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, subject_pattern <span class="op">=</span> <span class="st">"^MATH|^STAT"</span><span class="op">)</span> <span class="co"># If subject codes are always exact prefix</span></span>
+<span><span class="fu"><a href="reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, subject_pattern <span class="op">=</span> <span class="st">"^MATH|^STAT"</span><span class="op">)</span> <span class="co"># Prefix match</span></span>
 <span></span>
 <span><span class="co"># Filter by department</span></span>
 <span><span class="fu"><a href="reference/filter_schedule.html">filter_schedule</a></span><span class="op">(</span><span class="va">schedule</span>, department_pattern <span class="op">=</span> <span class="st">"Business"</span><span class="op">)</span></span>
@@ -207,7 +200,7 @@ $$</span></p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="compass-instructor-vs-institutional-interest-inclination-strategy">🧭 Instructor vs Institutional Interest Inclination Strategy<a class="anchor" aria-label="anchor" href="#compass-instructor-vs-institutional-interest-inclination-strategy"></a>
+<h2 id="vomiting_face-instructor-vs-institutional-interest-inclination-strategy">🤮 Instructor vs Institutional Interest Inclination Strategy<a class="anchor" aria-label="anchor" href="#vomiting_face-instructor-vs-institutional-interest-inclination-strategy"></a>
 </h2>
 <p>You can specify how regular teaching load is assigned when determining overload pay:</p>
 <ul>
@@ -226,6 +219,7 @@ $$</span></p>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=catool" class="external-link">View on CRAN</a></li>
 <li><a href="https://github.com/dawit3000/catool/" class="external-link">Browse source code</a></li>
 <li><a href="https://github.com/dawit3000/catool/issues" class="external-link">Report a bug</a></li>
 </ul>
