@@ -3,9 +3,9 @@ title: "catool: Walkthrough"
 output:
   rmarkdown::html_vignette: default
 vignette: >
+  %\VignetteEncoding{UTF-8}
   %\VignetteIndexEntry{catool: Walkthrough}
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 editor_options:
   chunk_output_type: console
 ---
@@ -210,4 +210,4 @@ This option is supported in both `ol_comp()` and `ol_comp_summary()` functions.
 ## 📨 Questions?
 
 For questions or feedback, please open a [GitHub issue](https://github.com/dawit3000/catool/issues)
-or contact **Dawit Aberra** at [dawit3000@fvsu.edu](mailto:dawit3000@hotmail.com).
+or contact **Dawit Aberra** at [dawit3000@hotmail.com](mailto:dawit3000@hotmail.com).

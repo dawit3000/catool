@@ -1,4 +1,4 @@
-# catool 1.0.0
+# catool 1.0.1
 
 Initial release of the **catool** (Compensation Analysis Tool) R package.
 
