@@ -108,7 +108,7 @@ ol_comp <- function(instructor_schedule, L = 4, U = 9, rate_per_cr = 2500 / 3,
       paste0("Over ", reg_load, " QHRS: ", total_qualified),
       paste0("Overload Pay Rate: $", round(rate_per_cr, 2)),
       paste0("Total Overload: $", format(round(total_comp, 2), nsmall = 2)),
-      "Note: ENRLD<12 PRO or NO",
+      "Note: ENRLD<U+1 PRO or NO",
       "", "", ""
     )
   )
